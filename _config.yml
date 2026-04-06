@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: 马老师BLOG
+subtitle: '不务正业的理性浪漫'
+description: '我是一位闲得蛋疼的正红旗少先队大队长。也是一名心理咨询师，感谢你的到访，希望你在这里能找到你需要的知识和教程。'
+keywords: 马老师,博客,心理咨询师,教程,分享,失业联盟,搭子
+author: 马老师
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
+url: https://blog.comema.ggff.net/
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
