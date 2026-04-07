@@ -1,0 +1,18 @@
+- title: 即刻短文
+  subTitle: 咸鱼的日常生活。
+  tips: 随时随地，分享生活
+  buttonText: 关于我
+  buttonLink: /about/
+  limit: 30
+  home_essay: true
+  top_background: https://img02.anheyu.com/adminuploads/1/2022/08/21/630249e2df20f.jpg
+  essay_list:
+    - content: 马老师BLOG正式上线啦！
+      date: 2026/04/07
+      from: 马老师
+    - content: 今天分享一些心理咨询的小知识。
+      date: 2026/04/06
+      from: 马老师
+    - content: 生活明朗，万物可爱。
+      date: 2026/04/05
+      from: 马老师
