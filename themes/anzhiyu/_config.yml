@@ -358,7 +358,7 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: 请在此处填写你的Twikoo的envId
+  envId: https://twink-7i36wish0-eisteddfodstudents687s-projects.vercel.app/
   region:
   visitor: false
   option:
