@@ -1,38 +1,16 @@
 ---
-title: Hello World
+title: 欢迎来到马老师的无用之地
+date: 2026-04-10
+tags: [网站公告]
+categories: [随笔随心]
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+Hi，你好啊！我是马老师。
 
-### Create a new post
+这是一个属于我的“灵感现场”与“数字避难所”。
 
-``` bash
-$ hexo new "My New Post"
-```
+在白天，我可能是一个正在和各种报错代码死磕的独立开发者；而在夜幕降临之后，我又会回到我心理咨询师的身份，倾听那些在深夜里无法被编译的情绪。
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+无论你是被我的技术笔记吸引而来，还是在某个人生十字路口的迷茫期无意间闯入，我都非常荣幸能在这里与你相遇。如果生活太重，不妨先把它的外壳拆掉。
 
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+愿这个带温度的树洞，能见证我们的同频和共鸣。随便逛逛吧！
