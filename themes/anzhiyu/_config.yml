@@ -437,7 +437,7 @@ footer:
   # 徽标部分配置项 https://shields.io/
   # https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr
   bdageitem:
-    enable: true
+    enable: false
     list:
       - link: https://hexo.io/ #徽标指向网站链接
         shields: https://npm.elemecdn.com/anzhiyu-blog@2.1.5/img/badge/Frame-Hexo.svg #徽标API
@@ -528,7 +528,7 @@ footer:
     linkList:
       - link: https://github.com/anzhiyu-c/hexo-theme-anzhiyu
         text: 主题
-      - link: https://image.anheyu.com
+      - link: https://tc.688650.xyz
         text: 图床
       # - link: https://beian.miit.gov.cn/
       #   text: 湘ICP备-xxxxxxx号
@@ -1027,7 +1027,7 @@ home_top:
   banner:
     tips: 记录职业中断期真实故事
     title: 好巧啊，你也失业了呀～
-    image: 	https://i.lxlad.com/file/1759574033330_%E6%A8%AA%E5%B9%85.png
+    image: https://i.lxlad.com/file/1759574033330_%E6%A8%AA%E5%B9%85.png
     link: /2025/10/04/失业联盟/
 
 # 朋友圈配置
