@@ -765,8 +765,8 @@ aside:
     content: 欢迎来看我的博客鸭~
   card_weixin:
     enable: true
-    face: https://bu.dusays.com/2023/01/13/63c02edf44033.png
-    backFace: https://bu.dusays.com/2023/05/13/645fa415e8694.png
+    face: https://i.lxlad.com/file/1759637434965_photo_2025-08-30_10-30-49.jpg
+    backFace: https://i.lxlad.com/file/1759637434965_photo_2025-08-30_10-30-49.jpg
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
