@@ -66,10 +66,9 @@ copy:
 # formal:
 #   name: link || icon
 social:
-  Github: https://github.com/anzhiyu-c || anzhiyu-icon-github
-  Email: mailto:anzhiyu-c@qq.com || anzhiyu-icon-envelope
-  Twitter: https://twitter.com/your-username || anzhiyu-icon-twitter
-  Telegram: https://t.me/your-username || anzhiyu-icon-telegram
+  Github: https://github.com/jason6668 || anzhiyu-icon-github
+  Email: mailto:ma@8818618.xyz || anzhiyu-icon-envelope
+  Telegram: https://t.me/sisumasanBot || anzhiyu-icon-telegram
 
 # 作者卡片 状态
 author_status:
