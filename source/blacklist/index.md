@@ -1,7 +1,7 @@
 ---
-title: 职场避雷专区 - 极简工具版
+title: 职场避雷全网检索
 date: 2026-04-11
-type: "about"
+type: "page"
 aside: false
 top_img: false
 copyright: false
