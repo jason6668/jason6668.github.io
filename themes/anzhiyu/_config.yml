@@ -4,6 +4,11 @@ menu:
     分类: /categories/ || anzhiyu-icon-shapes
     标签: /tags/ || anzhiyu-icon-tags
 
+  探索:
+    心理学随笔: /categories/心理学随笔/ || anzhiyu-icon-heartbeat
+    自动化与部署: /categories/自动化与部署/ || anzhiyu-icon-robot
+    社会纪实: /categories/社会纪实/ || anzhiyu-icon-camera-retro
+
   友链:
     摸鱼小游戏: https://cmgame.zone.id/ || anzhiyu-icon-gamepad
     朋友圈: /fcircle/ || anzhiyu-icon-artstation
@@ -761,8 +766,8 @@ aside:
     name_link: /
 
   card_announcement:
-    enable: false
-    content: 欢迎来看我的博客鸭~
+    enable: true
+    content: 欢迎来到马老师的“无用之地”。这里记录着心理学的洞察、自动化的实践以及那些被按下的暂停键。
   card_weixin:
     enable: true
     face: https://i.lxlad.com/file/1759637434965_photo_2025-08-30_10-30-49.jpg

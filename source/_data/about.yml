@@ -1,57 +1,59 @@
 - class_name: 关于页
-  subtitle: 生活明朗，万物可爱✨
+  subtitle: 品牌运营、心理洞察与技术跨界的实践者✨
   avatarImg: https://tc.688650.xyz/file/1759637434965_photo_2025-08-30_10-30-49.jpg
   avatarSkills:
     left:
       - 🤖️ 心理咨询师
-      - 🔍 分享与热心帮助
-      - 🏠 正红旗少先队大队长
-      - 🔨 设计开发一条龙
+      - 🔍 品牌运营专家
+      - 🏠 自动化部署达人
+      - 🔨 跨界技术实践者
     right:
       - 专修交互与设计 🤝
       - 脚踏实地行动派 🏃
       - 团队小组发动机 🧱
       - 壮汉人狠话不多 💢
-  name: 马老师
-  description: 是一名 心理咨询师、博主、分享者
+  name: 马老师 (Jason)
+  description: 致力于通过**心理学**理解人心，通过**自动化**解放劳力，通过**品牌运营**传递价值。
   aboutsiteTips:
-    tips: 追求
-    title1: 源于
-    title2: 热爱而去 感受
+    tips: 核心价值
+    title1: 跨界
+    title2: 融合 创造 深度
     word:
-      - 学习
-      - 生活
-      - 程序
-      - 体验
-  helloAbout: Hello there!
+      - 心理学
+      - 自动化
+      - 品牌
+      - 纪实
+  helloAbout: 欢迎来到我的“第二大脑”！
   skillsTips:
-    tips: 技能
-    title: 开启创造力
+    tips: 核心领域
+    title: 跨界技术与专业洞察
   careers:
-    tips: 生涯
-    title: 无限进步
+    tips: 职业路径
+    title: 专业成长与项目积累
     list:
-      - desc: 心理咨询师
+      - desc: 品牌运营专家：5年+品牌全链路运营经历，深谙用户增长与价值传播。
         color: "#357ef5"
-      - desc: 博主
-        color: "#357ef5"
+      - desc: 心理咨询师：在认知、情绪与行为领域提供专业支持，记录人性切片。
+        color: "#ff5e5e"
+      - desc: 独立开发者：沉迷于 N8N 自动化流、Docker 部署与 Cloudflare 生态。
+        color: "#ffaa00"
     img: https://tc.688650.xyz/2023/04/21/644287166329b.png
   statistic:
     link: /archives
-    text: 文章隧道
+    text: 思想沉淀
     cover: https://tc.688650.xyz/2023/05/01/644f4b037b930.jpg
   map:
-    title: 我现在住在
-    StrengthenTitle: 中国，长沙市
+    title: 现居于
+    StrengthenTitle: 中国 · 长沙
     background: https://tc.688650.xyz/2023/07/05/64a4c61cb20ef.jpg
     backgroundDark: https://tc.688650.xyz/2023/07/05/64a4c63495ac5.jpg
   selfInfo:
-    selfInfoTips1: 生于
-    selfInfoContentYear: 2002
-    selfInfoTips2: 湖南信息学院
-    selfInfoContent2: 软件工程
-    selfInfoTips3: 现在职业
-    selfInfoContent3: 心理咨询师🧑⚕️
+    selfInfoTips1: 深耕
+    selfInfoContentYear: 品牌 & 心理
+    selfInfoTips2: 学历背景
+    selfInfoContent2: 心理学 & 软件工程
+    selfInfoTips3: 当前重心
+    selfInfoContent3: 失业联盟项目运营 & 自动化咨询
   personalities:
     author_name: 执政官
     personality_type: ESFJ-A
@@ -59,54 +61,39 @@
     personality_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg
     name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
   maxim:
-    maxim_tips: 座右铭
-    maxim_top: 生活明朗，
-    maxim_bottom: 万物可爱。
+    maxim_tips: 核心准则
+    maxim_top: 职业可以中断，
+    maxim_bottom: 但生活不必关机。
   buff:
-    buff_tips: 特长
-    buff_top: 脑回路新奇的 酸菜鱼
-    buff_bottom: 二次元指数 MAX
+    buff_tips: 跨界 Buff
+    buff_top: 能写代码的 咨询师
+    buff_bottom: 懂心理学的 开发者
   game:
     game_tips: 爱好游戏
-    game_title: 原神
-    game_uid: "UID: 125766904"
+    game_title: 专注力训练
+    game_uid: "UID: 00000000"
     game_bg: https://tc.688650.xyz/2023/04/22/64433bf26e25d.webp
   comic:
-    comic_tips: 爱好番剧
-    comic_title: 追番
+    comic_tips: 阅读偏好
+    comic_title: 深度叙事
     comic_list:
       - name: 约定的梦幻岛
-        href: https://www.bilibili.com/bangumi/media/md5267750/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        href: #
         cover: https://tc.688650.xyz/2023/05/27/647166c44b414.webp
       - name: 咒术回战
-        href: https://www.bilibili.com/bangumi/media/md28229899/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
+        href: #
         cover: https://tc.688650.xyz/2023/05/24/646db4398832e.webp
-      - name: 紫罗兰永恒花园
-        href: https://www.bilibili.com/bangumi/media/md8892/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://tc.688650.xyz/2023/05/24/646db43983d99.webp
-      - name: 鬼灭之刃
-        href: https://www.bilibili.com/bangumi/media/md22718131/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://tc.688650.xyz/2023/05/24/646db439856a0.webp
-      - name: JOJO的奇妙冒险 黄金之风
-        href: https://www.bilibili.com/bangumi/media/md135652/?spm_id_from=666.25.b_6d656469615f6d6f64756c65.1
-        cover: https://tc.688650.xyz/2023/05/30/64760e38d651a.webp
   like:
     like_tips: 关注偏好
-    like_title: 数码科技
+    like_title: 技术自动化
     like_bg: https://tc.688650.xyz/2022/12/06/638f5f05ce1f7.jpg
-    like_bottom: 手机、电脑软硬件
+    like_bottom: Docker, Cloudflare, N8N
   music:
-    music_tips: 音乐偏好
-    music_title: 许嵩、民谣、华语流行
+    music_tips: 氛围偏好
+    music_title: 民谣 & 低保真
     music_bg: https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg
     music_link: /music
   reward_list:
-    - name: 海阔蓝
-      amount: 8.8
-      datatime: 2023-03-28
-    - name: LK66
-      amount: 66.6
-      datatime: 2023-03-24
-    - name: 张时貳
+    - name: 失业联盟支持者
       amount: 6.6
-      datatime: 2023-01-22
+      datatime: 2026-04-10
