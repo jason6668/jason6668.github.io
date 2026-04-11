@@ -1,113 +1,188 @@
 ---
-title: 职场避雷专区 - 记录真实，避开深坑
+title: 职场避雷专区 - 极简工具版
 date: 2026-04-11
 type: "about"
 aside: false
+top_img: false
+copyright: false
+reward: false
 ---
 
 <style>
-  .blacklist-container {
-    padding: 2rem;
-    background: var(--anzhiyu-card-bg);
-    border-radius: 12px;
-    box-shadow: var(--anzhiyu-shadow-light);
-    margin-bottom: 2rem;
+  /* 隐藏默认的文章标题和元信息，打造纯净工具流 */
+  #page-header { display: none !important; }
+  #post-info { display: none !important; }
+  .post-copyright { display: none !important; }
+  .post-reward { display: none !important; }
+  #pagination { display: none !important; }
+  
+  .blacklist-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+    font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  }
+  
+  .tool-header {
     text-align: center;
+    margin-bottom: 3rem;
   }
-  .search-box {
+  
+  .tool-header h1 {
+    font-size: 2.5rem;
+    background: linear-gradient(120deg, var(--anzhiyu-theme), #ff2442);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+  }
+  
+  .tool-header p {
+    color: var(--anzhiyu-secondtext);
+    font-size: 1.1rem;
+  }
+
+  .blacklist-card {
+    background: var(--anzhiyu-card-bg);
+    border: 1px solid var(--anzhiyu-card-border);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  .search-container {
     display: flex;
-    max-width: 600px;
-    margin: 1.5rem auto;
-    gap: 10px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
+
+  .search-input-wrapper {
+    width: 100%;
+    max-width: 700px;
+    position: relative;
+  }
+
   .search-input {
-    flex: 1;
-    padding: 12px 16px;
-    border-radius: 8px;
-    border: 2px solid var(--anzhiyu-theme);
+    width: 100%;
+    padding: 18px 25px;
+    border-radius: 50px;
+    border: 2px solid #eee;
+    font-size: 1.2rem;
     background: var(--anzhiyu-background);
     color: var(--anzhiyu-fontcolor);
+    transition: all 0.3s ease;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .search-input:focus {
+    border-color: var(--anzhiyu-theme);
+    box-shadow: 0 0 15px rgba(66, 90, 239, 0.2);
     outline: none;
   }
-  .btn-group {
+
+  .engine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 10px;
+  }
+
+  .engine-btn {
     display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 1rem;
-  }
-  .search-btn {
-    padding: 10px 20px;
-    border-radius: 8px;
-    background: var(--anzhiyu-theme);
+    gap: 8px;
+    padding: 15px;
+    border-radius: 12px;
     color: white !important;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.2s ease;
     border: none;
-    text-decoration: none !important;
+    font-size: 0.95rem;
   }
-  .search-btn:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
+
+  .engine-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   }
-  .xhs-btn { background: #ff2442; } /* 小红书红 */
-  .maimai-btn { background: #0076ff; } /* 脉脉蓝 */
-  .qcc-btn { background: #1b85cf; } /* 企查查 */
-  
-  .notice {
-    font-size: 0.9rem;
-    color: var(--anzhiyu-secondtext);
-    margin-top: 1rem;
+
+  .xhs { background: linear-gradient(135deg, #ff2442, #ff5277); }
+  .maimai { background: linear-gradient(135deg, #0076ff, #00b0ff); }
+  .qcc { background: linear-gradient(135deg, #1b85cf, #27aae1); }
+  .google { background: linear-gradient(135deg, #4285f4, #34a853); }
+
+  .disclaimer {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(255, 36, 66, 0.05);
+    border-left: 4px solid #ff2442;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: left;
   }
 </style>
 
-<div class="blacklist-container">
-  <h2>🔍 快速全网检索</h2>
-  <p>输入公司名称，一键检索各大平台真实评价</p>
-  
-  <div class="search-box">
-    <input type="text" id="companyInput" class="search-input" placeholder="请输入公司全称或关键词...">
+<div class="blacklist-wrapper">
+  <div class="tool-header">
+    <h1>职场避雷全网检索</h1>
+    <p>⚡️ 一键聚合各大职场社交平台真实评价</p>
   </div>
-  
-  <div class="btn-group">
-    <button onclick="searchPlatform('xhs')" class="search-btn xhs-btn">小红书检索</button>
-    <button onclick="searchPlatform('maimai')" class="search-btn maimai-btn">脉脉检索</button>
-    <button onclick="searchPlatform('qcc')" class="search-btn qcc-btn">企查查背调</button>
-    <button onclick="searchPlatform('google')" class="search-btn">谷歌深度搜索</button>
+
+  <div class="blacklist-card">
+    <div class="search-container">
+      <div class="search-input-wrapper">
+        <input type="text" id="target" class="search-input" placeholder="输入公司全称，如：XXX科技有限公司">
+      </div>
+      
+      <div class="engine-grid">
+        <button onclick="go('xhs')" class="engine-btn xhs">
+          <i class="anzhiyufont anzhiyu-icon-redbook"></i> 小红书避雷
+        </button>
+        <button onclick="go('maimai')" class="engine-btn maimai">
+          <i class="anzhiyufont anzhiyu-icon-linkedin"></i> 脉脉职言
+        </button>
+        <button onclick="go('qcc')" class="engine-btn qcc">
+          <i class="anzhiyufont anzhiyu-icon-shield"></i> 企查查风险
+        </button>
+        <button onclick="go('google')" class="engine-btn google">
+          <i class="anzhiyufont anzhiyu-icon-google"></i> 谷歌深度搜
+        </button>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>⚠️ 避雷声明：</strong>本工具仅提供跳转检索服务，搜索结果均为第三方平台公开评价。请用户理性甄别信息真伪。
+    </div>
   </div>
-  
-  <p class="notice">💡 提示：点击按钮将前往第三方平台。欢迎在下方评论区留言您遭遇的实录，为后来者避坑。</p>
+
+  <div style="margin-top: 4rem; text-align: center;">
+    <h2 style="margin-bottom: 2rem;">📢 匿名投稿 / 避雷墙</h2>
+    <p style="color: var(--anzhiyu-secondtext); margin-bottom: 2rem;">每一条真实记录，都在帮助未来的同事少踩一个坑。</p>
+  </div>
 </div>
 
 <script>
-  function searchPlatform(type) {
-    const input = document.getElementById('companyInput').value.trim();
-    if (!input) {
-      alert('请输入公司名称后再检索');
+  function go(type) {
+    const val = document.getElementById('target').value.trim();
+    if (!val) {
+      alert('请先输入要检索的公司名称');
       return;
     }
     
     let url = '';
+    const encoded = encodeURIComponent(val);
     switch(type) {
-      case 'xhs':
-        url = `https://www.xiaohongshu.com/search_result?keyword=${encodeURIComponent(input + ' 避雷')}`;
-        break;
-      case 'maimai':
-        url = `https://maimai.cn/search/contacts?query=${encodeURIComponent(input + ' 坑')}`;
-        break;
-      case 'qcc':
-        url = `https://www.qcc.com/web/search?key=${encodeURIComponent(input)}`;
-        break;
-      case 'google':
-        url = `https://www.google.com/search?q=${encodeURIComponent(input + ' 避雷 评价 面经')}`;
-        break;
+      case 'xhs': url = `https://www.xiaohongshu.com/search_result?keyword=${encoded}%20%E9%81%BF%E9%9B%B7`; break;
+      case 'maimai': url = `https://maimai.cn/search/contacts?query=${encoded}%20%E5%9D%91`; break;
+      case 'qcc': url = `https://www.qcc.com/web/search?key=${encoded}`; break;
+      case 'google': url = `https://www.google.com/search?q=${encoded}%20%E9%81%BF%E9%9B%B7%20%E5%9D%91%20%E9%9D%A2%E7%BB%8F`; break;
     }
     window.open(url, '_blank');
   }
 </script>
-
----
-
-## 📢 避雷实录
-请在下方提交您的真实遭遇（建议脱敏）。您的每一条留言都可能挽救一个职场人的职业生涯。
