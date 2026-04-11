@@ -9,7 +9,8 @@ menu:
     自动化与部署: /categories/自动化与部署/ || anzhiyu-icon-robot
     社会纪实: /categories/社会纪实/ || anzhiyu-icon-camera-retro
 
-  友链:
+  不要点:
+    马老师专属导航: https://nav.missma.qzz.io/ || anzhiyu-icon-map-location-dot
     摸鱼小游戏: https://cmgame.zone.id/ || anzhiyu-icon-gamepad
     朋友圈: /fcircle/ || anzhiyu-icon-artstation
     留言板: /comments/ || anzhiyu-icon-envelope
@@ -1008,21 +1009,21 @@ home_top:
   subTitle: 万物可爱。
   siteText: comema.ggff.net
   category:
-    - name: 教程笔记
-      path: /categories/教程笔记/
+    - name: 心理学随笔
+      path: /categories/心理学随笔/
+      shadow: var(--anzhiyu-shadow-pink)
+      class: pink
+      icon: anzhiyu-icon-heartbeat
+    - name: 自动化与部署
+      path: /categories/自动化与部署/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
-      icon: anzhiyu-icon-dove
-    - name: 软件推荐
-      path: /categories/软件推荐/
-      shadow: var(--anzhiyu-shadow-red)
-      class: red
-      icon: anzhiyu-icon-fire
-    - name: 资源中心
-      path: /categories/资源中心/
+      icon: anzhiyu-icon-robot
+    - name: 社会纪实
+      path: /categories/社会纪实/
       shadow: var(--anzhiyu-shadow-green)
       class: green
-      icon: anzhiyu-icon-book
+      icon: anzhiyu-icon-camera-retro
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: false
