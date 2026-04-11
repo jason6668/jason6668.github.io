@@ -364,7 +364,7 @@ waline:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://twink-7i36wish0-eisteddfodstudents687s-projects.vercel.app/
+  envId: https://comment.8818618.xyz # 使用了您新绑定的自定义域名
   region:
   visitor: false
   option:
