@@ -8,6 +8,7 @@ copyright: false
 reward: false
 ---
 
+{% raw %}
 <style>
 #page-header { display: none !important; }
 #post-info { display: none !important; }
@@ -35,13 +36,13 @@ reward: false
   background: var(--anzhiyu-card-bg);
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: var(--anzhiyu-shadow-light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 2rem;
 }
 
 .question-block {
   margin-bottom: 1.5rem;
-  border-bottom: 1px dashed var(--anzhiyu-card-border);
+  border-bottom: 1px dashed #ccc;
   padding-bottom: 1.5rem;
 }
 
@@ -65,7 +66,7 @@ reward: false
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  border: 1px solid transparent;
+  border: 1px solid #eee;
 }
 
 .option-label:hover {
@@ -81,7 +82,7 @@ reward: false
   display: block;
   width: 100%;
   padding: 15px;
-  background: var(--anzhiyu-theme);
+  background: #425AEF;
   color: white;
   text-align: center;
   font-size: 1.2rem;
@@ -108,7 +109,7 @@ reward: false
 .type-title {
   font-size: 2.5rem;
   font-weight: 800;
-  color: var(--anzhiyu-theme);
+  color: #425AEF;
   margin: 1rem 0;
   letter-spacing: 2px;
 }
@@ -123,7 +124,6 @@ reward: false
   <div class="mbti-card" id="mbti-container">
     <form id="mbtiForm">
       
-      <!-- E vs I -->
       <div class="question-block">
         <div class="question-title">1. 在经过了一周高强度的工作后，周末你更倾向于如何恢复精力？</div>
         <div class="options-group">
@@ -132,7 +132,6 @@ reward: false
         </div>
       </div>
       
-      <!-- S vs N -->
       <div class="question-block">
         <div class="question-title">2. 当面对一个新任务时，你更关注：</div>
         <div class="options-group">
@@ -141,7 +140,6 @@ reward: false
         </div>
       </div>
 
-      <!-- T vs F -->
       <div class="question-block">
         <div class="question-title">3. 当需要做出一个重要决定时，你往往：</div>
         <div class="options-group">
@@ -150,7 +148,6 @@ reward: false
         </div>
       </div>
 
-      <!-- J vs P -->
       <div class="question-block">
         <div class="question-title">4. 对于生活和计划的态度，你更像哪一种？</div>
         <div class="options-group">
@@ -223,3 +220,4 @@ function resetTest() {
   document.getElementById('result-box').style.display = 'none';
 }
 </script>
+{% endraw %}

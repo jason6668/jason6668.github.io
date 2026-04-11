@@ -8,6 +8,7 @@ copyright: false
 reward: false
 ---
 
+{% raw %}
 <style>
 /* 极简界面 */
 #page-header { display: none !important; }
@@ -26,7 +27,7 @@ reward: false
 
 .test-header h1 {
   font-size: 2.2rem;
-  color: var(--anzhiyu-theme);
+  color: #425AEF;
   margin-bottom: 0.5rem;
 }
 
@@ -34,13 +35,13 @@ reward: false
   background: var(--anzhiyu-card-bg);
   border-radius: 15px;
   padding: 2rem;
-  box-shadow: var(--anzhiyu-shadow-light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   margin-bottom: 2rem;
 }
 
 .question-block {
   margin-bottom: 1.5rem;
-  border-bottom: 1px dashed var(--anzhiyu-card-border);
+  border-bottom: 1px dashed #ccc;
   padding-bottom: 1.5rem;
 }
 
@@ -64,11 +65,11 @@ reward: false
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  border: 1px solid transparent;
+  border: 1px solid #eee;
 }
 
 .option-label:hover {
-  background: var(--anzhiyu-main);
+  background: #425AEF;
   color: white;
 }
 
@@ -80,14 +81,14 @@ reward: false
   display: block;
   width: 100%;
   padding: 15px;
-  background: var(--anzhiyu-theme);
+  background: #425AEF;
   color: white;
   text-align: center;
   font-size: 1.2rem;
   border-radius: 10px;
   border: none;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: opacity 0.3s;
 }
 
 .submit-btn:hover {
@@ -100,7 +101,7 @@ reward: false
   padding: 2rem;
   background: rgba(66, 90, 239, 0.1);
   border-radius: 15px;
-  border: 1px solid var(--anzhiyu-theme);
+  border: 1px solid #425AEF;
   text-align: center;
 }
 
@@ -118,10 +119,9 @@ reward: false
   </div>
 
   <div class="test-card" id="test-container">
-    <p style="margin-bottom: 2rem; color: var(--anzhiyu-secondtext);">请根据<strong>过去两周内</strong>的实际感受，回答以下问题：</p>
+    <p style="margin-bottom: 2rem; color: #666;">请根据<strong>过去两周内</strong>的实际感受，回答以下问题：</p>
     
     <form id="mentalTestForm">
-      <!-- Q1 -->
       <div class="question-block">
         <div class="question-title">1. 做事时提不起劲或没有兴趣</div>
         <div class="options-group">
@@ -132,7 +132,6 @@ reward: false
         </div>
       </div>
       
-      <!-- Q2 -->
       <div class="question-block">
         <div class="question-title">2. 感到情绪低落、沮丧或绝望</div>
         <div class="options-group">
@@ -143,7 +142,6 @@ reward: false
         </div>
       </div>
 
-      <!-- Q3 -->
       <div class="question-block">
         <div class="question-title">3. 感觉紧张，焦虑或急躁</div>
         <div class="options-group">
@@ -154,7 +152,6 @@ reward: false
         </div>
       </div>
 
-      <!-- Q4 -->
       <div class="question-block">
         <div class="question-title">4. 不能停止或无法控制担忧</div>
         <div class="options-group">
@@ -170,7 +167,7 @@ reward: false
 
     <div id="result-box">
       <h2 style="margin-bottom: 1rem;">📝 您的评估结果</h2>
-      <div id="score-text" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: var(--anzhiyu-theme);"></div>
+      <div id="score-text" style="font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem; color: #425AEF;"></div>
       <p id="analysis-text"></p>
       <button class="submit-btn" style="margin-top: 1rem; background: #888;" onclick="resetTest()">重新测试</button>
     </div>
@@ -224,3 +221,4 @@ function resetTest() {
   document.getElementById('result-box').style.display = 'none';
 }
 </script>
+{% endraw %}
