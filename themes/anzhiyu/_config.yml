@@ -1011,8 +1011,8 @@ home_top:
   category:
     - name: 心理学随笔
       path: /categories/心理学随笔/
-      shadow: var(--anzhiyu-shadow-pink)
-      class: pink
+      shadow: var(--anzhiyu-shadow-red)
+      class: red
       icon: anzhiyu-icon-heartbeat
     - name: 自动化与部署
       path: /categories/自动化与部署/
@@ -1026,8 +1026,8 @@ home_top:
       icon: anzhiyu-icon-camera-retro
     - name: 失业联盟
       path: https://www.youtube.com/@失业联盟
-      shadow: var(--anzhiyu-shadow-orange)
-      class: orange
+      shadow: var(--anzhiyu-shadow-blue)
+      class: blue
       icon: anzhiyu-icon-youtube
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
