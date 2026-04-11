@@ -1024,6 +1024,11 @@ home_top:
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-camera-retro
+    - name: 失业联盟
+      path: https://www.youtube.com/@失业联盟
+      shadow: var(--anzhiyu-shadow-orange)
+      class: orange
+      icon: anzhiyu-icon-youtube
   default_descr: 再怎么看我也不知道怎么描述它的啦！
   swiper:
     enable: false
