@@ -1,6 +1,7 @@
 ---
 title: “失业联盟”第一辑：记录那些被按下的暂停键
 date: 2026-04-11
+cover: https://tc.688650.xyz/2023/04/22/64433bf26e25d.webp
 categories:
   - 社会纪实
 tags:

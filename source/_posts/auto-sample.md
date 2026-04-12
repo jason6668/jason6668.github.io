@@ -1,6 +1,7 @@
 ---
 title: 使用 N8N 搭建你的个人信息自动化中心
 date: 2026-04-11
+cover: https://p2.music.126.net/Mrg1i7DwcwjWBvQPIMt_Mg==/79164837213438.jpg
 categories:
   - 科学上网
 tags:

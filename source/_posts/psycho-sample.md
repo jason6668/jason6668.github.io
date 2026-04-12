@@ -1,6 +1,7 @@
 ---
 title: 职业中断期的自我关怀：从认知行为疗法（CBT）说起
 date: 2026-04-11
+cover: https://tc.688650.xyz/2023/05/01/644f4b037b930.jpg
 categories:
   - 心理学随笔
 tags:

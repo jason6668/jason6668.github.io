@@ -1,6 +1,7 @@
 ---
 title: 部署订阅转换：WEB前端 - 多种主流方案详解
 date: 2026-04-12
+cover: https://tc.688650.xyz/2022/12/06/638f5f05ce1f7.jpg
 categories:
   - 科学上网
 tags:

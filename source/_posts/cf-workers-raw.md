@@ -1,6 +1,7 @@
 ---
 title: CF-Workers-Raw：轻松安全访问 GitHub 私有仓库原始文件
 date: 2026-04-12
+cover: https://tc.688650.xyz/2023/05/27/647166c44b414.webp
 categories:
   - 科学上网
 tags:
