@@ -1030,11 +1030,11 @@ home_top:
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-heartbeat
-    - name: 自动化与部署
-      path: /categories/自动化与部署/
+    - name: 科学上网
+      path: /categories/科学上网/
       shadow: var(--anzhiyu-shadow-blue)
       class: blue
-      icon: anzhiyu-icon-robot
+      icon: anzhiyu-icon-paper-plane
     - name: 社会纪实
       path: /categories/社会纪实/
       shadow: var(--anzhiyu-shadow-green)
