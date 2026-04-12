@@ -182,7 +182,8 @@ body { background-color: #f8fafc; }
   border-radius: 12px;
   font-weight: 700;
   font-size: 1.1rem;
-  text-decoration: none !important;
+  border: none;
+  cursor: pointer;
   transition: all 0.3s;
 }
 
@@ -233,33 +234,119 @@ body { background-color: #f8fafc; }
   color: #64748b;
   line-height: 1.6;
 }
+
+/* 支付弹窗 */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.payment-modal {
+  background: white;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  padding: 2.5rem;
+  text-align: center;
+  box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+  position: relative;
+  animation: modalPop 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes modalPop {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #999;
+}
+.close-btn:hover { color: #333; }
+
+.qr-code-img {
+  width: 200px;
+  height: 200px;
+  background: #eee;
+  margin: 1rem auto;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 1px solid #e2e2e2;
+}
+
+.confirm-pay-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background 0.3s;
+}
+.confirm-pay-btn:hover { background: #2563eb; }
+
+#tg-success {
+  display: none;
+  animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.tg-link-box {
+  background: #f0f9ff;
+  border: 1px dashed #3b82f6;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  color: #0369a1;
+  font-weight: bold;
+  font-size: 1.2rem;
+  word-break: break-all;
+}
 </style>
 
 <div class="vip-wrapper">
   <!-- Hero 区块 -->
   <div class="vip-hero">
-    <h1 class="vip-title">成为马老师的超级内核合伙人</h1>
+    <h1 class="vip-title">成为马老师的同路人（高级VIP圈层）</h1>
     <p class="vip-subtitle">
-      加入「失业联盟高级 VIP 圈子」，打破信息差。在这里，你不仅能获得一对一人工技术排忧，更能得到深度的心理与职业脱困辅导。拒绝弯路，高效破局。
+      技术架构、底层逻辑、商业洞察与深度理财。不走弯路，直击核心，专家级的全领域降维护航。
     </p>
   </div>
 
   <!-- 核心特权网格 -->
   <div class="features-grid">
     <div class="feature-card">
-      <div class="feature-icon">🚀</div>
-      <div class="feature-title">全栈技术疑问解答</div>
-      <div class="feature-desc">从 Hexo/Vue/React 博客搭建到自动化部署，遇到 Bug 随时在 VIP 专属通道找我提问，有问必答。</div>
+      <div class="feature-icon">💰</div>
+      <div class="feature-title">理财与财富矩阵布局</div>
+      <div class="feature-desc">打破死工资的限制圈。由专家级视角的理财实战经验沉淀，精准解析宏观周期与微观套利原理，拒绝被割韭菜。</div>
     </div>
     <div class="feature-card">
       <div class="feature-icon">💻</div>
-      <div class="feature-title">一对一远程协助</div>
-      <div class="feature-desc">看不懂报错？环境配不通？直接开启远程。钻石会员独享手把手代操作，直接帮你把系统跑通发版。</div>
+      <div class="feature-title">全域硬核技术顾问</div>
+      <div class="feature-desc">从底层网络架构开发到前沿 AI 生产力落地。遇到极小众报错或架构瓶颈？一问即通，专家级手把手为您破局。</div>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🧠</div>
-      <div class="feature-title">职业中断与心理辅导</div>
-      <div class="feature-desc">我是懂心理学的开发者。无论你是裸辞焦虑还是职场迷茫，提供极高隐私度的倾听与战略重构咨询。</div>
+      <div class="feature-title">心理战役与逆境破局</div>
+      <div class="feature-desc">万能并不是天生的，而是无数次重塑出来的。帮你拆解职场失业危机与心理内耗死结，做您坚不可摧的思想后台。</div>
     </div>
   </div>
 
@@ -267,85 +354,123 @@ body { background-color: #f8fafc; }
   <div class="pricing-section">
     <!-- 黄金会员 -->
     <div class="price-card plan-gold">
-      <div class="plan-name">黄金 VIP 会员</div>
-      <div class="plan-price">¥199 <sub>/ 年</sub></div>
-      <div class="plan-desc">适合热爱折腾，但偶尔需要高人指点避坑的极客伙伴。</div>
+      <div class="plan-name">黄金圈会员</div>
+      <div class="plan-price">¥399 <sub>/ 季度</sub></div>
+      <div class="plan-desc">属于热爱折腾极客、理财初学者的绝佳避坑防具。</div>
       
       <ul class="feature-list">
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          解锁全站所有隐藏高级教程与加密文章
+          解锁全站所有加密精华核心文章
         </li>
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          加入 VIP 专属交流社群 (微信/TG)
+          马老师亲自坐镇，各领域基础图文答疑
         </li>
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          日常技术问题图文/语音解答服务
+          共享一线闭门理财知识点与逻辑拆解
         </li>
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          共享最新开源项目与实用的自动部署脚本
+          进入 VIP 专属内部匿名交流频道
         </li>
       </ul>
       
-      <a href="javascript:alert('支付接口正在极速对接中，请先通过博客留言板添加马老师微信开通！');" class="cta-btn cta-gold">立即开通黄金会员</a>
+      <button class="cta-btn cta-gold" onclick="openPaymentModal('黄金圈会员')">立刻开启季度畅享</button>
     </div>
 
     <!-- 钻石会员 -->
     <div class="price-card popular plan-diamond">
-      <div class="popular-badge">最强保障 / 人工护航</div>
-      <div class="plan-name">终身钻石 VIP</div>
-      <div class="plan-price">¥999 <sub>/ 终身买断</sub></div>
-      <div class="plan-desc">属于你的私人技术顾问与心理急救包，一次买断，终身陪伴。</div>
+      <div class="popular-badge">无死角支持 / 私人智囊团</div>
+      <div class="plan-name">钻石圈会员</div>
+      <div class="plan-price">¥899 <sub>/ 季度</sub></div>
+      <div class="plan-desc">专家级降维打击，全领域一对一赋能，直接用我的经验为你赚钱/省命。</div>
       
       <ul class="feature-list">
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          <strong>包含【黄金会员】所有权益</strong>
+          <strong>完全包含【黄金圈】所有权益</strong>
         </li>
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          不限次人工在线技术分析与架构指导
+          无限制高优先级的在线人工疑问详解
         </li>
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          <strong>赠送 3 次大型环境/Bug 一对一远程操作协助</strong>
+          <strong>不定期一对一连线：手把手技术排雷 或 资产矩阵诊断</strong>
         </li>
         <li>
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          每年提供 1 次深度的【一对一语音职场心理战情分析】
-        </li>
-        <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          独立项目代部署享有内部亲友折扣
+          <strong>定制个人级职业突围与危机心理应急方案</strong>
         </li>
       </ul>
       
-      <a href="javascript:alert('支付接口正在极速对接中，请先通过博客留言板添加马老师微信开通！');" class="cta-btn cta-diamond">立即加入终身钻石圈</a>
+      <button class="cta-btn cta-diamond" onclick="openPaymentModal('钻石圈会员')">升级季度钻石顾问</button>
     </div>
   </div>
 
   <!-- FAQ 区块 -->
   <div class="faq-section">
-    <h2 class="faq-title">常见问题答疑 (FAQ)</h2>
+    <h2 class="faq-title">发售答疑 (FAQ)</h2>
     
     <div class="faq-item">
-      <div class="faq-q">🤔 加入 VIP 后如何联系您提供服务？</div>
-      <div class="faq-a">开通成功后，您将获得我个人的专属私人客服微信。所有技术咨询、心理辅导预约、甚至远程求助均直接与我 1V1 对接，拒绝机器人敷衍。</div>
+      <div class="faq-q">🤔 为什么只有季度订阅，不能一次性终身买断？</div>
+      <div class="faq-a">信息是有时效的，无论是最前沿的技术栈，还是变幻莫测的金融理财局势。季度制能倒逼我不断为您输出最当下的硬核知识，同时也保证服务的响应质量。“终身”只是一种噱头，陪伴且不断成长的季度周期才是最负责任的契约。</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">💻 远程协助都包含什么内容？</div>
-      <div class="faq-a">包括但不限于：博客框架 (Hexo, Vue, Nuxt) 疑难报错修复、服务器运行环境配置、Cloudflare 等自动化部署平台的管线配置、Git 冲突解决等前端开发相关疑难杂症。由我直接远程接通您的屏幕，手把手操作演示。</div>
-    </div>
-
-    <div class="faq-item">
-      <div class="faq-q">💸 支付后还能退款吗？</div>
-      <div class="faq-a">由于知识付费及人工服务档期的特殊性，VIP 服务一旦开通，不支持无理由退款。请在加入前充分阅读您所需的权益，谨慎投资您的成长。</div>
+      <div class="faq-q">💻 远程协助和专家答疑的范畴是什么？</div>
+      <div class="faq-a">包罗万象。你在开发里遇到的疑难报错，理财规划中的资产盲区，甚至因为大环境被裁员造成的崩溃心理。都可以直接通过私密方式联系我。我是你的全域防火墙。</div>
     </div>
   </div>
 
 </div>
+
+<!-- 支付弹层 -->
+<div class="modal-overlay" id="payModal">
+  <div class="payment-modal">
+    <span class="close-btn" onclick="closePaymentModal()">&times;</span>
+    <h2 style="font-size: 1.5rem; color: #1e293b; margin-bottom: 0.5rem;">扫描赞赏码开通</h2>
+    <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 2rem;">您选择的是：<strong id="planNameDisplay" style="color: #7c3aed;">钻石圈会员</strong></p>
+    
+    <!-- 这里放置微信或者支付宝赞赏码 -->
+    <div id="qr-container">
+      <img src="https://via.placeholder.com/200/425aef/ffffff?text=WeChat+Reward+Code" alt="支付赞赏码" class="qr-code-img">
+      <p style="color: #888; font-size: 0.85rem;">( 请使用微信或支付宝扫码完成打赏付款 )</p>
+      
+      <button class="confirm-pay-btn" onclick="confirmPayment()">我已完成支付</button>
+    </div>
+
+    <div id="tg-success">
+      <div style="font-size: 3rem; margin-bottom: 1rem;">✅</div>
+      <h3 style="color: #047857;">感谢您的信任及信任！</h3>
+      <p style="color: #475569; font-size: 0.95rem;">系统暂无自动回调机制。如果您确实完成了打赏，请即刻通过以下私密通道联系我为您手工开权：</p>
+      
+      <div class="tg-link-box">
+        TG（纸飞机）直达链接：<br>
+        <a href="https://t.me/MaLaoShi666" target="_blank" style="color: #2563eb; text-decoration: underline;">https://t.me/MaLaoShi666</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+function openPaymentModal(plan) {
+  document.getElementById('planNameDisplay').innerText = plan;
+  document.getElementById('qr-container').style.display = 'block';
+  document.getElementById('tg-success').style.display = 'none';
+  document.getElementById('payModal').style.display = 'flex';
+}
+
+function closePaymentModal() {
+  document.getElementById('payModal').style.display = 'none';
+}
+
+function confirmPayment() {
+  document.getElementById('qr-container').style.display = 'none';
+  document.getElementById('tg-success').style.display = 'block';
+}
+</script>
 {% endraw %}
