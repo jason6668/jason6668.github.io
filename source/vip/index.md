@@ -436,7 +436,7 @@ body { background-color: #f8fafc; }
     
     <!-- 这里放置微信或者支付宝赞赏码 -->
     <div id="qr-container">
-      <img src="https://via.placeholder.com/200/425aef/ffffff?text=WeChat+Reward+Code" alt="支付赞赏码" class="qr-code-img">
+      <img src="https://i.lxlad.com/file/1759639225701_2c31c63173d7fc749256cbc9ffa60655.jpg" alt="支付赞赏码" class="qr-code-img">
       <p style="color: #888; font-size: 0.85rem;">( 请使用微信或支付宝扫码完成打赏付款 )</p>
       
       <button class="confirm-pay-btn" onclick="confirmPayment()">我已完成支付</button>
@@ -449,7 +449,7 @@ body { background-color: #f8fafc; }
       
       <div class="tg-link-box">
         TG（纸飞机）直达链接：<br>
-        <a href="https://t.me/MaLaoShi666" target="_blank" style="color: #2563eb; text-decoration: underline;">https://t.me/MaLaoShi666</a>
+        <a href="https://t.me/sisumasanBot" target="_blank" style="color: #2563eb; text-decoration: underline;">@sisumasanBot</a>
       </div>
     </div>
 
