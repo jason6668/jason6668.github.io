@@ -1,5 +1,5 @@
 ---
-title: MBTI 性格测试 - 深入探索真我
+title: 16型人格 (MBTI) 免费性格测试
 date: 2026-04-12
 type: "page"
 aside: false
@@ -10,363 +10,583 @@ reward: false
 
 {% raw %}
 <style>
+/* 隐藏博客主题自带杂项，打造全屏应用沉浸感 */
 #page-header { display: none !important; }
 #post-info { display: none !important; }
 
-/* 整体版式设计模拟 16Personalities */
-.mbti-wrapper {
+body {
+  background-color: #f3f4f6;
+}
+
+.mbti-app {
   max-width: 800px;
   margin: 0 auto;
-  padding: 4rem 1rem;
-  font-family: "Nunito Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding: 2rem 1rem;
+  font-family: "Nunito Sans", "Helvetica Neue", -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 }
 
-.mbti-header {
+/* 顶部信息区域 */
+.app-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
-.mbti-header h1 {
+.app-header h1 {
   font-size: 2.5rem;
   color: #333;
-  margin-bottom: 1rem;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
-.mbti-header p {
-  color: #666;
+
+.app-header p {
+  color: #6a6a6a;
   font-size: 1.1rem;
 }
 
-/* 进度条 */
+/* 头部进度条区块，悬浮固定 */
+.progress-sticky-wrapper {
+  position: sticky;
+  top: 60px; /* 根据博客顶部导航栏微调 */
+  background: rgba(243, 244, 246, 0.95);
+  padding: 15px 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  color: #a1a1a1;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
 .progress-container {
   width: 100%;
   height: 6px;
-  background: #eee;
+  background: #e2e2e2;
   border-radius: 3px;
-  margin-bottom: 3rem;
-  position: sticky;
-  top: 60px;
-  z-index: 10;
+  overflow: hidden;
 }
+
 .progress-bar {
   height: 100%;
   background: #33a474;
   width: 0%;
-  border-radius: 3px;
-  transition: width 0.3s ease;
+  transition: width 0.4s ease;
 }
 
-/* 每道题目区块 */
-.question-block {
+/* 问题区块 */
+.page-group {
+  display: none;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 3rem 0;
+  margin-top: 2rem;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.page-group.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.question-row {
+  padding: 2.5rem 2rem;
+  border-bottom: 1px solid #f1f1f1;
   text-align: center;
-  margin-bottom: 5rem;
-  opacity: 1;
-  transition: opacity 0.5s;
+}
+.question-row:last-child {
+  border-bottom: none;
 }
 
 .statement {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #424242;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   font-weight: 600;
+  line-height: 1.4;
 }
 
-/* Likert 量表容器 */
+/* 同意反对标签 */
+.likert-labels {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.label-agree { color: #33a474; font-weight: 700; font-size: 1rem; margin-right: 15px;}
+.label-disagree { color: #88619a; font-weight: 700; font-size: 1rem; margin-left: 15px;}
+
+/* 16P圆盘量表 */
 .likert-scale {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  flex-wrap: nowrap;
+  gap: 15px; /* PC端间距 */
 }
 
 @media (max-width: 600px) {
   .likert-scale { gap: 8px; }
   .statement { font-size: 1.2rem; }
+  .label-agree, .label-disagree { font-size: 0.85rem; }
 }
 
-.likert-label {
-  font-weight: 700;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-.likert-label.agree { color: #33a474; margin-right: 15px; }
-.likert-label.disagree { color: #88619a; margin-left: 15px; }
-
-/* 圆形按钮 */
 .circle-btn {
   border-radius: 50%;
   border: 2px solid transparent;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
   background: white;
-  display: inline-block;
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* 大小分级 */
-.circle-btn.size-3 { width: 55px; height: 55px; }
-.circle-btn.size-2 { width: 45px; height: 45px; }
-.circle-btn.size-1 { width: 35px; height: 35px; }
-.circle-btn.size-0 { width: 28px; height: 28px; border-color: #94A0B4; }
+/* 圆形大小 */
+.size-3 { width: 55px; height: 55px; }
+.size-2 { width: 45px; height: 45px; }
+.size-1 { width: 35px; height: 35px; }
+.size-0 { width: 30px; height: 30px; border-color: #94A0B4; }
 
 @media (max-width: 600px) {
-  .circle-btn.size-3 { width: 40px; height: 40px; }
-  .circle-btn.size-2 { width: 34px; height: 34px; }
-  .circle-btn.size-1 { width: 28px; height: 28px; }
-  .circle-btn.size-0 { width: 24px; height: 24px; }
-  .likert-label.agree { margin-right: 5px; font-size: 0.8rem; }
-  .likert-label.disagree { margin-left: 5px; font-size: 0.8rem;}
+  .size-3 { width: 44px; height: 44px; }
+  .size-2 { width: 36px; height: 36px; }
+  .size-1 { width: 28px; height: 28px; }
+  .size-0 { width: 24px; height: 24px; }
 }
 
-/* 同意系颜色 (绿色) */
+/* 颜色交互 */
 .circle-btn.agree { border-color: #33a474; }
 .circle-btn.agree:hover { background-color: rgba(51, 164, 116, 0.2); }
-.circle-btn.agree.selected { background-color: #33a474; transform: scale(1.1); box-shadow: 0 4px 10px rgba(51,164,116,0.3); }
+.circle-btn.agree.selected { background-color: #33a474; transform: scale(1.05); }
 
-/* 反对系颜色 (紫色) */
 .circle-btn.disagree { border-color: #88619a; }
 .circle-btn.disagree:hover { background-color: rgba(136, 97, 154, 0.2); }
-.circle-btn.disagree.selected { background-color: #88619a; transform: scale(1.1); box-shadow: 0 4px 10px rgba(136,97,154,0.3); }
+.circle-btn.disagree.selected { background-color: #88619a; transform: scale(1.05); }
 
-/* 中立颜色 (灰色) */
 .circle-btn.neutral:hover { background-color: rgba(148, 160, 180, 0.2); }
-.circle-btn.neutral.selected { background-color: #94A0B4; transform: scale(1.1); }
+.circle-btn.neutral.selected { background-color: #94A0B4; transform: scale(1.05); }
 
+/* 下一页按钮区域 */
+.nav-buttons {
+  text-align: center;
+  padding: 3rem 0;
+}
 
-/* 原生表单隐藏 */
-.radio-holder { display: none; }
-
-.submit-btn {
-  display: block;
-  margin: 0 auto;
-  padding: 15px 40px;
-  background: #33a474;
-  color: white;
+.next-btn {
+  background: #425AED;
+  color: #fff;
+  border: none;
+  padding: 16px 50px;
   font-size: 1.2rem;
   font-weight: 700;
   border-radius: 30px;
-  border: none;
   cursor: pointer;
-  transition: opacity 0.3s;
-  box-shadow: 0 4px 15px rgba(51,164,116,0.3);
+  box-shadow: 0 4px 15px rgba(66, 90, 237, 0.3);
+  transition: all 0.3s;
 }
 
-.submit-btn:hover {
-  opacity: 0.9;
+.next-btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(66, 90, 237, 0.4);
 }
 
-.submit-btn:disabled {
+.next-btn:disabled {
   background: #ccc;
-  cursor: not-allowed;
   box-shadow: none;
-  transform: translateY(0);
+  cursor: not-allowed;
+  transform: none;
 }
 
-/* 结果弹层 */
+.error-text {
+  color: #ee5b5b;
+  margin-top: 15px;
+  display: none;
+  font-weight: bold;
+}
+
+/* 结果区块 */
 #result-wrapper {
   display: none;
-  text-align: center;
-  padding: 3rem;
-  background: #fdfdfd;
-  border-radius: 20px;
+  background: #fff;
+  border-radius: 12px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.08);
-  margin-top: 2rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.res-role-label {
+  font-size: 1.2rem;
+  color: #88619a;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
 }
 
 .type-title {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 800;
   color: #33a474;
-  margin: 1rem 0;
-  letter-spacing: 2px;
+  margin: 0;
+  line-height: 1;
 }
+
 .type-name {
-  font-size: 1.5rem;
-  color: #666;
+  font-size: 2rem;
+  color: #424242;
+  margin-top: 5px;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.dimension-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 2rem;
 }
 
+.dim-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.dim-bar-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-between;
+}
+
+.dim-label {
+  font-size: 0.95rem;
+  font-weight: 700;
+  width: 120px;
+}
+.dim-label.left { text-align: right; margin-right: 15px; }
+.dim-label.right { text-align: left; margin-left: 15px; }
+
+.dim-line {
+  flex: 1;
+  height: 8px;
+  background: #e2e2e2;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dim-fill {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  border-radius: 4px;
+}
 </style>
 
-<div class="mbti-wrapper">
-  
-  <div class="mbti-header" id="test-header">
-    <h1>深入了解你真实的自我</h1>
-    <p>完成本次快速测评，揭示在社交、决策和生活方式上驱动你的核心偏好。（共 8 题）</p>
+<div class="mbti-app">
+  <div class="app-header" id="test-header">
+    <h1>免费性格测试</h1>
+    <p>仅需不足10分钟即可完成。回答务必诚实，即使你并不喜欢答案。</p>
   </div>
 
-  <div class="progress-container" id="progress-container">
-    <div class="progress-bar" id="progress-bar"></div>
-  </div>
-
-  <form id="mbtiForm">
-    <!-- 题目将由 JS 动态生成在这个容器里 -->
-    <div id="questions-container"></div>
-    
-    <div style="text-align: center; margin-top: 3rem; margin-bottom: 5rem;">
-      <button type="button" class="submit-btn" id="finish-btn" disabled onclick="calculateResult()">查看测评结果</button>
-      <p id="error-text" style="color:red; display:none; margin-top:1rem;">请完成所有题目才能查看结果哦</p>
+  <div class="progress-sticky-wrapper" id="progress-wrapper">
+    <div class="progress-header">
+      <span id="pct-text">0%</span>
     </div>
-  </form>
-
-  <!-- 结果区块 -->
-  <div id="result-wrapper">
-    <h2 style="font-size: 1.5rem; color: #88619a;">你的性格类型是：</h2>
-    <div class="type-title" id="res-code">INFP</div>
-    <div class="type-name" id="res-name">调停者</div>
-    <p id="res-desc" style="color: #555; line-height: 1.8; margin-bottom: 3rem; text-align: left; background: #f5f7fa; padding: 1.5rem; border-radius: 10px;"></p>
-    <button class="submit-btn" style="background: #94A0B4; padding: 12px 30px;" onclick="location.reload()">重新测试</button>
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
   </div>
 
+  <div id="pages-container">
+    <!-- JS 将在这里注入分页和试题 -->
+  </div>
+
+  <div id="result-wrapper">
+    <div class="res-role-label">你的真实性格类型是</div>
+    <div class="type-title" id="res-code">INFP-T</div>
+    <div class="type-name" id="res-name">调停者</div>
+    
+    <div style="background: #f8f9fa; padding: 2rem; border-radius: 12px; margin-bottom: 3rem;">
+      <h3 style="margin-top: 0; color:#333; margin-bottom: 2rem;">性格特质图谱</h3>
+      <div id="traits-container"></div>
+    </div>
+    
+    <div id="res-desc" style="text-align: left; color: #555; line-height: 1.8; font-size: 1.1rem; padding: 0 1rem; margin-bottom: 3rem;"></div>
+
+    <button class="next-btn" onclick="location.reload()" style="background:#555;">再测一次</button>
+  </div>
 </div>
 
 <script>
-// 精选8道具有代表性的题目，还原 16P 风格的语境
-const questions = [
-  { id: 'IE_1', axis: 'E', prompt: '你经常结交新朋友。' },
-  { id: 'IE_2', axis: 'I', prompt: '你更喜欢在安静的角落独处，而不是成为众人瞩目的焦点。' },
-  { id: 'SN_1', axis: 'N', prompt: '你经常陷入深深的沉思之中，以至于忽略或忘记了周围发生的事情。' },
-  { id: 'SN_2', axis: 'S', prompt: '你认为依靠已被证明有效的经验比尝试新奇但不确定的方法更靠谱。' },
-  { id: 'TF_1', axis: 'F', prompt: '当朋友悲伤时，你更倾向于提供情感支持，而不是提供解决问题的方法。' },
-  { id: 'TF_2', axis: 'T', prompt: '在辩论中，赢得辩论比确保对方不感到沮丧更重要。' },
-  { id: 'JP_1', axis: 'J', prompt: '你尽可能提前做好旅行计划，不喜欢到了目的地再凭感觉走。' },
-  { id: 'JP_2', axis: 'P', prompt: '与其每天严格遵守日程表，你更喜欢顺其自然，即兴安排时间。' }
+// 完整且专业的 60 道题库结构，对标 16P 标准（划分为5个核心维度：E/I, S/N, T/F, J/P, A/T）
+// 这里以精简的 30 题（每维 6 题）呈现，兼顾快速与专业，分页展示每页 5 题。
+const allQuestions = [
+  // E vs I (内向 vs 外向)
+  { axis: 'E', prompt: '你经常在社交聚会上结交新朋友。' },
+  { axis: 'I', prompt: '你通常避免主动与陌生人搭话。' },
+  { axis: 'E', prompt: '你觉得自己在繁忙热闹的环境中能恢复精力。' },
+  { axis: 'I', prompt: '在一个充满很多人的房间里，你倾向于靠近墙壁避开人群。' },
+  { axis: 'E', prompt: '你喜欢参与需要快速反应的集体团队活动。' },
+  { axis: 'I', prompt: '周末你更倾向于一个人安静地度过，而不是出门社交。' },
+
+  // S vs N (实感 vs 直觉)
+  { axis: 'N', prompt: '你经常沉浸于对未来无限可能性的幻想中。' },
+  { axis: 'S', prompt: '相比讨论抽象的哲学理论，你更喜欢研究立竿见影的实事。' },
+  { axis: 'N', prompt: '你喜欢探讨事物隐藏的意义，而不是仅凭表面现象做判断。' },
+  { axis: 'S', prompt: '你做事极其依赖过去的经验，而不是直觉。' },
+  { axis: 'N', prompt: '你常常被奇思妙想所吸引，即便它们暂时看似毫无用处。' },
+  { axis: 'S', prompt: '你注重事实和细节，很少让想象力脱缰。' },
+
+  // T vs F (理智 vs 情感)
+  { axis: 'T', prompt: '在做决策时，逻辑和事实对你来说比他人的感受更重要。' },
+  { axis: 'F', prompt: '你极度共情，很容易体会到他人的悲伤。' },
+  { axis: 'T', prompt: '如果在工作中发现错误，即使会伤害对方感情，你也会直言不讳。' },
+  { axis: 'F', prompt: '当你朋友遇到困难时，你更倾向于提供情感安慰，而不是解决问题的方案。' },
+  { axis: 'T', prompt: '你倾向于把效率置于“让每个人都开心”之上。' },
+  { axis: 'F', prompt: '你极度不忍心看到别人受到伤害。' },
+
+  // J vs P (评判 vs 探索)
+  { axis: 'J', prompt: '你喜欢在开始一天前，先把所有事情规划得井井有条。' },
+  { axis: 'P', prompt: '你经常直到最后一刻才决定周末的具体安排。' },
+  { axis: 'J', prompt: '你的工作空间通常保持整洁有序。' },
+  { axis: 'P', prompt: '比起严格遵守日程表，你更喜欢随遇而安。' },
+  { axis: 'J', prompt: '你很难忍受一件事悬而未决。' },
+  { axis: 'P', prompt: '你总是在最后一刻迸发出灵感和动力来完成任务。' },
+
+  // A vs T (坚决 vs 动荡)
+  { axis: 'T_A', prompt: '你很容易因为别人的批评而怀疑自己的能力。' }, // 动荡(T)
+  { axis: 'A', prompt: '即使遇到挫折，你通常也能保持自信和冷静。' }, // 坚决(A)
+  { axis: 'T_A', prompt: '你经常会在做出决定后反复懊恼，担心选错了。' },
+  { axis: 'A', prompt: '你很少会为了已经在过去发生的事情感到后悔。' },
+  { axis: 'T_A', prompt: '在感受到别人对你有一点点不满时，你会异常焦虑。' },
+  { axis: 'A', prompt: '你觉得自己通常能很好地掌控自己的情绪。' }
 ];
 
-// 大数据量表解析档案
+const QUESTIONS_PER_PAGE = 5;
+const totalPages = Math.ceil(allQuestions.length / QUESTIONS_PER_PAGE);
+
+let currentPage = 0;
+const userAnswers = new Array(allQuestions.length).fill(null); 
+
 const mbtiProfiles = {
-  "INTJ": { name: "建筑师", desc: "富有想象力和战略性的思想家，一切皆在计划之中。你不仅能看到事物原本的样子，还能看到它们可能成为的样子。" },
-  "INTP": { name: "逻辑学家", desc: "具有创造力的发明家，对知识有着止不住的渴望。你热爱理论，并愿意花费大把时间去验证和打磨自己的想法。" },
-  "ENTJ": { name: "指挥官", desc: "大胆、富有想象力且意志强大的领导者，总能找到或创造解决办法。在追求目标的道路上，你冷静而果断。" },
-  "ENTP": { name: "辩论家", desc: "聪明好奇的思想者，不会放弃任何智力上的挑战。你享受解构和重建观点，在思维的碰撞中寻找火花。" },
-  "INFJ": { name: "提倡者", desc: "安静而神秘，同时鼓舞人心且不知疲倦的理想主义者。你拥有深刻的直觉，致力于让世界变得更好。" },
-  "INFP": { name: "调停者", desc: "诗意、善良的利他主义者，总是热情地为正当理由提供帮助。你的内心世界丰富且充实，富有深刻的同理心。" },
-  "ENFJ": { name: "主人公", desc: "富有魅力、鼓舞人心的领导者，有使听众着迷的能力。天生的教育家，乐于看见身边的人成长与蜕变。" },
-  "ENFP": { name: "竞选者", desc: "热情、有创造力、爱社交的自由精灵，总能找到理由微笑。你能够洞察言辞背后的情感与动机。" },
-  "ISTJ": { name: "物流师", desc: "实际且注重事实的个人，可靠性不容怀疑。你尊重传统与秩序，一板一眼地履行着自己的职责。" },
-  "ISFJ": { name: "守卫者", desc: "非常专注而温暖的守护者，时刻准备着保护爱着的人们。你有极强的责任感，对细节有着异乎寻常的掌控力。" },
-  "ESTJ": { name: "总经理", desc: "出色的管理者，在管理事物或人的方面无与伦比。你坚信法律和规则的价值，是团队中稳健的支柱。" },
-  "ESFJ": { name: "执政官", desc: "极度关心他人、爱社交且受欢迎的人，总是热心提供帮助。极有责任心，希望为所有人营造和谐的氛围。" },
-  "ISTP": { name: "鉴赏家", desc: "大胆而实际的实验家，擅长探索任何形式的工具。你是安静的观察者，却能在危机来临迅速反应。" },
-  "ISFP": { name: "探险家", desc: "灵活、有魅力的艺术家，时刻准备着探索和体验新鲜事物。你讨厌被束缚，通过美学与行为探索生活。" },
-  "ESTP": { name: "企业家", desc: "聪明、精力充沛且十分善于感知的人，真正地享受在边缘生活。热爱冒险，善于在危机中寻找机遇。" },
-  "ESFP": { name: "表演者", desc: "自发、精力充沛而热情的表演者——生活在他们周围永不无聊。你是天生的活跃分子，享受聚光灯下的每一秒。" }
+  "INTJ": { name: "建筑师", desc: "富有想象力和战略性的思想家，一切皆在计划之中。" },
+  "INTP": { name: "逻辑学家", desc: "具有创造力的发明家，对知识有着止不住的渴望。" },
+  "ENTJ": { name: "指挥官", desc: "大胆、富有想象力且意志强大的领导者，总能找到或创造解决办法。" },
+  "ENTP": { name: "辩论家", desc: "聪明好奇的思想者，不会放弃任何智力上的挑战。" },
+  "INFJ": { name: "提倡者", desc: "安静而神秘，同时鼓舞人心且不知疲倦的理想主义者。" },
+  "INFP": { name: "调停者", desc: "诗意、善良的利他主义者，总是热情地为正当理由提供帮助。" },
+  "ENFJ": { name: "主人公", desc: "富有魅力、鼓舞人心的领导者，有使听众着迷的能力。" },
+  "ENFP": { name: "竞选者", desc: "热情、有创造力、爱社交的自由精灵，总能找到理由微笑。" },
+  "ISTJ": { name: "物流师", desc: "实际且注重事实的个人，可靠性不容怀疑。" },
+  "ISFJ": { name: "守卫者", desc: "非常专注而温暖的守护者，时刻准备着保护爱着的人们。" },
+  "ESTJ": { name: "总经理", desc: "出色的管理者，在管理事物或人的方面无与伦比。" },
+  "ESFJ": { name: "执政官", desc: "极度关心他人、爱社交且受欢迎的人，总是热心提供帮助。" },
+  "ISTP": { name: "鉴赏家", desc: "大胆而实际的实验家，擅长使用任何形式的工具。" },
+  "ISFP": { name: "探险家", desc: "灵活有魅力的艺术家，时刻准备着探索和体验新鲜事物。" },
+  "ESTP": { name: "企业家", desc: "聪明、精力充沛且十分善于感知的人，真正地享受在边缘生活。" },
+  "ESFP": { name: "表演者", desc: "自发、精力充沛而热情——生活在他们周围永不无聊。" }
 };
 
-const scores = {}; // 记录每题的得分
-let answeredCount = 0;
-
-function renderQuestions() {
-  const container = document.getElementById('questions-container');
-  questions.forEach((q, index) => {
-    container.innerHTML += `
-      <div class="question-block" id="qb-${index}">
-        <div class="statement">${q.prompt}</div>
-        <div class="likert-scale">
-          <span class="likert-label agree">同意</span>
-          <div class="circle-btn size-3 agree" onclick="selectOpt(${index}, '${q.axis}', 3)"></div>
-          <div class="circle-btn size-2 agree" onclick="selectOpt(${index}, '${q.axis}', 2)"></div>
-          <div class="circle-btn size-1 agree" onclick="selectOpt(${index}, '${q.axis}', 1)"></div>
-          <div class="circle-btn size-0 neutral" onclick="selectOpt(${index}, 'Neutral', 0)"></div>
-          <div class="circle-btn size-1 disagree" onclick="selectOpt(${index}, '${q.axis}', -1)"></div>
-          <div class="circle-btn size-2 disagree" onclick="selectOpt(${index}, '${q.axis}', -2)"></div>
-          <div class="circle-btn size-3 disagree" onclick="selectOpt(${index}, '${q.axis}', -3)"></div>
-          <span class="likert-label disagree">反对</span>
+function initApp() {
+  const container = document.getElementById('pages-container');
+  
+  for(let p = 0; p < totalPages; p++) {
+    const pageDiv = document.createElement('div');
+    pageDiv.className = `page-group ${p === 0 ? 'active' : ''}`;
+    pageDiv.id = `page-${p}`;
+    
+    // 生成题目
+    const startIdx = p * QUESTIONS_PER_PAGE;
+    const endIdx = Math.min(startIdx + QUESTIONS_PER_PAGE, allQuestions.length);
+    
+    for(let i = startIdx; i < endIdx; i++) {
+        pageDiv.innerHTML += `
+        <div class="question-row" id="row-${i}">
+          <div class="statement">${allQuestions[i].prompt}</div>
+          <div class="likert-labels">
+            <span class="label-agree">同意</span>
+            <div class="likert-scale">
+                <div class="circle-btn size-3 agree" onclick="selectAnswer(${i}, 3)"></div>
+                <div class="circle-btn size-2 agree" onclick="selectAnswer(${i}, 2)"></div>
+                <div class="circle-btn size-1 agree" onclick="selectAnswer(${i}, 1)"></div>
+                <div class="circle-btn size-0 neutral" onclick="selectAnswer(${i}, 0)"></div>
+                <div class="circle-btn size-1 disagree" onclick="selectAnswer(${i}, -1)"></div>
+                <div class="circle-btn size-2 disagree" onclick="selectAnswer(${i}, -2)"></div>
+                <div class="circle-btn size-3 disagree" onclick="selectAnswer(${i}, -3)"></div>
+            </div>
+            <span class="label-disagree">反对</span>
+          </div>
         </div>
+      `;
+    }
+    
+    // 生成控制按钮
+    const isLast = (p === totalPages - 1);
+    pageDiv.innerHTML += `
+      <div class="nav-buttons">
+        <button class="next-btn" id="next-btn-${p}" onclick="${isLast ? 'submitTest()' : `nextPage(${p})`}">
+          ${isLast ? '查看测评结果' : '下一页 ➔'}
+        </button>
+        <div class="error-text" id="err-${p}">请先必须回答页面上的所有问题，才能继续。</div>
       </div>
     `;
-  });
+    container.appendChild(pageDiv);
+  }
 }
 
-function selectOpt(qIndex, axis, value) {
-  // 视觉反馈
-  const block = document.getElementById(`qb-${qIndex}`);
-  const circles = block.querySelectorAll('.circle-btn');
+function selectAnswer(qIdx, val) {
+  // DOM 视觉反馈
+  const row = document.getElementById(`row-${qIdx}`);
+  const circles = row.querySelectorAll('.circle-btn');
   circles.forEach(c => c.classList.remove('selected'));
-  // 找出对应的圆
-  // 索引映射: 3->0, 2->1, 1->2, 0->3, -1->4, -2->5, -3->6
-  const mapIndex = { "3": 0, "2": 1, "1": 2, "0": 3, "-1": 4, "-2": 5, "-3": 6 };
-  circles[mapIndex[value]].classList.add('selected');
   
-  // 记录进度和答案
-  if (scores[qIndex] === undefined) {
-    answeredCount++;
-  }
+  const mapIdx = { "3": 0, "2": 1, "1": 2, "0": 3, "-1": 4, "-2": 5, "-3": 6 };
+  circles[mapIdx[val]].classList.add('selected');
   
-  // 对于反对（负分），如果是测 E，那么实际上更偏向 I。
-  // 我们最终得分逻辑：E vs I：+ 表示 E， - 表示 I （基于问题的正向指向）
-  scores[qIndex] = { axis: axis, val: value };
+  // 数据记录
+  userAnswers[qIdx] = val;
+  updateGlobalProgress();
   
-  updateProgress();
+  // 清除错误提示
+  const pIdx = Math.floor(qIdx / QUESTIONS_PER_PAGE);
+  document.getElementById(`err-${pIdx}`).style.display = 'none';
 }
 
-function updateProgress() {
-  const pct = (answeredCount / questions.length) * 100;
+function updateGlobalProgress() {
+  const answered = userAnswers.filter(a => a !== null).length;
+  const pct = Math.round((answered / allQuestions.length) * 100);
   document.getElementById('progress-bar').style.width = pct + '%';
-  if (answeredCount === questions.length) {
-    const btn = document.getElementById('finish-btn');
-    btn.disabled = false;
-    btn.style.boxShadow = "0 6px 15px rgba(51,164,116,0.5)";
-    btn.style.transform = "scale(1.05)";
-    document.getElementById('error-text').style.display = 'none';
-  }
+  document.getElementById('pct-text').innerText = pct + '%';
 }
 
-function calculateResult() {
-  if (answeredCount < questions.length) {
-    document.getElementById('error-text').style.display = 'block';
+function validatePage(pIdx) {
+  const startIdx = pIdx * QUESTIONS_PER_PAGE;
+  const endIdx = Math.min(startIdx + QUESTIONS_PER_PAGE, allQuestions.length);
+  for(let i=startIdx; i<endIdx; i++) {
+    if(userAnswers[i] === null) return false;
+  }
+  return true;
+}
+
+function nextPage(pIdx) {
+  if(!validatePage(pIdx)) {
+    document.getElementById(`err-${pIdx}`).style.display = 'block';
+    // 自动滚动到第一个未答题
+    const startIdx = pIdx * QUESTIONS_PER_PAGE;
+    const endIdx = Math.min(startIdx + QUESTIONS_PER_PAGE, allQuestions.length);
+    for(let i=startIdx; i<endIdx; i++) {
+        if(userAnswers[i] === null) {
+            document.getElementById(`row-${i}`).scrollIntoView({behavior: 'smooth', block: 'center'});
+            break;
+        }
+    }
     return;
   }
   
-  // 核心维度的分数累积
-  const sums = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
-  
-  for(let i=0; i<questions.length; i++) {
-    const ans = scores[i];
-    // 此处简化：如果此题 axis 为 E，选同意(正值)，那么E得分，否则如果是反向（反对则是负值），则为其对立面I得分
-    const baseAxis = questions[i].axis; // 题目的主要倾向
-    let opposite = "";
-    if(baseAxis === 'E') opposite = 'I'; if(baseAxis === 'I') opposite = 'E';
-    if(baseAxis === 'S') opposite = 'N'; if(baseAxis === 'N') opposite = 'S';
-    if(baseAxis === 'T') opposite = 'F'; if(baseAxis === 'F') opposite = 'T';
-    if(baseAxis === 'J') opposite = 'P'; if(baseAxis === 'P') opposite = 'J';
-    
-    if (ans.val > 0) {
-      sums[baseAxis] += ans.val;
-    } else if (ans.val < 0) {
-      sums[opposite] += Math.abs(ans.val);
-    }
-    // 中立0分双方不加分
-  }
-
-  // 计算四个维度的结果
-  let type = "";
-  type += (sums['E'] >= sums['I']) ? "E" : "I";
-  type += (sums['N'] >= sums['S']) ? "N" : "S";
-  type += (sums['F'] >= sums['T']) ? "F" : "T";
-  type += (sums['J'] >= sums['P']) ? "J" : "P";
-  
-  // 针对存在平票或者微弱倾向的兜底（此处采用了直观比大小）
-  
-  // 隐藏表单，显示结果
-  document.getElementById('mbtiForm').style.display = 'none';
-  document.getElementById('test-header').style.display = 'none';
-  document.getElementById('progress-container').style.display = 'none';
-  
-  const resBox = document.getElementById('result-wrapper');
-  resBox.style.display = 'block';
-  setTimeout(() => { resBox.style.opacity = 1; }, 50);
-  
-  document.getElementById('res-code').innerText = type;
-  document.getElementById('res-name').innerText = mbtiProfiles[type].name;
-  document.getElementById('res-desc').innerText = mbtiProfiles[type].desc;
+  window.scrollTo({top: 0});
+  document.getElementById(`page-${pIdx}`).classList.remove('active');
+  document.getElementById(`page-${pIdx+1}`).classList.add('active');
+  currentPage++;
 }
 
-// 初始化渲染
-window.onload = () => {
-  renderQuestions();
-};
+function submitTest() {
+  if(!validatePage(totalPages - 1)) {
+    document.getElementById(`err-${totalPages - 1}`).style.display = 'block';
+    return;
+  }
+  
+  // 开始计分
+  const scores = { E:0, I:0, S:0, N:0, T:0, F:0, J:0, P:0, A:0, T_A:0 };
+  
+  allQuestions.forEach((q, idx) => {
+    const val = userAnswers[idx];
+    const axis = q.axis;
+    let opp = '';
+    if(axis==='E') opp='I'; else if(axis==='I') opp='E';
+    else if(axis==='S') opp='N'; else if(axis==='N') opp='S';
+    else if(axis==='T') opp='F'; else if(axis==='F') opp='T';
+    else if(axis==='J') opp='P'; else if(axis==='P') opp='J';
+    else if(axis==='A') opp='T_A'; else if(axis==='T_A') opp='A';
+
+    if(val > 0) scores[axis] += val;
+    else if(val < 0) scores[opp] += Math.abs(val);
+  });
+
+  // 判断性格代码
+  const E_pct = Math.round((scores.E / (scores.E + scores.I || 1)) * 100);
+  const N_pct = Math.round((scores.N / (scores.S + scores.N || 1)) * 100);
+  const T_pct = Math.round((scores.T / (scores.T + scores.F || 1)) * 100);
+  const J_pct = Math.round((scores.J / (scores.J + scores.P || 1)) * 100);
+  const A_pct = Math.round((scores.A / (scores.A + scores.T_A || 1)) * 100);
+
+  let type = "";
+  type += E_pct >= 50 ? "E" : "I";
+  type += N_pct >= 50 ? "N" : "S";
+  type += T_pct >= 50 ? "T" : "F";
+  type += J_pct >= 50 ? "J" : "P";
+  const identity = A_pct >= 50 ? "A" : "T";
+
+  document.getElementById('test-header').style.display = 'none';
+  document.getElementById('progress-wrapper').style.display = 'none';
+  document.getElementById('pages-container').style.display = 'none';
+
+  const resWrap = document.getElementById('result-wrapper');
+  resWrap.style.display = 'block';
+  setTimeout(()=> window.scrollTo({top: 0, behavior: 'smooth'}), 100);
+
+  document.getElementById('res-code').innerText = `${type}-${identity}`;
+  document.getElementById('res-name').innerText = mbtiProfiles[type].name;
+  
+  let descHtml = `您的性格类型极其独特：<strong>${mbtiProfiles[type].desc}</strong> <br><br>
+  您属于 <strong>${type}</strong> 类型，后缀 <strong>${identity === 'A' ? '坚决 (Assertive)' : '动荡 (Turbulent)'}</strong> 代表您在压力下的自我认同模式。<br><br>`;
+  document.getElementById('res-desc').innerHTML = descHtml;
+
+  // 渲染五维雷达条图
+  renderTraitBar('精神', '外向 (Extraverted)', E_pct, '内向 (Introverted)', 100-E_pct, '#1bbf89');
+  renderTraitBar('能量', '直觉 (Intuitive)', N_pct, '现实 (Observant)', 100-N_pct, '#e4b622');
+  renderTraitBar('本性', '逻辑 (Thinking)', T_pct, '感受 (Feeling)', 100-T_pct, '#4298b4');
+  renderTraitBar('战术', '计划 (Judging)', J_pct, '探索 (Prospecting)', 100-J_pct, '#88619a');
+  renderTraitBar('身份', '坚决 (Assertive)', A_pct, '动荡 (Turbulent)', 100-A_pct, '#f25e62');
+}
+
+function renderTraitBar(dimName, leftName, leftPct, rightName, rightPct, color) {
+  const container = document.getElementById('traits-container');
+  let leftColor = leftPct >= rightPct ? color : '#e2e2e2';
+  let rightColor = rightPct > leftPct ? color : '#e2e2e2';
+  let fillHtml = ``;
+  if (leftPct >= rightPct) {
+      fillHtml = `<div class="dim-fill" style="background:${color}; left:0; width:${leftPct}%;"></div>`;
+  } else {
+      fillHtml = `<div class="dim-fill" style="background:${color}; right:0; width:${rightPct}%;"></div>`;
+  }
+
+  container.innerHTML += `
+    <div class="dimension-row">
+      <div class="dim-title">${dimName}特质</div>
+      <div class="dim-bar-wrapper">
+        <div class="dim-label left" style="color:${leftColor}">${leftPct}%<br><span style="font-size:0.85rem">${leftName}</span></div>
+        <div class="dim-line">
+            ${fillHtml}
+        </div>
+        <div class="dim-label right" style="color:${rightColor}">${rightPct}%<br><span style="font-size:0.85rem">${rightName}</span></div>
+      </div>
+    </div>
+  `;
+}
+
+window.onload = initApp;
 </script>
 {% endraw %}
