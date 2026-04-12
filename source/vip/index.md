@@ -204,6 +204,127 @@ body { background-color: #f8fafc; }
   box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.3);
 }
 
+/* 档案介绍 */
+.profile-section {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+  background: white;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f1f5f9;
+}
+.profile-content {
+  flex: 1;
+}
+.profile-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+.profile-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+.profile-tag {
+  background: #f1f5f9;
+  color: #3b82f6;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.profile-desc {
+  color: #475569;
+  line-height: 1.6;
+}
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+}
+
+/* 社会证明 (评价) */
+.social-proof {
+  max-width: 1000px;
+  margin: 5rem auto;
+  text-align: center;
+}
+.social-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 1rem;
+}
+.social-subtitle {
+  color: #64748b;
+  margin-bottom: 3rem;
+}
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+.testimonial-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  border: 1px solid #f1f5f9;
+}
+.testimonial-text {
+  color: #475569;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.author-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ede9fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #8b5cf6;
+}
+.author-info {
+  display: flex;
+  flex-direction: column;
+}
+.author-name {
+  font-weight: 700;
+  color: #0f172a;
+  font-size: 0.95rem;
+}
+.author-role {
+  color: #64748b;
+  font-size: 0.85rem;
+}
+.stat-badge { font-weight: bold; color: #8b5cf6; background: #ede9fe; padding: 4px 10px; border-radius: 12px; font-size: 0.9rem; }
+.feature-list li span.emoji-icon { font-size: 1.25rem; margin-right: 12px; flex-shrink: 0; line-height: 1; margin-top: 2px; }
+
 /* FAQ 区块 */
 .faq-section {
   max-width: 800px;
@@ -327,8 +448,25 @@ body { background-color: #f8fafc; }
   <div class="vip-hero">
     <h1 class="vip-title">成为马老师的同路人（高级VIP圈层）</h1>
     <p class="vip-subtitle">
-      技术架构、底层逻辑、商业洞察与深度理财。不走弯路，直击核心，专家级的全领域降维护航。
+      <strong style="color: #3b82f6;">不务正业的理性浪漫：</strong>用技术逻辑拆解理财，用哲学智慧慰藉失业焦虑。<br>
+      已有 <span class="stat-badge">300+</span> 位同路人加入，这里是您专属的全领域降维护航圈。
     </p>
+  </div>
+
+  <!-- 个人背书档案 -->
+  <div class="profile-section">
+    <img src="/img/tx.webp" onerror="this.src='https://i.lxlad.com/file/1754020968962_6c02a7b6cf7f28edfe25841e21b7ffbc.jpg'" alt="马老师" class="profile-avatar">
+    <div class="profile-content">
+      <div class="profile-title">马老师 (Sisu)</div>
+      <div class="profile-tags">
+        <span class="profile-tag">全栈技术专家</span>
+        <span class="profile-tag">理财逆商操盘手</span>
+        <span class="profile-tag">心理战役同盟</span>
+      </div>
+      <div class="profile-desc">
+        拥有长期互联网技术与商业落地实操经验，深度赋能 AI 生产力落地与多端全栈架构。我不仅协助开发者破局技术瓶颈，更跨界拆解金融理财套利原理，拒绝随波逐流的“韭菜”命运。在当下严峻的大环境中，凭借深厚心理学积淀与实战背景，我将陪你拆解职场失业危机，给出最切中要害的点拨、情绪价值以及实操突围纲领。
+      </div>
+    </div>
   </div>
 
   <!-- 核心特权网格 -->
@@ -340,13 +478,13 @@ body { background-color: #f8fafc; }
     </div>
     <div class="feature-card">
       <div class="feature-icon">💻</div>
-      <div class="feature-title">全域硬核技术顾问</div>
-      <div class="feature-desc">从底层网络架构开发到前沿 AI 生产力落地。遇到极小众报错或架构瓶颈？一问即通，专家级手把手为您破局。</div>
+      <div class="feature-title">全域硬核技术与 AI 赋能</div>
+      <div class="feature-desc">从底层网络架构开发到前沿全栈 AI 生产力落地。遇到极小众报错或架构瓶颈？一问即通，专家级手把手为您破局。</div>
     </div>
     <div class="feature-card">
       <div class="feature-icon">🧠</div>
-      <div class="feature-title">心理战役与逆境破局</div>
-      <div class="feature-desc">万能并不是天生的，而是无数次重塑出来的。帮你拆解职场失业危机与心理内耗死结，做您坚不可摧的思想后台。</div>
+      <div class="feature-title">心理战役与职场失业突围</div>
+      <div class="feature-desc">不仅是心理咨询，更是实操的突围路径。帮你拆解职场危机与情绪内耗，给足同理心的同时提供降维打击的方法论。</div>
     </div>
   </div>
 
@@ -360,53 +498,91 @@ body { background-color: #f8fafc; }
       
       <ul class="feature-list">
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          解锁全站所有加密精华核心文章
+          <span class="emoji-icon">📖</span>
+          解锁全站所有加密精华核心文章（每周硬核内容高频更新）
         </li>
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          马老师亲自坐镇，各领域基础图文答疑
+          <span class="emoji-icon">💬</span>
+          专属内部群基础图文答疑，马老师本人亲自坐镇
         </li>
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+          <span class="emoji-icon">📊</span>
           共享一线闭门理财知识点与逻辑拆解
         </li>
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          进入 VIP 专属内部匿名交流频道
+          <span class="emoji-icon">🤝</span>
+          进入 VIP 专属内部匿名交流频道，链接同频优质人脉
         </li>
       </ul>
       
-      <button class="cta-btn cta-gold" onclick="openPaymentModal('黄金圈会员')">立刻开启季度畅享</button>
+      <button class="cta-btn cta-gold" onclick="openPaymentModal('黄金圈会员')">立刻加入同路人圈层</button>
     </div>
 
     <!-- 钻石会员 -->
     <div class="price-card popular plan-diamond">
-      <div class="popular-badge">无死角支持 / 私人智囊团</div>
+      <div class="popular-badge">最高性价比 / 最受推崇</div>
       <div class="plan-name">钻石圈会员</div>
       <div class="plan-price">¥899 <sub>/ 季度</sub></div>
-      <div class="plan-desc">专家级降维打击，全领域一对一赋能，直接用我的经验为你赚钱/省命。</div>
+      <div class="plan-desc">专家级降维打击，全领域一对一赋能，直接用我的经验为你铺路！</div>
       
       <ul class="feature-list">
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          <strong>完全包含【黄金圈】所有权益</strong>
+          <span class="emoji-icon">✨</span>
+          <strong style="color: #1e293b;">完全包含【黄金圈】所有基础权益</strong>
         </li>
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          无限制高优先级的在线人工疑问详解
+          <span class="emoji-icon">⚡</span>
+          <strong style="color: #7c3aed;">无限制高优先级的在线人工疑问详解，随时呼叫响应</strong>
         </li>
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          <strong>不定期一对一连线：手把手技术排雷 或 资产矩阵诊断</strong>
+          <span class="emoji-icon">💻</span>
+          <strong style="color: #7c3aed;">不定期 1v1 深度连线，手把手技术排雷或资产矩阵诊断</strong>
         </li>
         <li>
-          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-          <strong>定制个人级职业突围与危机心理应急方案</strong>
+          <span class="emoji-icon">🎯</span>
+          <strong style="color: #7c3aed;">定制个人职场突围方案（含一次深度沟通+专属PDF行动建议书）</strong>
         </li>
       </ul>
       
-      <button class="cta-btn cta-diamond" onclick="openPaymentModal('钻石圈会员')">升级季度钻石顾问</button>
+      <button class="cta-btn cta-diamond" onclick="openPaymentModal('钻石圈会员')">立即升级钻石顾问赋能</button>
+    </div>
+  </div>
+
+  <!-- 社会证明 -->
+  <div class="social-proof">
+    <h2 class="social-title">听听同路人的真实反馈</h2>
+    <div class="social-subtitle">沉浸式参与我们的圈层，他们有这些改变</div>
+    <div class="testimonials">
+      <div class="testimonial-card">
+        <div class="testimonial-text">"跟着马老师重新梳理了资产架构，避开了今年好几个大坑，早知道早点加入了！这里的信息差价值真的远超门票。"</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info">
+            <span class="author-name">Alex / 互联网大厂后端</span>
+            <span class="author-role">钻石圈会员</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">"在面临失业和技术转型的焦虑期，心理战役板块给了我极大的力量，马老师不仅帮忙疏导情绪，还给出了极具操作性的突围路线图。"</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">L</div>
+          <div class="author-info">
+            <span class="author-name">林同学 / 前端转 AI 架构</span>
+            <span class="author-role">钻石圈会员</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-text">"之前看博客就很受用，加入社群后发现交流圈子质量极高，大家都是热爱深耕的同行。解答问题总是一针见血。"</div>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info">
+            <span class="author-name">Ryan / 全栈开发者</span>
+            <span class="author-role">黄金圈会员</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -416,12 +592,17 @@ body { background-color: #f8fafc; }
     
     <div class="faq-item">
       <div class="faq-q">🤔 为什么只有季度订阅，不能一次性终身买断？</div>
-      <div class="faq-a">信息是有时效的，无论是最前沿的技术栈，还是变幻莫测的金融理财局势。季度制能倒逼我不断为您输出最当下的硬核知识，同时也保证服务的响应质量。“终身”只是一种噱头，陪伴且不断成长的季度周期才是最负责任的契约。</div>
+      <div class="faq-a">信息是有时效的，无论是最前沿的技术栈，还是变幻莫测的金融理财局势。季度制能倒逼我不断为您输出最当下的硬核知识，同时也保证服务的响应质量。“终身”只是一种噱头，陪伴且不断成长互助的季度周期才是最负责任的契约。</div>
     </div>
 
     <div class="faq-item">
-      <div class="faq-q">💻 远程协助和专家答疑的范畴是什么？</div>
-      <div class="faq-a">包罗万象。你在开发里遇到的疑难报错，理财规划中的资产盲区，甚至因为大环境被裁员造成的崩溃心理。都可以直接通过私密方式联系我。我是你的全域防火墙。</div>
+      <div class="faq-q">💻 远程协助和定制咨询的范畴是什么？</div>
+      <div class="faq-a">包罗万象。你在开发里遇到的疑难报错（从底层网络到AI工程）、理财规划中的资产盲区，甚至因为大环境裁员造成的崩溃心理。都可以直接通过私秘方式联系我。我是你的全域防火墙。</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">🛡️ 关于退款政策与内容有效性，如何保障？</div>
+      <div class="faq-a">由于知识服务与深度咨询的特殊性，一旦开通原则上不支持无理由退款。但我承诺，订阅期内的精华文章会在到期后仍为您提供归档查看方式。同时，如果我的专属咨询（钻石圈）完全未能为您提供任何实质性破局思路与情绪疏解，支持酌情退还部分订阅费。这是我的专业底气与责任心。</div>
     </div>
   </div>
 
