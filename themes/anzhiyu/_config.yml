@@ -6,12 +6,24 @@ menu:
 
   探索:
     心理学随笔: /categories/心理学随笔/ || anzhiyu-icon-heartbeat
-    自动化与部署: /categories/自动化与部署/ || anzhiyu-icon-robot
     社会纪实: /categories/社会纪实/ || anzhiyu-icon-camera-retro
     避雷专区: /blacklist/ || anzhiyu-icon-shield-halved
     心理自测: /mental-test/ || anzhiyu-icon-heart-pulse
     MBTI测评: /mbti-test/ || anzhiyu-icon-brain
     核心会员: /vip/ || anzhiyu-icon-crown
+
+  科学上网:
+    DockerHub镜像: https://Docker.CMLiussss.net/ || anzhiyu-icon-docker
+    GitHub镜像: https://Github.CMLiussss.net/ || anzhiyu-icon-github
+    ProxyIP验证: https://check.proxyip.cmliussss.net/ || anzhiyu-icon-shield-halved
+    Socks5验证: https://check.socks5.cmliussss.net/ || anzhiyu-icon-shield-halved
+    DoH: https://DoH.cmliussss.net/ || anzhiyu-icon-link
+    CMoonTV: https://CMoonTV.dedyn.io || anzhiyu-icon-tv
+    订阅转换: https://SUB.CMLiussss.com/ || anzhiyu-icon-bolt
+    WebSSH: https://SSH.CMLiussss.net/ || anzhiyu-icon-terminal
+    Nezha面板: https://nezha.cmliussss.com/ || anzhiyu-icon-server
+    CF优选域名: https://cf.090227.xyz/ || anzhiyu-icon-cloud
+
 
 
   不要点:
