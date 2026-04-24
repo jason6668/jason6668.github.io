@@ -7,8 +7,7 @@ cover: https://tc.688650.xyz/file/1777041676937_image.png
 date: '2026-04-11'
 sticky: ''
 tags:
-- N8N
-- 自动化
+- 人生管理疗
 title: 火锅式人生管理疗法：莫慌，先把锅底整明白
 updated: '2026-04-24T22:14:36.565+08:00'
 ---
