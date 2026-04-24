@@ -1,16 +1,18 @@
 ---
-title: CF-Workers-Raw：轻松安全访问 GitHub 私有仓库原始文件
-date: 2026-04-12
-cover: https://tc.688650.xyz/2023/05/27/647166c44b414.webp
+abbrlink: ''
 categories:
-  - 科学上网
+- 科学上网
+cover: https://tc.688650.xyz/file/1777042414004_image.png
+date: '2026-04-12'
+sticky: ''
 tags:
-  - Cloudflare
-  - Workers
-  - GitHub
-  - 私库访问
+- Cloudflare
+- Workers
+- GitHub
+- 私库访问
+title: CF-Workers-Raw：轻松安全访问 GitHub 私有仓库原始文件
+updated: '2026-04-24T22:48:38.465+08:00'
 ---
-
 # CF-Workers-Raw：轻松安全访问 GitHub 私有仓库
 
 这个项目允许你通过 Cloudflare Workers 安全地访问 GitHub 私有仓库中的原始文件，无需直接暴露你的 GitHub 令牌。非常适合那些需要通过网络分发私有配置文件的场景。
@@ -58,34 +60,46 @@ tags:
 假设你的 Cloudflare Workers 项目部署在 `raw.090227.xyz`，而你要访问的私有文件是 `https://raw.githubusercontent.com/cmliu/CF-Workers-Raw/main/_worker.js`。
 
 ### 方法1：未设置变量参数的临时用法
+
 通过 URL 参数传递令牌：
+
 ```text
 https://raw.090227.xyz/cmliu/CF-Workers-Raw/main/_worker.js?token=你的GitHub令牌
 ```
+
 或者完整版：
+
 ```text
 https://raw.090227.xyz/https://raw.githubusercontent.com/cmliu/CF-Workers-Raw/main/_worker.js?token=你的GitHub令牌
 ```
 
 ### 方法2：只设置 `GH_TOKEN` 变量（适合固定访问）
+
 如果你经常访问同一个私有仓库，可以在 Workers 设置中添加一个名为 `GH_TOKEN` 的环境变量。这样，你就可以直接访问，无需把 Token 拼在 URL 里：
+
 ```text
 https://raw.090227.xyz/cmliu/CF-Workers-Raw/main/_worker.js
 ```
 
 ### 方法3：添加额外的访问控制（推荐⭐最安全）
+
 为了更高的安全性，你可以同时设置两个变量：
+
 - `GH_TOKEN`：真实的 GitHub 令牌
 - `TOKEN`：一个自定义的访问密码（比如 `sd123123`）
 
 然后，你的安全 URL 会是这样的：
+
 ```text
 https://raw.090227.xyz/cmliu/CF-Workers-Raw/main/_worker.js?token=sd123123
 ```
+
 这种方法提供了双重安全：即使有人猜到了你的自定义密钥 `sd123123`，他们仍然无法直接拿到你的 GitHub Token！
 
 ### 方法4：添加 GH_NAME、GH_REPO 隐藏你的库信息
+
 为了更高的隐私性，你可以把你的仓库信息也藏在环境变量里：
+
 - `GH_NAME`：例如设置 `cmliu`。此时 URL 为 `https://raw.090227.xyz/CF-Workers-Raw/main/_worker.js?token=sd123123`
 - `GH_REPO`：例如设置 `CF-Workers-Raw`。此时 URL 简化为 `https://raw.090227.xyz/main/_worker.js?token=sd123123`
 - `GH_BRANCH`：例如设置 `main`。URL 终极简化版为 `https://raw.090227.xyz/_worker.js?token=sd123123`
