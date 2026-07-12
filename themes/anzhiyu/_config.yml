@@ -788,7 +788,7 @@ aside:
   card_weixin:
     enable: true
     face: https://tc.688650.xyz/file/1776004535955_图片.png
-    backFace: https://tc.688650.xyz/file/1776004627241_图片.png
+    backFace: https://tc.8818618.xyz/file/1783855313712_image.png
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
