@@ -2,7 +2,7 @@
 abbrlink: ''
 categories:
 - 科学上网
-cover: https://tc.688650.xyz/file/1777079850553_image.png
+cover: https://tc.8818618.xyz/file/1783842510171_image.png
 date: '2026-04-12'
 sticky: ''
 tags:
@@ -10,7 +10,7 @@ tags:
 - SUBWEB
 - 隐私保护
 title: 部署订阅转换：WEB前端 - 多种主流方案详解
-updated: '2026-04-25T09:19:01.533+08:00'
+updated: '2026-07-12T15:50:35.446+08:00'
 ---
 # 🔄 部署订阅转换：WEB前端 💎 多种主流方案详解
 
@@ -52,7 +52,7 @@ updated: '2026-04-25T09:19:01.533+08:00'
      ```
    - `src\views\Subconverter.vue` 文件示例，添加进后端下方的列表中：
      ```js
-     customBackend: {    
+     customBackend: {  
          "马老师专属后端": "https://你的后端地址",
          // ...
      }
