@@ -2,7 +2,7 @@
 abbrlink: ''
 categories:
 - 科学上网
-cover: https://tc.688650.xyz/file/1777042414004_image.png
+cover: https://tc.8818618.xyz/file/1783842510171_image.png
 date: '2026-04-12'
 sticky: ''
 tags:
@@ -11,7 +11,7 @@ tags:
 - GitHub
 - 私库访问
 title: CF-Workers-Raw：轻松安全访问 GitHub 私有仓库原始文件
-updated: '2026-04-24T22:48:38.465+08:00'
+updated: '2026-07-12T15:47:18.563+08:00'
 ---
 # CF-Workers-Raw：轻松安全访问 GitHub 私有仓库
 
