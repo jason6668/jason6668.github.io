@@ -3,13 +3,13 @@ abbrlink: 心理自我治疗
 ai_description: 深度解析如何利用 N8N 这一强大的自动化工具，将分散的信息流（如 RSS、Telegram）整合并实现自动化分拣，旨在通过技术手段提升信息处理效率，解放生产力。
 categories:
 - 科学上网
-cover: https://tc.688650.xyz/file/1777041676937_image.png
+cover: https://tc.8818618.xyz/file/1783842187915_image.png
 date: '2026-04-11'
 sticky: ''
 tags:
 - 人生管理疗
 title: 火锅式人生管理疗法：莫慌，先把锅底整明白
-updated: '2026-04-24T22:14:36.565+08:00'
+updated: '2026-07-12T15:39:43.735+08:00'
 ---
 # 火锅式人生管理疗法：莫慌，先把锅底整明白
 
