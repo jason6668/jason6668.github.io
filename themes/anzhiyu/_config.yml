@@ -1004,11 +1004,11 @@ pwa:
   startup_image_enable: true
   manifest: /manifest.json
   theme_color: var(--anzhiyu-main)
-  mask_icon: /img/siteicon/apple-icon-180.png
-  apple_touch_icon: /img/siteicon/apple-icon-180.png
-  bookmark_icon: /img/siteicon/apple-icon-180.png
-  favicon_32_32: /img/siteicon/32.png
-  favicon_16_16: /img/siteicon/16.png
+  mask_icon: https://tc.8818618.xyz/file/1783850983366_image.png
+  apple_touch_icon: https://tc.8818618.xyz/file/1783850983366_image.png
+  bookmark_icon: https://tc.8818618.xyz/file/1783850983366_image.png
+  favicon_32_32: https://tc.8818618.xyz/file/1783850983366_image.png
+  favicon_16_16: https://tc.8818618.xyz/file/1783850983366_image.png
 
 # Open graph meta tags
 # https://developers.facebook.com/docs/sharing/webmasters/
@@ -1053,7 +1053,7 @@ home_top:
   banner:
     tips: 记录职业中断期真实故事
     title: 好巧啊，你也失业了呀～
-    image: https://i.lxlad.com/file/1759574033330_%E6%A8%AA%E5%B9%85.png
+    image: https://tc.8818618.xyz/file/1783851228401_image.png
     link: https://www.youtube.com/@失业联盟
 
 # 朋友圈配置
