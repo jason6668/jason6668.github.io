@@ -164,7 +164,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://tc.688650.xyz/file/1776002525830_图片.png
+  img: https://tc.8818618.xyz/file/1783850983366_image.png
   effect: false
 
 # Disable all banner image
@@ -762,7 +762,7 @@ preloader:
   source: 3
   # pace theme (see https://codebyzach.github.io/pace/)
   pace_css_url:
-  avatar: https://tc.688650.xyz/file/1776002525830_图片.png # 自定加载动画义头像
+  avatar: https://tc.8818618.xyz/file/1783850983366_image.png # 自定加载动画义头像
 
 # aside (侧边栏)
 # --------------------------------------
