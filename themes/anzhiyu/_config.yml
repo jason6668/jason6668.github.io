@@ -46,7 +46,7 @@ menu:
 
 # nav相关配置
 nav:
-  enable: true
+  enable: false
   travelling: false
   clock: false
   menu:
@@ -58,7 +58,7 @@ nav:
     - title: 项目
       item:
         - name: 马老师图床
-          link: https://tc.688650.xyz/
+          link: https://tc.8818618.xyz/
           icon: https://image.anheyu.com/favicon.ico
 
 # mourn （哀悼日，指定日期网站简单变灰，不包括滚动条）
@@ -269,7 +269,7 @@ post_copyright:
 reward:
   enable: true
   QR_code:
-    - img: https://i.lxlad.com/file/1759639225701_2c31c63173d7fc749256cbc9ffa60655.jpg
+    - img: https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg
       link:
       text: 赞赏
 
