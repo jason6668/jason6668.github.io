@@ -1,5 +1,5 @@
 - class_name: 关于页
-  subtitle: 品牌运营、心理洞察与技术跨界的实践者✨
+  subtitle: 在人心与代码之间搭桥的跨界实践者 ✨
   avatarImg: https://tc.8818618.xyz/file/1783850983366_image.png
   avatarSkills:
     left:
@@ -13,7 +13,7 @@
       - 团队小组发动机 🧱
       - 壮汉人狠话不多 💢
   name: 马老师 (Jason)
-  description: 致力于通过**心理学**理解人心，通过**自动化**解放劳力，通过**品牌运营**传递价值。
+  description: 用**心理学**读懂人心，用**自动化**把重复劳动交给机器，用**品牌运营**把价值讲清楚、传出去。
   aboutsiteTips:
     tips: 核心价值
     title1: 跨界
@@ -31,11 +31,11 @@
     tips: 职业路径
     title: 专业成长与项目积累
     list:
-      - desc: 品牌运营专家：5年+品牌全链路运营经历，深谙用户增长与价值传播。
+      - desc: 品牌运营专家：5 年+品牌全链路实战，从定位、内容到增长，擅长把复杂价值讲成用户听得懂的故事。
         color: "#357ef5"
-      - desc: 心理咨询师：在认知、情绪与行为领域提供专业支持，记录人性切片。
+      - desc: 心理咨询师：聚焦认知、情绪与行为，提供专业而温暖的心理支持，也记录那些真实的人性切片。
         color: "#ff5e5e"
-      - desc: 独立开发者：沉迷于 N8N 自动化流、Docker 部署与 Cloudflare 生态。
+      - desc: 独立开发者：痴迷 N8N 自动化工作流、Docker 与 Cloudflare 生态，信奉"能自动化的，就别手动"。
         color: "#ffaa00"
     img: /img/default_cover.jpg
   statistic:
@@ -44,7 +44,7 @@
     cover: /img/default_cover.jpg
   map:
     title: 现居于
-    StrengthenTitle: 中国 · 长沙
+    StrengthenTitle: 澳大利亚
     background: /img/default_cover.jpg
     backgroundDark: /img/default_cover.jpg
   selfInfo:
@@ -53,7 +53,7 @@
     selfInfoTips2: 学历背景
     selfInfoContent2: 心理学 & 软件工程
     selfInfoTips3: 当前重心
-    selfInfoContent3: 失业联盟项目运营 & 自动化咨询
+    selfInfoContent3: 失业联盟运营 & 自动化咨询服务
   personalities:
     author_name: 执政官
     personality_type: ESFJ-A
