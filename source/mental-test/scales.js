@@ -424,3 +424,17 @@ SCALES.push(
 }
 );
 console.log('[scales] 已加载 ' + SCALES.length + ' 个量表');
+
+/* ============ 玄学测算（链接型工具卡） ============ */
+SCALES.push(
+{
+  id:'star', cat:'玄学测算', emoji:'🔮', title:'马老师星座分析',
+  desc:'12 星座今日/明日/本周/本月运势、幸运色与数字、速配星座、配对查询。',
+  time:'随时查看', link:'/star-fortune/', n:'工具',
+},
+{
+  id:'liuyao', cat:'玄学测算', emoji:'☯️', title:'六爻占卜',
+  desc:'铜钱摇卦、数字起卦，自动排盘（纳甲/六亲/世应/旬空/六兽）与断卦参考。',
+  time:'随时起卦', link:'/liuyao/', n:'工具',
+}
+);

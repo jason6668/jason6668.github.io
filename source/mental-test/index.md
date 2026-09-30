@@ -95,7 +95,7 @@ body { background-color: #f3f4f6; }
   <div id="mt-mall">
     <div class="mt-hero">
       <h1>🧠 马老师自用心理测评系统</h1>
-      <p>26 个专业量表 · 297 道题 · 全部免费 · 测完即出报告</p>
+      <p>26 个专业量表 · 297 道题 · 星座六爻测算 · 全部免费</p>
     </div>
     <input class="mt-search" id="mt-search" placeholder="🔍 搜索量表：比如 焦虑、睡眠、霍兰德…" oninput="mtRenderMall()">
     <div class="mt-cats" id="mt-cats"></div>
@@ -108,7 +108,7 @@ body { background-color: #f3f4f6; }
       <details><summary>我的答题数据会被上传吗？</summary><p>不会。所有答题和历史记录只保存在你这台设备的浏览器 localStorage 里，不上传任何服务器。清空浏览器数据即删除。</p></details>
       <details><summary>多久测一次合适？</summary><p>建议每 2–4 周测一次，观察分数变化趋势。治疗/咨询期间可按医生建议的频率复测。</p></details>
     </div>
-    <p class="mt-hotline">需要帮助？全国心理援助热线 <b>12356</b>（24小时）</p>
+    <p class="mt-hotline">💬 联系马老师：<a href="https://t.me/sisumasanBot" target="_blank" style="color:#425AEF;font-weight:700;">✈️ Telegram @sisumasanBot</a> · <a href="mailto:ma@8818618.xyz" style="color:#425AEF;font-weight:700;">📧 ma@8818618.xyz</a></p>
     <p class="mt-disclaimer">本站量表为自我探索与科普用途，不构成医疗诊断。如有需要，请前往正规医院精神科/心理科就诊。</p>
   </div>
 
@@ -144,7 +144,7 @@ body { background-color: #f3f4f6; }
       <button class="mt-btn ghost" onclick="mtQuit()">🏪 返回商城</button>
     </div>
     <div class="mt-sec" id="mt-hist-sec" style="display:none"><h3>📈 历史趋势（仅本机）</h3><div id="mt-hist"></div></div>
-    <p class="mt-hotline">需要帮助？全国心理援助热线 <b>12356</b>（24小时）</p>
+    <p class="mt-hotline">💬 联系马老师：<a href="https://t.me/sisumasanBot" target="_blank" style="color:#425AEF;font-weight:700;">✈️ Telegram @sisumasanBot</a> · <a href="mailto:ma@8818618.xyz" style="color:#425AEF;font-weight:700;">📧 ma@8818618.xyz</a></p>
   </div>
 </div>
 
@@ -576,10 +576,24 @@ SCALES.push(
 }
 );
 console.log('[scales] 已加载 ' + SCALES.length + ' 个量表');
+
+/* ============ 玄学测算（链接型工具卡） ============ */
+SCALES.push(
+{
+  id:'star', cat:'玄学测算', emoji:'🔮', title:'马老师星座分析',
+  desc:'12 星座今日/明日/本周/本月运势、幸运色与数字、速配星座、配对查询。',
+  time:'随时查看', link:'/star-fortune/', n:'工具',
+},
+{
+  id:'liuyao', cat:'玄学测算', emoji:'☯️', title:'六爻占卜',
+  desc:'铜钱摇卦、数字起卦，自动排盘（纳甲/六亲/世应/旬空/六兽）与断卦参考。',
+  time:'随时起卦', link:'/liuyao/', n:'工具',
+}
+);
 </script>
 <script>
 let mtCur = null, mtIdx = 0, mtAns = [];
-const mtCats = ['全部','情绪健康','人格特质','职业发展','亲密关系','自我成长'];
+const mtCats = ['全部','情绪健康','人格特质','职业发展','亲密关系','自我成长','玄学测算'];
 let mtCat = '全部';
 
 function mtRenderMall() {
@@ -587,8 +601,15 @@ function mtRenderMall() {
   const box = document.getElementById('mt-cats');
   box.innerHTML = mtCats.map(c => `<button class="mt-cat${c===mtCat?' active':''}" onclick="mtSetCat('${c}')">${c}</button>`).join('');
   const list = SCALES.filter(s => (mtCat==='全部'||s.cat===mtCat) && (!q || s.title.includes(q) || s.desc.includes(q)));
-  document.getElementById('mt-count').innerText = `共 ${list.length} 个量表`;
-  document.getElementById('mt-grid').innerHTML = list.map(s => `
+  document.getElementById('mt-count').innerText = `共 ${list.length} 个${mtCat==='玄学测算'?'测算工具':'量表'}`;
+  document.getElementById('mt-grid').innerHTML = list.map(s => s.link ? `
+    <a class="mt-card" href="${s.link}" style="text-decoration:none;color:inherit;">
+      <div class="emoji">${s.emoji}</div><h2>${s.title}</h2>
+      <div class="desc">${s.desc}</div>
+      <div class="mt-badges"><span class="mt-badge">🔗 测算工具</span><span class="mt-badge">${s.time}</span></div>
+      <div class="mt-theory">📚 传统民俗 · 仅供娱乐</div>
+      <div class="mt-start">进入 →</div>
+    </a>` : `
     <div class="mt-card" onclick="mtStart('${s.id}')">
       <div class="emoji">${s.emoji}</div><h2>${s.title}</h2>
       <div class="desc">${s.desc}</div>
