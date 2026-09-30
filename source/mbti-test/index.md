@@ -382,22 +382,70 @@ let currentPage = 0;
 const userAnswers = new Array(allQuestions.length).fill(null); 
 
 const mbtiProfiles = {
-  "INTJ": { name: "建筑师", desc: "富有想象力和战略性的思想家，一切皆在计划之中。" },
-  "INTP": { name: "逻辑学家", desc: "具有创造力的发明家，对知识有着止不住的渴望。" },
-  "ENTJ": { name: "指挥官", desc: "大胆、富有想象力且意志强大的领导者，总能找到或创造解决办法。" },
-  "ENTP": { name: "辩论家", desc: "聪明好奇的思想者，不会放弃任何智力上的挑战。" },
-  "INFJ": { name: "提倡者", desc: "安静而神秘，同时鼓舞人心且不知疲倦的理想主义者。" },
-  "INFP": { name: "调停者", desc: "诗意、善良的利他主义者，总是热情地为正当理由提供帮助。" },
-  "ENFJ": { name: "主人公", desc: "富有魅力、鼓舞人心的领导者，有使听众着迷的能力。" },
-  "ENFP": { name: "竞选者", desc: "热情、有创造力、爱社交的自由精灵，总能找到理由微笑。" },
-  "ISTJ": { name: "物流师", desc: "实际且注重事实的个人，可靠性不容怀疑。" },
-  "ISFJ": { name: "守卫者", desc: "非常专注而温暖的守护者，时刻准备着保护爱着的人们。" },
-  "ESTJ": { name: "总经理", desc: "出色的管理者，在管理事物或人的方面无与伦比。" },
-  "ESFJ": { name: "执政官", desc: "极度关心他人、爱社交且受欢迎的人，总是热心提供帮助。" },
-  "ISTP": { name: "鉴赏家", desc: "大胆而实际的实验家，擅长使用任何形式的工具。" },
-  "ISFP": { name: "探险家", desc: "灵活有魅力的艺术家，时刻准备着探索和体验新鲜事物。" },
-  "ESTP": { name: "企业家", desc: "聪明、精力充沛且十分善于感知的人，真正地享受在边缘生活。" },
-  "ESFP": { name: "表演者", desc: "自发、精力充沛而热情——生活在他们周围永不无聊。" }
+  "INTJ": { name: "建筑师", desc: "富有想象力和战略性的思想家，一切皆在计划之中。",
+    strength: "战略眼光极强，独立自主，逻辑严密，擅长把复杂系统化繁为简。",
+    blind: "容易显得冷漠固执，对"低效"的社交缺乏耐心，可能忽视他人情绪。",
+    career: "战略咨询、科研、架构设计、投资分析" },
+  "INTP": { name: "逻辑学家", desc: "具有创造力的发明家，对知识有着止不住的渴望。",
+    strength: "抽象思维顶尖，好奇心驱动，擅长发现模式与第一性原理。",
+    blind: "容易陷入过度分析而迟迟不行动，对琐碎执行缺乏兴趣。",
+    career: "学术研究、算法工程、产品设计、哲学思辨类工作" },
+  "ENTJ": { name: "指挥官", desc: "大胆、富有想象力且意志强大的领导者，总能找到或创造解决办法。",
+    strength: "天生的组织者，目标感极强，决策果断，擅长带领团队攻坚。",
+    blind: "可能显得强势压迫，对"慢"和"情绪化"容忍度低。",
+    career: "企业管理、创业、投行、项目管理" },
+  "ENTP": { name: "辩论家", desc: "聪明好奇的思想者，不会放弃任何智力上的挑战。",
+    strength: "思维敏捷，能言善辩，擅长头脑风暴与跨界连接。",
+    blind: "容易喜新厌旧，对收尾和细节缺乏耐心，可能给人不靠谱感。",
+    career: "市场营销、创业、律师、创意策划" },
+  "INFJ": { name: "提倡者", desc: "安静而神秘，同时鼓舞人心且不知疲倦的理想主义者。",
+    strength: "洞察人心，有坚定的价值观，能为信念长期投入。",
+    blind: "容易过度内耗、完美主义，对辜负自己期望的人难以释怀。",
+    career: "心理咨询、作家、公益、人力资源" },
+  "INFP": { name: "调停者", desc: "诗意、善良的利他主义者，总是热情地为正当理由提供帮助。",
+    strength: "共情力强，价值观纯粹，创造力丰富，待人真诚。",
+    blind: "容易情绪化、逃避冲突，在高压竞争环境中容易受伤。",
+    career: "写作、艺术创作、心理咨询、教育" },
+  "ENFJ": { name: "主人公", desc: "富有魅力、鼓舞人心的领导者，有使听众着迷的能力。",
+    strength: "感染力极强，善于激发他人潜能，天生的 mentor。",
+    blind: "容易过度承担他人情绪，忽视自己的需求，害怕让别人失望。",
+    career: "培训、销售管理、公关、教育" },
+  "ENFP": { name: "竞选者", desc: "热情、有创造力、爱社交的自由精灵，总能找到理由微笑。",
+    strength: "人缘极佳，点子多，适应力强，能把氛围带起来。",
+    blind: "注意力易分散，讨厌重复性工作，情绪来得快去得也快。",
+    career: "新媒体、活动策划、广告创意、自由职业" },
+  "ISTJ": { name: "物流师", desc: "实际且注重事实的个人，可靠性不容怀疑。",
+    strength: "极度可靠，做事有条理，承诺必达，是团队的定海神针。",
+    blind: "可能显得刻板，不喜欢变化，对"不按规矩"容忍度低。",
+    career: "财务、审计、法务、军警、项目管理" },
+  "ISFJ": { name: "守卫者", desc: "非常专注而温暖的守护者，时刻准备着保护爱着的人们。",
+    strength: "细心体贴，记忆力好，默默把每件事做到位。",
+    blind: "不擅长拒绝，容易被"老好人"标签拖累，压抑自己的需求。",
+    career: "护理、行政、客服、教育" },
+  "ESTJ": { name: "总经理", desc: "出色的管理者，在管理事物或人的方面无与伦比。",
+    strength: "执行力拉满，讲规则重效率，能把混乱理出秩序。",
+    blind: "可能显得专断，对"感受型"同事缺乏耐心。",
+    career: "运营管理、供应链、公务员、制造业管理" },
+  "ESFJ": { name: "执政官", desc: "极度关心他人、爱社交且受欢迎的人，总是热心提供帮助。",
+    strength: "情商高，善于营造和谐氛围，是团队粘合剂。",
+    blind: "过度在意他人评价，害怕冲突，难以做"恶人"决策。",
+    career: "客户成功、医护、教师、社区运营" },
+  "ISTP": { name: "鉴赏家", desc: "大胆而实际的实验家，擅长使用任何形式的工具。",
+    strength: "动手能力极强，危机时刻冷静，擅长拆解和修复一切。",
+    blind: "讨厌被管束和繁文缛节，情感表达比较"钝"。",
+    career: "工程师、飞行员、外科医生、极限运动/手艺人" },
+  "ISFP": { name: "探险家", desc: "灵活有魅力的艺术家，时刻准备着探索和体验新鲜事物。",
+    strength: "审美在线，活在当下，待人温和不评判。",
+    blind: "讨厌长期规划，容易随性而为，竞争意识弱。",
+    career: "设计、摄影、音乐、手工艺" },
+  "ESTP": { name: "企业家", desc: "聪明、精力充沛且十分善于感知的人，真正享受在边缘试探。",
+    strength: "反应极快，实战派，危机处理能力一流，人脉广。",
+    blind: "容易冲动，厌恶理论说教，长期主义不足。",
+    career: "销售、创业、急救/消防、体育竞技" },
+  "ESFP": { name: "表演者", desc: "自发、精力充沛而热情，身边永远不缺欢笑。",
+    strength: "舞台感强，共情即时，能把任何场合变成派对。",
+    blind: "讨厌孤独和枯燥，对未来规划缺乏兴趣。",
+    career: "演艺、主持、旅游、儿童教育" }
 };
 
 function initApp() {
@@ -550,8 +598,15 @@ function submitTest() {
   document.getElementById('res-code').innerText = `${type}-${identity}`;
   document.getElementById('res-name').innerText = mbtiProfiles[type].name;
   
-  let descHtml = `您的性格类型极其独特：<strong>${mbtiProfiles[type].desc}</strong> <br><br>
-  您属于 <strong>${type}</strong> 类型，后缀 <strong>${identity === 'A' ? '坚决 (Assertive)' : '动荡 (Turbulent)'}</strong> 代表您在压力下的自我认同模式。<br><br>`;
+  const pf = mbtiProfiles[type];
+  let descHtml = `<p style="font-size:1.15rem;margin-bottom:1.2rem;">${pf.desc}</p>
+  <p>您属于 <strong>${type}</strong> 类型，后缀 <strong>${identity === 'A' ? '坚决型 (Assertive)' : '动荡型 (Turbulent)'}</strong>：${identity === 'A' ? '自信稳定，抗压能力强' : '敏感进取，自我要求高、情绪体验更深刻'}。</p>
+  <div style="display:grid;gap:.8rem;margin-top:1.2rem;">
+    <div style="background:#f0faf5;border-left:4px solid #33a474;padding:.9rem 1rem;border-radius:0 8px 8px 0;"><b>✨ 核心优势</b><br>${pf.strength}</div>
+    <div style="background:#fdf6ec;border-left:4px solid #e4b622;padding:.9rem 1rem;border-radius:0 8px 8px 0;"><b>🔍 成长盲点</b><br>${pf.blind}</div>
+    <div style="background:#f0f4ff;border-left:4px solid #425AED;padding:.9rem 1rem;border-radius:0 8px 8px 0;"><b>💼 适配方向</b><br>${pf.career}</div>
+  </div>
+  <p style="margin-top:1.2rem;color:#888;font-size:.9rem;">注：MBTI 是偏好倾向描述而非能力判定，不应作为招聘、升学等决策的唯一依据。</p>`;
   document.getElementById('res-desc').innerHTML = descHtml;
 
   // 渲染五维雷达条图
