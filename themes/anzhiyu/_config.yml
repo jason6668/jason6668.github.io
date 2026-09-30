@@ -10,6 +10,8 @@ menu:
     避雷专区: /blacklist/ || anzhiyu-icon-shield-halved
     心理自测: /mental-test/ || anzhiyu-icon-heart-pulse
     MBTI测评: /mbti-test/ || anzhiyu-icon-brain
+    星座分析: /star-fortune/ || anzhiyu-icon-star
+    六爻占卜: /liuyao/ || anzhiyu-icon-yin-yang
 
   科学上网:
     DockerHub镜像: https://Docker.CMLiussss.net/ || anzhiyu-icon-docker
