@@ -151,7 +151,7 @@ function lyDateLine(){
   var rich=(document.getElementById('ly-rich').textContent||'').replace(/日$/,'');
   document.getElementById('ly-today-line').textContent='📅 今天 '+(d.getMonth()+1)+'月'+d.getDate()+'日 星期'+WD+(rich?' · '+rich+'日':'');
 }
-lyDateLine();</script>
+lyDateLine();
 /* ===== 基础表 ===== */
 const G=['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
 const Z=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
