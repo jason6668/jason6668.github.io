@@ -66,8 +66,11 @@ aside: false
       var moneyHtml = item.money >= 50
         ? '<div class="reward-list-item-money" style="background:var(--anzhiyu-yellow)">¥' + esc(Number(item.money).toFixed(2)) + '</div>'
         : '<div class="reward-list-item-money">¥' + esc(Number(item.money).toFixed(2)) + '</div>';
+      var msgHtml = item.message
+        ? '<div class="reward-list-item-msg" style="font-size:0.85em;color:var(--anzhiyu-fontcolor);opacity:0.75;margin-top:0.2rem;">' + esc(item.message) + '</div>'
+        : '';
       return '<div class="reward-list-item">' +
-        '<div class="reward-list-item-name">' + esc(item.name) + '</div>' +
+        '<div class="reward-list-item-name">' + esc(item.name) + msgHtml + '</div>' +
         '<div class="reward-list-bottom-group">' + moneyHtml +
         '<div class="datatime reward-list-item-time">' + esc(fmtDate(item.date)) + '</div>' +
         '</div></div>';
