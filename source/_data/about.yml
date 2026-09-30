@@ -37,16 +37,16 @@
         color: "#ff5e5e"
       - desc: 独立开发者：沉迷于 N8N 自动化流、Docker 部署与 Cloudflare 生态。
         color: "#ffaa00"
-    img: https://tc.688650.xyz/2023/04/21/644287166329b.png
+    img: /img/default_cover.jpg
   statistic:
     link: /archives
     text: 思想沉淀
-    cover: https://tc.688650.xyz/2023/05/01/644f4b037b930.jpg
+    cover: /img/default_cover.jpg
   map:
     title: 现居于
     StrengthenTitle: 中国 · 长沙
-    background: https://tc.688650.xyz/2023/07/05/64a4c61cb20ef.jpg
-    backgroundDark: https://tc.688650.xyz/2023/07/05/64a4c63495ac5.jpg
+    background: /img/default_cover.jpg
+    backgroundDark: /img/default_cover.jpg
   selfInfo:
     selfInfoTips1: 深耕
     selfInfoContentYear: 品牌 & 心理
@@ -57,7 +57,7 @@
   personalities:
     author_name: 执政官
     personality_type: ESFJ-A
-    photo_url: https://tc.688650.xyz/2023/07/05/64a4c63495ac5.jpg
+    photo_url: /img/default_cover.jpg
     personality_img: https://npm.elemecdn.com/anzhiyu-blog@2.0.8/img/svg/ESFJ-A.svg
     name_url: https://www.16personalities.com/ch/esfj-%E4%BA%BA%E6%A0%BC
   maxim:
@@ -72,21 +72,21 @@
     game_tips: 爱好游戏
     game_title: 专注力训练
     game_uid: "UID: 00000000"
-    game_bg: https://tc.688650.xyz/2023/04/22/64433bf26e25d.webp
+    game_bg: /img/default_cover.jpg
   comic:
     comic_tips: 阅读偏好
     comic_title: 深度叙事
     comic_list:
       - name: 约定的梦幻岛
         href: #
-        cover: https://tc.688650.xyz/2023/05/27/647166c44b414.webp
+        cover: /img/default_cover.jpg
       - name: 咒术回战
         href: #
-        cover: https://tc.688650.xyz/2023/05/24/646db4398832e.webp
+        cover: /img/default_cover.jpg
   like:
     like_tips: 关注偏好
     like_title: 技术自动化
-    like_bg: https://tc.688650.xyz/2022/12/06/638f5f05ce1f7.jpg
+    like_bg: /img/default_cover.jpg
     like_bottom: Docker, Cloudflare, N8N
   music:
     music_tips: 氛围偏好
