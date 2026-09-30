@@ -77,53 +77,28 @@ reward: false
   border-left: 4px solid #e5484d; background: rgba(229,72,77,.07);
   border-radius: 0 10px 10px 0; padding: 1rem 1.2rem; font-size: .9rem; line-height: 1.8;
 }
-@media (max-width: 640px) { .bl-card { padding: 1.2rem; } .bl-hero h1 { font-size: 1.7rem; } }
-</style>
 
-<div class="bl-wrapper">
-  <div class="bl-hero">
-    <h1>🛡️ 职场避雷中心</h1>
-    <p>入职前必查 · 一键全网检索公司口碑 / 风险 / 真实评价</p>
-  </div>
-
-  <div class="bl-card">
+.bl-wt-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:1rem; }
+.bl-wt-tab { padding:10px 18px; border-radius:20px; border:2px solid var(--anzhiyu-card-border); background:var(--anzhiyu-background); cursor:pointer; fo  <div class="bl-card">
     <h2>🔍 公司背景一键深搜</h2>
     <div class="bl-input-group">
-      <input type="text" id="bl-target" class="bl-input" placeholder="输入公司全称，如：某某科技有限公司">
-      <button onclick="blAll()" class="bl-btn">一键全网深搜</button>
+      <input type="text" id="bl-target" class="bl-input" placeholder="输入公司全称，如：某某科技有限公司" onkeydown="if(event.key==='Enter')blSearch()">
+      <button onclick="blSearch()" class="bl-btn">开始检索</button>
     </div>
-    <div class="bl-engines">
-      <button onclick="blGo('xhs')" class="bl-engine e-xhs">小红书<small>员工真实爆料</small></button>
-      <button onclick="blGo('maimai')" class="bl-engine e-maimai">脉脉职言<small>前员工评价</small></button>
-      <button onclick="blGo('boss')" class="bl-engine e-boss">BOSS直聘<small>面试评价</small></button>
-      <button onclick="blGo('zhihu')" class="bl-engine e-zhihu">知乎<small>深度讨论</small></button>
-      <button onclick="blGo('qcc')" class="bl-engine e-qcc">企查查<small>工商风险</small></button>
-      <button onclick="blGo('tyc')" class="bl-engine e-tyc">天眼查<small>司法诉讼</small></button>
-      <button onclick="blGo('baidu')" class="bl-engine e-baidu">百度<small>舆情新闻</small></button>
-      <button onclick="blGo('google')" class="bl-engine e-google">谷歌<small>英文信源</small></button>
+    <p style="font-size:.85rem;color:#888;margin:.5rem 0 0;">下方 4 个平台结果直接在页内展示，另 4 个平台因禁止嵌入请点击跳转查看。</p>
+  </div>
+
+  <div class="bl-card" id="bl-workbench" style="display:none;">
+    <h2>🖥️ 检索工作台 <span id="bl-kw" style="font-size:.9rem;color:#888;font-weight:400;"></span></h2>
+    <div class="bl-wt-tabs" id="bl-tabs"></div>
+    <div class="bl-wt-body" id="bl-body"></div>
+    <div class="bl-ext">
+      <h3>🔗 需跳转查看的平台 <span style="font-weight:400;font-size:.8rem;color:#888;">（对方禁止页内嵌入）</span></h3>
+      <div class="bl-ext-grid" id="bl-ext"></div>
     </div>
   </div>
 
-  <div class="bl-card">
-    <h2>✅ 入职前必查清单</h2>
-    <ul class="bl-checklist">
-      <li><span class="num">1</span><div><b>查工商司法</b><p>企查查 / 天眼查看成立年限、参保人数、被执行人、行政处罚。参保人数远小于宣传规模要警惕。</p></div></li>
-      <li><span class="num">2</span><div><b>查员工口碑</b><p>小红书、脉脉搜"公司名 + 避雷 / 坑 / 加班 / 欠薪"，重点看 3 个月内的帖子。</p></div></li>
-      <li><span class="num">3</span><div><b>查薪资真实性</b><p>Offer 写进合同的是税前还是税后？试用期打几折？年终奖是"最高"还是"固定"？</p></div></li>
-      <li><span class="num">4</span><div><b>查社保公积金</b><p>按实际工资还是最低基数缴纳？入职当月还是次月起缴？直接问 HR，不用不好意思。</p></div></li>
-      <li><span class="num">5</span><div><b>查离职率</b><p>面试时问"这个岗位为什么空出来""团队去年走了几个人"，支吾其词的基本有坑。</p></div></li>
-      <li><span class="num">6</span><div><b>查合同主体</b><p>签约公司和面试公司是否为同一家？外包、劳务派遣必须在入职前明确告知。</p></div></li>
-    </ul>
-  </div>
-
-  <div class="bl-card">
-    <h2>⚠️ 常见求职骗局图鉴</h2>
-    <div class="bl-scam-grid">
-      <div class="bl-scam"><h3>💸 收费培训贷</h3><p>以"岗前培训"为名让你贷款交培训费，号称"入职后报销"。正规公司培训一律免费。</p></div>
-      <div class="bl-scam"><h3>📦 刷单返利</h3><p>"动动手指日入 500"，先小额返利引你加大投入后拉黑。所有刷单都是诈骗。</p></div>
-      <div class="bl-scam"><h3>🪪 证件扣押</h3><p>扣身份证、毕业证"统一保管"。这是违法的，任何理由都不能扣留证件原件。</p></div>
-      <div class="bl-scam"><h3>📝 阴阳合同</h3><p>口头承诺 15k，合同只写 8k + "绩效"。一切以纸质合同为准，口头承诺录音留证。</p></div>
-      <div class="bl-scam"><h3>🔄 试用期陷阱</h3><p>超长试用期、试用期无社保、试用期结束前找理由辞退。试用期最长 6 个月且必须缴社保。</p></div>
+scam"><h3>🔄 试用期陷阱</h3><p>超长试用期、试用期无社保、试用期结束前找理由辞退。试用期最长 6 个月且必须缴社保。</p></div>
       <div class="bl-scam"><h3>🌍 海外高薪</h3><p>东南亚"客服""文员"月薪 3 万包机票。本质是电诈园区，去了就回不来。</p></div>
     </div>
   </div>
@@ -135,25 +110,46 @@ reward: false
 </div>
 
 <script>
-function blGo(type) {
-  const val = document.getElementById('bl-target').value.trim();
-  if (!val) { alert('请先输入公司名称'); return; }
-  const e = encodeURIComponent(val);
-  const urls = {
-    xhs: `https://www.xiaohongshu.com/search_result?keyword=${e}%20%E9%81%BF%E9%9B%B7`,
-    maimai: `https://maimai.cn/search/contacts?query=${e}%20%E5%9D%91`,
-    boss: `https://www.zhipin.com/web/geek/job?query=${e}`,
-    zhihu: `https://www.zhihu.com/search?type=content&q=${e}%E5%85%AC%E5%8F%B8%E6%80%8E%E4%B9%88%E6%A0%B7`,
-    qcc: `https://www.qcc.com/web/search?key=${e}`,
-    tyc: `https://www.tianyancha.com/search?key=${e}`,
-    baidu: `https://www.baidu.com/s?wd=${e}%E9%81%BF%E9%9B%B7%20%E5%9D%91`,
-    google: `https://www.google.com/search?q=${e}%20%E9%81%BF%E9%9B%B7%20%E5%9D%91%20%E9%9D%A2%E7%BB%8F`
-  };
-  window.open(urls[type], '_blank');
+const BL_EMBED = [
+  { id:'xhs', name:'📕 小红书', tip:'看什么：<b>员工真实爆料</b>。重点看 3 个月内的"避雷/劝退/加班"帖，注意水军（全是好评+无干货的号）。',
+    url: q => `https://www.xiaohongshu.com/search_result?keyword=${q}%20%E9%81%BF%E9%9B%B7` },
+  { id:'zhihu', name:'📘 知乎', tip:'看什么：<b>深度讨论</b>。"这家公司怎么样"类问题下高赞回答的信息密度最高，记得看评论区补充。',
+    url: q => `https://www.zhihu.com/search?type=content&q=${q}%E5%85%AC%E5%8F%B8%E6%80%8E%E4%B9%88%E6%A0%B7` },
+  { id:'tyc', name:'🏢 天眼查', tip:'看什么：<b>司法与经营风险</b>。重点看：被执行人、行政处罚、经营异常、参保人数是否与宣传规模相符。',
+    url: q => `https://www.tianyancha.com/search?key=${q}` },
+  { id:'baidu', name:'🔎 百度', tip:'看什么：<b>舆情新闻</b>。搜"公司名 + 欠薪/裁员/劳动仲裁"，注意区分官方通稿和真实爆料。',
+    url: q => `https://www.baidu.com/s?wd=${q}%E9%81%BF%E9%9B%B7%20%E5%9D%91` }
+];
+const BL_EXT = [
+  { name:'💬 脉脉职言', desc:'前员工匿名评价，看"公司点评"区的真实打分。',
+    url: q => `https://maimai.cn/search/contacts?query=${q}%20%E5%9D%91` },
+  { name:'💼 BOSS直聘', desc:'看在招岗位的薪资范围 + 面试评价，判断薪资真实性。',
+    url: q => `https://www.zhipin.com/web/geek/job?query=${q}` },
+  { name:'📊 企查查', desc:'工商信息、股东背景、融资历史，成立不满 2 年的公司多留心。',
+    url: q => `https://www.qcc.com/web/search?key=${q}` },
+  { name:'🌐 谷歌', desc:'英文信源 + 外媒报道，适合查有海外业务的公司。',
+    url: q => `https://www.google.com/search?q=${q}%20%E9%81%BF%E9%9B%B7%20%E5%9D%91` }
+];
+let blKw = '';
+function blSearch() {
+  const v = document.getElementById('bl-target').value.trim();
+  if (!v) { alert('请先输入公司名称'); return; }
+  blKw = encodeURIComponent(v);
+  document.getElementById('bl-kw').innerText = '— 关键词：' + v;
+  document.getElementById('bl-workbench').style.display = 'block';
+  const tabs = document.getElementById('bl-tabs');
+  tabs.innerHTML = BL_EMBED.map((p,i) =>
+    `<button class="bl-wt-tab${i===0?' active':''}" onclick="blTab(${i})">${p.name}</button>`).join('');
+  const ext = document.getElementById('bl-ext');
+  ext.innerHTML = BL_EXT.map(p =>
+    `<div class="bl-ext-card"><b>${p.name}</b><p>${p.desc}</p><a href="${p.url(blKw)}" target="_blank" rel="noopener">前往查看 →</a></div>`).join('');
+  blTab(0);
+  document.getElementById('bl-workbench').scrollIntoView({behavior:'smooth'});
 }
-function blAll() {
-  const val = document.getElementById('bl-target').value.trim();
-  if (!val) { alert('请先输入公司名称'); return; }
-  ['xhs','maimai','qcc'].forEach((t, i) => setTimeout(() => blGo(t), i * 300));
+function blTab(i) {
+  document.querySelectorAll('.bl-wt-tab').forEach((t,j)=>t.classList.toggle('active', j===i));
+  const p = BL_EMBED[i];
+  document.getElementById('bl-body').innerHTML =
+    `<div class="bl-wt-tip">${p.tip}</div><iframe src="${p.url(blKw)}" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups allow-forms" title="${p.name}检索结果"></iframe>`;
 }
 </script>

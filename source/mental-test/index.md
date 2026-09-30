@@ -67,6 +67,19 @@ reward: false
   background: rgba(229,72,77,.06); border-left: 4px solid #e5484d; border-radius: 0 8px 8px 0; line-height: 1.8;
 }
 @media (max-width: 640px) { .mt-card { padding: 1.2rem; } .mt-hero h1 { font-size: 1.7rem; } }
+
+.mt-crisis { display:none; background:#b3261e; color:#fff; border-radius:12px; padding:1.2rem 1.4rem; margin-bottom:1.2rem; line-height:1.8; }
+.mt-crisis b { font-size:1.1rem; }
+.mt-crisis a { color:#fff; text-decoration:underline; font-weight:700; }
+.mt-items { width:100%; border-collapse:collapse; margin:1rem 0; font-size:.88rem; }
+.mt-items th, .mt-items td { border:1px solid var(--anzhiyu-card-border); padding:.55rem .7rem; text-align:left; }
+.mt-items th { background:var(--anzhiyu-background); }
+.mt-items td:last-child { text-align:center; font-weight:700; }
+.mt-hist { margin-top:1.5rem; }
+.mt-hist h3 { font-size:1rem; margin-bottom:.6rem; }
+.mt-hist-row { display:flex; justify-content:space-between; font-size:.85rem; padding:.5rem .8rem; background:var(--anzhiyu-background); border-radius:8px; margin-bottom:.4rem; }
+.mt-report-meta { display:flex; gap:1rem; flex-wrap:wrap; font-size:.85rem; color:#888; margin-bottom:.8rem; }
+.mt-report-meta span { background:var(--anzhiyu-background); padding:.35rem .8rem; border-radius:20px; }
 </style>
 
 <div class="mt-wrapper">
@@ -87,10 +100,17 @@ reward: false
     <button class="mt-submit" onclick="mtCalc()">生成评估报告</button>
 
     <div id="mt-result">
+      <div class="mt-crisis" id="mt-crisis">🚨 <b>请注意：</b>你在"伤害自己的念头"这一题上选择了大于 0 分。<br>
+      这是一个需要认真对待的信号。请立即联系你信任的人陪伴你，或拨打全国心理援助热线 <b>12356</b>（24小时免费），也可以直接到附近医院精神科/心理科就诊。<br>
+      你不是一个人在扛，求助是勇敢的第一步。</div>
+      <div class="mt-report-meta" id="mt-meta"></div>
       <div class="mt-score-ring" id="mt-ring"><span style="font-size:2rem" id="mt-num"></span><span style="font-size:.8rem;font-weight:400">总分</span></div>
       <div class="mt-level" id="mt-level"></div>
       <div class="mt-severity" id="mt-sev"></div>
       <div class="mt-advice" id="mt-advice"></div>
+      <h3 style="margin-top:1.5rem;font-size:1rem;">📋 各条目得分回顾</h3>
+      <table class="mt-items"><thead><tr><th>题目</th><th>选项</th><th>得分</th></tr></thead><tbody id="mt-items-body"></tbody></table>
+      <div class="mt-hist" id="mt-hist"></div>
       <button class="mt-submit" style="background:#888" onclick="mtReset()">重新测试</button>
     </div>
 
@@ -106,7 +126,7 @@ reward: false
 const MT_SCALES = {
   phq9: {
     name: 'PHQ-9 抑郁筛查量表',
-    info: '由美国辉瑞公司开发，国际最常用的抑郁症初筛工具。请回想<b>过去两周</b>内，你有多少时候被以下问题困扰。',
+    info: '由 Spitzer 等开发，国际最常用的抑郁症初筛工具（Cronbach\u03b1≈0.89）。请回想<b>过去两周</b>内，你有多少时候被以下问题困扰。临界值：≥10 分建议进一步评估。',
     qs: [
       '做事时提不起劲或没有兴趣',
       '感到心情低落、沮丧或绝望',
@@ -128,7 +148,7 @@ const MT_SCALES = {
   },
   gad7: {
     name: 'GAD-7 焦虑筛查量表',
-    info: '国际通用的广泛性焦虑障碍初筛工具。请回想<b>过去两周</b>内，你有多少时候被以下问题困扰。',
+    info: '由 Spitzer 等开发的广泛性焦虑障碍初筛工具（Cronbach\u03b1≈0.92）。请回想<b>过去两周</b>内，你有多少时候被以下问题困扰。临界值：≥10 分建议进一步评估。',
     qs: [
       '感到紧张、焦虑或烦躁',
       '无法停止或控制担忧',
@@ -192,6 +212,34 @@ function mtCalc() {
     `<div style="background:${x.color};opacity:${x===lv?1:.35}">${x.label}<br>${x.max}分内</div>`).join('');
   document.getElementById('mt-advice').innerHTML = lv.advice +
     `<br><br>💡 <b>马老师会员</b>提供一对一心理咨询与长期陪伴，详见 <a href="https://vip.8818618.xyz/" target="_blank">vip.8818618.xyz</a>。`;
+  // PHQ-9 第9题危机预警
+  const crisis = (mtCur === 'phq9' && (+document.querySelector('input[name=q8]:checked').value) > 0);
+  document.getElementById('mt-crisis').style.display = crisis ? 'block' : 'none';
+  // 报告元信息
+  const now = new Date();
+  document.getElementById('mt-meta').innerHTML =
+    `<span>📊 ${s.name}</span><span>🕐 ${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,'0')}-${String(now.getDate()).padStart(2,'0')}</span><span>📝 共 ${s.qs.length} 题</span>`;
+  // 条目回顾表
+  document.getElementById('mt-items-body').innerHTML = s.qs.map((q, i) => {
+    const v = +document.querySelector(`input[name=q${i}]:checked`).value;
+    return `<tr><td>${i+1}. ${q}</td><td>${MT_OPTS[v]}</td><td style="color:${v>=2?'#e5484d':'inherit'}">${v}</td></tr>`;
+  }).join('');
+  // 历史记录（本地保存，不上传）
+  try {
+    const key = 'mt_hist_' + mtCur;
+    const hist = JSON.parse(localStorage.getItem(key) || '[]');
+    hist.push({ d: now.toISOString().slice(0,10), s: total, l: lv.label });
+    localStorage.setItem(key, JSON.stringify(hist.slice(-10)));
+    if (hist.length > 1) {
+      const prev = hist[hist.length-2];
+      const diff = total - prev.s;
+      const trend = diff === 0 ? '持平' : (diff > 0 ? `上升 ${diff} 分` : `下降 ${Math.abs(diff)} 分`);
+      document.getElementById('mt-hist').innerHTML =
+        `<h3>📈 历史趋势（仅保存在本机）</h3>` +
+        hist.slice(-5).reverse().map(h => `<div class="mt-hist-row"><span>${h.d}</span><span>${h.s} 分 · ${h.l}</span></div>`).join('') +
+        `<p style="font-size:.85rem;color:#888;">距上次（${prev.d}，${prev.s}分）：<b>${trend}</b>${diff>0?'，建议关注状态变化':''}</p>`;
+    } else { document.getElementById('mt-hist').innerHTML = ''; }
+  } catch(e) {}
   document.getElementById('mt-result').style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }

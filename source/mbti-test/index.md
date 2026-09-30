@@ -326,13 +326,24 @@ body {
     
     <div id="res-desc" style="text-align: left; color: #555; line-height: 1.8; font-size: 1.1rem; padding: 0 1rem; margin-bottom: 3rem;"></div>
 
-    <button class="next-btn" onclick="location.reload()" style="background:#555;">再测一次</button>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;">
+      <button class="next-btn" onclick="mbtiCopy()">📋 复制结果</button>
+      <button class="next-btn" onclick="location.reload()" style="background:#555;">再测一次</button>
+    </div>
+    <div style="margin-top:3rem;text-align:left;background:#f8f9fa;border-radius:12px;padding:1.5rem 1.8rem;">
+      <h3 style="margin-top:0;">📖 五个维度是什么意思</h3>
+      <p style="font-size:.92rem;line-height:1.9;color:#555;margin:.6rem 0;"><b>精神（E/I）：</b>你的能量来源。外向者从社交中充电，内向者从独处中回血——没有好坏，只是"插座"不同。</p>
+      <p style="font-size:.92rem;line-height:1.9;color:#555;margin:.6rem 0;"><b>能量（N/S）：</b>你接收信息的方式。直觉型关注可能性与大局，实感型关注事实与细节。</p>
+      <p style="font-size:.92rem;line-height:1.9;color:#555;margin:.6rem 0;"><b>本性（T/F）：</b>你的决策依据。逻辑型重公平与效率，感受型重和谐与人心。</p>
+      <p style="font-size:.92rem;line-height:1.9;color:#555;margin:.6rem 0;"><b>战术（J/P）：</b>你的生活方式。计划型喜欢确定性与收尾，探索型喜欢灵活性与开放。</p>
+      <p style="font-size:.92rem;line-height:1.9;color:#555;margin:.6rem 0;"><b>身份（A/T）：</b>你的自我认同。坚决型自信稳定，动荡型敏感进取、自我要求更高。</p>
+      <p style="font-size:.85rem;color:#999;margin-bottom:0;">本测试为兴趣向自我探索工具，题目改编自公开的 MBTI 理论框架，非临床诊断量表。</p>
+    </div>
   </div>
 </div>
 
 <script>
-// 完整且专业的 60 道题库结构，对标 16P 标准（划分为5个核心维度：E/I, S/N, T/F, J/P, A/T）
-// 这里以精简的 30 题（每维 6 题）呈现，兼顾快速与专业，分页展示每页 5 题。
+// 完整 60 题专业题库，对标 16P 标准（5个核心维度：E/I, S/N, T/F, J/P, A/T，每维 12 题），分页展示每页 5 题。
 const allQuestions = [
   // E vs I (内向 vs 外向)
   { axis: 'E', prompt: '你经常在社交聚会上结交新朋友。' },
@@ -372,7 +383,43 @@ const allQuestions = [
   { axis: 'T_A', prompt: '你经常会在做出决定后反复懊恼，担心选错了。' },
   { axis: 'A', prompt: '你很少会为了已经在过去发生的事情感到后悔。' },
   { axis: 'T_A', prompt: '在感受到别人对你有一点点不满时，你会异常焦虑。' },
-  { axis: 'A', prompt: '你觉得自己通常能很好地掌控自己的情绪。' }
+  { axis: 'A', prompt: '你觉得自己通常能很好地掌控自己的情绪。' },
+
+  // ---- 第二轮：提升信度 ----
+  { axis: 'E', prompt: '在聚会中，你通常是主动开启话题的那个。' },
+  { axis: 'I', prompt: '社交之后你需要独处来"充电"，否则会感到疲惫。' },
+  { axis: 'E', prompt: '你习惯先说出来再思考，而不是想好了再说。' },
+  { axis: 'I', prompt: '比起热闹的群体聚会，你更享受深度的一对一交流。' },
+  { axis: 'E', prompt: '你经常是朋友圈子里组织活动、张罗聚会的人。' },
+  { axis: 'I', prompt: '被很多人包围时，你会下意识寻找安静的角落。' },
+
+  { axis: 'N', prompt: '你相信"第六感"，常凭直觉做重要决定。' },
+  { axis: 'S', prompt: '你更信任亲眼所见的证据，而不是理论推测。' },
+  { axis: 'N', prompt: '你喜欢思考"如果……会怎样"这类假设性问题。' },
+  { axis: 'S', prompt: '你做事喜欢有明确的步骤和说明书。' },
+  { axis: 'N', prompt: '你容易注意到事物之间隐藏的联系。' },
+  { axis: 'S', prompt: '你觉得空想是浪费时间，行动才有价值。' },
+
+  { axis: 'T', prompt: '你认为"对事不对人"是最高效的处事原则。' },
+  { axis: 'F', prompt: '做决定时，你会优先考虑它对相关人的影响。' },
+  { axis: 'T', prompt: '被批评时，你更在意对方逻辑是否成立，而非语气。' },
+  { axis: 'F', prompt: '你很容易因为电影或故事而落泪。' },
+  { axis: 'T', prompt: '你觉得规则面前应该人人平等，不讲情面。' },
+  { axis: 'F', prompt: '你宁愿自己吃亏，也不愿看到身边人难过。' },
+
+  { axis: 'J', prompt: '出门旅行前，你一定会做好详细攻略。' },
+  { axis: 'P', prompt: '你喜欢保留各种可能性，不到最后一刻不拍板。' },
+  { axis: 'J', prompt: '未完成事项会让你如鲠在喉，必须列清单逐一消灭。' },
+  { axis: 'P', prompt: '你觉得计划赶不上变化，随机应变才是王道。' },
+  { axis: 'J', prompt: '你的手机 App 一定是分类整理好的。' },
+  { axis: 'P', prompt: '截止日期反而能激发你的创造力和效率。' },
+
+  { axis: 'T_A', prompt: '你会在深夜反复回想白天说错的那句话。' },
+  { axis: 'A', prompt: '即使被否定，你也能很快调整心态继续前进。' },
+  { axis: 'T_A', prompt: '你对自己的要求近乎苛刻，很少感到"已经够好了"。' },
+  { axis: 'A', prompt: '你很少把别人的负面评价放在心上。' },
+  { axis: 'T_A', prompt: '重要场合前，你会紧张到失眠或反复演练。' },
+  { axis: 'A', prompt: '你相信"船到桥头自然直"，很少为未来过度焦虑。' }
 ];
 
 const QUESTIONS_PER_PAGE = 5;
@@ -384,7 +431,7 @@ const userAnswers = new Array(allQuestions.length).fill(null);
 const mbtiProfiles = {
   "INTJ": { name: "建筑师", desc: "富有想象力和战略性的思想家，一切皆在计划之中。",
     strength: "战略眼光极强，独立自主，逻辑严密，擅长把复杂系统化繁为简。",
-    blind: "容易显得冷漠固执，对"低效"的社交缺乏耐心，可能忽视他人情绪。",
+    blind: "容易显得冷漠固执，对“低效”的社交缺乏耐心，可能忽视他人情绪。",
     career: "战略咨询、科研、架构设计、投资分析" },
   "INTP": { name: "逻辑学家", desc: "具有创造力的发明家，对知识有着止不住的渴望。",
     strength: "抽象思维顶尖，好奇心驱动，擅长发现模式与第一性原理。",
@@ -392,7 +439,7 @@ const mbtiProfiles = {
     career: "学术研究、算法工程、产品设计、哲学思辨类工作" },
   "ENTJ": { name: "指挥官", desc: "大胆、富有想象力且意志强大的领导者，总能找到或创造解决办法。",
     strength: "天生的组织者，目标感极强，决策果断，擅长带领团队攻坚。",
-    blind: "可能显得强势压迫，对"慢"和"情绪化"容忍度低。",
+    blind: "可能显得强势压迫，对“慢”和“情绪化”容忍度低。",
     career: "企业管理、创业、投行、项目管理" },
   "ENTP": { name: "辩论家", desc: "聪明好奇的思想者，不会放弃任何智力上的挑战。",
     strength: "思维敏捷，能言善辩，擅长头脑风暴与跨界连接。",
@@ -416,23 +463,23 @@ const mbtiProfiles = {
     career: "新媒体、活动策划、广告创意、自由职业" },
   "ISTJ": { name: "物流师", desc: "实际且注重事实的个人，可靠性不容怀疑。",
     strength: "极度可靠，做事有条理，承诺必达，是团队的定海神针。",
-    blind: "可能显得刻板，不喜欢变化，对"不按规矩"容忍度低。",
+    blind: "可能显得刻板，不喜欢变化，对“不按规矩”容忍度低。",
     career: "财务、审计、法务、军警、项目管理" },
   "ISFJ": { name: "守卫者", desc: "非常专注而温暖的守护者，时刻准备着保护爱着的人们。",
     strength: "细心体贴，记忆力好，默默把每件事做到位。",
-    blind: "不擅长拒绝，容易被"老好人"标签拖累，压抑自己的需求。",
+    blind: "不擅长拒绝，容易被“老好人”标签拖累，压抑自己的需求。",
     career: "护理、行政、客服、教育" },
   "ESTJ": { name: "总经理", desc: "出色的管理者，在管理事物或人的方面无与伦比。",
     strength: "执行力拉满，讲规则重效率，能把混乱理出秩序。",
-    blind: "可能显得专断，对"感受型"同事缺乏耐心。",
+    blind: "可能显得专断，对“感受型”同事缺乏耐心。",
     career: "运营管理、供应链、公务员、制造业管理" },
   "ESFJ": { name: "执政官", desc: "极度关心他人、爱社交且受欢迎的人，总是热心提供帮助。",
     strength: "情商高，善于营造和谐氛围，是团队粘合剂。",
-    blind: "过度在意他人评价，害怕冲突，难以做"恶人"决策。",
+    blind: "过度在意他人评价，害怕冲突，难以做“恶人”决策。",
     career: "客户成功、医护、教师、社区运营" },
   "ISTP": { name: "鉴赏家", desc: "大胆而实际的实验家，擅长使用任何形式的工具。",
     strength: "动手能力极强，危机时刻冷静，擅长拆解和修复一切。",
-    blind: "讨厌被管束和繁文缛节，情感表达比较"钝"。",
+    blind: "讨厌被管束和繁文缛节，情感表达比较“钝”。",
     career: "工程师、飞行员、外科医生、极限运动/手艺人" },
   "ISFP": { name: "探险家", desc: "灵活有魅力的艺术家，时刻准备着探索和体验新鲜事物。",
     strength: "审美在线，活在当下，待人温和不评判。",
@@ -595,6 +642,8 @@ function submitTest() {
   resWrap.style.display = 'block';
   setTimeout(()=> window.scrollTo({top: 0, behavior: 'smooth'}), 100);
 
+  window._mbtiRes = { type: `${type}-${identity}`, name: mbtiProfiles[type].name,
+    dims: [ ['精神', E_pct, '外向','内向'], ['能量', N_pct, '直觉','现实'], ['本性', T_pct, '逻辑','感受'], ['战术', J_pct, '计划','探索'], ['身份', A_pct, '坚决','动荡'] ] };
   document.getElementById('res-code').innerText = `${type}-${identity}`;
   document.getElementById('res-name').innerText = mbtiProfiles[type].name;
   
@@ -640,6 +689,16 @@ function renderTraitBar(dimName, leftName, leftPct, rightName, rightPct, color) 
       </div>
     </div>
   `;
+}
+
+
+function mbtiCopy() {
+  const r = window._mbtiRes;
+  if (!r) return;
+  const txt = `我的 MBTI 测试结果：${r.type}「${r.name}」\n` +
+    r.dims.map(d => `${d[0]}：${d[2]} ${d[1]}% / ${d[3]} ${100-d[1]}%`).join('\n') +
+    `\n—— 来自马老师博客 MBTI 测评 https://blog.8818618.xyz/mbti-test/`;
+  navigator.clipboard.writeText(txt).then(() => alert('结果已复制，快去分享给朋友吧！'));
 }
 
 window.onload = initApp;
