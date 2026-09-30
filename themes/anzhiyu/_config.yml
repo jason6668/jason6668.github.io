@@ -12,6 +12,7 @@ menu:
     MBTI测评: /mbti-test/ || anzhiyu-icon-brain
     星座分析: /star-fortune/ || anzhiyu-icon-star
     六爻占卜: /liuyao/ || anzhiyu-icon-yin-yang
+    新手教程: /tutorial/ || anzhiyu-icon-book-open
 
   科学上网:
     DockerHub镜像: https://Docker.CMLiussss.net/ || anzhiyu-icon-docker
