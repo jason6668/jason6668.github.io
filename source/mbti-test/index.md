@@ -129,7 +129,7 @@ body { background-color: #f3f4f6; }
         <div class="dp"><b>🗺️ 战术 J / P</b><p>计划喜欢确定性，探索喜欢灵活性</p></div>
       </div>
       <button class="big-start" onclick="mbtiBegin()">开始测试 →</button>
-      <p class="start-tip">请凭第一直觉作答，没有对错之分 · 可随时退出</p>
+      <p class="start-tip">请凭第一直觉作答，没有对错之分 · 可随时退出<br><a href="/mbti-types/" style="color:#88619a;font-weight:700;">🗺️ 先看看 16 种人格详解 →</a></p>
     </div>
   </div>
 
@@ -185,6 +185,7 @@ body { background-color: #f3f4f6; }
 
     <div class="action-btns">
       <button class="next-btn" onclick="mbtiCopy()">📋 复制结果</button>
+      <button class="next-btn" onclick="location.href='/mbti-types/#type-'+window._mbtiRes.type.slice(0,4)" style="background:#88619a">🗺️ 查看我的完整详解</button>
       <button class="next-btn gray" onclick="location.reload()">再测一次</button>
     </div>
 
