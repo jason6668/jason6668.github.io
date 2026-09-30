@@ -41,6 +41,7 @@ menu:
     马老师专属TV: https://tv.8818618.xyz/ || anzhiyu-icon-film
     马老师专属音乐: https://music.8818618.xyz/ || anzhiyu-icon-music
     会员服务: https://vip.8818618.xyz/ || anzhiyu-icon-crown
+    赞赏支持: https://rewards.8818618.xyz/ || anzhiyu-icon-hand-heart-fill
 
   我的:
     音乐馆: /music/ || anzhiyu-icon-music
@@ -277,6 +278,8 @@ post_copyright:
 # Sponsor/reward
 reward:
   enable: true
+  # 独立赞赏墙地址（文章底部"赞赏者名单"按钮跳转目标）
+  list_url: https://rewards.8818618.xyz/
   QR_code:
     - img: https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg
       link:

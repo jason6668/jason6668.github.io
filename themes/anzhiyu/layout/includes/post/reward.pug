@@ -12,7 +12,8 @@
             a(href=url_for(clickTo) target='_blank')
               img.post-qr-code-img(src=url_for(item.img) alt=item.text)
             .post-qr-code-desc=item.text
-      a.reward-main-btn(href='/about/#about-reward' target='_blank')
+      - var listUrl = theme.reward.list_url || '/about/#about-reward'
+      a.reward-main-btn(href=listUrl target='_blank')
         .reward-text=_p('reward.list')
         .reward-dec=_p('reward.list_desc')
 #quit-box(onclick="anzhiyu.removeRewardMask()" style="display: none")
