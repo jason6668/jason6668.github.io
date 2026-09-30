@@ -122,6 +122,11 @@ const TYPES = [
     });
   });
   list.innerHTML = html;
+  // 渲染后处理锚点：卡片是 JS 动态生成的，原生锚点跳转会先于渲染触发
+  if (location.hash) {
+    const target = document.querySelector(decodeURIComponent(location.hash));
+    if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 150);
+  }
 })();
 </script>
 {% endraw %}
