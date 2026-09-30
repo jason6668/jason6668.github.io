@@ -121,6 +121,7 @@ table.ly-pan tr.dong td{background:#fff8f0}
 
 <div class="ly-card" id="ly-result-card" style="display:none">
 <div class="ly-step"><div class="no">3</div><div class="t">排盘</div></div>
+<div style="text-align:center;color:#999;font-size:13px;margin:-6px 0 8px;" id="ly-today-line"></div>
 <div class="ly-row" style="margin-bottom:10px;font-size:14px;">
 <span>📅 起卦日：<input type="date" class="ly-input" id="ly-date" style="padding:6px 10px;" onchange="lyRepan()"></span>
 <span>日辰：<b id="ly-rich"></b></span>
@@ -144,6 +145,13 @@ table.ly-pan tr.dong td{background:#fff8f0}
 </div>
 
 <script>
+function lyDateLine(){
+  // 排盘区顶部：每天自动更新的日期（干支跟随排盘日辰）
+  var d=new Date(),WD='日一二三四五六'[d.getDay()];
+  var rich=(document.getElementById('ly-rich').textContent||'').replace(/日$/,'');
+  document.getElementById('ly-today-line').textContent='📅 今天 '+(d.getMonth()+1)+'月'+d.getDate()+'日 星期'+WD+(rich?' · '+rich+'日':'');
+}
+lyDateLine();</script>
 /* ===== 基础表 ===== */
 const G=['甲','乙','丙','丁','戊','己','庚','辛','壬','癸'];
 const Z=['子','丑','寅','卯','辰','巳','午','未','申','酉','戌','亥'];
@@ -329,6 +337,7 @@ lyDoPan(bits,moving);
 function renderPan(){
 const {pan,gz,yue}=lyPan;
 document.getElementById('ly-rich').textContent=gz.gz+'日';
+if(typeof lyDateLine==='function') lyDateLine();
 const bs=beastStart(gz.gan), xk=xunkong(gz.idx);
 const yue5=Z5[yue];
 let html=`<div class="ly-gua-name">${pan.name} <span style="font-size:14px;color:#888;">${TN[pan.palace]}宫 · ${pan.kind}</span></div>

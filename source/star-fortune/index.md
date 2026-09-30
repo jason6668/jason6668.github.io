@@ -18,6 +18,8 @@ date: 2026-09-30
 .xz-tabs{display:flex;gap:8px;justify-content:center;margin:20px 0;flex-wrap:wrap}
 .xz-tab{padding:9px 22px;border-radius:20px;border:2px solid #eef0f7;background:#fff;cursor:pointer;font-size:14px;font-weight:600}
 .xz-tab.active{background:#425AEF;color:#fff;border-color:#425AEF}
+.xz-tab small{font-weight:400;font-size:11px;color:#999;display:block;margin-top:2px}
+.xz-tab.active small{color:#dde4ff}
 .xz-card{background:#fff;border-radius:18px;padding:24px;box-shadow:0 6px 24px rgba(0,0,0,.06);margin-bottom:18px}
 .xz-card h2{margin:0 0 4px;font-size:22px}
 .xz-card .sub{color:#999;font-size:13px;margin-bottom:16px}
@@ -53,11 +55,12 @@ date: 2026-09-30
   <div class="xz-grid" id="xz-grid"></div>
 
   <div class="xz-tabs" id="xz-tabs">
-    <button class="xz-tab active" data-r="day">今日运势</button>
-    <button class="xz-tab" data-r="tomorrow">明日运势</button>
-    <button class="xz-tab" data-r="week">本周运势</button>
-    <button class="xz-tab" data-r="month">本月运势</button>
+    <button class="xz-tab active" data-r="day">今日运势<br><small id="xz-d-day"></small></button>
+    <button class="xz-tab" data-r="tomorrow">明日运势<br><small id="xz-d-tomorrow"></small></button>
+    <button class="xz-tab" data-r="week">本周运势<br><small id="xz-d-week"></small></button>
+    <button class="xz-tab" data-r="month">本月运势<br><small id="xz-d-month"></small></button>
   </div>
+  <div style="text-align:center;color:#999;font-size:13px;margin:-8px 0 12px;" id="xz-today-line"></div>
 
   <div class="xz-card" id="xz-fortune"></div>
 
@@ -166,6 +169,17 @@ function xzPair(){
   document.getElementById('xz-pair-result').innerHTML=`<div style="font-size:15px;font-weight:700;">${A.s}${A.n} × ${B.s}${B.n}</div><div class="xz-score">${score}<span style="font-size:18px;">分</span></div><div style="font-weight:700;color:#ff7a45;margin:6px 0;">${c} · ${elR}</div><div style="font-size:14px;color:#666;line-height:1.8;">${txt}</div>`;
 }
 (function init(){
+  // 每天自动更新的日期（tab 标签 + 今日行）
+  const WD=['日','一','二','三','四','五','六'];
+  const d=new Date(), md=m=>`${m.getMonth()+1}.${m.getDate()}`;
+  const tmr=new Date(d.getTime()+864e5);
+  const wkS=new Date(d); wkS.setDate(d.getDate()-((d.getDay()+6)%7));
+  const wkE=new Date(wkS); wkE.setDate(wkS.getDate()+6);
+  document.getElementById('xz-d-day').textContent=md(d)+' 周'+WD[d.getDay()];
+  document.getElementById('xz-d-tomorrow').textContent=md(tmr)+' 周'+WD[tmr.getDay()];
+  document.getElementById('xz-d-week').textContent=md(wkS)+'-'+md(wkE);
+  document.getElementById('xz-d-month').textContent=(d.getMonth()+1)+'月';
+  document.getElementById('xz-today-line').textContent=`📅 今天是 ${d.getFullYear()}年${d.getMonth()+1}月${d.getDate()}日 星期${WD[d.getDay()]}，运势每日零点更新`;
   document.getElementById('xz-grid').innerHTML=SIGNS.map((s,i)=>`<div class="xz-sign" onclick="xzSign=${i};xzRender()"><div class="s">${s.s}</div><div class="n">${s.n}</div><div class="d">${s.d}</div></div>`).join('');
   document.querySelectorAll('.xz-tab').forEach(el=>el.onclick=()=>{xzRange=el.dataset.r;xzRender()});
   const opts=SIGNS.map((s,i)=>`<option value="${i}">${s.s} ${s.n}</option>`).join('');
