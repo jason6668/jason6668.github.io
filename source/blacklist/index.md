@@ -79,7 +79,28 @@ reward: false
 }
 
 .bl-wt-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:1rem; }
-.bl-wt-tab { padding:10px 18px; border-radius:20px; border:2px solid var(--anzhiyu-card-border); background:var(--anzhiyu-background); cursor:pointer; fo  <div class="bl-card">
+.bl-wt-tab { padding:10px 18px; border-radius:20px; border:2px solid var(--anzhiyu-card-border); background:var(--anzhiyu-background); cursor:pointer; font-weight:600; font-size:.9rem; color:var(--anzhiyu-fontcolor); }
+.bl-wt-tab.active { border-color:var(--anzhiyu-theme); color:var(--anzhiyu-theme); background:rgba(66,90,239,.07); }
+.bl-wt-body iframe { width:100%; height:640px; border:1px solid var(--anzhiyu-card-border); border-radius:12px; background:#fff; }
+.bl-wt-tip { font-size:.85rem; color:#888; margin-bottom:.8rem; }
+.bl-wt-tip b { color:var(--anzhiyu-theme); }
+.bl-ext { margin-top:1.5rem; border-top:1px dashed var(--anzhiyu-card-border); padding-top:1.2rem; }
+.bl-ext h3 { font-size:1.05rem; margin-bottom:.8rem; }
+.bl-ext-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:10px; }
+.bl-ext-card { border:1px solid var(--anzhiyu-card-border); border-radius:10px; padding:1rem; background:var(--anzhiyu-background); }
+.bl-ext-card b { display:block; margin-bottom:.3rem; }
+.bl-ext-card p { font-size:.8rem; color:#888; margin:0 0 .7rem; line-height:1.6; }
+.bl-ext-card a { display:inline-block; padding:8px 16px; border-radius:8px; background:var(--anzhiyu-theme); color:#fff !important; font-size:.85rem; font-weight:600; }
+@media (max-width:640px){ .bl-wt-body iframe{ height:480px; } }
+</style>
+
+<div class="bl-wrapper">
+  <div class="bl-hero">
+    <h1>🛡️ 职场避雷中心</h1>
+    <p>入职前必查 · 一键全网检索公司口碑 / 风险 / 真实评价</p>
+  </div>
+
+  <div class="bl-card">
     <h2>🔍 公司背景一键深搜</h2>
     <div class="bl-input-group">
       <input type="text" id="bl-target" class="bl-input" placeholder="输入公司全称，如：某某科技有限公司" onkeydown="if(event.key==='Enter')blSearch()">
@@ -98,10 +119,30 @@ reward: false
     </div>
   </div>
 
-scam"><h3>🔄 试用期陷阱</h3><p>超长试用期、试用期无社保、试用期结束前找理由辞退。试用期最长 6 个月且必须缴社保。</p></div>
+  <div class="bl-card">
+    <h2>✅ 入职前必查清单</h2>
+    <ul class="bl-checklist">
+      <li><span class="num">1</span><div><b>查工商司法</b><p>企查查 / 天眼查看成立年限、参保人数、被执行人、行政处罚。参保人数远小于宣传规模要警惕。</p></div></li>
+      <li><span class="num">2</span><div><b>查员工口碑</b><p>小红书、脉脉搜"公司名 + 避雷 / 坑 / 加班 / 欠薪"，重点看 3 个月内的帖子。</p></div></li>
+      <li><span class="num">3</span><div><b>查薪资真实性</b><p>Offer 写进合同的是税前还是税后？试用期打几折？年终奖是"最高"还是"固定"？</p></div></li>
+      <li><span class="num">4</span><div><b>查社保公积金</b><p>按实际工资还是最低基数缴纳？入职当月还是次月起缴？直接问 HR，不用不好意思。</p></div></li>
+      <li><span class="num">5</span><div><b>查离职率</b><p>面试时问"这个岗位为什么空出来""团队去年走了几个人"，支吾其词的基本有坑。</p></div></li>
+      <li><span class="num">6</span><div><b>查合同主体</b><p>签约公司和面试公司是否为同一家？外包、劳务派遣必须在入职前明确告知。</p></div></li>
+    </ul>
+  </div>
+
+  <div class="bl-card">
+    <h2>⚠️ 常见求职骗局图鉴</h2>
+    <div class="bl-scam-grid">
+      <div class="bl-scam"><h3>💸 收费培训贷</h3><p>以"岗前培训"为名让你贷款交培训费，号称"入职后报销"。正规公司培训一律免费。</p></div>
+      <div class="bl-scam"><h3>📦 刷单返利</h3><p>"动动手指日入 500"，先小额返利引你加大投入后拉黑。所有刷单都是诈骗。</p></div>
+      <div class="bl-scam"><h3>🪪 证件扣押</h3><p>扣身份证、毕业证"统一保管"。这是违法的，任何理由都不能扣留证件原件。</p></div>
+      <div class="bl-scam"><h3>📝 阴阳合同</h3><p>口头承诺 15k，合同只写 8k + "绩效"。一切以纸质合同为准，口头承诺录音留证。</p></div>
+      <div class="bl-scam"><h3>🔄 试用期陷阱</h3><p>超长试用期、试用期无社保、试用期结束前找理由辞退。试用期最长 6 个月且必须缴社保。</p></div>
       <div class="bl-scam"><h3>🌍 海外高薪</h3><p>东南亚"客服""文员"月薪 3 万包机票。本质是电诈园区，去了就回不来。</p></div>
     </div>
   </div>
+
 
   <div class="bl-note">
     <b>📢 免责与投稿：</b>本站仅提供检索入口与科普，不构成法律建议。检索结果来自第三方平台，请自行甄别。
