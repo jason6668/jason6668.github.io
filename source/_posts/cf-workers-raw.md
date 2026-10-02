@@ -1,17 +1,17 @@
 ---
-abbrlink: ''
 categories:
-- 科学上网
-cover: https://tc.8818618.xyz/file/1783842510171_image.png
+  - 科学上网
+cover: 'https://tc.8818618.xyz/file/1783842510171_image.png'
 date: '2026-04-12'
 sticky: ''
 tags:
-- Cloudflare
-- Workers
-- GitHub
-- 私库访问
+  - Cloudflare
+  - Workers
+  - GitHub
+  - 私库访问
 title: CF-Workers-Raw：轻松安全访问 GitHub 私有仓库原始文件
 updated: '2026-07-12T15:47:18.563+08:00'
+abbrlink: 9c29b7ce
 ---
 # CF-Workers-Raw：轻松安全访问 GitHub 私有仓库
 

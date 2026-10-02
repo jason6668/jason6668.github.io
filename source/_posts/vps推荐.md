@@ -1,15 +1,15 @@
 ---
-abbrlink: 面向国内访问优化的海外云服务器选择
 categories:
-- - 科学上网
-cover: https://tc.8818618.xyz/file/1783841546057_image.png
+  - - 科学上网
+cover: 'https://tc.8818618.xyz/file/1783841546057_image.png'
 date: '2026-04-25T13:23:46.050929+08:00'
 sticky: ''
 tags:
-- 'VMRack VPS '
-- 隐私协议
+  - 'VMRack VPS '
+  - 隐私协议
 title: VMRack VPS 体验分享
 updated: '2026-07-12T15:30:35.698+08:00'
+abbrlink: 5a82730e
 ---
 # VMRack VPS 体验分享：面向国内访问优化的海外云服务器选择
 

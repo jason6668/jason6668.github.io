@@ -1,16 +1,16 @@
 ---
-abbrlink: 'MiniMax H3 '
 categories:
-- - AI教学
-cover: https://tc.8818618.xyz/file/1786024011281_image.png
+  - - AI教学
+cover: 'https://tc.8818618.xyz/file/1786024011281_image.png'
 date: '2026-08-01T21:26:44.062685+08:00'
 sticky: '3'
 tags:
-- 'MiniMax H3 '
-- MiniMax H3 强袭开源教程
-- H3 到底是什么
+  - 'MiniMax H3 '
+  - MiniMax H3 强袭开源教程
+  - H3 到底是什么
 title: MiniMax H3 强袭开源教程
 updated: '2026-08-01T21:26:52.696+08:00'
+abbrlink: 64a1db08
 ---
 # 
 

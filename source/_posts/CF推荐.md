@@ -1,16 +1,16 @@
 ---
-abbrlink: CF部署
 categories:
-- - 科学上网
-cover: https://tc.8818618.xyz/file/1784009889465_image.png
+  - - 科学上网
+cover: 'https://tc.8818618.xyz/file/1784009889465_image.png'
 date: '2026-07-14T14:09:59.159560+08:00'
 sticky: ''
 tags:
-- 科学上网
-- CF
-- Edgetunnel 部署
+  - 科学上网
+  - CF
+  - Edgetunnel 部署
 title: Edgetunnel 部署与 VLESS 订阅转换指南
 updated: '2026-07-14T14:10:07.403+08:00'
+abbrlink: cbfc1e6a
 ---
 # 边缘计算的进阶玩法：Edgetunnel 部署与 VLESS 订阅转换指南
 

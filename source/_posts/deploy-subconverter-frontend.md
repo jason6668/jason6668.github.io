@@ -1,16 +1,16 @@
 ---
-abbrlink: ''
 categories:
-- 科学上网
-cover: https://tc.8818618.xyz/file/1783842510171_image.png
+  - 科学上网
+cover: 'https://tc.8818618.xyz/file/1783842510171_image.png'
 date: '2026-04-12'
 sticky: ''
 tags:
-- 订阅转换
-- SUBWEB
-- 隐私保护
+  - 订阅转换
+  - SUBWEB
+  - 隐私保护
 title: 部署订阅转换：WEB前端 - 多种主流方案详解
 updated: '2026-07-12T15:50:35.446+08:00'
+abbrlink: f8759eb6
 ---
 # 🔄 部署订阅转换：WEB前端 💎 多种主流方案详解
 

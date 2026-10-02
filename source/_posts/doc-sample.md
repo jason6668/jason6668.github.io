@@ -1,13 +1,13 @@
 ---
-abbrlink: Karing 新手教程
 categories:
-- - 科学上网
-cover: https://tc.8818618.xyz/file/1783842745180_image.png
+  - - 科学上网
+cover: 'https://tc.8818618.xyz/file/1783842745180_image.png'
 date: '2026-04-11'
 sticky: ''
 tags: []
 title: Karing 新手教程
 updated: '2026-07-12T15:51:02.092+08:00'
+abbrlink: aae0b4be
 ---
 ---
 # Karing 新手教程：别慌，网络没坏，可能只是配置还没调好
