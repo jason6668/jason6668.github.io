@@ -10,8 +10,20 @@ jobs:
   sync-to-forum:
     runs-on: ubuntu-latest
     steps:
-      - name: 等待 Cloudflare 构建更新 search.xml
-        run: sleep 180
+      - name: 等待 Cloudflare 构建完成
+        run: |
+          # 轮询 search.xml 直到内容变化（说明 Cloudflare 部署完成），最多等 15 分钟
+          OLD=$(curl -s --max-time 20 "https://blog.8818618.xyz/search.xml" | md5sum | cut -d' ' -f1)
+          echo "当前 search.xml 指纹: $OLD"
+          for i in $(seq 1 30); do
+            sleep 30
+            NEW=$(curl -s --max-time 20 "https://blog.8818618.xyz/search.xml" | md5sum | cut -d' ' -f1)
+            if [ "$NEW" != "$OLD" ]; then
+              echo "检测到博客已更新，开始同步"
+              break
+            fi
+            echo "等待 Cloudflare 构建... ($i/30)"
+          done
 
       - name: 触发论坛博客同步
         run: |
@@ -19,7 +31,6 @@ jobs:
             echo "尝试第 $i 次..."
             RESP=$(curl -s --max-time 30 "https://bbs.8818618.xyz/api/cron/blog-sync?secret=${{ secrets.FORUM_CRON_SECRET }}")
             echo "$RESP"
-            # 同步成功或基线建立都算完成
             echo "$RESP" | grep -q '"ok":true' && exit 0
             sleep 120
           done
