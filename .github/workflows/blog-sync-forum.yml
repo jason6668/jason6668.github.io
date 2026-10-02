@@ -1,0 +1,27 @@
+name: 同步新文章到论坛
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'source/_posts/**'
+
+jobs:
+  sync-to-forum:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 等待 Cloudflare 构建更新 search.xml
+        run: sleep 180
+
+      - name: 触发论坛博客同步
+        run: |
+          for i in 1 2 3; do
+            echo "尝试第 $i 次..."
+            RESP=$(curl -s --max-time 30 "https://bbs.8818618.xyz/api/cron/blog-sync?secret=${{ secrets.FORUM_CRON_SECRET }}")
+            echo "$RESP"
+            # 同步成功或基线建立都算完成
+            echo "$RESP" | grep -q '"ok":true' && exit 0
+            sleep 120
+          done
+          echo "三次尝试均未成功，请检查"
+          exit 1
