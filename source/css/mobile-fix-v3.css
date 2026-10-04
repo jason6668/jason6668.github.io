@@ -80,6 +80,28 @@
     transform: translate(-20px);
   }
 
+  /* 随便逛逛蓝条：钉在标题卡里常驻（对应 PC 悬停态） */
+  #random-hover {
+    position: relative !important;
+    opacity: 1 !important;
+    height: 46px;
+    margin-top: 10px;
+    padding-left: 1rem !important;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px;
+  }
+
+  #random-hover .bannerText {
+    font-size: 20px;
+  }
+
+  #random-hover i {
+    font-size: 24px;
+  }
+
   /* ② 分类卡：和 PC 一样 4 张横排一行 */
   .categoryGroup {
     display: flex !important;
