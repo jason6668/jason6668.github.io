@@ -34,7 +34,7 @@
   }
 
   .banners-title {
-    position: relative;
+    position: static !important;
     z-index: 3;
   }
 
@@ -81,25 +81,29 @@
   }
 
   /* 随便逛逛蓝条：钉在标题卡里常驻（对应 PC 悬停态） */
-  #random-hover {
+  #random-banner #random-hover {
     position: relative !important;
     opacity: 1 !important;
-    height: 46px;
+    width: auto !important;
+    height: 46px !important;
+    top: auto !important;
+    left: auto !important;
     margin-top: 10px;
     padding-left: 1rem !important;
     border-radius: 10px;
-    flex-direction: row;
+    flex-direction: row !important;
     align-items: center;
     justify-content: flex-start;
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
-  #random-hover .bannerText {
-    font-size: 20px;
+  #random-banner #random-hover .bannerText {
+    font-size: 20px !important;
   }
 
-  #random-hover i {
-    font-size: 24px;
+  #random-banner #random-hover i {
+    font-size: 24px !important;
+    margin-left: 8px;
   }
 
   /* ② 分类卡：和 PC 一样 4 张横排一行 */
@@ -175,7 +179,7 @@
   .topGroup .todayCard .todayCard-info {
     bottom: 1.4rem;
     left: 1.1rem;
-    max-width: 58%;
+    max-width: 64%;
   }
 
   .topGroup .banner-button {
