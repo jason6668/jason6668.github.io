@@ -1,0 +1,121 @@
+/* 马老师博客 · 移动端排版修复（2026-10-04）
+   解决：首页横幅区在手机上被挤成横向滚动、分类卡只剩 3 张、置顶卡错位。
+   只作用于 ≤900px，PC 端保持主题原样。 */
+
+@media screen and (max-width: 900px) {
+  /* 防任何元素把页面撑出横向滚动 */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* 横幅区：改为上下纵向排列，不再横向卷轴 */
+  #home_top .swiper_container_card {
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    height: auto !important;
+    width: 100%;
+  }
+
+  div#bannerGroup {
+    width: 100%;
+    height: auto;
+  }
+
+  /* 分类卡：2×2 网格，四张全显示 */
+  .categoryGroup {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    height: auto;
+    min-width: 0;
+    margin-top: 8px;
+  }
+
+  .categoryGroup .categoryItem,
+  .categoryGroup .categoryItem:nth-child(3) {
+    display: block !important;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .categoryGroup a.categoryButton {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    line-height: 1.2;
+    font-size: 1rem;
+  }
+
+  .categoryGroup .categoryButtonText {
+    padding-left: 16px;
+  }
+
+  .categoryGroup a.categoryButton i,
+  .categoryGroup a.categoryButton svg {
+    font-size: 2.4rem;
+    width: 56px;
+    top: 50%;
+    transform: translateY(-50%) rotate(15deg);
+  }
+
+  a.categoryButton:after {
+    display: none;
+  }
+
+  /* 置顶文章区：整行宽，两列卡片 */
+  .topGroup {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+  }
+
+  .topGroup .recent-post-item {
+    display: flex;
+    width: calc(50% - 4px);
+    min-width: 0;
+    flex: 1 1 calc(50% - 4px);
+    height: 148px !important;
+    max-height: 148px;
+    margin: 0 0 8px 0;
+  }
+
+  .topGroup .recent-post-item:nth-child(odd) {
+    margin-right: 8px;
+  }
+
+  /* 分类标签行：横向滑动，不再换行挤压 */
+  #categoryBar .category-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #categoryBar .category-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  #categoryBar #catalog-list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  #categoryBar .catalog-list-item {
+    flex: 0 0 auto;
+  }
+
+  .category-bar-next {
+    display: none !important;
+  }
+
+  /* 文章列表卡片封面在手机上别太高 */
+  #recent-posts .recent-post-item .post_cover {
+    max-height: 200px;
+    overflow: hidden;
+  }
+}
