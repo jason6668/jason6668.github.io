@@ -1,6 +1,6 @@
-/* 马老师博客 · 移动端排版修复（2026-10-04）
-   解决：首页横幅区在手机上被挤成横向滚动、分类卡只剩 3 张、置顶卡错位。
-   只作用于 ≤900px，PC 端保持主题原样。 */
+/* 马老师博客 · 移动端排版（2026-10-04 v2，按 PC 端顶部结构还原）
+   PC 顶部：左=大标题卡（生活明朗/万物可爱+技能图标）+ 4 张分类卡横排，右=「失业联盟」今日大卡。
+   主题在 ≤1200px 把大标题卡和今日大卡都藏了，这里在 ≤900px 按原顺序整幅摆出来。PC 不受影响。 */
 
 @media screen and (max-width: 900px) {
   /* 防任何元素把页面撑出横向滚动 */
@@ -9,7 +9,7 @@
     overflow-x: hidden;
   }
 
-  /* 横幅区：改为上下纵向排列，不再横向卷轴 */
+  /* 横幅区：纵向排列，不再横向卷轴 */
   #home_top .swiper_container_card {
     flex-direction: column !important;
     flex-wrap: nowrap;
@@ -23,21 +23,48 @@
     height: auto;
   }
 
-  /* 分类卡：2×2 网格，四张全显示 */
+  /* ① 大标题卡（PC 左上同款，整幅显示） */
+  #random-banner {
+    display: flex !important;
+    height: auto;
+    min-height: 148px;
+    padding: 16px 18px;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+
+  .banners-title-big {
+    font-size: 30px !important;
+    line-height: 1.25;
+  }
+
+  #skills-tags-group-all {
+    height: 58px;
+    overflow: hidden;
+    margin-top: 8px;
+    transform: rotate(-8deg);
+  }
+
+  #skills-tags-group-all .tags-group-wrapper {
+    margin-top: 0 !important;
+  }
+
+  /* ② 分类卡：和 PC 一样 4 张横排一行 */
   .categoryGroup {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
+    display: flex !important;
+    flex-direction: row;
     gap: 8px;
     height: auto;
     min-width: 0;
-    margin-top: 8px;
+    margin-top: 0;
   }
 
   .categoryGroup .categoryItem,
   .categoryGroup .categoryItem:nth-child(3) {
     display: block !important;
+    flex: 1 1 0;
     width: auto;
-    height: auto;
+    height: 58px;
     min-width: 0;
     margin: 0;
   }
@@ -45,19 +72,20 @@
   .categoryGroup a.categoryButton {
     display: flex;
     align-items: center;
-    height: 64px;
-    line-height: 1.2;
-    font-size: 1rem;
+    height: 58px;
+    line-height: 1.15;
+    font-size: 13px;
   }
 
   .categoryGroup .categoryButtonText {
-    padding-left: 16px;
+    padding-left: 10px;
+    white-space: nowrap;
   }
 
   .categoryGroup a.categoryButton i,
   .categoryGroup a.categoryButton svg {
-    font-size: 2.4rem;
-    width: 56px;
+    font-size: 1.6rem;
+    width: 34px;
     top: 50%;
     transform: translateY(-50%) rotate(15deg);
   }
@@ -66,27 +94,50 @@
     display: none;
   }
 
-  /* 置顶文章区：整行宽，两列卡片 */
+  /* ③ 今日大卡（PC 右侧「失业联盟」深色大卡，整幅显示在分类卡下方） */
   .topGroup {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
-    margin-top: 10px;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    margin-top: 8px;
   }
 
+  .topGroup .todayCard {
+    display: flex !important;
+    position: relative;
+    width: 100%;
+    height: 210px;
+    margin: 0;
+    top: auto;
+    left: auto;
+  }
+
+  .topGroup .todayCard .todayCard-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .topGroup .todayCard .todayCard-info {
+    bottom: 1.2rem;
+    left: 1.2rem;
+    max-width: 72%;
+  }
+
+  .topGroup .todayCard .todayCard-info .todayCard-title {
+    font-size: 21px;
+    line-height: 1.35;
+  }
+
+  .topGroup .banner-button-group {
+    right: 1.2rem;
+    bottom: 1.2rem;
+  }
+
+  /* PC 上今日大卡盖住的小卡不单独出（内容在下面文章列表里都有） */
   .topGroup .recent-post-item {
-    display: flex;
-    width: calc(50% - 4px);
-    min-width: 0;
-    flex: 1 1 calc(50% - 4px);
-    height: 148px !important;
-    max-height: 148px;
-    margin: 0 0 8px 0;
-  }
-
-  .topGroup .recent-post-item:nth-child(odd) {
-    margin-right: 8px;
+    display: none !important;
   }
 
   /* 分类标签行：横向滑动，不再换行挤压 */
