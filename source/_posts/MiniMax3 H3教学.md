@@ -3,7 +3,6 @@ categories:
   - - AI教学
 cover: 'https://tc.8818618.xyz/file/1786024011281_image.png'
 date: '2026-08-01T21:26:44.062685+08:00'
-sticky: '3'
 tags:
   - 'MiniMax H3 '
   - MiniMax H3 强袭开源教程

@@ -1,7 +1,7 @@
 ---
 categories:
   - 科学上网
-cover: 'https://tc.8818618.xyz/file/1783842510171_image.png'
+cover: '/images/cover-subconvert-20261004.jpg'
 date: '2026-04-12'
 sticky: ''
 tags:
