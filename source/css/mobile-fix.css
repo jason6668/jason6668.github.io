@@ -151,6 +151,75 @@
     display: none;
   }
 
+  /* 顶部功能按钮：还原 PC 菜单行 + 中控台开关 */
+  #page-header {
+    margin-bottom: 46px;
+  }
+
+  #nav #menus {
+    display: flex !important;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    margin: 0;
+    padding: 0 8px;
+    transform: none !important;
+    background: var(--anzhiyu-card-bg);
+    border-bottom: var(--style-border-always);
+    overflow-x: auto;
+    scrollbar-width: none;
+    z-index: 90;
+  }
+
+  #nav #menus::-webkit-scrollbar {
+    display: none;
+  }
+
+  #nav #menus .menus_items {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    height: 46px;
+    margin: 0;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  #nav .menus_items .menus_item {
+    position: static;
+  }
+
+  #nav .menus_items .menus_item > a {
+    padding: 6px 11px;
+    font-size: 14px;
+    white-space: nowrap;
+    border-radius: 50px;
+  }
+
+  #nav .menus_items .menus_item .menus_item_child {
+    position: fixed !important;
+    top: 110px;
+    left: 10px;
+    right: 10px;
+    width: auto;
+    z-index: 999;
+  }
+
+  #nav .menus_items .menus_item:hover .menus_item_child,
+  #nav .menus_items .menus_item:focus-within .menus_item_child {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  #center-console + label {
+    display: flex !important;
+    margin-left: 0.6rem;
+  }
+
   /* ③ 今日大卡（PC 右侧「失业联盟」深色大卡，整幅显示在分类卡下方） */
   .topGroup {
     display: flex;
