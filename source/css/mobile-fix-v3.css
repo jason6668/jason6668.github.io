@@ -27,10 +27,15 @@
   #random-banner {
     display: flex !important;
     height: auto;
-    min-height: 148px;
-    padding: 16px 18px;
+    min-height: 0;
+    padding: 16px 18px 12px;
     margin-bottom: 8px;
     justify-content: center;
+  }
+
+  .banners-title {
+    position: relative;
+    z-index: 3;
   }
 
   .banners-title-big {
@@ -38,15 +43,40 @@
     line-height: 1.25;
   }
 
+  /* 技能图标缩成一条小瓷砖装饰带（PC 是 120px 大砖，手机上等比缩小） */
   #skills-tags-group-all {
-    height: 58px;
+    flex: none;
+    position: relative;
+    z-index: 1;
+    height: 50px !important;
+    min-height: 0 !important;
     overflow: hidden;
-    margin-top: 8px;
-    transform: rotate(-8deg);
+    margin-top: 10px;
+    transform: none;
   }
 
   #skills-tags-group-all .tags-group-wrapper {
     margin-top: 0 !important;
+  }
+
+  #skills-tags-group-all .tags-group-icon-pair {
+    margin-left: 0.55rem;
+  }
+
+  #skills-tags-group-all .tags-group-icon {
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 13px;
+    font-size: 22px;
+  }
+
+  #skills-tags-group-all .tags-group-icon img {
+    width: 24px !important;
+  }
+
+  #skills-tags-group-all .tags-group-icon-pair .tags-group-icon:nth-child(even) {
+    margin-top: 0.35rem;
+    transform: translate(-20px);
   }
 
   /* ② 分类卡：和 PC 一样 4 张横排一行 */
@@ -120,13 +150,13 @@
   }
 
   .topGroup .todayCard .todayCard-info {
-    bottom: 1.2rem;
-    left: 1.2rem;
-    max-width: 72%;
+    bottom: 1.1rem;
+    left: 1.1rem;
+    max-width: 60%;
   }
 
   .topGroup .todayCard .todayCard-info .todayCard-title {
-    font-size: 21px;
+    font-size: 20px;
     line-height: 1.35;
   }
 
