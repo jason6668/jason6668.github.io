@@ -1239,7 +1239,7 @@ dynamicEffect:
 inject:
   head:
     # 自定义css
-    - <link rel="stylesheet" href="/css/mobile-fix.css">
+    - <link rel="stylesheet" href="/css/mobile-fix-v2.css">
 
   bottom:
     # 自定义js
