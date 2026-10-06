@@ -145,4 +145,15 @@ date: 2026-09-30
 <div class="tut-tip">💡 每个站里也都有自己的新手教程，跳转过去后在导航里找「📖 新手教程」就行。</div>
 </div>
 
+<div class="tut-card">
+<h2>📖 五站图文教程（带实拍截图，一步一图）</h2>
+<div class="tut-grid">
+<a class="tut-link-card" href="/p/a8ee43bc/"><b>💬 论坛总教程</b><span>注册、登录、逛忏悔录、投稿、改密码</span></a>
+<a class="tut-link-card" href="/p/d90cc1e3/"><b>💭 专属聊天教程</b><span>登录、群聊与频道、树洞投稿</span></a>
+<a class="tut-link-card" href="/p/edb41455/"><b>📺 聚合直播教程</b><span>找直播、看直播、体育与会员</span></a>
+<a class="tut-link-card" href="/p/7d636691/"><b>🎬 专属TV教程</b><span>搜片、播放、换源与电视直播</span></a>
+<a class="tut-link-card" href="/p/cd1b4196/"><b>🎙️ 专属会议教程</b><span>加入会议、开麦与发消息</span></a>
+</div>
+</div>
+
 </div>
