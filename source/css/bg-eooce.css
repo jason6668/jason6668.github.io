@@ -1,0 +1,20 @@
+/* 马老师博客 · 背景配色（2026-10-09，eooce 同款）
+   浅色模式：左上薄荷青 → 中部近白 → 右上浅桃橙的多段渐变 + 极浅细网格。
+   仅覆盖浅色模式的页面底层 #web_bg；卡片、侧栏、正文、深色模式一律不动。 */
+
+html:not([data-theme="dark"]) #web_bg {
+  /* 去掉主题自带的 -1deg 倾斜，避免网格线看起来是歪的；元素本身 200% 尺寸仍全覆盖 */
+  transform: none;
+  background:
+    /* 细网格：横线 + 竖线，极低透明度 */
+    repeating-linear-gradient(0deg, rgba(24, 90, 86, 0.05) 0, rgba(24, 90, 86, 0.05) 1px, transparent 1px, transparent 54px),
+    repeating-linear-gradient(90deg, rgba(24, 90, 86, 0.05) 0, rgba(24, 90, 86, 0.05) 1px, transparent 1px, transparent 54px),
+    /* 多段渐变：左上薄荷青 → 中部近白 → 右上浅桃橙 */
+    linear-gradient(118deg, #E6F4F1 0%, #FFFFFF 48%, #FFF1E5 100%);
+  background-attachment: fixed;
+}
+
+/* 橡皮筋滚动/边缘区域兜底浅色，避免露出突兀底色 */
+html:not([data-theme="dark"]) body {
+  background-color: #EDF5F2;
+}

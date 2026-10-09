@@ -1222,6 +1222,7 @@ inject:
   head:
     # 自定义css
     - <link rel="stylesheet" href="/css/mobile-fix.css?v=2026100425">
+    - <link rel="stylesheet" href="/css/bg-eooce.css?v=20261009">
 
   bottom:
     # 自定义js
