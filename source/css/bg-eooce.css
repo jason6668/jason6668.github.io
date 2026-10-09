@@ -1,20 +1,68 @@
-/* 马老师博客 · 背景配色（2026-10-09，eooce 同款）
-   浅色模式：左上薄荷青 → 中部近白 → 右上浅桃橙的多段渐变 + 极浅细网格。
-   仅覆盖浅色模式的页面底层 #web_bg；卡片、侧栏、正文、深色模式一律不动。 */
+/* 马老师博客 · 背景与卡片质感（2026-10-09，按 rewards 赞赏墙样板回调）
+   浅色模式：暖金微光 + 青绿雾面光晕 + 青绿斜向雾面渐变；
+   卡片使用半透玻璃白、轻模糊、白色细边与青绿柔影。
+   深色模式不覆盖，继续使用 anzhiyu 原生深色体系。 */
+
+html:not([data-theme="dark"]) {
+  --blog-ink: #22312e;
+  --blog-ink-secondary: #5b6b68;
+  --blog-accent: #185a56;
+  --blog-card-glass: rgba(255, 255, 255, 0.86);
+  --blog-card-border: rgba(255, 255, 255, 0.7);
+  --blog-card-shadow: 0 12px 32px rgba(24, 90, 86, 0.11);
+
+  /* 只在浅色模式把主题的文字与卡片变量带到 rewards 的墨绿灰体系。 */
+  --anzhiyu-fontcolor: var(--blog-ink);
+  --anzhiyu-secondtext: var(--blog-ink-secondary);
+  --anzhiyu-card-bg: var(--blog-card-glass);
+  --anzhiyu-card-border: var(--blog-card-border);
+  --anzhiyu-shadow-border: var(--blog-card-shadow);
+  --anzhiyu-background: #e2efec;
+  --global-bg: #e2efec;
+  --card-bg: var(--blog-card-glass);
+}
+
+html:not([data-theme="dark"]) body {
+  color: var(--blog-ink);
+  background-color: #e2efec;
+}
 
 html:not([data-theme="dark"]) #web_bg {
-  /* 去掉主题自带的 -1deg 倾斜，避免网格线看起来是歪的；元素本身 200% 尺寸仍全覆盖 */
+  /* 去掉主题自带的 -1deg 倾斜；保留该层原有全屏覆盖方式。 */
   transform: none;
   background:
-    /* 细网格：横线 + 竖线，极低透明度 */
-    repeating-linear-gradient(0deg, rgba(24, 90, 86, 0.05) 0, rgba(24, 90, 86, 0.05) 1px, transparent 1px, transparent 54px),
-    repeating-linear-gradient(90deg, rgba(24, 90, 86, 0.05) 0, rgba(24, 90, 86, 0.05) 1px, transparent 1px, transparent 54px),
-    /* 多段渐变：左上薄荷青 → 中部近白 → 右上浅桃橙 */
-    linear-gradient(118deg, #E6F4F1 0%, #FFFFFF 48%, #FFF1E5 100%);
+    radial-gradient(900px 480px at 15% -5%, rgba(255, 183, 77, 0.28), transparent 60%),
+    radial-gradient(1000px 560px at 88% 0%, rgba(24, 90, 86, 0.30), transparent 55%),
+    radial-gradient(800px 500px at 50% 110%, rgba(24, 90, 86, 0.20), transparent 60%),
+    linear-gradient(165deg, #f3f8f7 0%, #e2efec 48%, #cfe4df 100%);
   background-attachment: fixed;
 }
 
-/* 橡皮筋滚动/边缘区域兜底浅色，避免露出突兀底色 */
-html:not([data-theme="dark"]) body {
-  background-color: #EDF5F2;
+/* 主要内容卡片：玻璃白 + 24px 大圆角；正文卡保持较高不透明度保证阅读对比度。 */
+html:not([data-theme="dark"]) #recent-posts > .recent-post-item,
+html:not([data-theme="dark"]) #aside-content .card-widget {
+  background: var(--blog-card-glass);
+  border: 1px solid var(--blog-card-border);
+  border-radius: 24px;
+  box-shadow: var(--blog-card-shadow);
+  backdrop-filter: blur(10px) saturate(1.08);
+  -webkit-backdrop-filter: blur(10px) saturate(1.08);
+}
+
+@media (min-width: 769px) {
+  html:not([data-theme="dark"]) .layout > div:first-child:not(.recent-posts) {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--blog-card-border);
+    border-radius: 24px;
+    box-shadow: var(--blog-card-shadow);
+    backdrop-filter: blur(10px) saturate(1.05);
+    -webkit-backdrop-filter: blur(10px) saturate(1.05);
+  }
+}
+
+/* 移动端文章主体沿用主题的通栏排版，只借用雾面底色，不强加悬浮卡片边框。 */
+@media (max-width: 768px) {
+  html:not([data-theme="dark"]) .layout > div:first-child:not(.recent-posts) {
+    background: rgba(255, 255, 255, 0.88);
+  }
 }
