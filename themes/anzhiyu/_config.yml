@@ -14,13 +14,6 @@ menu:
     六爻占卜: /liuyao/ || anzhiyu-icon-yin-yang
     新手教程: /tutorial/ || anzhiyu-icon-book-open
 
-  科学上网:
-    马老师专属TV: https://tv.8818618.xyz/ || anzhiyu-icon-tv
-    WebSSH: https://ssh.8818618.xyz/ || anzhiyu-icon-terminal
-    马老师专属面板: https://vps.8818618.xyz/ || anzhiyu-icon-server
-
-
-
   点我试一试:
     马老师专属导航: https://nav.missma.qzz.io/ || anzhiyu-icon-map-location-dot
     马老师专属新闻频道: https://newsma.8818618.xyz/ || anzhiyu-icon-newspaper
@@ -36,6 +29,8 @@ menu:
     论坛社区: https://bbs.8818618.xyz/ || anzhiyu-icon-comments
     会员服务: https://vip.8818618.xyz/ || anzhiyu-icon-crown
     赞赏支持: https://rewards.8818618.xyz/ || anzhiyu-icon-hand-heart-fill
+    WebSSH: https://ssh.8818618.xyz/ || anzhiyu-icon-terminal
+    马老师专属面板: https://vps.8818618.xyz/ || anzhiyu-icon-server
 
   我的:
     音乐馆: /music/ || anzhiyu-icon-music
@@ -1036,11 +1031,6 @@ home_top:
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-heartbeat
-    - name: 科学上网
-      path: /categories/科学上网/
-      shadow: var(--anzhiyu-shadow-blue)
-      class: blue
-      icon: anzhiyu-icon-paper-plane
     - name: 社会纪实
       path: /categories/社会纪实/
       shadow: var(--anzhiyu-shadow-green)
