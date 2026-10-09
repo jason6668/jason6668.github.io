@@ -6,7 +6,6 @@ menu:
 
   探索:
     心理学随笔: /categories/心理学随笔/ || anzhiyu-icon-heartbeat
-    社会纪实: /categories/社会纪实/ || anzhiyu-icon-camera-retro
     避雷专区: /blacklist/ || anzhiyu-icon-shield-halved
     心理自测: /mental-test/ || anzhiyu-icon-heart-pulse
     MBTI测评: /mbti-test/ || anzhiyu-icon-brain
@@ -1031,8 +1030,8 @@ home_top:
       shadow: var(--anzhiyu-shadow-red)
       class: red
       icon: anzhiyu-icon-heartbeat
-    - name: 社会纪实
-      path: /categories/社会纪实/
+    - name: 科学上网
+      path: /categories/科学上网/
       shadow: var(--anzhiyu-shadow-green)
       class: green
       icon: anzhiyu-icon-camera-retro
