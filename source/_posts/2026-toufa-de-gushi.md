@@ -1,7 +1,7 @@
 ---
 title: 辫子剪了，膝盖还跪着
 categories:
-  - 杂谈
+  - 鲁迅
 tags:
   - 鲁迅
   - 呐喊

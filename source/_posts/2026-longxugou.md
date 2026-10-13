@@ -1,7 +1,6 @@
 ---
 title: 从龙须沟到城中村：治的是沟，还是人？
-categories:
-  - 杂谈
+categories: 老舍
 tags:
   - 老舍
   - 龙须沟

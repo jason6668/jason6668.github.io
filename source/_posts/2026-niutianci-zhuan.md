@@ -1,7 +1,7 @@
 ---
 title: 出生就是"福星"，最后沦落街头：鸡娃的祖师爷在这里
 date: 2026-10-16 08:40:00
-categories: [老舍, 现代文学]
+categories: 老舍
 tags: [老舍, 牛天赐传, 鸡娃, 教育]
 description: 牛天赐含着金汤匙出生，最后却一无所有。今天的学区房和补习班，是不是另一场荒诞？
 cover: /images/niutianci-zhuan.jpg

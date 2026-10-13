@@ -1,6 +1,6 @@
 ---
 title: 法家不是"法治"：商鞅韩非那套东西，今天的老板们还在用
-categories: 时评
+categories: 诸子百家
 tags: [诸子百家, 法家, 韩非, 商鞅, 马老师]
 description: 法、术、势三件套，秦朝靠它统一天下，也靠它二世而亡。今天公司里的KPI和末位淘汰，玩的还是法家那套。
 cover: /images/fajia-sixiang.jpg

@@ -1,6 +1,6 @@
 ---
 title: 你的"水逆"要怪邹衍：中国人嘴上说不信，心里全是阴阳五行
-categories: 时评
+categories: 诸子百家
 tags: [诸子百家, 阴阳家, 邹衍, 五行, 迷信, 马老师]
 description: 邹衍的阴阳五行学说死了两千年，却活在每个中国人的日常里。中医、风水、算命、星座水逆，都是他的传人。
 cover: /images/yinyang-sixiang.jpg

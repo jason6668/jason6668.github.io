@@ -1,7 +1,7 @@
 ---
 title: 从"铁杆庄稼"到街头穷汉：八旗子弟的没落，是每个"铁饭碗"的明天
 date: 2026-10-16 09:10:00
-categories: [老舍, 现代文学]
+categories: 老舍
 tags: [老舍, 正红旗下, 自传, 铁饭碗]
 description: 满清完了，八旗子弟从贵族变成累赘。今天的"铁饭碗"信仰，和当年的"铁杆庄稼"有什么区别？
 cover: /images/zhenghongqi-xia.jpg

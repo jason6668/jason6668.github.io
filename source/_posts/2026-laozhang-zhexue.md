@@ -1,7 +1,7 @@
 ---
 title: 嘴上都是主义，心里全是生意：老张的哲学一百年没过时
 date: 2026-10-16 08:50:00
-categories: [老舍, 现代文学]
+categories: 老舍
 tags: [老舍, 老张的哲学, 官本位, 讽刺]
 description: 老张信奉"钱本位"，当官就是为了发财。今天的考公热和酒桌文化，是不是同一套哲学？
 cover: /images/laozhang-zhexue.jpg

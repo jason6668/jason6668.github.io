@@ -1,7 +1,7 @@
 ---
 title: 嘴炮一流，实干零分：赵子曰就是百年前的键盘侠
 date: 2026-10-16 09:00:00
-categories: [老舍, 现代文学]
+categories: 老舍
 tags: [老舍, 赵子曰, 五四, 键盘侠]
 description: 赵子曰整天谈革命谈主义，最后谈成了军阀帮凶。今天的"口嗨革命家"，是不是同一个配方？
 cover: /images/zhao-ziyue.jpg

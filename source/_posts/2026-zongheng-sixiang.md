@@ -1,6 +1,6 @@
 ---
 title: 战国"外交天团"：苏秦张仪靠一张嘴，把七个国家玩得团团转
-categories: 历史
+categories: 诸子百家
 tags: [纵横家, 苏秦, 张仪, 诸子百家, 马老师]
 description: 合纵连横、朝秦暮楚，纵横家是战国最会"搞关系"的一群人。他们的套路，今天的外交官和销售还在用。
 cover: /images/zongheng-sixiang.jpg

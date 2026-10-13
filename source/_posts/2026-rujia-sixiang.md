@@ -1,6 +1,6 @@
 ---
 title: 从"丧家之犬"到"万世师表"：儒家到底凭什么赢了诸子百家？
-categories: 文化
+categories: 诸子百家
 tags: [儒家, 诸子百家, 孔子, 传统文化, 马老师]
 description: 孔子活着的时候周游列国没人搭理，死后却成了圣人。儒家凭什么从百家争鸣中杀出来，统治中国两千年？这篇讲透它的发家史。
 cover: /images/rujia-sixiang.jpg

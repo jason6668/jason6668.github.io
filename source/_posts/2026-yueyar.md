@@ -1,7 +1,6 @@
 ---
 title: 不想成为我妈，却活成了她——读老舍《月牙儿》
-categories:
-  - 杂谈
+categories: 老舍
 tags:
   - 老舍
   - 月牙儿

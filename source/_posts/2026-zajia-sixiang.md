@@ -1,6 +1,6 @@
 ---
 title: "杂家"：中国最早的"斜杠青年"，为什么下场最惨？
-categories: 历史
+categories: 诸子百家
 tags: [杂家, 吕不韦, 吕氏春秋, 诸子百家, 马老师]
 description: 兼收并蓄、不搞门户之见，杂家本该最吃香，可为什么在诸子百家中混得最惨？看看今天的"斜杠青年"，答案就在里面。
 cover: /images/zajia-sixiang.jpg

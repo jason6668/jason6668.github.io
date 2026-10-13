@@ -1,7 +1,6 @@
 ---
 title: “躺平”是年轻人发明的？老舍1937年就写完了
-categories:
-  - 杂谈
+categories: 老舍
 tags:
   - 老舍
   - 我这一辈子

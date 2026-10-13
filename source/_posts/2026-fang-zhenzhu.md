@@ -1,7 +1,6 @@
 ---
 title: 从唱大鼓的到人民艺术家：网红的“从良”课
-categories:
-  - 杂谈
+categories: 老舍
 tags:
   - 老舍
   - 方珍珠

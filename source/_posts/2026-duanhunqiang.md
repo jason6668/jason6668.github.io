@@ -1,7 +1,6 @@
 ---
 title: 沙子龙封枪那一夜：本事再大，也敌不过时代
-categories:
-  - 杂谈
+categories: 老舍
 tags:
   - 老舍
   - 断魂枪

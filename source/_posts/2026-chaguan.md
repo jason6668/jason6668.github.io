@@ -1,7 +1,6 @@
 ---
 title: “我爱咱们的国啊，可是谁爱我呢？”——重读老舍《茶馆》
-categories:
-  - 杂谈
+categories: 老舍
 tags:
   - 老舍
   - 茶馆

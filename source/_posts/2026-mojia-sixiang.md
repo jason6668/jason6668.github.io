@@ -1,6 +1,6 @@
 ---
 title: 墨家：诸子百家中最"硬核"的学派，为什么死得最惨？
-categories: 文化
+categories: 诸子百家
 tags: [墨家, 诸子百家, 墨子, 兼爱, 程序员, 马老师]
 description: 墨子可能是中国历史上头一个"工程师"，他的学派纪律严明、说干就干。这样的学派为什么两千年就灭亡了？兼爱在今天还有可能吗？
 cover: /images/mojia-sixiang.jpg

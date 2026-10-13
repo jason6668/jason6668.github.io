@@ -1,6 +1,6 @@
 ---
 title: 儒家这碗"心灵鸡汤"，中国人喝了一千年，喝出了一身病
-categories: 时评
+categories: 诸子百家
 tags: [儒家, 批判, 传统文化, 马老师]
 description: 从孝道绑架到三纲五常，从"和为贵"到官本位，儒家思想到底给中国人带来了什么？这篇把话说透。
 cover: /images/rujia-weihai.jpg

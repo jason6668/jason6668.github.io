@@ -1,7 +1,6 @@
 ---
 title: 老舍写给孩子的童话，今天的孩子没空读
-categories:
-  - 杂谈
+categories: 老舍
 tags:
   - 老舍
   - 小坡的生日
