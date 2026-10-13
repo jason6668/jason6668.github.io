@@ -41,6 +41,7 @@ date: 2026-10-13 12:30:00
 
 三个口子一起漏，这水池能不干吗？
 
+![年轻人退保潮](/images/shebao-young-quit.jpg)
 ## 二、2029年，基金见底
 
 学者测算过，就算没有退保潮，中国职工社保基金的结余也会在**2029年耗尽**，从2030年开始出现赤字。
@@ -67,6 +68,7 @@ date: 2026-10-13 12:30:00
 
 农民兄弟种了一辈子地，交了一辈子公粮，到老了拿的那点养老金，可能还不够城里人体制内退休人员一顿饭钱。你说这合理吗？
 
+![三轨制不公](/images/shebao-three-tracks.jpg)
 ## 四、现收现付：一场精心设计的"接力赛"
 
 很多人以为，自己交的社保是存起来给自己养老的。马老师告诉你：**不是的。**
@@ -91,6 +93,7 @@ date: 2026-10-13 12:30:00
 
 怎么开刀呢？强制企业按实际工资全额缴纳、提高个人缴费基数、延迟退休……每一刀，都砍在普通人身上。
 
+![三个死循环](/images/shebao-death-loops.jpg)
 ## 马老师锐评
 
 好了，分析完了，马老师说几句大实话：
@@ -110,103 +113,3 @@ date: 2026-10-13 12:30:00
 ---
 
 *马老师专属时事锐评，每周更新。觉得有道理就转发给还在"假装没看见"的朋友。*
-
-## English Version
-
-# The "Grey Rhino" of Social Security: When Young People Vote with Their Feet
-
-Hello everyone, I'm Teacher Ma.
-
-Today let's talk about a heavy but unavoidable topic — social security. Don't swipe away at the mere mention of it; this is tied to your monthly paycheck, your parents' pensions, and whether you can "lie flat" with peace of mind ten years from now.
-
-There's a term called "grey rhino" — a massive crisis standing right in front of you, visible to everyone, yet everyone pretends not to see it. Social security is the biggest grey rhino facing our generation. It's not hiding; it's pawing the ground right there, kicking dust into our throats.
-
-## 1. 100,000 People Quietly Exiting Every Day
-
-Consider these numbers — they might make you gasp:
-
-**China's social security contributors are decreasing by about 100,000 per day.**
-
-What does 100,000 mean? That's roughly the population of a county, vanishing from the contributor list daily. Over a year, that's 36.5 million. This isn't "gradual change" — it's an avalanche.
-
-Where are people leaking from? Three holes draining simultaneously:
-
-**Hole #1: Young people withdrawing.** In Q1 alone, 58 million young people chose to withdraw. 58 million, friends — this isn't an "isolated phenomenon," it's an entire generation voting with their feet.
-
-You might ask: are young people foolish? Giving up social security? Teacher Ma tells you: they're not foolish at all; they do the math better than anyone.
-
-**Hole #2: The retirement wave.** 20 million workers retire each year, switching from "payers" to "receivers." Money in shrinks while money out balloons — the gap doubles instantly. It's like a pool with the inlet pipe narrowing and the outlet widening.
-
-**Hole #3: Unemployment and flexible employment.** Of 320 million flexibly-employed people, only 70 million pay social security. The remaining 250 million aren't unwilling — they genuinely can't afford it. When you're struggling to eat, social security is a luxury.
-
-Three holes leaking at once — how could the pool not run dry?
-
-## 2. 2029: The Fund Hits Bottom
-
-Scholars estimate that even without the withdrawal wave, China's employee social security fund surplus will be **exhausted by 2029**, with deficits starting in 2030.
-
-Note: that's the optimistic scenario *without* mass withdrawals. Now the wave is here — 58 million young people gone in one quarter — so the timeline likely moves up to **2028 or even earlier**.
-
-When is 2028? Next year is 2027; the year after is 2028. The fund could start eating into reserves as soon as the year after next.
-
-Translation: savings run out, expenses exceed income. At that point, either collect more or pay out less — or both. Which do you think will land on you?
-
-## 3. The World's Most Unfair "Three-Track System"
-
-If the depleting fund is "natural disaster," what follows is "man-made."
-
-China's social security runs on three tracks — three groups, three待遇 (benefit levels), with absurd gaps:
-
-**Track 1: Government/institution employees.** ~62.63 million people, receiving ¥1.6 trillion in fiscal subsidies — **54%** of the total. Per capita, one of them equals several of the others.
-
-**Track 2: Enterprise employees.** ~130 million people, ¥846 billion in subsidies (28.6%). Standard — you get what the formula says.
-
-**Track 3: Urban-rural residents (mostly farmers).** The largest group — 188 million people, 55% of all recipients — yet only ¥512.3 billion in subsidies, a mere **17%**.
-
-See it? The largest group gets the least; the smallest gets the most. "Unfair" doesn't begin to cover it — this is fairness ground into the dirt.
-
-Farmers who tilled the land all their lives, paid grain taxes for decades, end up with pensions that might not cover one meal for a retired insider. Is that reasonable?
-
-## 4. Pay-As-You-Go: A Carefully Designed Relay Race
-
-Many believe their contributions are saved for their own retirement. Teacher Ma tells you: **they're not.**
-
-China uses pay-as-you-go — this month's contributions go straight to current retirees next month. Your money never enters your "little vault"; it goes directly into someone else's pocket.
-
-This works when population grows: many young, few old, everyone chips in, enough to share.
-
-But when population declines, it's checkmate: fewer payers, more receivers. Like a relay race with fewer and fewer runners up front and more and more waiting behind — one day, the baton drops.
-
-Some call it a Ponzi scheme. Teacher Ma thinks that's harsh, but the logic rhymes — both depend on newcomers. Difference: Ponzi is illegal; social security is legal. Ponzi fraudsters flee; social security can't flee — it just endures.
-
-## 5. Three Death Loops Nobody Can Break
-
-Why doesn't the government operate decisively despite knowing the problem? Three death loops:
-
-**Economic loop:** The property bubble burst; long-term slowdown. High growth once papered over the holes; now the holes keep growing.
-
-**Demographic loop:** One-child policy aftermath — fewer births, aging population, shrinking workforce. No amount of cleverness conjures money without young contributors.
-
-**Political loop:** Insider vested interests are untouchable. Who dares touch Track 1's 54%? That's 62.63 million people's cheese. So the knife falls on the other two tracks — enterprises and ordinary workers.
-
-How? Mandatory full-salary contributions, higher personal bases, delayed retirement... every cut lands on ordinary people.
-
-## Teacher Ma's Take
-
-Analysis done. Some straight talk:
-
-**First, young people withdrawing isn't "short-sighted" — it's "clear-eyed."** When the math says you'll likely never break even, when you see the three-track chasm, when rules can change anytime (hello, delayed retirement), exiting is rational. It's not youth being irresponsible — the system disappointed youth first.
-
-**Second, the final bill-payer's name is already written.** The video's conclusion stings: sacrificing modern youth to protect insider elders. Crude but true — vested interests can't be touched, holes must be filled, so squeeze those with the least voice.
-
-**Third, don't "deal with it later."** 2028 sounds far, but social security is a decades-long marathon. You're 30 now; to pay or not determines whether you get anything at 60. This isn't "future business" — it's a decision for now.
-
-**Fourth, advice for ordinary folks:** Keep paying what you must (it's baseline protection — mosquito legs are still meat), but never treat it as your entire retirement plan. Save yourself, buy commercial insurance, build side income — walk on multiple legs. Eggs in one basket + leaky basket = tears.
-
-One last line: **the scariest thing about grey rhinos isn't their size — it's that everyone sees them yet pretends not to.** Young people voting with their feet shows some are awake.
-
-What about you — keep pretending, or start planning for yourself?
-
----
-
-*Teacher Ma's current-affairs commentary, updated weekly. Forward to friends still "pretending not to see" if it resonates.*
