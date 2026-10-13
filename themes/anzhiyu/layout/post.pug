@@ -26,7 +26,34 @@ block content
             - let data_type_update = theme.post_meta.post.date_type === 'updated'
             - let date_type = data_type_update ? 'updated' : 'date'
             time(itemprop="dateCreated datePublished" datetime=date_xml(page[date_type]) title=date_title + ' ' + full_date(page[date_type]))=date(page[date_type], config.date_format)
-      !=page.content
+      if page.reward_required
+        //- 打赏阅读：只显示摘要，全文用打赏墙遮住（君子模式）
+        .reward-excerpt!=page.excerpt
+        #reward-paywall(style="margin:2rem 0;padding:2.5rem 1.5rem;text-align:center;border:2px dashed #f0a030;border-radius:12px;background:#fffbf0")
+          h3(style="margin-bottom:.5rem") 💰 打赏后阅读全文
+          p(style="color:#666;font-size:.9rem;margin-bottom:1.2rem") 这篇是付费内容，感谢你的支持让马老师持续输出干货
+          div(style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap")
+            a(href="https://rewards.8818618.xyz/" target="_blank" rel="noopener" style="padding:.6rem 1.5rem;background:#f0a030;color:#fff;border-radius:8px;text-decoration:none;font-weight:600") 去打赏
+            button#reward-unlock-btn(type="button" style="padding:.6rem 1.5rem;background:#fff;color:#f0a030;border:2px solid #f0a030;border-radius:8px;cursor:pointer;font-weight:600") 我已打赏，阅读全文
+        .reward-full-content(style="display:none")!=page.content
+        script.
+          (function(){
+            var key = 'reward_unlocked_' + !{JSON.stringify(page.abbrlink || page.path || '')};
+            var btn = document.getElementById('reward-unlock-btn');
+            var wall = document.getElementById('reward-paywall');
+            var excerpt = document.querySelector('.reward-excerpt');
+            var full = document.querySelector('.reward-full-content');
+            function unlock(){
+              try{ localStorage.setItem(key, '1'); }catch(e){}
+              if(wall) wall.style.display = 'none';
+              if(excerpt) excerpt.style.display = 'none';
+              if(full) full.style.display = 'block';
+            }
+            try{ if(localStorage.getItem(key) === '1'){ unlock(); return; } }catch(e){}
+            if(btn) btn.addEventListener('click', unlock);
+          })();
+      else
+        !=page.content
 
     include includes/post/post-copyright.pug
 
