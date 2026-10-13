@@ -27,22 +27,27 @@ block content
             - let date_type = data_type_update ? 'updated' : 'date'
             time(itemprop="dateCreated datePublished" datetime=date_xml(page[date_type]) title=date_title + ' ' + full_date(page[date_type]))=date(page[date_type], config.date_format)
       if page.reward_required
-        //- 打赏阅读：只显示摘要，全文用打赏墙遮住（君子模式）
+        //- 打赏阅读：只显示摘要，全文用打赏墙遮住（验证打赏记录）
         .reward-excerpt!=page.excerpt
         #reward-paywall(style="margin:2rem 0;padding:2.5rem 1.5rem;text-align:center;border:2px dashed #f0a030;border-radius:12px;background:#fffbf0")
           h3(style="margin-bottom:.5rem") 💰 打赏后阅读全文
-          p(style="color:#666;font-size:.9rem;margin-bottom:1.2rem") 这篇是付费内容，感谢你的支持让马老师持续输出干货
-          div(style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap")
+          p(style="color:#666;font-size:.9rem;margin-bottom:1.2rem") 这篇是付费内容，打赏后输入昵称验证即可阅读全文
+          div(style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem")
             a(href="https://rewards.8818618.xyz/" target="_blank" rel="noopener" style="padding:.6rem 1.5rem;background:#f0a030;color:#fff;border-radius:8px;text-decoration:none;font-weight:600") 去打赏
-            button#reward-unlock-btn(type="button" style="padding:.6rem 1.5rem;background:#fff;color:#f0a030;border:2px solid #f0a030;border-radius:8px;cursor:pointer;font-weight:600") 我已打赏，阅读全文
+          div#reward-verify-form(style="max-width:320px;margin:0 auto")
+            input#reward-name(type="text" placeholder="打赏时填写的昵称" style="width:100%;padding:.6rem;margin-bottom:.6rem;border:1px solid #ddd;border-radius:8px;box-sizing:border-box")
+            button#reward-verify-btn(type="button" style="width:100%;padding:.6rem;background:#f0a030;color:#fff;border:none;border-radius:8px;cursor:pointer;font-weight:600") 验证并阅读全文
+            p#reward-verify-msg(style="color:#e74c3c;font-size:.85rem;margin-top:.5rem;min-height:1.2em")
         .reward-full-content(style="display:none")!=page.content
         script.
           (function(){
             var key = 'reward_unlocked_' + !{JSON.stringify(page.abbrlink || page.path || '')};
-            var btn = document.getElementById('reward-unlock-btn');
             var wall = document.getElementById('reward-paywall');
             var excerpt = document.querySelector('.reward-excerpt');
             var full = document.querySelector('.reward-full-content');
+            var nameInput = document.getElementById('reward-name');
+            var verifyBtn = document.getElementById('reward-verify-btn');
+            var msg = document.getElementById('reward-verify-msg');
             function unlock(){
               try{ localStorage.setItem(key, '1'); }catch(e){}
               if(wall) wall.style.display = 'none';
@@ -50,7 +55,24 @@ block content
               if(full) full.style.display = 'block';
             }
             try{ if(localStorage.getItem(key) === '1'){ unlock(); return; } }catch(e){}
-            if(btn) btn.addEventListener('click', unlock);
+            if(verifyBtn) verifyBtn.addEventListener('click', function(){
+              var name = (nameInput.value || '').trim();
+              if(!name){ msg.textContent = '请先输入打赏时的昵称'; return; }
+              msg.textContent = '验证中...';
+              verifyBtn.disabled = true;
+              fetch('https://rewards.8818618.xyz/api/rewards.js')
+                .then(function(r){ return r.json(); })
+                .then(function(j){
+                  var records = (j && j.data) || [];
+                  var found = records.some(function(r){
+                    return r && r.name && r.name.trim() === name;
+                  });
+                  if(found){ unlock(); }
+                  else{ msg.textContent = '没找到该昵称的打赏记录，请确认昵称或先去打赏'; }
+                })
+                .catch(function(){ msg.textContent = '验证失败，请检查网络后重试'; })
+                .finally(function(){ verifyBtn.disabled = false; });
+            });
           })();
       else
         !=page.content
