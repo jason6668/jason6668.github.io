@@ -6,7 +6,7 @@ tags:
   - 钱钟书
   - 围城
   - 读书批判
-description: "婚姻是围城"精辟吗？精辟。可它对吗？一条条拆钱钟书的经典语言，看看哪些是智慧，哪些是毒鸡汤。
+description: 《婚姻是围城》精辟吗？精辟。可它对吗？一条条拆钱钟书的经典语言，看看哪些是智慧，哪些是毒鸡汤。
 cover: /images/weicheng-pipan-cover.jpg
 abbrlink: weicheng-pipan
 date: 2026-10-14 21:00:00
