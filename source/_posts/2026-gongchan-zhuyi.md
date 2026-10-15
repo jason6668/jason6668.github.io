@@ -8,7 +8,7 @@ tags:
   - 按需分配
   - 早产儿
   - 终极目标
-description: "各尽所能按需分配"八个字背后，是人类历史上最大胆的设想。为什么全世界都没实现？苏联中国都是"早产"？离我们还有多远？
+description: 《各尽所能按需分配》八个字背后，是人类历史上最大胆的设想。为什么全世界都没实现？苏联中国都是"早产"？离我们还有多远？
 cover: /images/gongchan-zhuyi-cover.jpg
 abbrlink: gongchan-zhuyi
 ---
