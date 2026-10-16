@@ -1,8 +1,9 @@
-/* 马老师博客 - 最新评论卡片兜底
+/* 马老师博客 - 最新留言卡片兜底（含自动轮播）
  * 逻辑：主题自带加载器（Twikoo）优先，最多等它 5 秒；
- * 若仍无评论，留言板 /comments/ 评论优先展示，其次全站最新评论，
- * 都没有则渲染示例评论（各 5 秒超时，6.5 秒必出内容）。
- * 有真实评论时示例评论永远不会出现；主题后加载出真实评论会覆盖兜底。
+ * 若仍无留言，留言板 /comments/ 留言优先展示，其次全站最新评论，
+ * 都没有则渲染示例留言（各 5 秒超时，6.5 秒必出内容）。
+ * 展示时一次一条、4 秒轮播切换，鼠标悬停暂停。
+ * 有真实留言时示例留言永远不会出现；主题后加载出真实评论会覆盖兜底。
  */
 (function () {
   'use strict';
@@ -37,14 +38,43 @@
       '<div class="name"><span>' + esc(nick) + '</span></div>' +
       '</div></div>';
   }
+  // 轮播：一次只显示一条，4 秒切换，鼠标悬停暂停
+  function startRotate(b, list) {
+    stopRotate(b);
+    var i = 0;
+    function show(n) {
+      // 重新触发 CSS 淡入动画：先清空再写入
+      b.innerHTML = '';
+      void b.offsetWidth;
+      b.innerHTML = itemHTML(list[n].nick, list[n].text, list[n].url);
+    }
+    b.classList.add('ma-rotating');
+    show(0);
+    if (list.length < 2) return;
+    b._maTimer = setInterval(function () {
+      i = (i + 1) % list.length;
+      show(i);
+    }, 4000);
+    b.onmouseenter = function () { stopRotate(b); };
+    b.onmouseleave = function () {
+      if (list.length < 2 || b._maTimer) return;
+      b._maTimer = setInterval(function () {
+        i = (i + 1) % list.length;
+        show(i);
+      }, 4000);
+    };
+  }
+  function stopRotate(b) {
+    if (b._maTimer) { clearInterval(b._maTimer); b._maTimer = null; }
+    b.onmouseenter = null; b.onmouseleave = null;
+  }
   function render(list) {
     var bs = boxes();
     if (!bs.length) return;
-    var html = list.map(function (c) { return itemHTML(c.nick, c.text, c.url); }).join('');
     bs.forEach(function (b) {
       // 主题加载器若已渲染出真实评论，就不覆盖
       if (b.querySelector('.aside-list-item[data-theme="1"]')) return;
-      b.innerHTML = html;
+      startRotate(b, list);
     });
   }
 
