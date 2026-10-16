@@ -716,7 +716,7 @@ inject:
   - <link rel="stylesheet" href="/css/bg-eooce.css?v=20261009">
   - <link rel="stylesheet" href="/css/aside-left.css?v=20261017e">
   bottom:
-  - <script src="/js/ma-newest-comments.js?v=20261017a"></script>
+  - <script src="/js/ma-newest-comments.js?v=20261017b"></script>
 CDN:
   internal_provider: local
   third_party_provider: cbd
