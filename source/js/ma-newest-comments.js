@@ -1,7 +1,7 @@
 /* 马老师博客 - 最新评论卡片兜底
  * 逻辑：主题自带加载器（Twikoo）优先，最多等它 5 秒；
- * 若仍无评论，并行拉「最新评论」与「留言板 /comments/」评论（各 5 秒超时），
- * 哪个先有数据用哪个；都没有则渲染示例评论。
+ * 若仍无评论，留言板 /comments/ 评论优先展示，其次全站最新评论，
+ * 都没有则渲染示例评论（各 5 秒超时，6.5 秒必出内容）。
  * 有真实评论时示例评论永远不会出现；主题后加载出真实评论会覆盖兜底。
  */
 (function () {
@@ -74,35 +74,41 @@
   function fallback() {
     if (themeHasComments()) return; // 主题已渲染
     var settled = false;
-    function useFirst(list) {
-      if (settled) return;
-      if (list && list.length) { settled = true; render(list); }
+    function finish(list) {
+      if (settled || themeHasComments()) return;
+      settled = true;
+      render(list && list.length ? list.slice(0, 6) : SAMPLE);
     }
-    var p1 = twikooEvent({ event: 'GET_RECENT_COMMENTS', pageSize: 6, includeReply: true }, 5000)
-      .then(function (d) {
-        var arr = (d && d.data) || [];
-        return arr.map(function (c) {
-          return { nick: c.nick || '访客', text: stripHtml(c.commentText), url: c.url || '/comments/' };
-        }).filter(function (c) { return c.text; });
-      }).catch(function () { return []; });
-    var p2 = twikooEvent({ event: 'COMMENT_GET', url: '/comments/', page: 1, pageSize: 5 }, 5000)
+    // 留言板优先：两个请求并行发出，但渲染时留言板结果优先
+    var pBoard = twikooEvent({ event: 'COMMENT_GET', url: '/comments/', page: 1, pageSize: 6 }, 5000)
       .then(function (d) {
         var arr = (d && d.data && d.data.data) || [];
         return arr.map(function (c) {
           return { nick: c.nick || '访客', text: stripHtml(c.commentText || c.comment), url: '/comments/' };
         }).filter(function (c) { return c.text; });
       }).catch(function () { return []; });
-    p1.then(useFirst);
-    p2.then(useFirst);
-    // 6 秒后无论如何兜底：有数据已渲染则跳过，否则上示例
+    var pRecent = twikooEvent({ event: 'GET_RECENT_COMMENTS', pageSize: 6, includeReply: true }, 5000)
+      .then(function (d) {
+        var arr = (d && d.data) || [];
+        return arr.map(function (c) {
+          return { nick: c.nick || '访客', text: stripHtml(c.commentText), url: c.url || '/comments/' };
+        }).filter(function (c) { return c.text; });
+      }).catch(function () { return []; });
+    // 留言板先返回且有数据 → 立即用留言板
+    pBoard.then(function (bl) {
+      if (settled) return;
+      if (bl.length) { settled = true; render(bl); }
+      else pRecent.then(function (rl) { finish(rl); }); // 留言板为空才用最新评论
+    });
+    // 6.5 秒强制兜底：优先留言板，其次最新评论，最后示例
     setTimeout(function () {
       if (settled || themeHasComments()) return;
       settled = true;
-      Promise.all([p1, p2]).then(function (rs) {
-        var all = rs[0].concat(rs[1]);
-        render(all.length ? all.slice(0, 6) : SAMPLE);
+      Promise.all([pBoard, pRecent]).then(function (rs) {
+        var pick = rs[0].length ? rs[0] : rs[1];
+        render(pick.length ? pick.slice(0, 6) : SAMPLE);
       });
-    }, 6000);
+    }, 6500);
   }
 
   // 每 500ms 检查一次主题加载器是否已渲染出评论，最多等 5 秒
