@@ -30,25 +30,46 @@
   max-width: 1100px; margin: 0 auto; padding: 28px 20px 8px;
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
 }
-.ma-fcol h4 { font-size: 14px; margin: 0 0 12px; }
-.ma-fcol > a {
+/* 主题全局 #footer-wrap a 是浅灰，必须用更高优先级覆盖 */
+#footer-wrap #ma-footer .ma-fcol h4 { font-size: 14px; margin: 0 0 12px; color: var(--anzhiyu-fontcolor); }
+#footer-wrap #ma-footer .ma-fcol > a {
   display: block; font-size: 13px; padding: 4px 0;
-  text-decoration: none; opacity: .72; transition: opacity .2s;
+  text-decoration: none; color: var(--anzhiyu-fontcolor); opacity: .78;
+  transition: opacity .2s, color .2s;
 }
-.ma-fcol > a:hover { opacity: 1; }
-.ma-desc { font-size: 13px; line-height: 1.7; margin: 0 0 8px; opacity: .72; }
+#footer-wrap #ma-footer .ma-fcol > a:hover { opacity: 1; color: var(--anzhiyu-theme); }
+#footer-wrap #ma-footer .ma-desc { font-size: 13px; line-height: 1.7; margin: 0 0 8px; color: var(--anzhiyu-secondtext); }
 
-/* ========== 最新留言兜底头像 ========== */
-.ma-comment-avatar {
-  width: 40px; height: 40px; border-radius: 50%;
+/* ========== 最新留言：聊天列表式（头像 + 昵称/日期 + 内容摘要） ========== */
+#card-newest-comments .aside-list.ma-rotating { min-height: 78px; }
+#card-newest-comments .aside-list-item.ma-msg {
+  display: flex; gap: 10px; align-items: flex-start;
+  padding: 8px 2px; animation: ma-msg-in .45s ease;
+}
+#card-newest-comments .ma-msg-avatar { flex: none; text-decoration: none; }
+#card-newest-comments .ma-comment-avatar {
+  width: 46px; height: 46px; border-radius: 10px;
   display: inline-flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 16px; font-weight: 700; flex: none;
+  color: #fff; font-size: 17px; font-weight: 700; flex: none;
 }
-#card-newest-comments .aside-list-item .thumbnail { display: inline-flex; }
-
-/* ========== 最新留言轮播：淡入淡出，悬停暂停 ========== */
-#card-newest-comments .aside-list.ma-rotating { min-height: 62px; }
-#card-newest-comments .aside-list.ma-rotating .aside-list-item { animation: ma-msg-in .45s ease; }
+#card-newest-comments .ma-msg-body { flex: 1; min-width: 0; }
+#card-newest-comments .ma-msg-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  margin-bottom: 3px; gap: 8px;
+}
+#card-newest-comments .ma-msg-nick {
+  font-weight: 700; font-size: 14px; color: var(--anzhiyu-fontcolor);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+#card-newest-comments .ma-msg-date {
+  flex: none; font-size: 12px; color: var(--anzhiyu-secondtext);
+}
+#card-newest-comments .ma-msg-text {
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  font-size: 13px; line-height: 1.6; color: var(--anzhiyu-secondtext);
+  text-decoration: none;
+}
+#card-newest-comments .ma-msg-text:hover { color: var(--anzhiyu-theme); }
 @keyframes ma-msg-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 /* ========== 手机端（≤768px）：页脚单列居中 ========== */
