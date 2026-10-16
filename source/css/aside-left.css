@@ -24,45 +24,21 @@
   }
 }
 
-/* ========== 马老师专属页脚 #ma-footer（紫色系） ========== */
-#ma-footer {
-  max-width: 1400px;
-  margin: 20px auto 0;
-  padding: 34px 34px 26px;
-  background: linear-gradient(135deg, #3d2f7d 0%, #5b45b8 55%, #7b5fe0 100%);
-  border-radius: 18px;
-  color: #fff;
-  box-shadow: 0 8px 30px rgba(91, 69, 184, .25);
-}
+/* ========== 马老师专属页脚 #ma-footer（论坛式三栏，无背景） ========== */
+#ma-footer { margin-top: 28px; }
 .ma-footer-inner {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  gap: 28px;
+  max-width: 1100px; margin: 0 auto; padding: 28px 20px 8px;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
 }
-.ma-brand-head { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
-.ma-avatar { width: 52px; height: 52px; border-radius: 50%; border: 2px solid rgba(255,255,255,.55); }
-.ma-brand-name strong { display: block; font-size: 19px; letter-spacing: 1px; }
-.ma-brand-name span { font-size: 12px; opacity: .75; }
-.ma-slogan { font-size: 13px; line-height: 1.8; opacity: .85; margin: 6px 0 12px; }
-.ma-social { display: flex; gap: 10px; }
-.ma-social a {
-  width: 36px; height: 36px; border-radius: 50%;
-  display: inline-flex; align-items: center; justify-content: center;
-  background: rgba(255,255,255,.14); color: #fff; font-size: 17px;
-  transition: background .25s, transform .25s;
-}
-.ma-social a:hover { background: rgba(255,255,255,.32); transform: translateY(-2px); color: #fff; }
-.ma-ftitle { font-size: 15px; font-weight: 700; margin-bottom: 12px; letter-spacing: 2px; position: relative; padding-bottom: 8px; }
-.ma-ftitle::after { content: ""; position: absolute; left: 0; bottom: 0; width: 26px; height: 3px; border-radius: 2px; background: rgba(255,255,255,.65); }
+.ma-fcol h4 { font-size: 14px; margin: 0 0 12px; }
 .ma-fcol > a {
-  display: block; color: rgba(255,255,255,.82); font-size: 13.5px; line-height: 2.1;
-  transition: color .2s, padding-left .2s;
+  display: block; font-size: 13px; padding: 4px 0;
+  text-decoration: none; opacity: .72; transition: opacity .2s;
 }
-.ma-fcol > a:hover { color: #fff; padding-left: 4px; }
-.ma-info { display: block; font-size: 13.5px; line-height: 2.1; color: rgba(255,255,255,.82); }
-#ma-run-days { font-weight: 700; color: #ffe27a; }
+.ma-fcol > a:hover { opacity: 1; }
+.ma-desc { font-size: 13px; line-height: 1.7; margin: 0 0 8px; opacity: .72; }
 
-/* ========== 最新评论兜底头像 ========== */
+/* ========== 最新留言兜底头像 ========== */
 .ma-comment-avatar {
   width: 40px; height: 40px; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
@@ -70,12 +46,12 @@
 }
 #card-newest-comments .aside-list-item .thumbnail { display: inline-flex; }
 
-/* ========== 手机端（≤768px）与参考站对齐：页脚单列居中 ========== */
+/* ========== 最新留言轮播：淡入淡出，悬停暂停 ========== */
+#card-newest-comments .aside-list.ma-rotating { min-height: 62px; }
+#card-newest-comments .aside-list.ma-rotating .aside-list-item { animation: ma-msg-in .45s ease; }
+@keyframes ma-msg-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+
+/* ========== 手机端（≤768px）：页脚单列居中 ========== */
 @media screen and (max-width: 768px) {
-  #ma-footer { margin: 14px 12px 0; padding: 26px 20px 20px; border-radius: 14px; }
-  .ma-footer-inner { grid-template-columns: 1fr; gap: 22px; text-align: center; }
-  .ma-brand-head { justify-content: center; }
-  .ma-social { justify-content: center; }
-  .ma-ftitle::after { left: 50%; transform: translateX(-50%); }
-  .ma-fcol > a:hover { padding-left: 0; }
+  .ma-footer-inner { grid-template-columns: 1fr; gap: 18px; padding: 22px 16px 4px; text-align: center; }
 }
