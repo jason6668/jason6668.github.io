@@ -30,7 +30,7 @@
   function stripHtml(s) { return String(s || '').replace(/<[^>]+>/g, '').slice(0, 60); }
   function itemHTML(nick, text, url) {
     var first = esc(nick).charAt(0) || '友';
-    return '<div class="aside-list-item">' +
+    return '<div class="aside-list-item" data-ma="1">' +
       '<a href="' + esc(url || '/comments/') + '" class="thumbnail">' +
       '<div class="ma-comment-avatar" style="background:' + colorFor(nick) + '">' + first + '</div></a>' +
       '<div class="content">' +
@@ -38,11 +38,16 @@
       '<div class="name"><span>' + esc(nick) + '</span></div>' +
       '</div></div>';
   }
+  // 主题自己渲染的条目（没有 data-ma 标记）
+  function boxHasThemeItems(b) { return b.querySelector('.aside-list-item:not([data-ma="1"])') !== null; }
+  // 还没有任何条目的卡片才需要兜底
+  function boxNeeds(b) { return b.querySelector('.aside-list-item') === null; }
   // 轮播：一次只显示一条，4 秒切换，鼠标悬停暂停
   function startRotate(b, list) {
     stopRotate(b);
     var i = 0;
     function show(n) {
+      if (boxHasThemeItems(b)) { stopRotate(b); return; } // 主题接管了就收手
       // 重新触发 CSS 淡入动画：先清空再写入
       b.innerHTML = '';
       void b.offsetWidth;
@@ -68,12 +73,10 @@
     if (b._maTimer) { clearInterval(b._maTimer); b._maTimer = null; }
     b.onmouseenter = null; b.onmouseleave = null;
   }
-  function render(list) {
-    var bs = boxes();
-    if (!bs.length) return;
-    bs.forEach(function (b) {
-      // 主题加载器若已渲染出真实评论，就不覆盖
-      if (b.querySelector('.aside-list-item[data-theme="1"]')) return;
+  // 只给 targets 里这些卡片渲染；主题已填的卡片跳过
+  function render(list, targets) {
+    (targets || boxes()).forEach(function (b) {
+      if (boxHasThemeItems(b)) return;
       startRotate(b, list);
     });
   }
@@ -92,29 +95,15 @@
         .then(resolve, function (e) { clearTimeout(timer); reject(e); });
     });
   }
-
-  function themeHasComments() {
-    var bs = boxes();
-    if (!bs.length) return true; // 卡片不存在就不管
-    return bs.some(function (b) { return b.querySelector('.aside-list-item') !== null; });
-  }
-
-  // 示例评论：仅在没有任何真实评论时展示（马老师读者口吻）
-  var SAMPLE = [
-    { nick: '老陈', text: '马老师这篇把失业的事说透了，转到我们车间群了，好几个工友看完半天没说话。', url: '/comments/' },
-    { nick: '阿珍', text: '关注三年了，每次心里堵得慌就来翻马老师的旧文，比那些心灵鸡汤管用多了。', url: '/comments/' },
-    { nick: '大刘', text: '房价这篇看了三遍，已经转给家里人了。说得实在，不整虚的。', url: '/comments/' },
-    { nick: '小雨', text: '马老师，能多写写普通人怎么攒钱吗？蹲一个更新！', url: '/comments/' },
-    { nick: '悟空', text: '哈哈，骂得好，笑着笑着就沉默了。', url: '/comments/' }
-  ];
-
-  function fallback() {
-    if (themeHasComments()) return; // 主题已渲染
+  // 每个卡片独立兜底：只给仍然空着的卡片填内容
+  function fallback(targets) {
+    targets = (targets || []).filter(boxNeeds);
+    if (!targets.length) return; // 每个卡片都已有内容就不管
     var settled = false;
     function finish(list) {
-      if (settled || themeHasComments()) return;
+      if (settled) return;
       settled = true;
-      render(list && list.length ? list.slice(0, 6) : SAMPLE);
+      render(list && list.length ? list.slice(0, 6) : SAMPLE, targets);
     }
     // 留言板优先：两个请求并行发出，但渲染时留言板结果优先
     var pBoard = twikooEvent({ event: 'COMMENT_GET', url: '/comments/', page: 1, pageSize: 6 }, 5000)
@@ -134,25 +123,35 @@
     // 留言板先返回且有数据 → 立即用留言板
     pBoard.then(function (bl) {
       if (settled) return;
-      if (bl.length) { settled = true; render(bl); }
+      if (bl.length) { settled = true; render(bl, targets); }
       else pRecent.then(function (rl) { finish(rl); }); // 留言板为空才用最新评论
     });
     // 6.5 秒强制兜底：优先留言板，其次最新评论，最后示例
     setTimeout(function () {
-      if (settled || themeHasComments()) return;
+      if (settled) return;
       settled = true;
       Promise.all([pBoard, pRecent]).then(function (rs) {
         var pick = rs[0].length ? rs[0] : rs[1];
-        render(pick.length ? pick.slice(0, 6) : SAMPLE);
+        render(pick.length ? pick.slice(0, 6) : SAMPLE, targets);
       });
     }, 6500);
   }
 
-  // 每 500ms 检查一次主题加载器是否已渲染出评论，最多等 5 秒
+  // 示例留言：仅在没有任何真实留言时展示（马老师读者口吻）
+  var SAMPLE = [
+    { nick: '老陈', text: '马老师这篇把失业的事说透了，转到我们车间群了，好几个工友看完半天没说话。', url: '/comments/' },
+    { nick: '阿珍', text: '关注三年了，每次心里堵得慌就来翻马老师的旧文，比那些心灵鸡汤管用多了。', url: '/comments/' },
+    { nick: '大刘', text: '房价这篇看了三遍，已经转给家里人了。说得实在，不整虚的。', url: '/comments/' },
+    { nick: '小雨', text: '马老师，能多写写普通人怎么攒钱吗？蹲一个更新！', url: '/comments/' },
+    { nick: '悟空', text: '哈哈，骂得好，笑着笑着就沉默了。', url: '/comments/' }
+  ];
+
+  // 每 500ms 检查一次：只给仍然空着的卡片兜底，最多等主题 5 秒
   var waited = 0;
   var timer = setInterval(function () {
     waited += 500;
-    if (themeHasComments()) { clearInterval(timer); return; }
-    if (waited >= 5000) { clearInterval(timer); fallback(); }
+    var need = boxes().filter(boxNeeds);
+    if (!need.length) { clearInterval(timer); return; }
+    if (waited >= 5000) { clearInterval(timer); fallback(need); }
   }, 500);
 })();
