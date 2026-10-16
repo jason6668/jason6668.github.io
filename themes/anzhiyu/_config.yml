@@ -440,7 +440,7 @@ aside:
   hide: false
   button: true
   mobile: true
-  position: right
+  position: left
   display:
     archive: true
     tag: true
@@ -469,7 +469,7 @@ aside:
   card_tags:
     enable: true
     limit: 40
-    color: false
+    color: true
     sort_order: null
     highlightTags: null
   card_archives:
