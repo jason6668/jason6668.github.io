@@ -28,14 +28,26 @@
     });
   }
   function stripHtml(s) { return String(s || '').replace(/<[^>]+>/g, '').slice(0, 60); }
-  function itemHTML(nick, text, url) {
+  function fmtDate(t) {
+    var d = new Date(+t);
+    if (!t || isNaN(d.getTime())) return '';
+    return (d.getMonth() + 1) + '/' + d.getDate() + '日';
+  }
+  function daysAgo(n) {
+    var d = new Date(); d.setDate(d.getDate() - n);
+    return (d.getMonth() + 1) + '/' + d.getDate() + '日';
+  }
+  // 聊天列表式：圆角头像 + 昵称/日期 + 内容摘要
+  function itemHTML(nick, text, url, date) {
     var first = esc(nick).charAt(0) || '友';
-    return '<div class="aside-list-item" data-ma="1">' +
-      '<a href="' + esc(url || '/comments/') + '" class="thumbnail">' +
+    var u = esc(url || '/comments/');
+    return '<div class="aside-list-item ma-msg" data-ma="1">' +
+      '<a href="' + u + '" class="ma-msg-avatar">' +
       '<div class="ma-comment-avatar" style="background:' + colorFor(nick) + '">' + first + '</div></a>' +
-      '<div class="content">' +
-      '<a class="comment" href="' + esc(url || '/comments/') + '" title="' + esc(text) + '">' + esc(text) + '</a>' +
-      '<div class="name"><span>' + esc(nick) + '</span></div>' +
+      '<div class="ma-msg-body">' +
+      '<div class="ma-msg-head"><span class="ma-msg-nick">' + esc(nick) + '</span>' +
+      (date ? '<span class="ma-msg-date">' + esc(date) + '</span>' : '') + '</div>' +
+      '<a href="' + u + '" class="ma-msg-text" title="' + esc(text) + '">' + esc(text) + '</a>' +
       '</div></div>';
   }
   // 主题自己渲染的条目（没有 data-ma 标记）
@@ -51,7 +63,7 @@
       // 重新触发 CSS 淡入动画：先清空再写入
       b.innerHTML = '';
       void b.offsetWidth;
-      b.innerHTML = itemHTML(list[n].nick, list[n].text, list[n].url);
+      b.innerHTML = itemHTML(list[n].nick, list[n].text, list[n].url, list[n].date);
     }
     b.classList.add('ma-rotating');
     show(0);
@@ -110,14 +122,14 @@
       .then(function (d) {
         var arr = (d && d.data && d.data.data) || [];
         return arr.map(function (c) {
-          return { nick: c.nick || '访客', text: stripHtml(c.commentText || c.comment), url: '/comments/' };
+          return { nick: c.nick || '访客', text: stripHtml(c.commentText || c.comment), url: '/comments/', date: fmtDate(c.created) };
         }).filter(function (c) { return c.text; });
       }).catch(function () { return []; });
     var pRecent = twikooEvent({ event: 'GET_RECENT_COMMENTS', pageSize: 6, includeReply: true }, 5000)
       .then(function (d) {
         var arr = (d && d.data) || [];
         return arr.map(function (c) {
-          return { nick: c.nick || '访客', text: stripHtml(c.commentText), url: c.url || '/comments/' };
+          return { nick: c.nick || '访客', text: stripHtml(c.commentText), url: c.url || '/comments/', date: fmtDate(c.created || c.createdAt) };
         }).filter(function (c) { return c.text; });
       }).catch(function () { return []; });
     // 留言板先返回且有数据 → 立即用留言板
@@ -139,11 +151,11 @@
 
   // 示例留言：仅在没有任何真实留言时展示（马老师读者口吻）
   var SAMPLE = [
-    { nick: '老陈', text: '马老师这篇把失业的事说透了，转到我们车间群了，好几个工友看完半天没说话。', url: '/comments/' },
-    { nick: '阿珍', text: '关注三年了，每次心里堵得慌就来翻马老师的旧文，比那些心灵鸡汤管用多了。', url: '/comments/' },
-    { nick: '大刘', text: '房价这篇看了三遍，已经转给家里人了。说得实在，不整虚的。', url: '/comments/' },
-    { nick: '小雨', text: '马老师，能多写写普通人怎么攒钱吗？蹲一个更新！', url: '/comments/' },
-    { nick: '悟空', text: '哈哈，骂得好，笑着笑着就沉默了。', url: '/comments/' }
+    { nick: '老陈', text: '马老师这篇把失业的事说透了，转到我们车间群了，好几个工友看完半天没说话。', url: '/comments/', date: daysAgo(0) },
+    { nick: '阿珍', text: '关注三年了，每次心里堵得慌就来翻马老师的旧文，比那些心灵鸡汤管用多了。', url: '/comments/', date: daysAgo(1) },
+    { nick: '大刘', text: '房价这篇看了三遍，已经转给家里人了。说得实在，不整虚的。', url: '/comments/', date: daysAgo(2) },
+    { nick: '小雨', text: '马老师，能多写写普通人怎么攒钱吗？蹲一个更新！', url: '/comments/', date: daysAgo(3) },
+    { nick: '悟空', text: '哈哈，骂得好，笑着笑着就沉默了。', url: '/comments/', date: daysAgo(4) }
   ];
 
   // 每 500ms 检查一次：只给仍然空着的卡片兜底，最多等主题 5 秒
