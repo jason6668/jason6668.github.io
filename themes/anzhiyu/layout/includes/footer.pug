@@ -41,46 +41,29 @@
   if theme.footer.custom_text
     .footer_custom_text!=`${theme.footer.custom_text}`
 
-  //- 马老师专属页脚（独立设计：结构参考同主题站点，内容元素融入论坛生态）
+  //- 马老师专属页脚（论坛式三栏，无背景）
   #ma-footer
     .ma-footer-inner
-      .ma-fcol.ma-brand
-        .ma-brand-head
-          img.ma-avatar(src=theme.avatar.img, alt=config.author)
-          .ma-brand-name
-            strong= config.title
-            span= config.subtitle
-        p.ma-slogan 不务正业的理性浪漫，专治各种精神内耗。
-        .ma-social
-          a(href='https://github.com/jason6668', target='_blank', rel='noopener', title='GitHub')
-            i.anzhiyufont.anzhiyu-icon-github
-          a(href='mailto:ma@8818618.xyz', title='邮箱')
-            i.anzhiyufont.anzhiyu-icon-envelope
-          a(href='https://t.me/sisumasanBot', target='_blank', rel='noopener', title='Telegram')
-            i.anzhiyufont.anzhiyu-icon-telegram
       .ma-fcol
-        .ma-ftitle 快速导航
+        h4 快速导航
         a(href='/archives/') 归档
         a(href='/categories/') 分类
         a(href='/tags/') 标签
         a(href='/comments/') 留言板
         a(href='/blacklist/') 避雷专区
       .ma-fcol
-        .ma-ftitle 马老师生态
+        h4 马老师生态
         a(href='https://bbs.8818618.xyz/', target='_blank', rel='noopener') JM社区
         a(href='https://zb.8818618.xyz/', target='_blank', rel='noopener') 专属直播
         a(href='https://tv.8818618.xyz/', target='_blank', rel='noopener') 专属TV
         a(href='https://music.8818618.xyz/', target='_blank', rel='noopener') 专属音乐
         a(href='https://rewards.8818618.xyz/', target='_blank', rel='noopener') 赞赏墙
         a(href='https://vip.8818618.xyz/', target='_blank', rel='noopener') 会员服务
+        a(href='https://t.me/sisumasanBot', target='_blank', rel='noopener') ✈️ Telegram
       .ma-fcol
-        .ma-ftitle 本站信息
-        span.ma-info 建站于 2021 年 4 月 1 日
-        span.ma-info 已稳定运行 #[b#ma-run-days] 天
-        span.ma-info 由 Hexo & 安知鱼主题强力驱动
-        a(href='/copyright') 版权声明
-  script.
-    (function(){try{var s=new Date('2021-04-01T00:00:00+08:00').getTime();var d=Math.floor((Date.now()-s)/864e5);var e=document.getElementById('ma-run-days');if(e)e.textContent=d;}catch(_){}})();
+        h4 本站信息
+        p.ma-desc 马老师的个人博客：把复杂的事说明白，把憋屈的事说痛快。专治各种精神内耗。
+        a(href='/atom.xml', target='_blank', rel='noopener') 📡 RSS 订阅
 
   if theme.footer.list.enable
     - let projectList = theme.footer.list.project
