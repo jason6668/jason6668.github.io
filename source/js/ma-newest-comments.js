@@ -1,7 +1,8 @@
 /* 马老师博客 - 最新评论卡片兜底
- * 逻辑：先等主题自带加载器（Twikoo）9 秒；若仍无评论，
- * 依次尝试：Twikoo 拉最新评论(6s 超时) → 拉留言板 /comments/ 评论 → 渲染示例评论。
- * 有真实评论时示例评论永远不会出现。
+ * 逻辑：主题自带加载器（Twikoo）优先，最多等它 5 秒；
+ * 若仍无评论，并行拉「最新评论」与「留言板 /comments/」评论（各 5 秒超时），
+ * 哪个先有数据用哪个；都没有则渲染示例评论。
+ * 有真实评论时示例评论永远不会出现；主题后加载出真实评论会覆盖兜底。
  */
 (function () {
   'use strict';
@@ -21,6 +22,7 @@
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
     });
   }
+  function stripHtml(s) { return String(s || '').replace(/<[^>]+>/g, '').slice(0, 60); }
   function itemHTML(nick, text, url) {
     var first = esc(nick).charAt(0) || '友';
     return '<div class="aside-list-item">' +
@@ -34,6 +36,8 @@
   function render(list) {
     var b = box();
     if (!b) return;
+    // 主题加载器若已渲染出真实评论，就不覆盖
+    if (b.querySelector('.aside-list-item[data-theme="1"]')) return;
     b.innerHTML = list.map(function (c) { return itemHTML(c.nick, c.text, c.url); }).join('');
   }
 
@@ -41,7 +45,7 @@
     return new Promise(function (resolve, reject) {
       var ctrl, timer;
       try { ctrl = new AbortController(); } catch (e) { reject(e); return; }
-      timer = setTimeout(function () { try { ctrl.abort(); } catch (e) {} reject(new Error('timeout')); }, timeoutMs || 6000);
+      timer = setTimeout(function () { try { ctrl.abort(); } catch (e) {} reject(new Error('timeout')); }, timeoutMs || 5000);
       fetch(TWIKOO_API, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -58,19 +62,6 @@
     return b.querySelector('.aside-list-item') !== null;
   }
 
-  function tryBoardThenSample() {
-    twikooEvent({ event: 'COMMENT_GET', url: '/comments/', page: 1, pageSize: 5 }, 6000).then(function (d) {
-      var arr = (d && d.data && d.data.data) || [];
-      if (arr.length) {
-        render(arr.map(function (c) {
-          return { nick: c.nick || '访客', text: (c.commentText || c.comment || '').replace(/<[^>]+>/g, '').slice(0, 60), url: '/comments/' };
-        }));
-      } else {
-        render(SAMPLE);
-      }
-    }).catch(function () { render(SAMPLE); });
-  }
-
   // 示例评论：仅在没有任何真实评论时展示（马老师读者口吻）
   var SAMPLE = [
     { nick: '老陈', text: '马老师这篇把失业的事说透了，转到我们车间群了，好几个工友看完半天没说话。', url: '/comments/' },
@@ -80,23 +71,45 @@
     { nick: '悟空', text: '哈哈，骂得好，笑着笑着就沉默了。', url: '/comments/' }
   ];
 
-  // 每秒检查一次主题加载器是否已渲染出评论，最多等 9 秒
+  function fallback() {
+    if (themeHasComments()) return; // 主题已渲染
+    var settled = false;
+    function useFirst(list) {
+      if (settled) return;
+      if (list && list.length) { settled = true; render(list); }
+    }
+    var p1 = twikooEvent({ event: 'GET_RECENT_COMMENTS', pageSize: 6, includeReply: true }, 5000)
+      .then(function (d) {
+        var arr = (d && d.data) || [];
+        return arr.map(function (c) {
+          return { nick: c.nick || '访客', text: stripHtml(c.commentText), url: c.url || '/comments/' };
+        }).filter(function (c) { return c.text; });
+      }).catch(function () { return []; });
+    var p2 = twikooEvent({ event: 'COMMENT_GET', url: '/comments/', page: 1, pageSize: 5 }, 5000)
+      .then(function (d) {
+        var arr = (d && d.data && d.data.data) || [];
+        return arr.map(function (c) {
+          return { nick: c.nick || '访客', text: stripHtml(c.commentText || c.comment), url: '/comments/' };
+        }).filter(function (c) { return c.text; });
+      }).catch(function () { return []; });
+    p1.then(useFirst);
+    p2.then(useFirst);
+    // 6 秒后无论如何兜底：有数据已渲染则跳过，否则上示例
+    setTimeout(function () {
+      if (settled || themeHasComments()) return;
+      settled = true;
+      Promise.all([p1, p2]).then(function (rs) {
+        var all = rs[0].concat(rs[1]);
+        render(all.length ? all.slice(0, 6) : SAMPLE);
+      });
+    }, 6000);
+  }
+
+  // 每 500ms 检查一次主题加载器是否已渲染出评论，最多等 5 秒
   var waited = 0;
   var timer = setInterval(function () {
-    waited += 1000;
+    waited += 500;
     if (themeHasComments()) { clearInterval(timer); return; }
-    if (waited >= 9000) {
-      clearInterval(timer);
-      twikooEvent({ event: 'GET_RECENT_COMMENTS', pageSize: 6, includeReply: true }, 6000).then(function (d) {
-        var arr = (d && d.data) || [];
-        if (arr.length) {
-          render(arr.map(function (c) {
-            return { nick: c.nick || '访客', text: (c.commentText || '').replace(/<[^>]+>/g, '').slice(0, 60), url: c.url || '/comments/' };
-          }));
-        } else {
-          tryBoardThenSample();
-        }
-      }).catch(tryBoardThenSample);
-    }
-  }, 1000);
+    if (waited >= 5000) { clearInterval(timer); fallback(); }
+  }, 500);
 })();
