@@ -9,7 +9,11 @@
   var CARD_SEL = '#card-newest-comments .aside-list';
   var TWIKOO_API = 'https://comment.8818618.xyz';
 
-  function box() { return document.querySelector(CARD_SEL); }
+  function boxes() {
+    // 主题在 console 卡片组和侧边栏各放了一个同 id 的卡片，都要处理
+    var nodes = document.querySelectorAll('[id="card-newest-comments"] .aside-list');
+    return Array.prototype.slice.call(nodes);
+  }
 
   // 昵称首字 + 哈希配色头像
   function colorFor(name) {
@@ -34,11 +38,14 @@
       '</div></div>';
   }
   function render(list) {
-    var b = box();
-    if (!b) return;
-    // 主题加载器若已渲染出真实评论，就不覆盖
-    if (b.querySelector('.aside-list-item[data-theme="1"]')) return;
-    b.innerHTML = list.map(function (c) { return itemHTML(c.nick, c.text, c.url); }).join('');
+    var bs = boxes();
+    if (!bs.length) return;
+    var html = list.map(function (c) { return itemHTML(c.nick, c.text, c.url); }).join('');
+    bs.forEach(function (b) {
+      // 主题加载器若已渲染出真实评论，就不覆盖
+      if (b.querySelector('.aside-list-item[data-theme="1"]')) return;
+      b.innerHTML = html;
+    });
   }
 
   function twikooEvent(payload, timeoutMs) {
@@ -57,9 +64,9 @@
   }
 
   function themeHasComments() {
-    var b = box();
-    if (!b) return true; // 卡片不存在就不管
-    return b.querySelector('.aside-list-item') !== null;
+    var bs = boxes();
+    if (!bs.length) return true; // 卡片不存在就不管
+    return bs.some(function (b) { return b.querySelector('.aside-list-item') !== null; });
   }
 
   // 示例评论：仅在没有任何真实评论时展示（马老师读者口吻）
