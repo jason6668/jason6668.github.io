@@ -16,6 +16,14 @@
           include ./card_post_toc.pug
         !=partial('includes/widget/card_recent_post', {}, {cache: true})
         !=partial('includes/widget/card_ad', {}, {cache: true})
+        if theme.newest_comments.enable
+          #card-newest-comments
+            .item-headline
+              i.anzhiyufont.anzhiyu-icon-comments
+              span= _p('aside.card_newest_comments.headline')
+            .aside-list
+              span= _p('aside.card_newest_comments.loading_text')
+            hr
   else
     //- page
     !=partial('includes/widget/card_author', {}, {cache: true})
@@ -31,5 +39,13 @@
         !=partial('includes/widget/card_ad', {}, {cache: true})
         !=partial('includes/widget/card_tags', {}, {cache: true})
         !=partial('includes/widget/card_archives', {}, {cache: true})
+        if theme.newest_comments.enable
+          #card-newest-comments
+            .item-headline
+              i.anzhiyufont.anzhiyu-icon-comments
+              span= _p('aside.card_newest_comments.headline')
+            .aside-list
+              span= _p('aside.card_newest_comments.loading_text')
+            hr
         !=partial('includes/widget/card_webinfo', {}, {cache: true})
       !=partial('includes/widget/card_bottom_self', {}, {cache: true})
