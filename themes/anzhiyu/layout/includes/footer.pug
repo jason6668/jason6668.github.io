@@ -41,7 +41,7 @@
   if theme.footer.custom_text
     .footer_custom_text!=`${theme.footer.custom_text}`
 
-  //- 马老师专属页脚（论坛式三栏，无背景）
+  //- 马老师专属页脚（参考 zrf.me：标题/链接 16px，两栏）
   #ma-footer
     .ma-footer-inner
       .ma-fcol
@@ -60,10 +60,6 @@
         a(href='https://rewards.8818618.xyz/', target='_blank', rel='noopener') 赞赏墙
         a(href='https://vip.8818618.xyz/', target='_blank', rel='noopener') 会员服务
         a(href='https://t.me/sisumasanBot', target='_blank', rel='noopener') ✈️ Telegram
-      .ma-fcol
-        h4 本站信息
-        p.ma-desc 马老师的个人博客：把复杂的事说明白，把憋屈的事说痛快。专治各种精神内耗。
-        a(href='/atom.xml', target='_blank', rel='noopener') 📡 RSS 订阅
 
   if theme.footer.list.enable
     - let projectList = theme.footer.list.project
