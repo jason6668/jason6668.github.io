@@ -492,7 +492,7 @@ runtimeshow:
   enable: true
   publish_date: 4/1/2021 00:00:00
 newest_comments:
-  enable: true
+  enable: false
   sort_order: null
   limit: 6
   storage: 10
