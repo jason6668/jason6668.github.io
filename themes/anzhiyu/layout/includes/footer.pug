@@ -41,26 +41,6 @@
   if theme.footer.custom_text
     .footer_custom_text!=`${theme.footer.custom_text}`
 
-  //- 马老师专属页脚（参考 zrf.me：标题/链接 16px，两栏）
-  #ma-footer
-    .ma-footer-inner
-      .ma-fcol
-        h4 快速导航
-        a(href='/archives/') 归档
-        a(href='/categories/') 分类
-        a(href='/tags/') 标签
-        a(href='/comments/') 留言板
-        a(href='/blacklist/') 避雷专区
-      .ma-fcol
-        h4 马老师生态
-        a(href='https://bbs.8818618.xyz/', target='_blank', rel='noopener') JM社区
-        a(href='https://zb.8818618.xyz/', target='_blank', rel='noopener') 专属直播
-        a(href='https://tv.8818618.xyz/', target='_blank', rel='noopener') 专属TV
-        a(href='https://music.8818618.xyz/', target='_blank', rel='noopener') 专属音乐
-        a(href='https://rewards.8818618.xyz/', target='_blank', rel='noopener') 赞赏墙
-        a(href='https://vip.8818618.xyz/', target='_blank', rel='noopener') 会员服务
-        a(href='https://t.me/sisumasanBot', target='_blank', rel='noopener') ✈️ Telegram
-
   if theme.footer.list.enable
     - let projectList = theme.footer.list.project
     #anzhiyu-footer
