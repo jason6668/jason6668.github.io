@@ -714,9 +714,9 @@ inject:
   head:
   - <link rel="stylesheet" href="/css/mobile-fix.css?v=2026100425">
   - <link rel="stylesheet" href="/css/bg-eooce.css?v=20261009">
-  - <link rel="stylesheet" href="/css/aside-left.css?v=20261017i">
+  - <link rel="stylesheet" href="/css/aside-left.css?v=20261017j">
   bottom:
-  - <script src="/js/ma-newest-comments.js?v=20261017f"></script>
+  - <script src="/js/ma-newest-comments.js?v=20261017g"></script>
 CDN:
   internal_provider: local
   third_party_provider: cbd
