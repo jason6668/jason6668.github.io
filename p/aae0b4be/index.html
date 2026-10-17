@@ -1,0 +1,600 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>Karing 新手教程 | 马老师BLOG</title><meta name="keywords" content="马老师,博客,心理咨询师,教程,分享,失业联盟,搭子"><meta name="author" content="马老师"><meta name="copyright" content="马老师"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="Karing 新手教程"><meta name="application-name" content="Karing 新手教程"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="Karing 新手教程"><meta property="og:url" content="https://blog.8818618.xyz/p/aae0b4be/index.html"><meta property="og:site_name" content="马老师BLOG"><meta property="og:description" content="Karing 新手教程：别慌，网络没坏，可能只是配置还没调好有些朋友第一次打开 Karing，表情大概是这样的： “我只是想让网络顺一点，为什么突然像在参加工程师资格考试？” 订阅、节点、规则、延迟、TUN、分流……这些词单独看都认识，放在一起就像一桌专业名词在开会。 但别慌。 Karing 没有"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://tc.8818618.xyz/file/1783842745180_image.png"><meta property="article:author" content="马老师"><meta property="article:tag" content="马老师,博客,心理咨询师,教程,分享,失业联盟,搭子"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://tc.8818618.xyz/file/1783842745180_image.png"><meta name="description" content="Karing 新手教程：别慌，网络没坏，可能只是配置还没调好有些朋友第一次打开 Karing，表情大概是这样的： “我只是想让网络顺一点，为什么突然像在参加工程师资格考试？” 订阅、节点、规则、延迟、TUN、分流……这些词单独看都认识，放在一起就像一桌专业名词在开会。 但别慌。 Karing 没有"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.8818618.xyz/p/aae0b4be/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"tianli","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"S-DUCSO4G2QZ1Z7SLR","Referer":"https://comema.ggff.net/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: 'https://comment.8818618.xyz',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: {"apiurl":null},
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 心理咨询师","🔍 分享与热心帮助","🏠 正红旗少先队大队长","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 闲得蛋疼"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":false,"limitCount":50,"languages":{"author":"作者: 马老师","link":"链接: ","source":"来源: 马老师BLOG","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '马老师BLOG',
+  title: 'Karing 新手教程',
+  postAI: '',
+  pageFillDescription: 'Karing 新手教程：别慌网络没坏可能只是配置还没调好, 它不是魔法也不是凭空变出网络的神秘按钮。它更像一个导航软件：路要自己有它负责帮你规划。, 一、Karing 适合谁？, 二、开始之前你需要准备什么？, 1. 一个可以安装 Karing 的设备, 2. Karing App, 3. 一个合法合规的订阅或配置, 三、第一步：下载安装 Karing, 四、第二步：添加订阅或配置, 五、第三步：连接节点, 六、第四步：测试延迟选择更合适的节点, 七、规则模式和全局模式怎么选？, 八、TUN 模式是什么？新手需要开吗？, 九、Android 用户可以关注按应用代理, 十、常见问题处理, 1. 订阅添加失败怎么办？, 2. 已经连接但还是打不开网页？, 3. 网速很慢怎么办？, 4. 为什么有些软件不走代理？, 十一、新手推荐设置, 十二、写在最后：网络工具是工具不是修仙法器新手教程别慌网络没坏可能只是配置还没调好有些朋友第一次打开表情大概是这样的我只是想让网络顺一点为什么突然像在参加工程师资格考试订阅节点规则延迟分流这些词单独看都认识放在一起就像一桌专业名词在开会但别慌没有看起来那么吓人它本质上是一个跨平台代理工具你可以把它理解成一个网络路线管家你给它一个合法合规的配置它负责帮你管理订阅选择节点执行规则让网络请求按照合适的路线走它不是魔法也不是凭空变出网络的神秘按钮它更像一个导航软件路要自己有它负责帮你规划一适合谁很适合这几类用户第一类刚接触代理工具的新手看到这些词会头大但又希望工具尽量简单好用第二类有多个订阅或配置的人以前每个配置都要单独维护现在可以集中管理少一点混乱多一点安稳第三类多设备用户比如手机电脑平板都想使用同一套配置的跨平台特性会比较方便第四类不想天天折腾的人有些工具适合技术爱好者深度调试有些工具适合普通人安静使用更偏向后者能用好管少折腾二开始之前你需要准备什么在使用前建议先准备好三样东西一个可以安装的设备支持多个平台包括等你可以根据自己的设备选择对应版本建议从官方渠道下载不要随便下载来源不明的安装包网络工具和普通软件不太一样它会接触你的网络连接配置所以安全性尤其重要不要看到高速版破解版增强版就心动很多时候真正增强的不是网速而是风险一个合法合规的订阅或配置只是工具本身不会凭空提供节点你需要自己准备订阅链接或配置文件没有配置就像一口空锅锅再好也煮不出晚饭三第一步下载安装根据你的设备前往官方渠道下载并安装安装完成后先不要急着乱点很多新手第一次打开这类工具时会本能地想把每个按钮都点一遍这很危险不是说软件会爆炸而是你很可能点到最后自己也不知道刚才改了什么技术工具最怕的不是不会用而是我感觉这个选项好像很厉害所以我开一下先克制住好奇心我们一步一步来四第二步添加订阅或配置打开后找到添加配置或添加订阅的入口通常流程大致是打开进入设置或配置管理选择添加配置粘贴你的订阅链接或导入配置文件保存并更新配置添加成功后会读取订阅里的节点信息这里要特别提醒一句订阅链接不要随便发给别人它就像你的网络配置钥匙不要截图发朋友圈也不要随手丢到群里有些东西分享出去以后失去的不只是隐私还有你本来就不太稳定的网络体验五第三步连接节点配置添加好以后回到主界面一般来说会显示可用节点列表你可以选择一个节点然后点击连接如果连接成功恭喜你第一步已经完成如果连接失败也不用急着怀疑人生代理工具连接失败很常见原因可能有很多可能是节点不可用可能是订阅过期可能是网络环境不稳定也可能只是你刚好选中了一个今天不想上班的节点这时可以先换一个节点试试六第四步测试延迟选择更合适的节点节点列表里通常会有很多地区和线路新手很容易陷入选择困难我该选哪个是不是名字看起来越高级越快是不是越远越神秘越神秘越强不一定最简单的方法是使用延迟测试功能延迟通常越低响应越快体验也可能越稳定你可以先测试全部节点然后选择延迟较低稳定性较好的节点不过也要注意延迟不是唯一标准有些节点延迟低但速度一般有些节点延迟略高但稳定性更好所以最靠谱的办法是测试之后再实际用一用技术世界里有一个朴素道理能稳定用比看起来很厉害更重要人生也是如此花里胡哨的计划不一定能坚持能每天执行一点点的小计划反而更可靠七规则模式和全局模式怎么选这是很多新手会遇到的问题简单来说规则模式根据规则判断哪些流量走代理哪些流量直连全局模式大部分或全部流量都走代理对于普通用户建议优先使用规则模式规则模式更适合日常使用因为它不会把所有流量都强行绕一圈本来可以直连的网站就让它直连需要代理的再走代理全局模式适合特殊场景但不建议新手一上来就长期使用因为它可能导致某些本地服务国内网站或应用访问变慢如果你不知道该选哪个就先选规则模式不知道该怎么选时先选更稳的这句话不仅适用于网络工具也适用于点奶茶换工作和深夜购物八模式是什么新手需要开吗模式可以理解为更底层的网络接管方式开启后它能让更多应用的流量经过处理适合一些需要全局接管网络流量的场景但对于新手来说不建议一上来就研究如果你只是浏览网页使用常见应用普通模式通常已经够用如果某些应用无法正常走代理再考虑是否需要开启简单说能不用复杂功能解决的问题就不要先打开复杂功能有些功能不是不好而是它会让排查问题变得更复杂就像你本来只是想煮碗面结果把厨房改造成了中央厨房最后发现自己连水龙头在哪都忘了九用户可以关注按应用代理如果你使用的是可能支持按应用设置代理这个功能的意思是你可以指定某些走代理某些不走代理比如只让浏览器走代理让某些本地保持直连或者排除不需要代理的应用这个功能很适合想精细控制网络行为的用户不过新手建议先不要一下子设置太复杂先让基础连接跑通再考虑分应用管理工具使用的顺序应该是先能用再好用最后才是精细化不要第一天就把自己变成网络架构师我们先做一个平静的普通人十常见问题处理订阅添加失败怎么办先检查订阅链接有没有复制完整很多失败不是因为工具复杂而是因为链接少复制了几个字符这就像寄快递少写了门牌号快递员再努力也只能在楼下沉思然后再检查订阅是否过期当前网络是否正常配置格式是否被支持是否需要先更新订阅已经连接但还是打不开网页可以按这个顺序排查先换一个节点再测试节点延迟再确认当前模式是规则还是全局再更新订阅最后重启或设备试试不要一上来就卸载重装卸载重装是技术世界里的大力出奇迹有时有效但不应该是第一反应网速很慢怎么办先测试延迟再换节点如果多个节点都慢可能是订阅服务本身的问题也可能是当前网络环境不稳定还可以检查是否开启了不必要的全局模式或复杂规则有时候不是工具不行是路线绕得太远就像你只是想从客厅去厨房结果导航让你先下楼绕小区一圈再回来不是不能到就是有点多余为什么有些软件不走代理可能是软件本身不遵循系统代理这种情况下可以尝试开启模式或者使用按应用代理功能但还是那句话先确认基础配置没问题再动高级功能否则你会陷入一种经典状态我不知道哪里坏了但我刚才确实改了很多东西这句话听起来就很危险十一新手推荐设置如果你是第一次使用可以按这个思路来使用官方版本导入一个稳定的订阅选择规则模式使用自动选择或低延迟节点基础功能跑通后再研究分应用代理和高级规则不要急着一次性配置到完美工具不是人生伴侣不需要第一眼就确定它的全部细节先相处一下看看哪里顺手哪里需要调整十二写在最后网络工具是工具不是修仙法器的意义不是让你变成网络专家它只是帮你把订阅节点和规则管理得更清楚让网络体验少一点混乱多一点可控使用这类工具时最重要的不是把每个选项都研究透而是掌握基本逻辑配置从哪里来节点怎么选择模式怎么切换出问题怎么排查高级功能什么时候再碰做到这些已经足够应对大多数日常场景如果哪天网络突然不稳定也别急着跟自己生气工具会出问题节点会出问题网络环境也会出问题不是什么都要归因到我是不是太笨了你不笨你只是第一次接触一个新工具慢慢来先添加配置再选择节点然后连接不行就换节点再不行就检查订阅技术问题大多不是玄学只是它们有时候比较擅长假装自己很深奥愿你从今天开始少一点配置焦虑多一点顺滑体验也愿你记住网络可以慢慢调人生也可以',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-07-12 07:51:02',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mobile-fix.css?v=2026100425"><link rel="stylesheet" href="/css/bg-eooce.css?v=20261009"><link rel="stylesheet" href="/css/aside-left.css?v=20261017p"><link rel="stylesheet" href="/css/ma-telegram-icon.css?v=20261017a"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="马老师BLOG" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://tc.8818618.xyz/file/1783850983366_image.png"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">马老师BLOG</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 探索</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6%E9%9A%8F%E7%AC%94/"><i class="anzhiyufont anzhiyu-icon-heartbeat faa-tada" style="font-size: 0.9em;"></i><span> 心理学随笔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/blacklist/"><i class="anzhiyufont anzhiyu-icon-shield-halved faa-tada" style="font-size: 0.9em;"></i><span> 避雷专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mental-test/"><i class="anzhiyufont anzhiyu-icon-heart-pulse faa-tada" style="font-size: 0.9em;"></i><span> 心理自测</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mbti-test/"><i class="anzhiyufont anzhiyu-icon-brain faa-tada" style="font-size: 0.9em;"></i><span> MBTI测评</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/star-fortune/"><i class="anzhiyufont anzhiyu-icon-star faa-tada" style="font-size: 0.9em;"></i><span> 星座分析</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/liuyao/"><i class="anzhiyufont anzhiyu-icon-yin-yang faa-tada" style="font-size: 0.9em;"></i><span> 六爻占卜</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tutorial/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> 新手教程</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 点我试一试</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://nav.missma.qzz.io/"><i class="anzhiyufont anzhiyu-icon-map-location-dot faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属导航</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://newsma.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-newspaper faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属新闻频道</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://cmgame.zone.id/"><i class="anzhiyufont anzhiyu-icon-gamepad faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼小游戏</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/moyu"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 专属服务</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属直播</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://tv.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-film faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属TV</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://bbs.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-comments faa-tada" style="font-size: 0.9em;"></i><span> 论坛社区</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vip.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-crown faa-tada" style="font-size: 0.9em;"></i><span> 会员服务</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://rewards.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 赞赏支持</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://ssh.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-terminal faa-tada" style="font-size: 0.9em;"></i><span> WebSSH</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vps.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-server faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属面板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg" target="_blank"><img class="post-qr-code-img" alt="赞赏" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg"/></a><div class="post-qr-code-desc">赞赏</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%9C%A3%E7%BB%8F/" style="font-size: 1.05rem;">一个人的圣经<sup>1</sup></a><a href="/tags/%E4%BA%B2%E7%88%B1%E7%9A%84%E7%94%9F%E6%B4%BB/" style="font-size: 1.05rem;">亲爱的生活<sup>1</sup></a><a href="/tags/%E4%BC%8A%E5%A7%86%E9%9B%B7%C2%B7%E5%87%AF%E5%B0%94%E6%B3%B0%E6%96%AF/" style="font-size: 1.05rem;">伊姆雷·凯尔泰斯<sup>1</sup></a><a href="/tags/%E5%85%AC%E7%BE%8A%E7%9A%84%E8%8A%82%E6%97%A5/" style="font-size: 1.05rem;">公羊的节日<sup>1</sup></a><a href="/tags/%E5%8B%92%E5%85%8B%E8%8E%B1%E9%BD%90%E5%A5%A5/" style="font-size: 1.05rem;">勒克莱齐奥<sup>1</sup></a><a href="/tags/%E5%91%BC%E5%90%B8%E7%A7%8B%E5%8D%83/" style="font-size: 1.05rem;">呼吸秋千<sup>1</sup></a><a href="/tags/%E5%93%88%E7%BD%97%E5%BE%B7%C2%B7%E5%93%81%E7%89%B9/" style="font-size: 1.05rem;">哈罗德·品特<sup>1</sup></a><a href="/tags/%E5%9F%83%E5%B0%94%E5%BC%97%E9%87%8C%E5%BE%B7%C2%B7%E8%80%B6%E5%88%A9%E5%86%85%E5%85%8B/" style="font-size: 1.05rem;">埃尔弗里德·耶利内克<sup>1</sup></a><a href="/tags/%E5%A4%9A%E4%B8%BD%E4%B8%9D%C2%B7%E8%8E%B1%E8%BE%9B/" style="font-size: 1.05rem;">多丽丝·莱辛<sup>1</sup></a><a href="/tags/%E5%A5%88%E4%BF%9D%E5%B0%94/" style="font-size: 1.05rem;">奈保尔<sup>1</sup></a><a href="/tags/%E5%A5%B3%E6%83%85%E4%BA%BA%E4%BB%AC/" style="font-size: 1.05rem;">女情人们<sup>1</sup></a><a href="/tags/%E5%AF%BB%E9%87%91%E8%80%85/" style="font-size: 1.05rem;">寻金者<sup>1</sup></a><a href="/tags/%E5%B8%95%E6%85%95%E5%85%8B/" style="font-size: 1.05rem;">帕慕克<sup>1</sup></a><a href="/tags/%E5%BA%93%E5%88%87/" style="font-size: 1.05rem;">库切<sup>1</sup></a><a href="/tags/%E5%BF%83%E5%85%BD/" style="font-size: 1.05rem;">心兽<sup>1</sup></a><a href="/tags/%E6%83%A8%E8%B4%A5/" style="font-size: 1.05rem;">惨败<sup>1</sup></a><a href="/tags/%E6%88%91%E7%9A%84%E5%90%8D%E5%AD%97%E5%8F%AB%E7%BA%A2/" style="font-size: 1.05rem;">我的名字叫红<sup>1</sup></a><a href="/tags/%E6%89%98%E9%A9%AC%E6%96%AF%C2%B7%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86/" style="font-size: 1.05rem;">托马斯·特朗斯特罗姆<sup>1</sup></a><a href="/tags/%E6%97%A0%E5%91%BD%E8%BF%90%E7%9A%84%E4%BA%BA%E7%94%9F/" style="font-size: 1.05rem;">无命运的人生<sup>1</sup></a><a href="/tags/%E6%AF%95%E6%96%AF%E6%B2%83%E6%96%AF%E5%85%88%E7%94%9F%E7%9A%84%E6%88%BF%E5%AD%90/" style="font-size: 1.05rem;">毕斯沃斯先生的房子<sup>1</sup></a><a href="/tags/%E7%81%B5%E5%B1%B1/" style="font-size: 1.05rem;">灵山<sup>1</sup></a><a href="/tags/%E7%88%B1%E4%B8%BD%E4%B8%9D%C2%B7%E9%97%A8%E7%BD%97/" style="font-size: 1.05rem;">爱丽丝·门罗<sup>1</sup></a><a href="/tags/%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86%E8%AF%97%E6%AD%8C%E5%85%A8%E9%9B%86/" style="font-size: 1.05rem;">特朗斯特罗姆诗歌全集<sup>1</sup></a><a href="/tags/%E7%94%9F%E6%97%A5%E6%B4%BE%E5%AF%B9/" style="font-size: 1.05rem;">生日派对<sup>1</sup></a><a href="/tags/%E7%9C%8B%E9%97%A8%E4%BA%BA/" style="font-size: 1.05rem;">看门人<sup>1</sup></a><a href="/tags/%E7%B1%B3%E6%A0%BC%E5%B0%94%E8%A1%97/" style="font-size: 1.05rem;">米格尔街<sup>1</sup></a><a href="/tags/%E7%BB%BF%E6%88%BF%E5%AD%90/" style="font-size: 1.05rem;">绿房子<sup>1</sup></a><a href="/tags/%E8%80%BB/" style="font-size: 1.05rem;">耻<sup>1</sup></a><a href="/tags/%E8%AE%B0%E5%BF%86%E7%9C%8B%E8%A7%81%E6%88%91/" style="font-size: 1.05rem;">记忆看见我<sup>1</sup></a><a href="/tags/%E8%AF%89%E8%AE%BC%E7%AC%94%E5%BD%95/" style="font-size: 1.05rem;">诉讼笔录<sup>1</sup></a><a href="/tags/%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96/" style="font-size: 1.05rem;">诺贝尔文学奖<sup>35</sup></a><a href="/tags/%E8%B5%AB%E5%A1%94%C2%B7%E7%B1%B3%E5%8B%92/" style="font-size: 1.05rem;">赫塔·米勒<sup>1</sup></a><a href="/tags/%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7K%E7%9A%84%E7%94%9F%E6%B4%BB%E5%92%8C%E6%97%B6%E4%BB%A3/" style="font-size: 1.05rem;">迈克尔·K的生活和时代<sup>1</sup></a><a href="/tags/%E9%80%83%E7%A6%BB/" style="font-size: 1.05rem;">逃离<sup>1</sup></a><a href="/tags/%E9%87%8E%E8%8D%89%E5%9C%A8%E6%AD%8C%E5%94%B1/" style="font-size: 1.05rem;">野草在歌唱<sup>1</sup></a><a href="/tags/%E9%87%91%E8%89%B2%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">金色笔记<sup>1</sup></a><a href="/tags/%E9%92%A2%E7%90%B4%E6%95%99%E5%B8%88/" style="font-size: 1.05rem;">钢琴教师<sup>1</sup></a><a href="/tags/%E9%9B%AA/" style="font-size: 1.05rem;">雪<sup>1</sup></a><a href="/tags/%E9%A9%AC%E9%87%8C%E5%A5%A5%C2%B7%E5%B7%B4%E5%B0%94%E5%8A%A0%E6%96%AF%C2%B7%E7%95%A5%E8%90%A8/" style="font-size: 1.05rem;">马里奥·巴尔加斯·略萨<sup>1</sup></a><a href="/tags/%E9%AB%98%E8%A1%8C%E5%81%A5/" style="font-size: 1.05rem;">高行健<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/10/"><span class="card-archive-list-date">十月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">184</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/09/"><span class="card-archive-list-date">九月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/08/"><span class="card-archive-list-date">八月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/07/"><span class="card-archive-list-date">七月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/04/"><span class="card-archive-list-date">四月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">11</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/11/"><span class="card-archive-list-date">十一月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/10/"><span class="card-archive-list-date">十月 2025</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">十月 2024</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" itemprop="url">科学上网</a></span><span class="article-meta tags"></span></div></div><h1 class="post-title" itemprop="name headline">Karing 新手教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-04-10T16:00:00.000Z" title="发表于 2026-04-11 00:00:00">2026-04-11</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-07-11T23:51:02.092Z" title="更新于 2026-07-12 07:51:02">2026-07-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为澳大利亚"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>澳大利亚</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="https://tc.8818618.xyz/file/1783842745180_image.png"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://blog.8818618.xyz/p/aae0b4be/"><header><a class="post-meta-categories" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" itemprop="url">科学上网</a><h1 id="CrawlerTitle" itemprop="name headline">Karing 新手教程</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">马老师</span><time itemprop="dateCreated datePublished" datetime="2026-04-10T16:00:00.000Z" title="发表于 2026-04-11 00:00:00">2026-04-11</time><time itemprop="dateCreated datePublished" datetime="2026-07-11T23:51:02.092Z" title="更新于 2026-07-12 07:51:02">2026-07-12</time></header><hr>
+<h1 id="Karing-新手教程：别慌，网络没坏，可能只是配置还没调好"><a href="#Karing-新手教程：别慌，网络没坏，可能只是配置还没调好" class="headerlink" title="Karing 新手教程：别慌，网络没坏，可能只是配置还没调好"></a>Karing 新手教程：别慌，网络没坏，可能只是配置还没调好</h1><p>有些朋友第一次打开 Karing，表情大概是这样的：</p>
+<p>“我只是想让网络顺一点，为什么突然像在参加工程师资格考试？”</p>
+<p>订阅、节点、规则、延迟、TUN、分流……<br>这些词单独看都认识，放在一起就像一桌专业名词在开会。</p>
+<p>但别慌。</p>
+<p>Karing 没有看起来那么吓人。它本质上是一个跨平台代理工具，你可以把它理解成一个“网络路线管家”：你给它一个合法合规的配置，它负责帮你管理订阅、选择节点、执行规则，让网络请求按照合适的路线走。</p>
+<h2 id="它不是魔法，也不是凭空变出网络的神秘按钮。它更像一个导航软件：路要自己有，它负责帮你规划。"><a href="#它不是魔法，也不是凭空变出网络的神秘按钮。它更像一个导航软件：路要自己有，它负责帮你规划。" class="headerlink" title="它不是魔法，也不是凭空变出网络的神秘按钮。它更像一个导航软件：路要自己有，它负责帮你规划。"></a>它不是魔法，也不是凭空变出网络的神秘按钮。<br>它更像一个导航软件：路要自己有，它负责帮你规划。</h2><h2 id="一、Karing-适合谁？"><a href="#一、Karing-适合谁？" class="headerlink" title="一、Karing 适合谁？"></a>一、Karing 适合谁？</h2><p>Karing 很适合这几类用户：</p>
+<p><strong>第一类：刚接触代理工具的新手。</strong><br>看到 Clash、V2ray、Sing-box、Shadowsocks 这些词会头大，但又希望工具尽量简单好用。</p>
+<p><strong>第二类：有多个订阅或配置的人。</strong><br>以前每个配置都要单独维护，现在可以集中管理，少一点混乱，多一点安稳。</p>
+<p><strong>第三类：多设备用户。</strong><br>比如手机、电脑、平板都想使用同一套配置，Karing 的跨平台特性会比较方便。</p>
+<p><strong>第四类：不想天天折腾的人。</strong><br>有些工具适合技术爱好者深度调试，有些工具适合普通人安静使用。Karing 更偏向后者：能用、好管、少折腾。</p>
+<hr>
+<h2 id="二、开始之前，你需要准备什么？"><a href="#二、开始之前，你需要准备什么？" class="headerlink" title="二、开始之前，你需要准备什么？"></a>二、开始之前，你需要准备什么？</h2><p>在使用 Karing 前，建议先准备好三样东西。</p>
+<h3 id="1-一个可以安装-Karing-的设备"><a href="#1-一个可以安装-Karing-的设备" class="headerlink" title="1. 一个可以安装 Karing 的设备"></a>1. 一个可以安装 Karing 的设备</h3><p>Karing 支持多个平台，包括 Android、iOS、Windows、macOS、Linux 等。你可以根据自己的设备选择对应版本。</p>
+<h3 id="2-Karing-App"><a href="#2-Karing-App" class="headerlink" title="2. Karing App"></a>2. Karing App</h3><p>建议从官方渠道下载，不要随便下载来源不明的安装包。</p>
+<p>网络工具和普通软件不太一样，它会接触你的网络连接配置，所以安全性尤其重要。<br>不要看到“高速版”“破解版”“增强版”就心动。很多时候，真正增强的不是网速，而是风险。</p>
+<h3 id="3-一个合法合规的订阅或配置"><a href="#3-一个合法合规的订阅或配置" class="headerlink" title="3. 一个合法合规的订阅或配置"></a>3. 一个合法合规的订阅或配置</h3><p>Karing 只是工具本身，不会凭空提供节点。</p>
+<p>你需要自己准备订阅链接或配置文件。<br>没有配置，Karing 就像一口空锅，锅再好，也煮不出晚饭。</p>
+<hr>
+<h2 id="三、第一步：下载安装-Karing"><a href="#三、第一步：下载安装-Karing" class="headerlink" title="三、第一步：下载安装 Karing"></a>三、第一步：下载安装 Karing</h2><p>根据你的设备，前往官方渠道下载并安装 Karing。</p>
+<p>安装完成后，先不要急着乱点。<br>很多新手第一次打开这类工具时，会本能地想把每个按钮都点一遍。</p>
+<p>这很危险。</p>
+<p>不是说软件会爆炸，而是你很可能点到最后，自己也不知道刚才改了什么。<br>技术工具最怕的不是不会用，而是“我感觉这个选项好像很厉害，所以我开一下”。</p>
+<p>先克制住好奇心。<br>我们一步一步来。</p>
+<hr>
+<h2 id="四、第二步：添加订阅或配置"><a href="#四、第二步：添加订阅或配置" class="headerlink" title="四、第二步：添加订阅或配置"></a>四、第二步：添加订阅或配置</h2><p>打开 Karing 后，找到添加配置或添加订阅的入口。</p>
+<p>通常流程大致是：</p>
+<ol>
+<li>打开 Karing；</li>
+<li>进入设置或配置管理；</li>
+<li>选择添加配置；</li>
+<li>粘贴你的订阅链接，或导入配置文件；</li>
+<li>保存并更新配置。</li>
+</ol>
+<p>添加成功后，Karing 会读取订阅里的节点信息。</p>
+<p>这里要特别提醒一句：</p>
+<p><strong>订阅链接不要随便发给别人。</strong></p>
+<p>它就像你的网络配置钥匙。<br>不要截图发朋友圈，也不要随手丢到群里。<br>有些东西分享出去以后，失去的不只是隐私，还有你本来就不太稳定的网络体验。</p>
+<hr>
+<h2 id="五、第三步：连接节点"><a href="#五、第三步：连接节点" class="headerlink" title="五、第三步：连接节点"></a>五、第三步：连接节点</h2><p>配置添加好以后，回到主界面。</p>
+<p>一般来说，Karing 会显示可用节点列表。你可以选择一个节点，然后点击连接。</p>
+<p>如果连接成功，恭喜你，第一步已经完成。</p>
+<p>如果连接失败，也不用急着怀疑人生。<br>代理工具连接失败很常见，原因可能有很多：</p>
+<p>可能是节点不可用；<br>可能是订阅过期；<br>可能是网络环境不稳定；<br>也可能只是你刚好选中了一个“今天不想上班”的节点。</p>
+<p>这时可以先换一个节点试试。</p>
+<hr>
+<h2 id="六、第四步：测试延迟，选择更合适的节点"><a href="#六、第四步：测试延迟，选择更合适的节点" class="headerlink" title="六、第四步：测试延迟，选择更合适的节点"></a>六、第四步：测试延迟，选择更合适的节点</h2><p>节点列表里通常会有很多地区和线路。</p>
+<p>新手很容易陷入选择困难：</p>
+<p>“我该选哪个？”<br>“是不是名字看起来越高级越快？”<br>“是不是越远越神秘，越神秘越强？”</p>
+<p>不一定。</p>
+<p>最简单的方法是使用延迟测试功能。<br>延迟通常越低，响应越快，体验也可能越稳定。</p>
+<p>你可以先测试全部节点，然后选择延迟较低、稳定性较好的节点。</p>
+<p>不过也要注意，延迟不是唯一标准。<br>有些节点延迟低，但速度一般；有些节点延迟略高，但稳定性更好。<br>所以最靠谱的办法是：测试之后，再实际用一用。</p>
+<p>技术世界里有一个朴素道理：</p>
+<p><strong>能稳定用，比看起来很厉害更重要。</strong></p>
+<p>人生也是如此。<br>花里胡哨的计划不一定能坚持，能每天执行一点点的小计划，反而更可靠。</p>
+<hr>
+<h2 id="七、规则模式和全局模式怎么选？"><a href="#七、规则模式和全局模式怎么选？" class="headerlink" title="七、规则模式和全局模式怎么选？"></a>七、规则模式和全局模式怎么选？</h2><p>这是很多新手会遇到的问题。</p>
+<p>简单来说：</p>
+<p><strong>规则模式</strong>：根据规则判断哪些流量走代理，哪些流量直连。<br><strong>全局模式</strong>：大部分或全部流量都走代理。</p>
+<p>对于普通用户，建议优先使用规则模式。</p>
+<p>规则模式更适合日常使用，因为它不会把所有流量都强行绕一圈。<br>本来可以直连的网站，就让它直连；需要代理的，再走代理。</p>
+<p>全局模式适合特殊场景，但不建议新手一上来就长期使用。<br>因为它可能导致某些本地服务、国内网站或应用访问变慢。</p>
+<p>如果你不知道该选哪个，就先选规则模式。</p>
+<p>不知道该怎么选时，先选更稳的。<br>这句话不仅适用于网络工具，也适用于点奶茶、换工作和深夜购物。</p>
+<hr>
+<h2 id="八、TUN-模式是什么？新手需要开吗？"><a href="#八、TUN-模式是什么？新手需要开吗？" class="headerlink" title="八、TUN 模式是什么？新手需要开吗？"></a>八、TUN 模式是什么？新手需要开吗？</h2><p>TUN 模式可以理解为更底层的网络接管方式。<br>开启后，它能让更多应用的流量经过 Karing 处理，适合一些需要全局接管网络流量的场景。</p>
+<p>但对于新手来说，不建议一上来就研究 TUN。</p>
+<p>如果你只是浏览网页、使用常见应用，普通模式通常已经够用。<br>如果某些应用无法正常走代理，再考虑是否需要开启 TUN。</p>
+<p>简单说：</p>
+<p><strong>能不用复杂功能解决的问题，就不要先打开复杂功能。</strong></p>
+<p>有些功能不是不好，而是它会让排查问题变得更复杂。<br>就像你本来只是想煮碗面，结果把厨房改造成了中央厨房，最后发现自己连水龙头在哪都忘了。</p>
+<hr>
+<h2 id="九、Android-用户可以关注“按应用代理”"><a href="#九、Android-用户可以关注“按应用代理”" class="headerlink" title="九、Android 用户可以关注“按应用代理”"></a>九、Android 用户可以关注“按应用代理”</h2><p>如果你使用的是 Android，Karing 可能支持按应用设置代理。</p>
+<p>这个功能的意思是：<br>你可以指定某些 App 走代理，某些 App 不走代理。</p>
+<p>比如：</p>
+<p>只让浏览器走代理；<br>让某些本地 App 保持直连；<br>或者排除不需要代理的应用。</p>
+<p>这个功能很适合想精细控制网络行为的用户。</p>
+<p>不过新手建议先不要一下子设置太复杂。<br>先让基础连接跑通，再考虑分应用管理。</p>
+<p>工具使用的顺序应该是：</p>
+<p>先能用，<br>再好用，<br>最后才是精细化。</p>
+<p>不要第一天就把自己变成网络架构师。<br>我们先做一个平静的普通人。</p>
+<hr>
+<h2 id="十、常见问题处理"><a href="#十、常见问题处理" class="headerlink" title="十、常见问题处理"></a>十、常见问题处理</h2><h3 id="1-订阅添加失败怎么办？"><a href="#1-订阅添加失败怎么办？" class="headerlink" title="1. 订阅添加失败怎么办？"></a>1. 订阅添加失败怎么办？</h3><p>先检查订阅链接有没有复制完整。</p>
+<p>很多失败不是因为工具复杂，而是因为链接少复制了几个字符。<br>这就像寄快递少写了门牌号，快递员再努力也只能在楼下沉思。</p>
+<p>然后再检查：</p>
+<p>订阅是否过期；<br>当前网络是否正常；<br>配置格式是否被支持；<br>是否需要先更新订阅。</p>
+<hr>
+<h3 id="2-已经连接，但还是打不开网页？"><a href="#2-已经连接，但还是打不开网页？" class="headerlink" title="2. 已经连接，但还是打不开网页？"></a>2. 已经连接，但还是打不开网页？</h3><p>可以按这个顺序排查：</p>
+<p>先换一个节点；<br>再测试节点延迟；<br>再确认当前模式是规则还是全局；<br>再更新订阅；<br>最后重启 Karing 或设备试试。</p>
+<p>不要一上来就卸载重装。<br>卸载重装是技术世界里的“大力出奇迹”，有时有效，但不应该是第一反应。</p>
+<hr>
+<h3 id="3-网速很慢怎么办？"><a href="#3-网速很慢怎么办？" class="headerlink" title="3. 网速很慢怎么办？"></a>3. 网速很慢怎么办？</h3><p>先测试延迟，再换节点。</p>
+<p>如果多个节点都慢，可能是订阅服务本身的问题，也可能是当前网络环境不稳定。</p>
+<p>还可以检查是否开启了不必要的全局模式或复杂规则。<br>有时候不是工具不行，是路线绕得太远。</p>
+<p>就像你只是想从客厅去厨房，结果导航让你先下楼绕小区一圈再回来。<br>不是不能到，就是有点多余。</p>
+<hr>
+<h3 id="4-为什么有些软件不走代理？"><a href="#4-为什么有些软件不走代理？" class="headerlink" title="4. 为什么有些软件不走代理？"></a>4. 为什么有些软件不走代理？</h3><p>可能是软件本身不遵循系统代理。<br>这种情况下，可以尝试开启 TUN 模式，或者使用按应用代理功能。</p>
+<p>但还是那句话：<br>先确认基础配置没问题，再动高级功能。</p>
+<p>否则你会陷入一种经典状态：</p>
+<p>“我不知道哪里坏了，但我刚才确实改了很多东西。”</p>
+<p>这句话听起来就很危险。</p>
+<hr>
+<h2 id="十一、新手推荐设置"><a href="#十一、新手推荐设置" class="headerlink" title="十一、新手推荐设置"></a>十一、新手推荐设置</h2><p>如果你是第一次使用 Karing，可以按这个思路来：</p>
+<p>使用官方版本；<br>导入一个稳定的订阅；<br>选择规则模式；<br>使用自动选择或低延迟节点；<br>基础功能跑通后，再研究 TUN、分应用代理和高级规则。</p>
+<p>不要急着一次性配置到完美。</p>
+<p>工具不是人生伴侣，不需要第一眼就确定它的全部细节。<br>先相处一下，看看哪里顺手，哪里需要调整。</p>
+<hr>
+<h2 id="十二、写在最后：网络工具是工具，不是修仙法器"><a href="#十二、写在最后：网络工具是工具，不是修仙法器" class="headerlink" title="十二、写在最后：网络工具是工具，不是修仙法器"></a>十二、写在最后：网络工具是工具，不是修仙法器</h2><p>Karing 的意义，不是让你变成网络专家。</p>
+<p>它只是帮你把订阅、节点和规则管理得更清楚，让网络体验少一点混乱，多一点可控。</p>
+<p>使用这类工具时，最重要的不是把每个选项都研究透，而是掌握基本逻辑：</p>
+<p>配置从哪里来；<br>节点怎么选择；<br>模式怎么切换；<br>出问题怎么排查；<br>高级功能什么时候再碰。</p>
+<p>做到这些，已经足够应对大多数日常场景。</p>
+<p>如果哪天网络突然不稳定，也别急着跟自己生气。<br>工具会出问题，节点会出问题，网络环境也会出问题。<br>不是什么都要归因到“我是不是太笨了”。</p>
+<p>你不笨。<br>你只是第一次接触一个新工具。</p>
+<p>慢慢来。<br>先添加配置，再选择节点，然后连接。<br>不行就换节点，再不行就检查订阅。</p>
+<p>技术问题大多不是玄学。<br>只是它们有时候比较擅长假装自己很深奥。</p>
+<p>愿你从今天开始，少一点配置焦虑，多一点顺滑体验。</p>
+<p>也愿你记住：</p>
+<p><strong>网络可以慢慢调，人生也可以。</strong></p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783850983366_image.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783850983366_image.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">马老师</div><div class="post-copyright__author_desc">不务正业的理性浪漫</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.8818618.xyz/p/aae0b4be/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.8818618.xyz/p/aae0b4be/')">Karing 新手教程</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg" alt="赞赏"/></a><div class="post-qr-code-desc">赞赏</div></li></ul><a class="reward-main-btn" href="https://rewards.8818618.xyz/" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.8818618.xyz/p/aae0b4be/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=Karing 新手教程&amp;url=https://blog.8818618.xyz/p/aae0b4be/&amp;pic=https://tc.8818618.xyz/file/1783842745180_image.png" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.8818618.xyz" target="_blank">马老师BLOG</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"></div></div></div><div class="post_share"><div class="social-share" data-image="/images/gongchan-zhuyi-cover.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/4e2533f5/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783842900188_image.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">职业中断期的自我关怀：从认知行为疗法（CBT）说起</div></div></a></div><div class="next-post pull-right"><a href="/p/d0967ec7/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783842187915_image.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">火锅式人生管理疗法：莫慌，先把锅底整明白</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783850983366_image.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/ma-status-badge.jpg" alt="status"/></div></div><div class="author-info__description">马老师，专说大实话…不务正业的理性浪漫，欢迎常来坐坐。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">马老师</h1><div class="author-info__desc">不务正业的理性浪漫</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/jason6668" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="mailto:ma@8818618.xyz" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="social-icon faa-parent animated-hover" href="https://t.me/sisumasanBot" target="_blank" title="Telegram"><i class="anzhiyufont anzhiyu-icon-telegram"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到马老师的“无用之地”。这里记录着心理学的洞察、自动化的实践以及那些被按下的暂停键。</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="window.open(&quot;https://vip.8818618.xyz/&quot;)"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(/images/vip-join-face.png?v=20260930) center center / 100% no-repeat"></div><div class="back face" style="background: url(/images/vip-join-back.png?v=20260930) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Karing-%E6%96%B0%E6%89%8B%E6%95%99%E7%A8%8B%EF%BC%9A%E5%88%AB%E6%85%8C%EF%BC%8C%E7%BD%91%E7%BB%9C%E6%B2%A1%E5%9D%8F%EF%BC%8C%E5%8F%AF%E8%83%BD%E5%8F%AA%E6%98%AF%E9%85%8D%E7%BD%AE%E8%BF%98%E6%B2%A1%E8%B0%83%E5%A5%BD"><span class="toc-number">1.</span> <span class="toc-text">Karing 新手教程：别慌，网络没坏，可能只是配置还没调好</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%83%E4%B8%8D%E6%98%AF%E9%AD%94%E6%B3%95%EF%BC%8C%E4%B9%9F%E4%B8%8D%E6%98%AF%E5%87%AD%E7%A9%BA%E5%8F%98%E5%87%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E7%A5%9E%E7%A7%98%E6%8C%89%E9%92%AE%E3%80%82%E5%AE%83%E6%9B%B4%E5%83%8F%E4%B8%80%E4%B8%AA%E5%AF%BC%E8%88%AA%E8%BD%AF%E4%BB%B6%EF%BC%9A%E8%B7%AF%E8%A6%81%E8%87%AA%E5%B7%B1%E6%9C%89%EF%BC%8C%E5%AE%83%E8%B4%9F%E8%B4%A3%E5%B8%AE%E4%BD%A0%E8%A7%84%E5%88%92%E3%80%82"><span class="toc-number">1.1.</span> <span class="toc-text">它不是魔法，也不是凭空变出网络的神秘按钮。它更像一个导航软件：路要自己有，它负责帮你规划。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81Karing-%E9%80%82%E5%90%88%E8%B0%81%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">一、Karing 适合谁？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%BC%80%E5%A7%8B%E4%B9%8B%E5%89%8D%EF%BC%8C%E4%BD%A0%E9%9C%80%E8%A6%81%E5%87%86%E5%A4%87%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.3.</span> <span class="toc-text">二、开始之前，你需要准备什么？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%80%E4%B8%AA%E5%8F%AF%E4%BB%A5%E5%AE%89%E8%A3%85-Karing-%E7%9A%84%E8%AE%BE%E5%A4%87"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. 一个可以安装 Karing 的设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Karing-App"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. Karing App</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%80%E4%B8%AA%E5%90%88%E6%B3%95%E5%90%88%E8%A7%84%E7%9A%84%E8%AE%A2%E9%98%85%E6%88%96%E9%85%8D%E7%BD%AE"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. 一个合法合规的订阅或配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85-Karing"><span class="toc-number">1.4.</span> <span class="toc-text">三、第一步：下载安装 Karing</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85%E6%88%96%E9%85%8D%E7%BD%AE"><span class="toc-number">1.5.</span> <span class="toc-text">四、第二步：添加订阅或配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E8%BF%9E%E6%8E%A5%E8%8A%82%E7%82%B9"><span class="toc-number">1.6.</span> <span class="toc-text">五、第三步：连接节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E7%AC%AC%E5%9B%9B%E6%AD%A5%EF%BC%9A%E6%B5%8B%E8%AF%95%E5%BB%B6%E8%BF%9F%EF%BC%8C%E9%80%89%E6%8B%A9%E6%9B%B4%E5%90%88%E9%80%82%E7%9A%84%E8%8A%82%E7%82%B9"><span class="toc-number">1.7.</span> <span class="toc-text">六、第四步：测试延迟，选择更合适的节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E8%A7%84%E5%88%99%E6%A8%A1%E5%BC%8F%E5%92%8C%E5%85%A8%E5%B1%80%E6%A8%A1%E5%BC%8F%E6%80%8E%E4%B9%88%E9%80%89%EF%BC%9F"><span class="toc-number">1.8.</span> <span class="toc-text">七、规则模式和全局模式怎么选？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81TUN-%E6%A8%A1%E5%BC%8F%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F%E6%96%B0%E6%89%8B%E9%9C%80%E8%A6%81%E5%BC%80%E5%90%97%EF%BC%9F"><span class="toc-number">1.9.</span> <span class="toc-text">八、TUN 模式是什么？新手需要开吗？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81Android-%E7%94%A8%E6%88%B7%E5%8F%AF%E4%BB%A5%E5%85%B3%E6%B3%A8%E2%80%9C%E6%8C%89%E5%BA%94%E7%94%A8%E4%BB%A3%E7%90%86%E2%80%9D"><span class="toc-number">1.10.</span> <span class="toc-text">九、Android 用户可以关注“按应用代理”</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E5%A4%84%E7%90%86"><span class="toc-number">1.11.</span> <span class="toc-text">十、常见问题处理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%A2%E9%98%85%E6%B7%BB%E5%8A%A0%E5%A4%B1%E8%B4%A5%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">1.11.1.</span> <span class="toc-text">1. 订阅添加失败怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B7%B2%E7%BB%8F%E8%BF%9E%E6%8E%A5%EF%BC%8C%E4%BD%86%E8%BF%98%E6%98%AF%E6%89%93%E4%B8%8D%E5%BC%80%E7%BD%91%E9%A1%B5%EF%BC%9F"><span class="toc-number">1.11.2.</span> <span class="toc-text">2. 已经连接，但还是打不开网页？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BD%91%E9%80%9F%E5%BE%88%E6%85%A2%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">1.11.3.</span> <span class="toc-text">3. 网速很慢怎么办？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%9B%E8%BD%AF%E4%BB%B6%E4%B8%8D%E8%B5%B0%E4%BB%A3%E7%90%86%EF%BC%9F"><span class="toc-number">1.11.4.</span> <span class="toc-text">4. 为什么有些软件不走代理？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E6%96%B0%E6%89%8B%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE"><span class="toc-number">1.12.</span> <span class="toc-text">十一、新手推荐设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E%EF%BC%9A%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%98%AF%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%B8%8D%E6%98%AF%E4%BF%AE%E4%BB%99%E6%B3%95%E5%99%A8"><span class="toc-number">1.13.</span> <span class="toc-text">十二、写在最后：网络工具是工具，不是修仙法器</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/gongchan-zhuyi/" title="共产主义：人类最大胆的设想，为什么到今天都没实现"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/gongchan-zhuyi-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="共产主义：人类最大胆的设想，为什么到今天都没实现"/></a><div class="content"><a class="title" href="/p/gongchan-zhuyi/" title="共产主义：人类最大胆的设想，为什么到今天都没实现">共产主义：人类最大胆的设想，为什么到今天都没实现</a><time datetime="2026-10-18T10:00:00.000Z" title="发表于 2026-10-18 18:00:00">2026-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/shehui-zhuyi/" title="社会主义：天天念叨的词，你真懂是什么意思吗"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/shehui-zhuyi-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="社会主义：天天念叨的词，你真懂是什么意思吗"/></a><div class="content"><a class="title" href="/p/shehui-zhuyi/" title="社会主义：天天念叨的词，你真懂是什么意思吗">社会主义：天天念叨的词，你真懂是什么意思吗</a><time datetime="2026-10-18T08:00:00.000Z" title="发表于 2026-10-18 16:00:00">2026-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/makesi-zhuyi/" title="马克思主义：穷光蛋写的书，为什么让全世界资本家睡不着觉"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/makesi-zhuyi-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="马克思主义：穷光蛋写的书，为什么让全世界资本家睡不着觉"/></a><div class="content"><a class="title" href="/p/makesi-zhuyi/" title="马克思主义：穷光蛋写的书，为什么让全世界资本家睡不着觉">马克思主义：穷光蛋写的书，为什么让全世界资本家睡不着觉</a><time datetime="2026-10-18T06:00:00.000Z" title="发表于 2026-10-18 14:00:00">2026-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/doudou-tianmu-hongchen/" title="《天幕红尘》：看透了，就别再装睡了"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/doudou-tianmu-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《天幕红尘》：看透了，就别再装睡了"/></a><div class="content"><a class="title" href="/p/doudou-tianmu-hongchen/" title="《天幕红尘》：看透了，就别再装睡了">《天幕红尘》：看透了，就别再装睡了</a><time datetime="2026-10-18T04:00:00.000Z" title="发表于 2026-10-18 12:00:00">2026-10-18</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/doudou-beipan/" title="《背叛》：一个&quot;骗子&quot;教会我们的，比所有成功学都值钱"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/doudou-beipan-cover.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《背叛》：一个&quot;骗子&quot;教会我们的，比所有成功学都值钱"/></a><div class="content"><a class="title" href="/p/doudou-beipan/" title="《背叛》：一个&quot;骗子&quot;教会我们的，比所有成功学都值钱">《背叛》：一个&quot;骗子&quot;教会我们的，比所有成功学都值钱</a><time datetime="2026-10-18T02:00:00.000Z" title="发表于 2026-10-18 10:00:00">2026-10-18</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/马老师-上班摸鱼中-orange?style=flat&amp;logo=coffeescript" alt="偶尔修 Bug，经常修心。这里是马老师的无用之地。" title="偶尔修 Bug，经常修心。这里是马老师的无用之地。"/><div id="runtimeTextTip"></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2026 By <a class="footer-bar-link" href="/" title="马老师" target="_blank">马老师</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  if () { 
+    window.typed = new Typed("#footer-type-tips", {
+      strings: ["不务正业的理性浪漫"],
+      startDelay: ,
+      typeSpeed: ,
+      loop: ,
+      backSpeed: 
+    })
+  } else {
+    document.getElementById("footer-type-tips").innerHTML = '不务正业的理性浪漫'
+  }
+}
+
+if () {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://tc.8818618.xyz" title="图床">图床</a><a class="footer-bar-link cc" href="/copyright" title="CC协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">231</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">507</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">29</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="/lbj.8818618.xyz" title="看剧"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="看剧"/><span class="back-menu-item-text">看剧</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://tc.8818618.xyz/" title="马老师图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="马老师图床"/><span class="back-menu-item-text">马老师图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 探索</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6%E9%9A%8F%E7%AC%94/"><i class="anzhiyufont anzhiyu-icon-heartbeat faa-tada" style="font-size: 0.9em;"></i><span> 心理学随笔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/blacklist/"><i class="anzhiyufont anzhiyu-icon-shield-halved faa-tada" style="font-size: 0.9em;"></i><span> 避雷专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mental-test/"><i class="anzhiyufont anzhiyu-icon-heart-pulse faa-tada" style="font-size: 0.9em;"></i><span> 心理自测</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mbti-test/"><i class="anzhiyufont anzhiyu-icon-brain faa-tada" style="font-size: 0.9em;"></i><span> MBTI测评</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/star-fortune/"><i class="anzhiyufont anzhiyu-icon-star faa-tada" style="font-size: 0.9em;"></i><span> 星座分析</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/liuyao/"><i class="anzhiyufont anzhiyu-icon-yin-yang faa-tada" style="font-size: 0.9em;"></i><span> 六爻占卜</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tutorial/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> 新手教程</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 点我试一试</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://nav.missma.qzz.io/"><i class="anzhiyufont anzhiyu-icon-map-location-dot faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属导航</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://newsma.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-newspaper faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属新闻频道</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://cmgame.zone.id/"><i class="anzhiyufont anzhiyu-icon-gamepad faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼小游戏</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/moyu"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/fcircle/"><i class="anzhiyufont anzhiyu-icon-artstation faa-tada" style="font-size: 0.9em;"></i><span> 朋友圈</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 专属服务</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属直播</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://tv.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-film faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属TV</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://bbs.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-comments faa-tada" style="font-size: 0.9em;"></i><span> 论坛社区</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vip.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-crown faa-tada" style="font-size: 0.9em;"></i><span> 会员服务</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://rewards.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 赞赏支持</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://ssh.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-terminal faa-tada" style="font-size: 0.9em;"></i><span> WebSSH</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vps.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-server faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属面板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%9C%A3%E7%BB%8F/" style="font-size: 0.88rem; color: rgb(56, 108, 168);">一个人的圣经<sup>1</sup></a><a href="/tags/%E4%BA%B2%E7%88%B1%E7%9A%84%E7%94%9F%E6%B4%BB/" style="font-size: 0.88rem; color: rgb(30, 6, 191);">亲爱的生活<sup>1</sup></a><a href="/tags/%E4%BC%8A%E5%A7%86%E9%9B%B7%C2%B7%E5%87%AF%E5%B0%94%E6%B3%B0%E6%96%AF/" style="font-size: 0.88rem; color: rgb(193, 63, 197);">伊姆雷·凯尔泰斯<sup>1</sup></a><a href="/tags/%E5%85%AC%E7%BE%8A%E7%9A%84%E8%8A%82%E6%97%A5/" style="font-size: 0.88rem; color: rgb(185, 2, 117);">公羊的节日<sup>1</sup></a><a href="/tags/%E5%8B%92%E5%85%8B%E8%8E%B1%E9%BD%90%E5%A5%A5/" style="font-size: 0.88rem; color: rgb(52, 196, 46);">勒克莱齐奥<sup>1</sup></a><a href="/tags/%E5%91%BC%E5%90%B8%E7%A7%8B%E5%8D%83/" style="font-size: 0.88rem; color: rgb(128, 13, 137);">呼吸秋千<sup>1</sup></a><a href="/tags/%E5%93%88%E7%BD%97%E5%BE%B7%C2%B7%E5%93%81%E7%89%B9/" style="font-size: 0.88rem; color: rgb(54, 195, 150);">哈罗德·品特<sup>1</sup></a><a href="/tags/%E5%9F%83%E5%B0%94%E5%BC%97%E9%87%8C%E5%BE%B7%C2%B7%E8%80%B6%E5%88%A9%E5%86%85%E5%85%8B/" style="font-size: 0.88rem; color: rgb(26, 118, 124);">埃尔弗里德·耶利内克<sup>1</sup></a><a href="/tags/%E5%A4%9A%E4%B8%BD%E4%B8%9D%C2%B7%E8%8E%B1%E8%BE%9B/" style="font-size: 0.88rem; color: rgb(188, 19, 163);">多丽丝·莱辛<sup>1</sup></a><a href="/tags/%E5%A5%88%E4%BF%9D%E5%B0%94/" style="font-size: 0.88rem; color: rgb(144, 41, 103);">奈保尔<sup>1</sup></a><a href="/tags/%E5%A5%B3%E6%83%85%E4%BA%BA%E4%BB%AC/" style="font-size: 0.88rem; color: rgb(51, 188, 108);">女情人们<sup>1</sup></a><a href="/tags/%E5%AF%BB%E9%87%91%E8%80%85/" style="font-size: 0.88rem; color: rgb(161, 129, 190);">寻金者<sup>1</sup></a><a href="/tags/%E5%B8%95%E6%85%95%E5%85%8B/" style="font-size: 0.88rem; color: rgb(120, 109, 89);">帕慕克<sup>1</sup></a><a href="/tags/%E5%BA%93%E5%88%87/" style="font-size: 0.88rem; color: rgb(20, 194, 31);">库切<sup>1</sup></a><a href="/tags/%E5%BF%83%E5%85%BD/" style="font-size: 0.88rem; color: rgb(65, 103, 59);">心兽<sup>1</sup></a><a href="/tags/%E6%83%A8%E8%B4%A5/" style="font-size: 0.88rem; color: rgb(5, 20, 148);">惨败<sup>1</sup></a><a href="/tags/%E6%88%91%E7%9A%84%E5%90%8D%E5%AD%97%E5%8F%AB%E7%BA%A2/" style="font-size: 0.88rem; color: rgb(89, 155, 157);">我的名字叫红<sup>1</sup></a><a href="/tags/%E6%89%98%E9%A9%AC%E6%96%AF%C2%B7%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86/" style="font-size: 0.88rem; color: rgb(3, 169, 148);">托马斯·特朗斯特罗姆<sup>1</sup></a><a href="/tags/%E6%97%A0%E5%91%BD%E8%BF%90%E7%9A%84%E4%BA%BA%E7%94%9F/" style="font-size: 0.88rem; color: rgb(148, 14, 10);">无命运的人生<sup>1</sup></a><a href="/tags/%E6%AF%95%E6%96%AF%E6%B2%83%E6%96%AF%E5%85%88%E7%94%9F%E7%9A%84%E6%88%BF%E5%AD%90/" style="font-size: 0.88rem; color: rgb(27, 136, 27);">毕斯沃斯先生的房子<sup>1</sup></a><a href="/tags/%E7%81%B5%E5%B1%B1/" style="font-size: 0.88rem; color: rgb(17, 4, 77);">灵山<sup>1</sup></a><a href="/tags/%E7%88%B1%E4%B8%BD%E4%B8%9D%C2%B7%E9%97%A8%E7%BD%97/" style="font-size: 0.88rem; color: rgb(136, 106, 110);">爱丽丝·门罗<sup>1</sup></a><a href="/tags/%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86%E8%AF%97%E6%AD%8C%E5%85%A8%E9%9B%86/" style="font-size: 0.88rem; color: rgb(179, 147, 179);">特朗斯特罗姆诗歌全集<sup>1</sup></a><a href="/tags/%E7%94%9F%E6%97%A5%E6%B4%BE%E5%AF%B9/" style="font-size: 0.88rem; color: rgb(66, 86, 105);">生日派对<sup>1</sup></a><a href="/tags/%E7%9C%8B%E9%97%A8%E4%BA%BA/" style="font-size: 0.88rem; color: rgb(152, 138, 19);">看门人<sup>1</sup></a><a href="/tags/%E7%B1%B3%E6%A0%BC%E5%B0%94%E8%A1%97/" style="font-size: 0.88rem; color: rgb(192, 52, 8);">米格尔街<sup>1</sup></a><a href="/tags/%E7%BB%BF%E6%88%BF%E5%AD%90/" style="font-size: 0.88rem; color: rgb(177, 177, 152);">绿房子<sup>1</sup></a><a href="/tags/%E8%80%BB/" style="font-size: 0.88rem; color: rgb(157, 172, 164);">耻<sup>1</sup></a><a href="/tags/%E8%AE%B0%E5%BF%86%E7%9C%8B%E8%A7%81%E6%88%91/" style="font-size: 0.88rem; color: rgb(186, 49, 60);">记忆看见我<sup>1</sup></a><a href="/tags/%E8%AF%89%E8%AE%BC%E7%AC%94%E5%BD%95/" style="font-size: 0.88rem; color: rgb(176, 34, 161);">诉讼笔录<sup>1</sup></a><a href="/tags/%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96/" style="font-size: 0.88rem; color: rgb(97, 101, 51);">诺贝尔文学奖<sup>35</sup></a><a href="/tags/%E8%B5%AB%E5%A1%94%C2%B7%E7%B1%B3%E5%8B%92/" style="font-size: 0.88rem; color: rgb(27, 163, 126);">赫塔·米勒<sup>1</sup></a><a href="/tags/%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7K%E7%9A%84%E7%94%9F%E6%B4%BB%E5%92%8C%E6%97%B6%E4%BB%A3/" style="font-size: 0.88rem; color: rgb(2, 14, 97);">迈克尔·K的生活和时代<sup>1</sup></a><a href="/tags/%E9%80%83%E7%A6%BB/" style="font-size: 0.88rem; color: rgb(108, 180, 153);">逃离<sup>1</sup></a><a href="/tags/%E9%87%8E%E8%8D%89%E5%9C%A8%E6%AD%8C%E5%94%B1/" style="font-size: 0.88rem; color: rgb(10, 104, 83);">野草在歌唱<sup>1</sup></a><a href="/tags/%E9%87%91%E8%89%B2%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem; color: rgb(158, 160, 175);">金色笔记<sup>1</sup></a><a href="/tags/%E9%92%A2%E7%90%B4%E6%95%99%E5%B8%88/" style="font-size: 0.88rem; color: rgb(139, 67, 20);">钢琴教师<sup>1</sup></a><a href="/tags/%E9%9B%AA/" style="font-size: 0.88rem; color: rgb(185, 34, 16);">雪<sup>1</sup></a><a href="/tags/%E9%A9%AC%E9%87%8C%E5%A5%A5%C2%B7%E5%B7%B4%E5%B0%94%E5%8A%A0%E6%96%AF%C2%B7%E7%95%A5%E8%90%A8/" style="font-size: 0.88rem; color: rgb(118, 71, 23);">马里奥·巴尔加斯·略萨<sup>1</sup></a><a href="/tags/%E9%AB%98%E8%A1%8C%E5%81%A5/" style="font-size: 0.88rem; color: rgb(20, 69, 185);">高行健<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 马老师 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2021 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/马老师-下班啦-blue?style=flat&amp;logo=coffeescript";
+        img.title = "职业可以中断，但生活不必关机。";
+        img.alt = "职业可以中断，但生活不必关机。";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://comment.8818618.xyz',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://comment.8818618.xyz',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="/js/ma-newest-comments.js?v=20261017h"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
