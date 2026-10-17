@@ -44,7 +44,9 @@
 #footer-wrap #ma-footer .ma-fcol > a:hover { color: var(--anzhiyu-theme); }
 
 /* ========== 最新留言：聊天列表式（头像 + 昵称/日期 + 内容摘要） ========== */
-#card-newest-comments .aside-list.ma-rotating { min-height: 78px; }
+#card-newest-comments .aside-list-item.ma-msg + .aside-list-item.ma-msg {
+  border-top: 1px solid rgba(120, 120, 120, .12);
+}
 #card-newest-comments .aside-list-item.ma-msg {
   display: flex; gap: 10px; align-items: flex-start;
   padding: 8px 2px; animation: ma-msg-in .45s ease;
