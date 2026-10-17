@@ -9,6 +9,7 @@ tags:
   - 塞万提斯
 description: 四百年前，一个西班牙老头写了个疯子大战风车的笑话。今天重读，笑不出来了：堂吉诃德疯吗？疯的是这个容不下理想的世界。
 cover: /images/tangjihede-cover.jpg
+top_img: /images/tangjihede-cover.jpg
 abbrlink: tangjihede
 ---
 
