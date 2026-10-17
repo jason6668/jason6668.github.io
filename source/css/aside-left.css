@@ -24,9 +24,9 @@
   }
 }
 
-/* ========== 侧边栏与博文列表顶部对齐 ========== */
+/* ========== 侧边栏与博文列表顶部对齐（recent-posts 里第一个子元素可能是 tabs 栏，用 :first-child 通杀） ========== */
 #content-inner.layout > #aside-content > .card-widget:first-child,
-#content-inner.layout > #recent-posts > .recent-post-item:first-child {
+#content-inner.layout > #recent-posts > :first-child {
   margin-top: 0 !important;
 }
 
