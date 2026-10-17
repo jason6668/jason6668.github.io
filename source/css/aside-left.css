@@ -24,25 +24,6 @@
   }
 }
 
-/* ========== 马老师专属页脚 #ma-footer（参考 zrf.me：标题/链接 16px，左对齐均布） ========== */
-#ma-footer { margin-top: 28px; }
-.ma-footer-inner {
-  max-width: 1100px; margin: 0 auto; padding: 28px 20px 8px;
-  display: grid; grid-template-columns: repeat(2, max-content); justify-content: space-evenly; gap: 24px;
-}
-/* 主题全局 #footer-wrap a 是浅灰，必须用更高优先级覆盖；主题默认居中，改左对齐 */
-#footer-wrap #ma-footer .ma-fcol { text-align: left; }
-#footer-wrap #ma-footer .ma-fcol h4 {
-  font-size: 16px; font-weight: 600; margin: 0 0 12px; text-align: left;
-  color: var(--anzhiyu-secondtext);
-}
-#footer-wrap #ma-footer .ma-fcol > a {
-  display: block; font-size: 16px; line-height: 1.9; padding: 2px 0; text-align: left;
-  text-decoration: none; color: var(--anzhiyu-fontcolor);
-  transition: color .2s;
-}
-#footer-wrap #ma-footer .ma-fcol > a:hover { color: var(--anzhiyu-theme); }
-
 /* ========== 最新留言：聊天列表式（头像 + 昵称/日期 + 内容摘要） ========== */
 #card-newest-comments .aside-list-item.ma-msg + .aside-list-item.ma-msg {
   border-top: 1px solid rgba(120, 120, 120, .12);
