@@ -75,7 +75,7 @@ social:
   Telegram: https://t.me/sisumasanBot || anzhiyu-icon-telegram
 author_status:
   enable: true
-  statusImg: https://i.lxlad.com/file/1762759436929_image.png
+  statusImg: /images/ma-status-badge.jpg
   skills:
   - 🤖️ 心理咨询师
   - 🔍 分享与热心帮助
