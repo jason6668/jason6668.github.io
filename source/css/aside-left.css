@@ -24,38 +24,17 @@
   }
 }
 
-/* ========== 最新留言：聊天列表式（头像 + 昵称/日期 + 内容摘要） ========== */
+/* ========== 侧边栏与博文列表顶部对齐 ========== */
+#content-inner.layout > #aside-content > .card-widget:first-child,
+#content-inner.layout > #recent-posts > .recent-post-item:first-child {
+  margin-top: 0 !important;
+}
+
+/* ========== 最新留言：两行式（头像+昵称/日期一行，摘要另起一行；关键排版由 JS 内联样式写死） ========== */
+#card-newest-comments .aside-list-item.ma-msg { display: block; padding: 10px 2px; animation: ma-msg-in .45s ease; }
 #card-newest-comments .aside-list-item.ma-msg + .aside-list-item.ma-msg {
   border-top: 1px solid rgba(120, 120, 120, .12);
 }
-#card-newest-comments .aside-list-item.ma-msg {
-  display: flex; gap: 10px; align-items: flex-start;
-  padding: 8px 2px; animation: ma-msg-in .45s ease;
-}
-#card-newest-comments .ma-msg-avatar { flex: none; text-decoration: none; }
-#card-newest-comments .ma-comment-avatar {
-  width: 46px; height: 46px; border-radius: 10px;
-  display: inline-flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 17px; font-weight: 700; flex: none;
-}
-#card-newest-comments .ma-msg-body { flex: 1; min-width: 0; }
-#card-newest-comments .ma-msg-head {
-  display: flex; justify-content: space-between; align-items: baseline;
-  margin-bottom: 3px; gap: 8px;
-}
-#card-newest-comments .ma-msg-nick {
-  font-weight: 700; font-size: 14px; color: var(--anzhiyu-fontcolor);
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-}
-#card-newest-comments .ma-msg-date {
-  flex: none; font-size: 12px; color: var(--anzhiyu-secondtext);
-}
-#card-newest-comments .ma-msg-text {
-  display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-  font-size: 13px; line-height: 1.6; color: var(--anzhiyu-secondtext);
-  text-decoration: none;
-}
-#card-newest-comments .ma-msg-text:hover { color: var(--anzhiyu-theme); }
 @keyframes ma-msg-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 
 /* ========== 手机端（≤768px）：页脚单列居中 ========== */
