@@ -24,21 +24,23 @@
   }
 }
 
-/* ========== 马老师专属页脚 #ma-footer（论坛式三栏，无背景） ========== */
+/* ========== 马老师专属页脚 #ma-footer（参考 zrf.me：标题/链接 16px，无背景） ========== */
 #ma-footer { margin-top: 28px; }
 .ma-footer-inner {
   max-width: 1100px; margin: 0 auto; padding: 28px 20px 8px;
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;
 }
 /* 主题全局 #footer-wrap a 是浅灰，必须用更高优先级覆盖 */
-#footer-wrap #ma-footer .ma-fcol h4 { font-size: 14px; margin: 0 0 12px; color: var(--anzhiyu-fontcolor); }
-#footer-wrap #ma-footer .ma-fcol > a {
-  display: block; font-size: 13px; padding: 4px 0;
-  text-decoration: none; color: var(--anzhiyu-fontcolor); opacity: .78;
-  transition: opacity .2s, color .2s;
+#footer-wrap #ma-footer .ma-fcol h4 {
+  font-size: 16px; font-weight: 600; margin: 0 0 12px;
+  color: var(--anzhiyu-secondtext);
 }
-#footer-wrap #ma-footer .ma-fcol > a:hover { opacity: 1; color: var(--anzhiyu-theme); }
-#footer-wrap #ma-footer .ma-desc { font-size: 13px; line-height: 1.7; margin: 0 0 8px; color: var(--anzhiyu-secondtext); }
+#footer-wrap #ma-footer .ma-fcol > a {
+  display: block; font-size: 16px; padding: 5px 0;
+  text-decoration: none; color: var(--anzhiyu-fontcolor);
+  transition: color .2s;
+}
+#footer-wrap #ma-footer .ma-fcol > a:hover { color: var(--anzhiyu-theme); }
 
 /* ========== 最新留言：聊天列表式（头像 + 昵称/日期 + 内容摘要） ========== */
 #card-newest-comments .aside-list.ma-rotating { min-height: 78px; }
