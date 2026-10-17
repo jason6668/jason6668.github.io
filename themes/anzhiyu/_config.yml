@@ -411,12 +411,10 @@ font:
   global-font-size: 16px
   code-font-size: null
   font-family: null
-  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft
-    YaHei", sans-serif
+  code-font-family: consolas, Menlo, "PingFang SC", "Microsoft JhengHei", "Microsoft YaHei", sans-serif
 blog_title_font:
   font_link: null
-  font-family: PingFang SC, 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei',
-    sans-serif
+  font-family: PingFang SC, 'Hiragino Sans GB', 'Microsoft JhengHei', 'Microsoft YaHei', sans-serif
 hr_icon:
   enable: true
   icon: \f0c4
@@ -714,7 +712,7 @@ inject:
   head:
   - <link rel="stylesheet" href="/css/mobile-fix.css?v=2026100425">
   - <link rel="stylesheet" href="/css/bg-eooce.css?v=20261009">
-  - <link rel="stylesheet" href="/css/aside-left.css?v=20261017n">
+  - <link rel="stylesheet" href="/css/aside-left.css?v=20261017o">
   - <link rel="stylesheet" href="/css/ma-telegram-icon.css?v=20261017a">
   bottom:
   - <script src="/js/ma-newest-comments.js?v=20261017h"></script>
