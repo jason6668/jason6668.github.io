@@ -37,18 +37,27 @@
     var d = new Date(); d.setDate(d.getDate() - n);
     return (d.getMonth() + 1) + '/' + d.getDate() + '日';
   }
-  // 聊天列表式：圆角头像 + 昵称/日期 + 内容摘要
-  function itemHTML(nick, text, url, date) {
+  // 两行式：第一行 头像 + 昵称（粗体）+ 日期（右对齐），第二行 内容摘要单行省略
+  // 关键排版用内联样式写死，主题 CSS 覆盖不掉
+  function itemHTML(nick, text, url, date, noBorder) {
     var first = esc(nick).charAt(0) || '友';
     var u = esc(url || '/comments/');
-    return '<div class="aside-list-item ma-msg" data-ma="1">' +
-      '<a href="' + u + '" class="ma-msg-avatar">' +
-      '<div class="ma-comment-avatar" style="background:' + colorFor(nick) + '">' + first + '</div></a>' +
-      '<div class="ma-msg-body">' +
-      '<div class="ma-msg-head"><span class="ma-msg-nick">' + esc(nick) + '</span>' +
-      (date ? '<span class="ma-msg-date">' + esc(date) + '</span>' : '') + '</div>' +
-      '<a href="' + u + '" class="ma-msg-text" title="' + esc(text) + '">' + esc(text) + '</a>' +
-      '</div></div>';
+    var avStyle = 'background:' + colorFor(nick) + ';width:42px;height:42px;border-radius:10px;' +
+      'display:inline-flex;align-items:center;justify-content:center;color:#fff;' +
+      'font-size:16px;font-weight:700;flex:none;';
+    var boxStyle = 'display:block;padding:10px 2px;' + (noBorder ? '' : 'border-top:1px solid rgba(120,120,120,.12);');
+    return '<div class="aside-list-item ma-msg" data-ma="1" style="' + boxStyle + '">' +
+      '<div style="display:flex;align-items:center;gap:10px;">' +
+      '<a href="' + u + '" style="flex:none;text-decoration:none;line-height:0;">' +
+      '<span class="ma-comment-avatar" style="' + avStyle + '">' + first + '</span></a>' +
+      '<span style="font-weight:700;font-size:14px;color:var(--anzhiyu-fontcolor);' +
+      'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">' + esc(nick) + '</span>' +
+      (date ? '<span style="margin-left:auto;flex:none;font-size:12px;color:var(--anzhiyu-secondtext);">' + esc(date) + '</span>' : '') +
+      '</div>' +
+      '<a href="' + u + '" title="' + esc(text) + '" style="display:block;margin-top:6px;' +
+      'white-space:nowrap;overflow:hidden;text-overflow:ellipsis;' +
+      'font-size:13px;line-height:1.6;color:var(--anzhiyu-secondtext);text-decoration:none;">' + esc(text) + '</a>' +
+      '</div>';
   }
   // 主题自己渲染的条目（没有 data-ma 标记）
   function boxHasThemeItems(b) { return b.querySelector('.aside-list-item:not([data-ma="1"])') !== null; }
@@ -57,8 +66,8 @@
   // 静态排 3 条；主题后填入真实评论则撤下兜底
   function showThree(b, list) {
     var html = '';
-    list.slice(0, 3).forEach(function (m) {
-      html += itemHTML(m.nick, m.text, m.url, m.date);
+    list.slice(0, 3).forEach(function (m, idx) {
+      html += itemHTML(m.nick, m.text, m.url, m.date, idx === 0);
     });
     b.innerHTML = html;
     // 观察 30 秒：主题若填入真实条目，撤下兜底条目
