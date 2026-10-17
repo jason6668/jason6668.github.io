@@ -718,7 +718,7 @@ inject:
   bottom:
   - <script src="/js/ma-newest-comments.js?v=20261017h"></script>
 - <script src="/js/ma-cursor-effect.js?v=20261017a"></script>  
-CDN:
+  CDN:
   internal_provider: local
   third_party_provider: cbd
   version: true
