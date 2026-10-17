@@ -1,8 +1,8 @@
-/* 马老师博客 - 最新留言卡片兜底（含自动轮播）
+/* 马老师博客 - 最新留言卡片兜底（3 条静态排布）
  * 逻辑：主题自带加载器（Twikoo）优先，最多等它 5 秒；
  * 若仍无留言，留言板 /comments/ 留言优先展示，其次全站最新评论，
  * 都没有则渲染示例留言（各 5 秒超时，6.5 秒必出内容）。
- * 展示时一次一条、4 秒轮播切换，鼠标悬停暂停。
+ * 展示：一次排 3 条（聊天列表式），静态不轮播。
  * 有真实留言时示例留言永远不会出现；主题后加载出真实评论会覆盖兜底。
  */
 (function () {
@@ -54,42 +54,29 @@
   function boxHasThemeItems(b) { return b.querySelector('.aside-list-item:not([data-ma="1"])') !== null; }
   // 还没有任何条目的卡片才需要兜底
   function boxNeeds(b) { return b.querySelector('.aside-list-item') === null; }
-  // 轮播：一次只显示一条，4 秒切换，鼠标悬停暂停
-  function startRotate(b, list) {
-    stopRotate(b);
-    var i = 0;
-    function show(n) {
-      if (boxHasThemeItems(b)) { stopRotate(b); return; } // 主题接管了就收手
-      // 重新触发 CSS 淡入动画：先清空再写入
-      b.innerHTML = '';
-      void b.offsetWidth;
-      b.innerHTML = itemHTML(list[n].nick, list[n].text, list[n].url, list[n].date);
-    }
-    b.classList.add('ma-rotating');
-    show(0);
-    if (list.length < 2) return;
-    b._maTimer = setInterval(function () {
-      i = (i + 1) % list.length;
-      show(i);
-    }, 4000);
-    b.onmouseenter = function () { stopRotate(b); };
-    b.onmouseleave = function () {
-      if (list.length < 2 || b._maTimer) return;
-      b._maTimer = setInterval(function () {
-        i = (i + 1) % list.length;
-        show(i);
-      }, 4000);
-    };
-  }
-  function stopRotate(b) {
-    if (b._maTimer) { clearInterval(b._maTimer); b._maTimer = null; }
-    b.onmouseenter = null; b.onmouseleave = null;
+  // 静态排 3 条；主题后填入真实评论则撤下兜底
+  function showThree(b, list) {
+    var html = '';
+    list.slice(0, 3).forEach(function (m) {
+      html += itemHTML(m.nick, m.text, m.url, m.date);
+    });
+    b.innerHTML = html;
+    // 观察 30 秒：主题若填入真实条目，撤下兜底条目
+    var n = 0;
+    var watcher = setInterval(function () {
+      n++;
+      if (boxHasThemeItems(b)) {
+        var ours = b.querySelectorAll('[data-ma="1"]');
+        for (var i = 0; i < ours.length; i++) ours[i].remove();
+        clearInterval(watcher);
+      } else if (n >= 15) { clearInterval(watcher); }
+    }, 2000);
   }
   // 只给 targets 里这些卡片渲染；主题已填的卡片跳过
   function render(list, targets) {
     (targets || boxes()).forEach(function (b) {
       if (boxHasThemeItems(b)) return;
-      startRotate(b, list);
+      showThree(b, list);
     });
   }
 
