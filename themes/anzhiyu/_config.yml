@@ -717,6 +717,14 @@ inject:
   - <link rel="stylesheet" href="/css/aside-left.css?v=20261017n">
   bottom:
   - <script src="/js/ma-newest-comments.js?v=20261017h"></script>
+
+
+
+
+- <script src="/js/ma-cursor-effect.js?v=20261017a"></script>
+
+
+  
 CDN:
   internal_provider: local
   third_party_provider: cbd
