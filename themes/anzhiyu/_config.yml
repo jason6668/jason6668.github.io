@@ -451,7 +451,7 @@ aside:
     name_link: /
   card_announcement:
     enable: true
-    content: 欢迎来到马老师的“无用之地”。这里记录着心理学的洞察、自动化的实践以及那些被按下的暂停键。
+    content: 欢迎来到马老师的"无用之地"。这里记录着心理学的洞察、自动化的实践以及那些被按下的暂停键。
   card_weixin:
     enable: true
     face: /images/vip-join-face.png?v=20260930
@@ -500,7 +500,7 @@ newest_comments:
 translate:
   enable: true
   default: 繁
-  rightMenuMsgDefault: 轉為繁體
+  rightMenuMsgDefault: 转为繁体
   defaultEncoding: 2
   translateDelay: 0
   msgToTraditionalChinese: 繁
@@ -715,6 +715,7 @@ inject:
   - <link rel="stylesheet" href="/css/mobile-fix.css?v=2026100425">
   - <link rel="stylesheet" href="/css/bg-eooce.css?v=20261009">
   - <link rel="stylesheet" href="/css/aside-left.css?v=20261017n">
+  - <link rel="stylesheet" href="/css/ma-telegram-icon.css?v=20261017a">
   bottom:
   - <script src="/js/ma-newest-comments.js?v=20261017h"></script>
   CDN:
