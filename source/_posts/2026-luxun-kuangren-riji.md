@@ -10,6 +10,8 @@ tags:
 description: 1918年5月，37岁的周树人第一次用"鲁迅"这个笔名，发表了中国第一篇白话小说《狂人日记》。他借一个"疯子"的日记，说出了那句振聋发聩的话："从来如此，便对么？"一百年过去了，我们不吃人了，但"吃人"的东西，换了个样子还在。
 cover: /images/luxun-kuangren.jpg
 abbrlink: luxun-kuangren-riji
+sticky: '900'
+top: 900
 date: 2026-10-13 19:30:00
 ---
 
