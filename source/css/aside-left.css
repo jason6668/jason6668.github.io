@@ -75,3 +75,16 @@
 .card-info-social-icons a[href*="t.me"]::before {
   content: none !important;
 }
+
+/* ===== v3 补强（2026-10-18）：v2 导致按钮塌成 0 尺寸，强制固定尺寸 ===== */
+#aside-content a[href*="t.me"],
+.card-info-social-icons a[href*="t.me"] {
+  width: 34px !important;
+  height: 34px !important;
+  min-width: 34px !important;
+  min-height: 34px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  flex-shrink: 0 !important;
+}
