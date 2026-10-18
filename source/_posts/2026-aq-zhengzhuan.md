@@ -9,6 +9,8 @@ tags:
 description: 精神胜利法一百年不过时：输了说"虽败犹荣"，被裁说"终于解脱"。赵太爷还在，圆圈还是画不圆。
 cover: /images/aq-zhengzhuan.jpg
 abbrlink: aq-zhengzhuan
+sticky: '900'
+top: 900
 date: 2026-10-14 09:10:00
 ---
 
