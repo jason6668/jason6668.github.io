@@ -11,7 +11,7 @@ tags:
 description: 1948年，斯金纳写了本小说，描述一个用行为主义原理管理的乌托邦。这是天堂还是地狱？马老师带你逛逛这个"完美社区"。
 cover: /images/psy-cover-skinner-walden.jpg
 abbrlink: psy-skinner-walden
-date: 2026-10-13 13:30:00
+date: 2019-01-24 13:30:00
 ---
 
 ## 开场：心理学家不务正业写小说

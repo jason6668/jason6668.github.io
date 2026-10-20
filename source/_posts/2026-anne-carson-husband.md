@@ -9,7 +9,7 @@ tags:
 cover: https://covers.openlibrary.org/b/isbn/9780375707575-L.jpg
 description: 副标题叫"由29支探戈组成的虚构随笔"——卡森用29个片段，拆完了一桩从相爱到背叛再到分开的婚姻。首位艾略特奖女性得主的代表作。
 abbrlink: b2c3d4e5
-date: 2026-10-13 11:00:00
+date: 2019-01-05 11:00:00
 ---
 
 ## 先说这个副标题：虚构的随笔

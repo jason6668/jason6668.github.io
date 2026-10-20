@@ -10,7 +10,7 @@ tags:
 description: 女娲造人补天不是母爱，是无聊和疲惫。今天的补天者还在被累死。
 cover: /images/butian.jpg
 abbrlink: luxun-butian
-date: 2026-10-14 16:00:00
+date: 2019-04-15 16:00:00
 ---
 
 女娲补天？别感动太早。

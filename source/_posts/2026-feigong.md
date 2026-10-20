@@ -10,7 +10,7 @@ tags:
 description: 1934年鲁迅写墨子劝战：明知劝不住，还是要劝。
 cover: /images/feigong.jpg
 abbrlink: luxun-feigong
-date: 2026-10-14 16:30:00
+date: 2019-04-22 16:30:00
 ---
 
 "先生，你从哪儿来？"

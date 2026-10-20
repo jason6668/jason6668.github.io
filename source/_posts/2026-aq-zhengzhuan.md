@@ -11,7 +11,7 @@ cover: /images/aq-zhengzhuan.jpg
 abbrlink: aq-zhengzhuan
 sticky: '900'
 top: 900
-date: 2026-10-14 09:10:00
+date: 2019-03-06 09:10:00
 ---
 
 被裁员那天，你发了条朋友圈："终于解脱了，迎接新生活！"配图是蓝天白云，点赞一片。可深夜你盯着天花板，翻来覆去睡不着。

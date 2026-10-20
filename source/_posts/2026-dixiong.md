@@ -10,7 +10,7 @@ tags:
 description: 哥哥病倒，弟弟先算医药费：亲情在利益面前的分量。
 cover: /images/dixiong.jpg
 abbrlink: panghuang-dixiong
-date: 2026-10-14 13:30:00
+date: 2019-04-10 13:30:00
 ---
 
 哥哥病了。重病。

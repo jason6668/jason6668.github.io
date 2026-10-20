@@ -9,7 +9,7 @@ tags:
 description: 黑猫吃了小白兔，还蹲在墙头晒太阳。鲁迅借猫写人：一百年了，黑猫们活得比谁都滋润。
 cover: /images/tu-he-mao.jpg
 abbrlink: tu-he-mao
-date: 2026-10-14 09:40:00
+date: 2019-03-13 09:40:00
 ---
 
 "我"养的小兔子，被黑猫吃了。

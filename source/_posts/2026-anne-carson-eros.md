@@ -9,7 +9,7 @@ tags:
 cover: https://cdn.thestorygraph.com/y2ba5g2tbejntmdcsyrlstc2qoki
 description: 博士论文标题化用笛卡尔"我思故我在"，改成"我恨我爱故我在"。从萨福的"苦甜"出发，卡森追踪了整个古希腊的爱欲观念。
 abbrlink: e5f6a7b8
-date: 2026-10-13 14:00:00
+date: 2019-01-27 14:00:00
 ---
 
 ## 先说这个标题：我恨我爱，故我在

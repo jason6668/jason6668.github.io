@@ -10,7 +10,7 @@ tags:
 description: 1900年，弗洛伊德说梦是愿望的达成。一百多年过去了，这本书为什么还在被骂、还在被读？马老师带你拆开这本心理学的开山之作。
 cover: /images/psy-cover-freud-dream.jpg
 abbrlink: psy-freud-dream
-date: 2026-10-13 11:00:00
+date: 2019-01-08 11:00:00
 ---
 
 ## 开场白：先别笑，这书真的是认真的

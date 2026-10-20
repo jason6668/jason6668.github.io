@@ -11,7 +11,7 @@ tags:
 description: 1954年，马斯洛画了个金字塔，说人有五层需求。这个图被用烂了，但很少有人读过原著。马老师带你看看金字塔背后，真正想说的是什么。
 cover: /images/psy-cover-maslow.jpg
 abbrlink: psy-maslow-motivation
-date: 2026-10-13 14:30:00
+date: 2019-01-31 14:30:00
 ---
 
 ## 开场：你一定见过这个图

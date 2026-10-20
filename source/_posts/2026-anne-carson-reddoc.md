@@ -9,7 +9,7 @@ tags:
 cover: https://www.lrb.co.uk/storage/800_filter/images/8/8/0/8/11178088-1-eng-GB/anne-carson-red-doc.jpg
 description: 格律翁长大了，赫拉克勒斯变成了PTSD老兵。标题里那个">"只是电脑自动保存的文件名，卡森觉得好玩就印上了封面。
 abbrlink: d4e5f6a7
-date: 2026-10-13 13:00:00
+date: 2019-01-20 13:00:00
 ---
 
 ## 先讲这个标题：全世界被一个文件名耍了

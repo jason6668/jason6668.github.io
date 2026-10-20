@@ -9,7 +9,7 @@ tags:
 cover: https://covers.openlibrary.org/b/isbn/9780375701290-L.jpg
 description: 一个长着翅膀的红色小怪物，从希腊神话的注脚里走出来，谈了一场让你想起初恋的恋爱——《红的自传》全本拆解。
 abbrlink: a1b2c3d4
-date: 2026-10-13 10:00:00
+date: 2019-01-03 10:00:00
 ---
 
 ## 先说这书的出身：翻译翻烦了，干脆重写

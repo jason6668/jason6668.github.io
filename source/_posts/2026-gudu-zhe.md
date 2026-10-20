@@ -10,7 +10,7 @@ tags:
 description: 特立独行的魏连殳：不合群者的孤独与结局。
 cover: /images/gudu-zhe.jpg
 abbrlink: panghuang-guduzhe
-date: 2026-10-14 13:10:00
+date: 2019-04-06 13:10:00
 ---
 
 魏连殳死了。

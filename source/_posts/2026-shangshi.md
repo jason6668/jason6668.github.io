@@ -10,7 +10,7 @@ tags:
 description: 爱情败给面包：涓生和子君的"伤逝"，今天的裸婚困境。
 cover: /images/shangshi.jpg
 abbrlink: panghuang-shangshi
-date: 2026-10-14 13:20:00
+date: 2019-04-08 13:20:00
 ---
 
 涓生和子君，同居了。

@@ -9,7 +9,7 @@ tags:
 description: 方玄绰端午节没钱过节，索薪不敢大声，只会说"差不多"。一百年后这三个字成了中年人的口头禅。
 cover: /images/duanwujie.jpg
 abbrlink: duanwujie
-date: 2026-10-14 09:20:00
+date: 2019-03-08 09:20:00
 ---
 
 端午节要到了，方玄绰却高兴不起来。

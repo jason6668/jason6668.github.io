@@ -9,7 +9,7 @@ tags:
 description: 一百年过去，孔乙己还在。脱不下长衫的大学生，写的"回"字四种写法谋生用不上，读书人的体面成了枷锁。
 cover: /images/kong-yiji.jpg
 abbrlink: kong-yiji
-date: 2026-10-14 08:00:00
+date: 2019-02-17 08:00:00
 ---
 
 你见过这种人吗？

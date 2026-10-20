@@ -10,7 +10,7 @@ tags:
 description: 要吹灭长明灯的"疯子"：挑战传统的，永远被当疯子。
 cover: /images/changmingdeng.jpg
 abbrlink: panghuang-changmingdeng
-date: 2026-10-14 12:40:00
+date: 2019-03-30 12:40:00
 ---
 
 村子里有座庙，庙里有盏灯，叫"长明灯"。

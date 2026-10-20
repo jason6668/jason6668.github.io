@@ -12,7 +12,7 @@ cover: /images/luxun-kuangren.jpg
 abbrlink: luxun-kuangren-riji
 sticky: '900'
 top: 900
-date: 2026-10-13 19:30:00
+date: 2019-02-15 19:30:00
 ---
 
 1918年5月，《新青年》杂志第4卷第5号上，登了一篇小说。

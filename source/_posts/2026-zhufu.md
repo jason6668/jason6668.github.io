@@ -10,7 +10,7 @@ tags:
 description: 祥林嫂的故事：封建礼教如何吃掉一个寡妇，今天"二婚歧视"还在。
 cover: /images/zhufu.jpg
 abbrlink: panghuang-zhufu
-date: 2026-10-14 12:00:00
+date: 2019-03-20 12:00:00
 ---
 
 祥林嫂死了。

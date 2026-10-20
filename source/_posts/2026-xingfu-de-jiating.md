@@ -10,7 +10,7 @@ tags:
 description: 写"幸福"骗稿费，现实一地鸡毛：文字工作者的辛酸。
 cover: /images/xingfu-de-jiating.jpg
 abbrlink: panghuang-xingfu
-date: 2026-10-14 12:20:00
+date: 2019-03-25 12:20:00
 ---
 
 有个作家，缺钱了。

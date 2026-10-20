@@ -10,7 +10,7 @@ tags:
 description: 不食周粟的伯夷叔齐，饿死前还在讲究体统。
 cover: /images/caiwei.jpg
 abbrlink: luxun-caiwei
-date: 2026-10-14 16:40:00
+date: 2019-04-25 16:40:00
 ---
 
 你们见过饿死还讲究排场的人吗？

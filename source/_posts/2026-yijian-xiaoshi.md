@@ -9,7 +9,7 @@ tags:
 description: 鲁迅笔下车夫的"傻"和今天的"精"：扶老人先拍照留证的时代，还有"一件小事"能让人脸红吗？
 cover: /images/yijian-xiaoshi.jpg
 abbrlink: yijian-xiaoshi
-date: 2026-10-14 08:30:00
+date: 2019-02-24 08:30:00
 ---
 
 这大概是鲁迅写过最短的一篇小说，也是最打脸的一篇。

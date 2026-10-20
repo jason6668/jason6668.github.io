@@ -10,7 +10,7 @@ tags:
 description: 老子西出函谷关：五千言道德经，是被烦出来的。
 cover: /images/chuguan.jpg
 abbrlink: luxun-chuguan
-date: 2026-10-14 16:50:00
+date: 2019-04-27 16:50:00
 ---
 
 你有没有过这种时刻：深夜加完班，站在公司楼下，看着灯火通明的格子间，心里就一个念头——老子不干了，老子要走。

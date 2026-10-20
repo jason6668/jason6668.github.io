@@ -9,7 +9,7 @@ tags:
 description: 鲁镇人的冷漠一百年没变：单亲妈妈的苦、"丧偶式育儿"、邻里各扫门前雪，何小仙的风凉话今天还在说。
 cover: /images/mingtian.jpg
 abbrlink: mingtian
-date: 2026-10-14 08:20:00
+date: 2019-02-22 08:20:00
 ---
 
 鲁镇有个女人，叫单四嫂子。

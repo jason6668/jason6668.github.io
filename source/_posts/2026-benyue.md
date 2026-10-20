@@ -10,7 +10,7 @@ tags:
 description: 后羿射日后躺在功劳簿上发胖，嫦娥看不下去飞走了。
 cover: /images/benyue.jpg
 abbrlink: luxun-benyue
-date: 2026-10-14 16:10:00
+date: 2019-04-18 16:10:00
 ---
 
 一个男人最油腻的时刻，不是肚子大了，而是嘴里开始三个字不离"想当年"。

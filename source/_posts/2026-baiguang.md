@@ -9,7 +9,7 @@ tags:
 description: 陈士成考了十六次举人，落榜后追着"白光"投了湖。今天的"白光"叫上岸，追的人只多不少。
 cover: /images/baiguang.jpg
 abbrlink: baiguang
-date: 2026-10-14 09:30:00
+date: 2019-03-10 09:30:00
 ---
 
 十六次。

@@ -9,7 +9,7 @@ tags:
 description: 辛亥剪了辫子，脑子里的辫子却留到了今天。从N先生的健忘，看职场PUA、精神资本家和跪着的膝盖。
 cover: /images/toufa-de-gushi.jpg
 abbrlink: toufa-de-gushi
-date: 2026-10-14 08:40:00
+date: 2019-02-27 08:40:00
 ---
 
 你去理发店，往椅子上一坐，师傅问一句"剪短点？"，你点点头。咔嚓咔嚓，头发落地，扫进垃圾桶，谁也不会多看一眼。

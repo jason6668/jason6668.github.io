@@ -9,7 +9,7 @@ tags:
 cover: https://m.media-amazon.com/images/I/71sF557T19L.SS700.jpg
 description: 开篇《玻璃随笔》39页，三个孤独的女人在厨房桌边：失恋的叙述者、母亲、艾米莉·勃朗特。《纽约时报》书评人：过去十年我重读最多的诗。
 abbrlink: f6a7b8c9
-date: 2026-10-13 15:00:00
+date: 2019-02-03 15:00:00
 ---
 
 ## 先说《玻璃随笔》：39页的钻石矿

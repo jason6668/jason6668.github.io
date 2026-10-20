@@ -11,7 +11,7 @@ cover: >-
   https://www.bozar.be/sites/default/files/styles/open_graph_style/public/efficy/images/3509952_anne_carson_c_jeff_brown_1200x550.jpg?h=e845b32d&itok=w1X8URId
 description: 一个古典学教授，把两千年前的残篇写成了你我都懂的失恋日记——认识一下 2026 年的诺奖得主安妮·卡森。
 abbrlink: 3c5e47e7
-date: 2026-10-08 19:00:00
+date: 2019-01-01 19:00:00
 ---
 
 ## 先说句题外话

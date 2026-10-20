@@ -10,7 +10,7 @@ tags:
 description: 一块肥皂照出伪君子：满口仁义道德，心里全是算计。
 cover: /images/feizao.jpg
 abbrlink: panghuang-feizao
-date: 2026-10-14 12:30:00
+date: 2019-03-27 12:30:00
 ---
 
 四铭买了块肥皂。

@@ -10,7 +10,7 @@ tags:
 description: 1945年，霍妮提出"真实自我"与"理想化自我"的冲突，揭开了"内耗"的真相。这本书是《我们时代的神经症人格》的续篇，也是霍妮理论的巅峰。马老师带你找到回家的路。
 cover: /images/psy-cover-horney-inner.jpg
 abbrlink: psy-horney-inner-conflicts
-date: 2026-10-13 15:30:00
+date: 2019-02-08 15:30:00
 ---
 
 ## 开场：你有没有"活成别人"？

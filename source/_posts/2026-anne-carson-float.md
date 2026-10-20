@@ -9,7 +9,7 @@ tags:
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479310838l/26046366.jpg
 description: 22个小册子装在透明塑料盒里，没有页码，任意顺序阅读。卡森说：它"不是一个有机的整体"。每个封面印着一道白色麻线——论证的线头，永远接不起来。
 abbrlink: b8c9d0e1
-date: 2026-10-13 17:00:00
+date: 2019-02-12 17:00:00
 ---
 
 ## 先说形态：去书店买个塑料盒？

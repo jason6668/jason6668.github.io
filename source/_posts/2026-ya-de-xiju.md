@@ -9,7 +9,7 @@ tags:
 description: 俄国人把鸭子当儿子养，鸭子飞走了他怅然若失。今天的"为你好"，是不是同一种爱？
 cover: /images/ya-de-xiju.jpg
 abbrlink: ya-de-xiju
-date: 2026-10-14 09:50:00
+date: 2019-03-15 09:50:00
 ---
 
 一个俄国人，买了几只小鸭子，爱得发痴。

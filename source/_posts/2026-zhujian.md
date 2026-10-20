@@ -10,7 +10,7 @@ tags:
 description: 三颗人头一口沸水：鲁迅笔下最暗黑的复仇，谁都没赢。
 cover: /images/zhujian.jpg
 abbrlink: luxun-zhujian
-date: 2026-10-14 16:20:00
+date: 2019-04-20 16:20:00
 ---
 
 复仇这件事，玩到极致是什么样？

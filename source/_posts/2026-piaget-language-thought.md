@@ -10,7 +10,7 @@ tags:
 description: 1923年，皮亚杰发现儿童的思维和成人完全不同，还分四个阶段。这个瑞士老头靠观察自己的三个孩子，颠覆了整个教育学。马老师带你看看小孩脑子里到底在想啥。
 cover: /images/psy-cover-piaget.jpg
 abbrlink: psy-piaget-language
-date: 2026-10-13 14:00:00
+date: 2019-01-29 14:00:00
 ---
 
 ## 开场：你家孩子是不是"不讲道理"？

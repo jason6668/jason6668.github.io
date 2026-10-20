@@ -10,7 +10,7 @@ tags:
 description: 不懂装懂的老学究：高老夫子的"专家"人设。
 cover: /images/gao-laofuzi.jpg
 abbrlink: panghuang-gaolaofuzi
-date: 2026-10-14 13:00:00
+date: 2019-04-03 13:00:00
 ---
 
 高老夫子要去给人讲课了。

@@ -9,7 +9,7 @@ tags:
 cover: https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1479310838l/26046366.jpg
 description: 改写索福克勒斯《安提戈涅》，全书手写墨迹印刷，插画印在半透明硫酸纸上。最妙的发明：一个从头到尾不说话、只在台上测量的哑角"Nick"。
 abbrlink: a7b8c9d0
-date: 2026-10-13 16:00:00
+date: 2019-02-10 16:00:00
 ---
 
 ## 这不是翻译，是行为艺术

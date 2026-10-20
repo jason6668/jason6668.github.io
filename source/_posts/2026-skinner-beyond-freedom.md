@@ -10,7 +10,7 @@ tags:
 description: 1971年，斯金纳说"自由意志"是神话，人类行为都是环境塑造的。这本书当年被骂成"法西斯"，今天却成了算法推荐的理论地基。马老师带你看看这个最被误解的心理学家。
 cover: /images/psy-cover-skinner-freedom.jpg
 abbrlink: psy-skinner-freedom
-date: 2026-10-13 13:00:00
+date: 2019-01-22 13:00:00
 ---
 
 ## 开场：这本书当年差点让他社死

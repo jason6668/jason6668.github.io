@@ -10,7 +10,7 @@ tags:
 description: 1937年，女心理学家霍妮说：神经症不是个人的病，是时代的病。她第一个站出来怼弗洛伊德，提出了"基本焦虑"概念。马老师带你看看，我们这个时代为什么让人焦虑。
 cover: /images/psy-cover-horney-neurotic.jpg
 abbrlink: psy-horney-neurotic
-date: 2026-10-13 15:00:00
+date: 2019-02-05 15:00:00
 ---
 
 ## 开场：第一个敢怼弗洛伊德的女人

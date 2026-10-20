@@ -9,7 +9,7 @@ tags:
 cover: https://i.ebayimg.com/images/g/9GUAAOSwD4tnHWXb/s-l600.webp
 description: 哥哥离家22年，死前一周才打来电话。卡森把一整本书做成风琴折页，装进盒子——"找个长楼梯，把它扔下去，看它展开。"
 abbrlink: c3d4e5f6
-date: 2026-10-13 12:00:00
+date: 2019-01-12 12:00:00
 ---
 
 ## 这不是一本书，是一个盒子

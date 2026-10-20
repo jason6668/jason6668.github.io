@@ -10,7 +10,7 @@ tags:
 description: 1930年，74岁的弗洛伊德写下这本"丧书"：文明的代价就是不快乐。快一百年了，我们过得更好了吗？马老师带你读这本预言之书。
 cover: /images/psy-cover-freud-civilization.jpg
 abbrlink: psy-freud-civilization
-date: 2026-10-13 12:00:00
+date: 2019-01-15 12:00:00
 ---
 
 ## 开场：老爷子晚年，写了本"丧书"
