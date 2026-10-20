@@ -9,7 +9,7 @@ tags:
 description: 都说《活着》教你坚强，可我要问：福贵一家的悲剧，到底是天灾还是人祸？把人祸写成天命，这本书有毒。
 cover: /images/huozhe-pipan-cover.jpg
 abbrlink: huozhe-pipan
-date: 2026-10-14 22:00:00
+date: 2019-11-06 08:30:00
 ---
 
 《活着》这本书，你读过吗？

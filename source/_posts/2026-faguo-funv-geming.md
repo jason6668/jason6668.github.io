@@ -9,7 +9,7 @@ tags:
 description: "1791年奥兰普·德·古热写下《女权宣言》，两年后上了断头台。法国女人1944年才拿到投票权。今天中国女性的处境，看看法国女人走过的路就明白了。"
 cover: /images/faguo-funv-cover.jpg
 abbrlink: faguo-funv-geming
-date: 2026-10-14 21:00:00
+date: 2019-10-18 12:00:00
 ---
 
 1791年9月，一个法国女人发表了一份宣言。

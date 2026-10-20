@@ -9,7 +9,7 @@ tags:
 description: 霍尔顿·考尔菲德被学校开除，在纽约流浪了三天。他骂遍了成人世界的假模假式，却在妹妹菲比面前哭得像个孩子。马老师带你读懂：为什么七十多年过去了，每一代年轻人都在霍尔顿身上看到自己。
 cover: /images/maitian-shouwangzhe-cover.jpg
 abbrlink: maitian-shouwangzhe
-date: 2026-10-17 10:00:00
+date: 2019-11-27 19:00:00
 ---
 
 ## 开篇：一个"问题少年"的自白

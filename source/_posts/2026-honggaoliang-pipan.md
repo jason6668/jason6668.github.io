@@ -9,7 +9,7 @@ tags:
 description: 都说《红高粱》是野性赞歌，可我要问：除了"野"，它还有什么？把抗战写成狂欢，把历史写成民俗画，这本书被严重高估了。
 cover: /images/honggaoliang-pipan-cover.jpg
 abbrlink: honggaoliang-pipan
-date: 2026-10-14 21:00:00
+date: 2019-11-03 20:30:00
 ---
 
 《红高粱家族》，你读过吗？

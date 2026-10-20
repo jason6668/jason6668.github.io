@@ -8,7 +8,7 @@ tags:
 description: 盖茨比攒了一辈子的钱，就为了够到对岸那盏绿灯。马老师带你读《了不起的盖茨比》，把美国梦的底裤扒下来给你看。
 cover: /images/gaicibi-cover.jpg
 abbrlink: gaicibi
-date: 2026-10-17 10:00:00
+date: 2019-10-27 18:00:00
 ---
 
 ## 开篇先说句扎心的

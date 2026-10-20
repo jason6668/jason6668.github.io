@@ -9,7 +9,7 @@ tags:
 description: 从1980年一封公开信，到2022年人口负增长；从超生罚你748万，到如今求你生娃发补贴。四十多年，一个政策，两代人的人生。今天把这段真实历史捋清楚。
 cover: /images/jihua-shengyu-cover.jpg
 abbrlink: jihua-shengyu-zhenxiang
-date: 2026-10-14 21:00:00
+date: 2019-11-11 18:00:00
 ---
 
 1980年9月25日，一封公开信，改变了几亿中国人的人生。

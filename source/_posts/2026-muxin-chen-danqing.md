@@ -5,7 +5,7 @@ tags: [木心, 陈丹青, 文学, 回忆录]
 description: 文革防空洞里偷纸写作，纽约给五个学生讲文学课。说白了，木心这种人，过去没有，将来也不会再有。
 cover: /images/muxin-chen-danqing.jpg
 abbrlink: muxin-chen-danqing
-date: 2026-10-16 17:30:00
+date: 2019-12-11 19:00:00
 ---
 
 你知道木心吗？

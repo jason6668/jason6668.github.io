@@ -5,7 +5,7 @@ tags: [诸子百家, 法家, 韩非, 商鞅, 马老师]
 description: 法、术、势三件套，秦朝靠它统一天下，也靠它二世而亡。今天公司里的KPI和末位淘汰，玩的还是法家那套。
 cover: /images/fajia-sixiang.jpg
 abbrlink: zhuzi-fajia
-date: 2026-10-17 10:00:00
+date: 2019-08-26 10:00:00
 ---
 
 一提法家，很多人脱口而出："哦，就是依法治国嘛，挺先进的。"

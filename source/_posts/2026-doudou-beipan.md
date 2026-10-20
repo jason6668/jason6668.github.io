@@ -5,7 +5,7 @@ tags: [豆豆, 背叛, 夏英杰, 和氏璧, 人性]
 description: 一个老板自己举报自己偷税，心甘情愿蹲监狱。豆豆《背叛》讲的不是背叛，是比忠诚更难的东西。
 cover: /images/doudou-beipan-cover.jpg
 abbrlink: doudou-beipan
-date: 2026-10-18 10:00:00
+date: 2019-09-12 10:00:00
 ---
 一个身家不菲的老板,自己跑去举报自己偷税,然后心甘情愿蹲进监狱。
 

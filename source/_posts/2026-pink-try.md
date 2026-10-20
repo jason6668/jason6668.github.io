@@ -6,7 +6,7 @@ description: 感情里摔倒是常态，难得的是摔完还敢再试一次
 cover: /images/pink-try-cover.jpg
 top_img: /images/pink-try-cover.jpg
 abbrlink: pink-try
-date: 2026-10-18 10:30:00
+date: 2019-12-19 08:30:00
 ---
 
 谁在感情里没摔过跟头。区别只在于，有人摔一次就躺平了，见人就说"爱情这玩意儿，谁信谁傻"；有人爬起来拍拍土，骂一句真疼，然后接着往前走。P!nk 这首《Try》，就是唱给第二种人的。不讲大道理，不熬鸡汤，就一句话：疼归疼，接着试。

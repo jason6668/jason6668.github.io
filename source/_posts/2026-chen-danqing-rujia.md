@@ -5,7 +5,7 @@ tags: [马老师杂谈, 陈丹青, 儒家]
 description: 陈丹青骂儒家骂了二十年，脏话张口就来。可说白了，他身上那股文人气，恰恰是最儒家的东西。这篇把他对儒家的看法掰开揉碎，具体分析。
 cover: /images/chen-danqing-rujia.jpg
 abbrlink: chen-danqing-rujia
-date: 2026-10-16 22:30:00
+date: 2019-09-26 21:15:00
 ---
 
 陈丹青这二十年，干得最多的事就是骂。

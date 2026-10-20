@@ -5,7 +5,7 @@ tags: [民国, 新中国, 改革开放, 近现代史]
 description: 一百年，从帝制到共和再到今天。说白了，有些问题换了个马甲还在。
 cover: /images/jindai-xiandai.jpg
 abbrlink: jindai-xiandai
-date: 2026-10-16 15:00:00
+date: 2019-11-13 19:00:00
 ---
 
 1911年，武昌一声枪响，两千年的帝制，哄的一声塌了。

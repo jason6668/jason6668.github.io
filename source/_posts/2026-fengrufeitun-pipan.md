@@ -9,7 +9,7 @@ tags:
 description: 莫言说要歌颂母性，可笔下的母亲只是"土地"。把乳房写几百次，这不是文学，是色情。
 cover: /images/fengrufeitun-pipan-cover.jpg
 abbrlink: fengrufeitun-pipan
-date: 2026-10-14 21:00:00
+date: 2019-10-25 21:15:00
 ---
 
 《丰乳肥臀》，你读过吗？

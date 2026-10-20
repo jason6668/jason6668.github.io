@@ -9,7 +9,7 @@ tags:
 description: 七代人，一个名字轮回七次，一种孤独传了一百年。马尔克斯写的是马孔多，说的是全人类：逃不出轮回的人，才是最孤独的人。
 cover: /images/bainian-gudu-cover.jpg
 abbrlink: bainian-gudu
-date: 2026-10-17 10:00:00
+date: 2019-09-19 12:00:00
 ---
 
 # 百年孤独：一部写满了轮回的家族史，扎的却是我们每个人的心

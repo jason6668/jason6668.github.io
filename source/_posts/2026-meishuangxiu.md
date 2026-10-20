@@ -5,7 +5,7 @@ tags: [马老师杂谈, 双休, 打工人, 劳动法]
 description: 法定双休三十年，可大多数人的周末不是在加班，就是在去加班的路上。
 cover: /images/meishuangxiu-cover.jpg
 abbrlink: meishuangxiu
-date: 2026-10-16 22:35:00
+date: 2019-12-02 20:30:00
 ---
 
 有人问我：国外都上四休三了，为啥国内连双休都没实行？

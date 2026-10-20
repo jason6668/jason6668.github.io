@@ -9,7 +9,7 @@ tags:
 description: 用"吃婴儿"的噱头把你吸引进来，可进来后呢？没下文了。这就是标题党，没有思想，只有噱头。
 cover: /images/jiuguo-pipan-cover.jpg
 abbrlink: jiuguo-pipan
-date: 2026-10-14 21:00:00
+date: 2019-11-15 12:00:00
 ---
 
 《酒国》，你读过吗？

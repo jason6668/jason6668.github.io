@@ -5,7 +5,7 @@ tags: [马老师杂谈, 老人与海, 海明威]
 description: 一个84天没钓到鱼的老头，拖回一副鱼骨，却成了文学史上的硬汉图腾。马老师带你读懂海明威：尊严不是赢来的，是扛出来的。
 cover: /images/laoren-yu-hai-cover.jpg
 abbrlink: laoren-yu-hai
-date: 2026-10-17 10:00:00
+date: 2019-11-20 08:30:00
 ---
 
 ## 开篇：一个空手而归的老头，凭什么封神

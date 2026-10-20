@@ -5,7 +5,7 @@ tags: [诸子百家, 阴阳家, 邹衍, 五行, 迷信, 马老师]
 description: 邹衍的阴阳五行学说死了两千年，却活在每个中国人的日常里。中医、风水、算命、星座水逆，都是他的传人。
 cover: /images/yinyang-sixiang.jpg
 abbrlink: zhuzi-yinyang
-date: 2026-10-17 10:20:00
+date: 2019-08-29 10:20:00
 ---
 
 "我水逆了，最近诸事不顺。"

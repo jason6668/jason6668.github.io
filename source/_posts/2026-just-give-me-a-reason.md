@@ -6,7 +6,7 @@ description: 感情散架前最缺的不是道理，是一个肯留下来的理�
 cover: /images/just-give-me-a-reason-cover.jpg
 top_img: /images/just-give-me-a-reason-cover.jpg
 abbrlink: just-give-me-a-reason
-date: 2026-10-18 10:30:00
+date: 2019-11-18 20:30:00
 ---
 
 有多少感情，不死在出轨上，不死在家暴上，死在"算了"两个字上。

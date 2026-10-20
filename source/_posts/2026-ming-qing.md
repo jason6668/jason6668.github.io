@@ -5,7 +5,7 @@ tags: [明朝, 清朝, 皇权专制, 闭关锁国, 鸦片战争]
 description: 皇权越来越大，国门越关越紧。说白了，自己把自己玩死的，古今第一。
 cover: /images/ming-qing.jpg
 abbrlink: ming-qing
-date: 2026-10-16 14:30:00
+date: 2019-12-04 08:30:00
 ---
 
 明清这六百年，是中国历史上最憋屈的一段。
