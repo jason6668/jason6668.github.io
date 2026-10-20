@@ -5,7 +5,7 @@ tags: [历史, 社会, 预测]
 description: 辛亥革命能成，靠的是四个条件缺一不可。今天对照一下，骑手有电动车，但枪杆子、组织、财政崩溃，一个都不齐。说白了，条件全在"慢性溃烂"那一边。
 cover: /images/xinhai-geming.jpg
 abbrlink: xinhai-geming
-date: 2026-10-16 21:00:00
+date: 2020-08-22 20:30:00
 ---
 
 ## 先把问题摆正

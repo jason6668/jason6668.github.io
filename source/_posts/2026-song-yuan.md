@@ -5,7 +5,7 @@ tags: [宋朝, 元朝, 重文轻武, 靖康之耻, 蒙古]
 description: 宋朝GDP世界第一，却被打得迁都又迁都。说白了，有钱没枪，钱就是别人的。
 cover: /images/song-yuan.jpg
 abbrlink: song-yuan
-date: 2026-10-16 14:00:00
+date: 2020-02-22 19:00:00
 ---
 
 宋朝，是中国历史上最有钱的朝代，没有之一。

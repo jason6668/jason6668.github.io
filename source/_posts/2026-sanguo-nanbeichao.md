@@ -5,7 +5,7 @@ tags: [三国, 两晋, 南北朝, 门阀, 五胡乱华]
 description: 上品无寒门，下品无士族。说白了，投胎是门技术活，古今都一样。
 cover: /images/sanguo-nanbeichao.jpg
 abbrlink: sanguo-nanbeichao
-date: 2026-10-16 13:00:00
+date: 2019-12-23 18:00:00
 ---
 
 一说三国，你脑子里是不是立马蹦出诸葛亮、关羽、赵云，桃园三结义，赤壁之战？

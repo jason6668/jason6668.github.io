@@ -9,7 +9,7 @@ tags:
 description: 六世轮回看了五十年苦难，可西门闹悟到了什么？什么都没悟到。这就是看客心态，把血泪史当连续剧看。
 cover: /images/shengsifilao-pipan-cover.jpg
 abbrlink: shengsifilao-pipan
-date: 2026-10-14 21:00:00
+date: 2019-12-28 12:00:00
 ---
 
 《生死疲劳》，你读过吗？

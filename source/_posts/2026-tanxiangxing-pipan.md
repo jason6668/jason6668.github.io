@@ -9,7 +9,7 @@ tags:
 description: 把檀香木钉穿人体的过程写几十页，像写艺术品。这不是批判酷刑，这是欣赏酷刑。
 cover: /images/tanxiangxing-pipan-cover.jpg
 abbrlink: tanxiangxing-pipan
-date: 2026-10-14 21:00:00
+date: 2020-04-01 08:30:00
 ---
 
 《檀香刑》，你读过吗？

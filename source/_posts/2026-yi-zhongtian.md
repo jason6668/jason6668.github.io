@@ -5,7 +5,7 @@ tags: [马老师杂谈, 易中天, 批判]
 description: 从"学术超男"到36卷中华史，说白了，易中天最大的本事不是讲历史，是把历史变成流量。这篇具体分析，专叫装睡的人。
 cover: /images/yi-zhongtian.jpg
 abbrlink: yi-zhongtian
-date: 2026-10-16 22:00:00
+date: 2020-09-17 21:15:00
 ---
 
 ## 开头：先把话说清楚

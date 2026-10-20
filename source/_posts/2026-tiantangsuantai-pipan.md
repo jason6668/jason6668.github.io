@@ -9,7 +9,7 @@ tags:
 description: 敢写蒜农苦，不敢写怎么办。敢写官员坏，不敢写制度错。这不是良心，这是半心。
 cover: /images/tiantangsuantai-pipan-cover.jpg
 abbrlink: tiantangsuantai-pipan
-date: 2026-10-14 21:00:00
+date: 2020-04-14 21:15:00
 ---
 
 《天堂蒜薹之歌》，你读过吗？

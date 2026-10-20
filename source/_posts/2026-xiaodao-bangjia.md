@@ -5,7 +5,7 @@ tags: [孝道, 亲情, 绑架, 家庭]
 description: 我养你这么大容易吗？这句话一出口，亲情就变成了债务。说白了，真孝顺是情分，被要挟的孝叫愚孝。
 cover: /images/xiaodao-bangjia.jpg
 abbrlink: xiaodao-bangjia
-date: 2026-10-16 17:00:00
+date: 2020-07-14 18:00:00
 ---
 
 孝道这东西，原本是个好东西。

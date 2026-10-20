@@ -9,7 +9,7 @@ tags:
 description: 低流行不等于翻篇。死亡数字、疫苗、后遗症、经济账——关于新冠，有太多事实被模糊了。
 cover: /images/xinguan-yiqing-cover.jpg
 abbrlink: xinguan-yiqing
-date: 2026-10-14 21:00:00
+date: 2020-08-09 12:00:00
 ---
 
 2020年1月23日，武汉封城。那天是腊月二十八，离除夕还有一天。

@@ -9,7 +9,7 @@ tags:
 description: 罗小通从头说到尾，说得天花乱坠，可说完你记住了什么？什么都没记住。就记住"他很能说"。
 cover: /images/sishiyipao-pipan-cover.jpg
 abbrlink: sishiyipao-pipan
-date: 2026-10-14 21:00:00
+date: 2020-02-09 18:00:00
 ---
 
 《四十一炮》，你读过吗？

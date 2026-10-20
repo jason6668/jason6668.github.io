@@ -5,7 +5,7 @@ tags: [失业, 社会, 预测]
 description: 几千万人没活干，社会会发生什么？说白了，不会一夜大乱，但会温水煮青蛙式地烂。这篇大胆预测，专叫装睡的人。
 cover: /images/shiye-dongluan.jpg
 abbrlink: shiye-dongluan
-date: 2026-10-16 20:00:00
+date: 2020-01-01 20:30:00
 ---
 
 ## 开头：数字背后，是几千万个活生生的人

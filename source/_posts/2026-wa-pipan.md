@@ -9,7 +9,7 @@ tags:
 description: 拿刀的人说"我手疼"，被捅的人连喊疼的资格都没有。这不是反思，这是洗白。
 cover: /images/wa-pipan-cover.jpg
 abbrlink: wa-pipan
-date: 2026-10-14 21:00:00
+date: 2020-04-27 18:00:00
 ---
 
 《蛙》，你读过吗？

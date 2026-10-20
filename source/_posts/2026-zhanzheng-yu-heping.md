@@ -9,7 +9,7 @@ tags:
 description: 托尔斯泰用一百多万字讲明白一件事：历史从来不是英雄写出来的，是无数普通人一脚一脚踩出来的。皮埃尔的迷茫、安德烈的幻灭、娜塔莎的成长、库图佐夫的忍耐，都是一面镜子，照见今天的我们。
 cover: /images/zhanzheng-yu-heping-cover.jpg
 abbrlink: zhanzheng-yu-heping
-date: 2026-10-17 10:00:00
+date: 2020-11-08 20:30:00
 ---
 
 ## 一部让人望而却步的巨著，其实讲的是你

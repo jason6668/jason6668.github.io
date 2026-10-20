@@ -9,7 +9,7 @@ tags:
 description: 俄罗斯鼠疫疑云，多省发布风险提示，网传爆料满天飞。信息不透明，才是最大的疫情帮凶。
 cover: /images/shuyi-yiqing-cover.jpg
 abbrlink: shuyi-yiqing
-date: 2026-10-14 20:00:00
+date: 2020-01-27 21:15:00
 ---
 
 鼠疫这个词，你上次听到是什么时候？历史课本？还是《大流感》那种纪录片？

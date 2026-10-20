@@ -5,7 +5,7 @@ tags: [贫穷, 底层, 工资, 分配, 内卷]
 description: 二三线3000，县城2500，一线6000都算高薪。说白了，穷不是因为你懒，是分蛋糕的人没打算分给你。
 cover: /images/weishenme-qiong.jpg
 abbrlink: weishenme-qiong
-date: 2026-10-16 15:30:00
+date: 2020-05-23 12:00:00
 ---
 
 先摆几个数字，你品品。
