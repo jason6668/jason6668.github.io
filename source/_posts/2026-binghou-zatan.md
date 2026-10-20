@@ -10,7 +10,7 @@ tags:
 description: 大病初愈的鲁迅谈中医：不神化，不妖魔化。今天的中医之争，最缺的就是这份清醒。
 cover: /images/binghou-zatan.jpg
 abbrlink: binghou-zatan
-date: 2026-10-15 13:50:00
+date: 2019-06-21 13:50:00
 ---
 
 1935年，鲁迅大病了一场。病好之后，他提笔写了篇《病后杂谈》，发表在《太白》上，后来收进《且介亭杂文》。

@@ -10,7 +10,7 @@ tags:
 description: 一百年前雷峰塔倒塌，鲁迅高兴之余泼了一盆冷水：塔倒了，人心里的塔还没倒。
 cover: /images/leifengta-daodiao.jpg
 abbrlink: leifengta-daodiao
-date: 2026-10-15 13:10:00
+date: 2019-06-11 13:10:00
 ---
 
 ## 塔倒的那天，鲁迅"高兴"

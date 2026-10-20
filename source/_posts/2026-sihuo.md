@@ -10,7 +10,7 @@ tags:
 description: 冰谷里一堆冻灭的火，他捧起来想救活，却只得到一缕青烟。一百年后，年轻人的热情还在被冻灭。
 cover: /images/sihuo.jpg
 abbrlink: sihuo
-date: 2026-10-15 12:50:00
+date: 2019-06-07 12:50:00
 ---
 
 ## 一个冻灭的梦

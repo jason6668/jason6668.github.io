@@ -10,7 +10,7 @@ tags:
 description: 白天当好人，晚上当"恶人"？鲁迅说：你的影子早想跟你绝交了。
 cover: /images/ying-de-gaobie.jpg
 abbrlink: ying-de-gaobie
-date: 2026-10-15 12:10:00
+date: 2019-05-28 12:10:00
 ---
 
 ## 你的影子，有一天会跟你说"拜拜"

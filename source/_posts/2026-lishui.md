@@ -10,7 +10,7 @@ tags:
 description: 大禹在泥里挖，学者在岸上开会：千年不变的笑话。
 cover: /images/lishui.jpg
 abbrlink: luxun-lishui
-date: 2026-10-14 17:00:00
+date: 2019-04-29 17:00:00
 ---
 
 水都淹到脖子了，岸上还有一群人在开会——研究水为什么会淹脖子。

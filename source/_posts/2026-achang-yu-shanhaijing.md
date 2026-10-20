@@ -9,7 +9,7 @@ tags:
 description: 迷信唠叨的阿长，却为小鲁迅买来了梦寐以求的绘图《山海经》。
 cover: /images/achang-yu-shanhaijing.jpg
 abbrlink: luxun-achang-shanhaijing
-date: 2026-10-15 08:10:00
+date: 2019-05-07 08:10:00
 ---
 
 《朝花夕拾》里最温情的一篇，写的不是爹妈，是一个保姆。阿长，一个没文化、迷信、唠叨、睡相还差的女工，鲁迅却为她写了一整篇散文，写到最后眼圈发热。这篇《阿长与〈山海经〉》，是鲁迅全集里少有的、笑着流泪的文字。

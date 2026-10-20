@@ -10,7 +10,7 @@ tags:
 description: 掏出空钱袋也要摆施舍姿态？鲁迅一百年前就戳穿了这种"慈善"。
 cover: /images/qiuqi-zhe.jpg
 abbrlink: qiuqi-zhe
-date: 2026-10-15 12:20:00
+date: 2019-05-30 12:20:00
 ---
 
 ## 一个空钱袋，换来一个白眼

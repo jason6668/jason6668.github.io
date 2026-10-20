@@ -9,7 +9,7 @@ tags:
 description: 迎神赛会上的无常鬼有人情味，现实里的"正人君子"却不如一个鬼。
 cover: /images/wuchang.jpg
 abbrlink: luxun-wuchang
-date: 2026-10-15 08:40:00
+date: 2019-05-11 08:40:00
 ---
 鲁迅在《朝花夕拾》里写过一篇《无常》，讲的是小时候在绍兴看迎神赛会，印象最深的一个角色——扮"白无常"的人。
 
