@@ -308,9 +308,81 @@ footer:
     left: null
     right: null
   list:
-    enable: false
-    randomFriends: 3
-    project: null
+    enable: true
+    randomFriends: 0
+    project:
+    - title: 文章
+      links:
+      - title: 隧道
+        link: /archives/
+      - title: 分类
+        link: /categories/
+      - title: 标签
+        link: /tags/
+    - title: 探索
+      links:
+      - title: 心理学随笔
+        link: /categories/心理学随笔/
+      - title: 避雷专区
+        link: /blacklist/
+      - title: 心理自测
+        link: /mental-test/
+      - title: MBTI测评
+        link: /mbti-test/
+      - title: 星座分析
+        link: /star-fortune/
+      - title: 六爻占卜
+        link: /liuyao/
+      - title: 新手教程
+        link: /tutorial/
+    - title: 点我试一试
+      links:
+      - title: 马老师专属导航
+        link: https://nav.missma.qzz.io/
+      - title: 马老师专属新闻频道
+        link: https://newsma.8818618.xyz/
+      - title: 摸鱼小游戏
+        link: https://cmgame.zone.id/
+      - title: 摸鱼专区
+        link: https://zb.8818618.xyz/moyu
+      - title: 朋友圈
+        link: /fcircle/
+      - title: 留言板
+        link: /comments/
+    - title: 专属服务
+      links:
+      - title: 马老师专属直播
+        link: https://zb.8818618.xyz/
+      - title: 马老师专属TV
+        link: https://tv.8818618.xyz/
+      - title: 马老师专属音乐
+        link: https://music.8818618.xyz/
+      - title: 论坛社区
+        link: https://bbs.8818618.xyz/
+      - title: 会员服务
+        link: https://vip.8818618.xyz/
+      - title: 赞赏支持
+        link: https://rewards.8818618.xyz/
+      - title: WebSSH
+        link: https://ssh.8818618.xyz/
+      - title: 马老师专属面板
+        link: https://vps.8818618.xyz/
+    - title: 我的
+      links:
+      - title: 音乐馆
+        link: /music/
+      - title: 追番页
+        link: /bangumis/
+      - title: 相册集
+        link: /album/
+      - title: 小空调
+        link: /air-conditioner/
+    - title: 关于
+      links:
+      - title: 关于本人
+        link: /about/
+      - title: 闲言碎语
+        link: /essay/
   footerBar:
     enable: true
     authorLink: /
