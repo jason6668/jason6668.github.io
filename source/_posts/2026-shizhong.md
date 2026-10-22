@@ -10,7 +10,7 @@ tags:
 description: 看杀头、看游街、看热搜：一百年的看客心态。
 cover: /images/shizhong.jpg
 abbrlink: panghuang-shizhong
-date: 2019-04-01 12:50:00
+date: 2021-11-01 12:50:00
 ---
 
 "首善之区"的街头，围了一圈人。
