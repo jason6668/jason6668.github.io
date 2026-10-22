@@ -10,7 +10,7 @@ tags:
 description: 本我、自我、超我——弗洛伊德1923年提出的人格结构理论，为什么一百多年后还在被引用？马老师用大白话讲透这三个小人的恩怨情仇。
 cover: /images/psy-cover-freud-egoid.jpg
 abbrlink: psy-freud-egoid
-date: 2019-01-10 11:30:00
+date: 2023-04-10 11:30:00
 ---
 
 ## 开场：你有没有觉得自己很分裂？
