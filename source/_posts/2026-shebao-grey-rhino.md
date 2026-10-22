@@ -10,7 +10,7 @@ tags:
 description: 每天10万人退出社保缴费，一季度5800万年轻人退保，基金2029年见底——这头灰犀牛不是会不会来，而是已经在你家门口刨蹄子了。
 cover: /images/shebao-grey-rhino.jpg
 abbrlink: shebao-grey-rhino
-date: 2019-01-17 12:30:00
+date: 2025-05-17 12:30:00
 ---
 
 # 社保这头"灰犀牛"：当年轻人开始用脚投票
