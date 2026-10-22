@@ -10,7 +10,7 @@ tags:
 description: 人人会背"地上的路"，却没人读前半句。鲁迅说希望和绝望一样虚妄，那该选哪边？
 cover: /images/xiwang.jpg
 abbrlink: xiwang
-date: 2019-06-04 12:40:00
+date: 2024-03-04 12:40:00
 ---
 
 ## 人人会背下半句，没人读上半句
