@@ -10,7 +10,7 @@ tags:
 description: 两个拿刀的人对峙不动手，看客从兴奋等到打哈欠。鲁迅1924年写的看客，一百年后搬进了评论区。
 cover: /images/fuchou.jpg
 abbrlink: fuchou
-date: 2019-06-02 12:30:00
+date: 2022-06-02 12:30:00
 ---
 
 ## 旷野上，两个拿刀的人
