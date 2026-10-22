@@ -10,7 +10,7 @@ tags:
 description: 从一句他妈的，鲁迅解剖了整个民族的心理。一百年后，我们还在用同样的方式骂人。
 cover: /images/lun-tamade.jpg
 abbrlink: lun-tamade
-date: 2019-06-09 13:00:00
+date: 2025-12-09 13:00:00
 ---
 
 ## 一句口头禅，骂了整个民族
