@@ -455,7 +455,7 @@ canvas_fluttering_ribbon:
   enable: false
   mobile: false
 canvas_nest:
-  enable: false
+  enable: true
   color: 0,0,255
   opacity: 0.7
   zIndex: -1
