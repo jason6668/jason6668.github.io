@@ -69,7 +69,7 @@ code_word_wrap: false
 copy:
   enable: true
   copyright:
-    enable: false
+    enable: true
     limit_count: 50
 social:
   Github: https://github.com/jason6668 || anzhiyu-icon-github
@@ -794,6 +794,7 @@ inject:
   - <link rel="stylesheet" href="/css/ma-telegram-icon.css?v=20261017a">
   bottom:
   - <script src="/js/ma-newest-comments.js?v=20261017h"></script>
+  - <script src="/js/ma-anti-copy.js?v=20261023a"></script>
   CDN:
   internal_provider: local
   third_party_provider: cbd
