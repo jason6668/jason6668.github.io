@@ -1,41 +1,112 @@
-- class_name: 世界各地夕阳与风景
-  path_name: /wordScenery
+- class_name: 行旅·山水
+  path_name: /photo-journey
   type: 2
-  description: 因为到不了世界各地，所以请网友们发来了各地的夕阳与风景🌇。
-  cover: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
-  top_background: https://bu.dusays.com/2023/06/30/649e546ada7dd.webp
+  description: 走过的山、看过的水，留给眼睛的纪念品。
+  cover: /images/album/journey-1.jpg
+  top_background: /images/album/journey-3.jpg
+  top_link: /album
+  top_btn_text: 返回相册集
   rowHeight: 220
   limit: 10
   lazyload: true
   btnLazyload: false
-  url: false
-  top_link: /album
-  top_btn_text: 返回
   album_list:
-    - date: 2022/10/26 01:00:00
-      content: 湘潭的一角。
-      address: 湖南湘潭
-      from: 再吃一口就减肥
+    - date: 2026-05-02
+      content: 云起的时候，山就醒了。
+      address: 山里
       image:
-        - https://bu.dusays.com/2023/04/09/64329399db122.webp
-    - date: 2022-10-25
-      content: 洛阳暴雨后的天空。
-      address: 河南洛阳
-      from: 紫菜卷
+        - /images/album/journey-1.jpg
+    - date: 2026-05-03
+      content: 雾还没散，镇子先醒了。
+      address: 江南水乡
       image:
-        - https://bu.dusays.com/2023/04/09/64329399db122.webp
-        - https://bu.dusays.com/2023/04/09/64329399db2e1.webp
+        - /images/album/journey-2.jpg
+    - date: 2026-06-18
+      content: 渔船归港，晚霞收摊。
+      address: 海边
+      image:
+        - /images/album/journey-3.jpg
+    - date: 2026-07-25
+      content: 风一吹，经幡把话都说完了。
+      address: 雪山垭口
+      image:
+        - /images/album/journey-4.jpg
+    - date: 2026-08-09
+      content: 竹影里走路，脚步都轻了。
+      address: 竹林
+      image:
+        - /images/album/journey-5.jpg
 
-- class_name: 我的日常
-  path_name: /dailyPhoto
+- class_name: 市井·日常
+  path_name: /photo-street
   type: 1
-  description: 这里存放的是有关我自己的一些沙雕生活与有趣的事情。
+  description: 热气腾腾的日子，才是真正的日子。
+  cover: /images/album/street-4.jpg
+  top_background: /images/album/street-4.jpg
   top_link: /album
-  top_btn_text: 返回
-  top_background: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
-  cover: https://bu.dusays.com/2023/04/09/64329399cea5a.webp
+  top_btn_text: 返回相册集
   album_list:
-    - date: 2022-10-24
-      content: 老妹的画
+    - date: 2026-09-06
+      content: 天刚亮，菜市场先热闹起来。
+      address: 菜市场
+      from: 马老师
       image:
-        - https://bu.dusays.com/2023/04/09/643293997b92b.jpeg
+        - /images/album/street-1.jpg
+    - date: 2026-09-13
+      content: 一碗面下肚，烦恼少一半。
+      address: 路边面摊
+      from: 马老师
+      image:
+        - /images/album/street-2.jpg
+    - date: 2026-09-27
+      content: 老手艺不吆喝，回头客自己来。
+      address: 老街修车铺
+      from: 马老师
+      image:
+        - /images/album/street-3.jpg
+    - date: 2026-10-03
+      content: 夜市的烟火气，是城市的安慰剂。
+      address: 夜市
+      from: 马老师
+      image:
+        - /images/album/street-4.jpg
+    - date: 2026-10-11
+      content: 雨把老巷洗得发亮。
+      address: 老巷
+      from: 马老师
+      image:
+        - /images/album/street-5.jpg
+
+- class_name: 书房·字间
+  path_name: /photo-study
+  type: 2
+  description: 安安静静读点字，心就有了着落。
+  cover: /images/album/study-1.jpg
+  top_background: /images/album/study-1.jpg
+  top_link: /album
+  top_btn_text: 返回相册集
+  rowHeight: 220
+  limit: 10
+  lazyload: true
+  btnLazyload: false
+  album_list:
+    - date: 2026-04-19
+      content: 午后三点，书比觉香。
+      address: 书房
+      image:
+        - /images/album/study-1.jpg
+    - date: 2026-05-24
+      content: 字写不好没关系，心要静。
+      address: 书房
+      image:
+        - /images/album/study-2.jpg
+    - date: 2026-06-07
+      content: 窗边这个角落，谁也不许抢。
+      address: 书房
+      image:
+        - /images/album/study-3.jpg
+    - date: 2026-10-18
+      content: 夜里读闲书，茶凉了再续。
+      address: 书房
+      image:
+        - /images/album/study-4.jpg
