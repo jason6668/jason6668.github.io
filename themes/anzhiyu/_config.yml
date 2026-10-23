@@ -12,7 +12,7 @@ menu:
     六爻占卜: /liuyao/ || anzhiyu-icon-yin-yang
     新手教程: /tutorial/ || anzhiyu-icon-book-open
   点我试一试:
-    马老师专属导航: https://nav.missma.qzz.io/ || anzhiyu-icon-map-location-dot
+    马老师专属导航: https://nav.8818618.xyz/ || anzhiyu-icon-map-location-dot
     马老师专属新闻频道: https://newsma.8818618.xyz/ || anzhiyu-icon-newspaper
     摸鱼小游戏: https://cmgame.zone.id/ || anzhiyu-icon-gamepad
     摸鱼专区: https://zb.8818618.xyz/moyu || anzhiyu-icon-tv
@@ -27,6 +27,8 @@ menu:
     赞赏支持: https://rewards.8818618.xyz/ || anzhiyu-icon-hand-heart-fill
     WebSSH: https://ssh.8818618.xyz/ || anzhiyu-icon-terminal
     马老师专属面板: https://vps.8818618.xyz/ || anzhiyu-icon-server
+    马老师专属订阅转换: https://sub.8818618.xyz/ || anzhiyu-icon-arrows-rotate
+    马老师专属隧道面板: https://tunnel.8818618.xyz/ || anzhiyu-icon-road
   我的:
     音乐馆: /music/ || anzhiyu-icon-music
     追番页: /bangumis/ || anzhiyu-icon-bilibili
@@ -338,7 +340,7 @@ footer:
     - title: 点我试一试
       links:
       - title: 马老师专属导航
-        link: https://nav.missma.qzz.io/
+        link: https://nav.8818618.xyz/
       - title: 马老师专属新闻频道
         link: https://newsma.8818618.xyz/
       - title: 摸鱼小游戏
@@ -367,6 +369,10 @@ footer:
         link: https://ssh.8818618.xyz/
       - title: 马老师专属面板
         link: https://vps.8818618.xyz/
+      - title: 马老师专属订阅转换
+        link: https://sub.8818618.xyz/
+      - title: 马老师专属隧道面板
+        link: https://tunnel.8818618.xyz/
     - title: 我的
       links:
       - title: 音乐馆
