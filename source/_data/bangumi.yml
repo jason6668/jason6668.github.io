@@ -1,0 +1,61 @@
+- name: 葬送的芙莉莲
+  cover: /images/bangumi/frieren.jpg
+  status: 已看
+  progress: 全 28 话
+  score: 9.8
+  comment: 慢悠悠地讲时间与告别，后劲最大的治愈番，哭了好几回。
+
+- name: 进击的巨人
+  cover: /images/bangumi/aot.jpg
+  status: 已看
+  progress: 全 89 话
+  score: 9.9
+  comment: 从一堵墙讲到整个世界，十年长篇能这么收官，值了。
+
+- name: 钢之炼金术师 FA
+  cover: /images/bangumi/fma.jpg
+  status: 已看
+  progress: 全 64 话
+  score: 9.9
+  comment: 等价交换四个字，够讲一辈子做人的道理。
+
+- name: 命运石之门
+  cover: /images/bangumi/steinsgate.jpg
+  status: 已看
+  progress: 全 24 话
+  score: 9.7
+  comment: 前半段攒耐心，后半段全是眼泪，一切都是命运石之门的选择。
+
+- name: 紫罗兰永恒花园
+  cover: /images/bangumi/violet.jpg
+  status: 已看
+  progress: 全 13 话 + 剧场版
+  score: 9.6
+  comment: 一封信哭一场，画面美得不讲道理。
+
+- name: 鬼灭之刃
+  cover: /images/bangumi/demonslayer.jpg
+  status: 已看
+  progress: 全 55 话
+  score: 9.2
+  comment: 制作天花板，简单的故事讲到了极致。
+
+- name: 咒术回战
+  cover: /images/bangumi/jujutsu.jpg
+  status: 在看
+  progress: 第 2 季
+  score: 9.0
+  comment: 打戏经费在燃烧，刀起人来也不含糊。
+
+- name: 间谍过家家
+  cover: /images/bangumi/spyfamily.jpg
+  status: 在看
+  progress: 第 2 季
+  score: 8.9
+  comment: 下饭神番，一家三口各怀鬼胎，又彼此治愈。
+
+- name: 夏目友人帐
+  cover: /images/bangumi/natsume.jpg
+  status: 想看
+  progress: 排队中
+  comment: 听说是最温柔的妖怪故事，忙完这阵就补。
