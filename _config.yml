@@ -161,3 +161,12 @@ bangumi: # 追番设置
 aplayer:
   meting: true
   asset_inject: false
+
+# 订阅源防搬运 (2026-10-23): 只给摘要, 不给全文
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  content: false
+  content_limit: 140
+  content_limit_delim: ' '
