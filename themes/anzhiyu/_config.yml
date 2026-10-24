@@ -687,12 +687,6 @@ home_top:
     title: 好巧啊，你也失业了呀～
     image: /images/shiye-banner-new.jpg?v=20261012
     link: https://www.youtube.com/@失业联盟
-friends_vue:
-  enable: true
-  vue_js: /js/friends-circle.js
-  apiurl: https://fcircle.8818618.xyz/
-  top_tips: 使用 友链朋友圈 订阅友链最新文章
-  top_background: null
 universe:
   enable: true
 bubble:
