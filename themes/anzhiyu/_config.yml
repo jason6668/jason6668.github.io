@@ -464,7 +464,7 @@ activate_power_mode:
   shake: false
   mobile: false
 fireworks:
-  enable: true
+  enable: false
   zIndex: 9999
   mobile: false
 click_heart:
