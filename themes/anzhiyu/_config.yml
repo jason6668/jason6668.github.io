@@ -16,7 +16,6 @@ menu:
     马老师专属新闻频道: https://newsma.8818618.xyz/ || anzhiyu-icon-newspaper
     摸鱼小游戏: https://cmgame.zone.id/ || anzhiyu-icon-gamepad
     摸鱼专区: https://zb.8818618.xyz/moyu || anzhiyu-icon-tv
-    朋友圈: /fcircle/ || anzhiyu-icon-artstation
     留言板: /comments/ || anzhiyu-icon-envelope
   专属服务:
     马老师专属直播: https://zb.8818618.xyz/ || anzhiyu-icon-tv
@@ -347,8 +346,6 @@ footer:
         link: https://cmgame.zone.id/
       - title: 摸鱼专区
         link: https://zb.8818618.xyz/moyu
-      - title: 朋友圈
-        link: /fcircle/
       - title: 留言板
         link: /comments/
     - title: 专属服务
@@ -795,7 +792,6 @@ inject:
   bottom:
   - <script src="/js/ma-newest-comments.js?v=20261017h"></script>
   - <script src="/js/ma-anti-copy.js?v=20261023a"></script>
-  - <script src="/js/ma-random-post.js?v=20261024a"></script>
   CDN:
   internal_provider: local
   third_party_provider: cbd
