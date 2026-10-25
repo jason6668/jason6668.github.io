@@ -1,7 +1,7 @@
 ---
 title: 六四：一场被抹去的记忆，和不敢被提起的追问
 categories: [时事锐评]
-tags: [六四, 八九学潮, 历史真相, 年轻人]
+tags: [马老师杂谈, 六四, 八九学潮, 历史真相, 年轻人]
 description: 有些事可以封锁，有些记忆删不掉。说白了，越不让提，越说明心虚。
 cover: /images/64-yundong.jpg
 abbrlink: 64-yundong

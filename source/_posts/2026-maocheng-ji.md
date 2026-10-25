@@ -2,7 +2,7 @@
 title: 猫国人吃迷叶亡了国：一百年了，为什么还在骂"国民性"
 date: 2019-06-30 08:20:00
 categories: 老舍
-tags: [老舍, 猫城记, 讽刺, 国民性]
+tags: [马老师杂谈, 老舍, 猫城记, 讽刺, 国民性]
 description: 老舍借火星上的猫国，骂的是当时的中国。一百年过去，为什么"国民性"这个词还没过时？
 cover: /images/maocheng-ji.jpg
 abbrlink: laoshe-maochengji

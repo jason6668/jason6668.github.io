@@ -1,7 +1,7 @@
 ---
 title: 《躺平》不是道家，内卷才是：被误解了两千年的老庄
 categories: 诸子百家
-tags: [道家, 诸子百家, 老子, 庄子, 躺平, 马老师]
+tags: [马老师杂谈, 道家, 诸子百家, 老子, 庄子, 躺平, 马老师]
 description: 一说到道家就想到《躺平》《摆烂》？大错特错。老子和庄子要是活在今天，头一个看不上的就是躺平。这篇讲透道家真正的智慧。
 cover: /images/daojia-sixiang.jpg
 abbrlink: zhuzi-daojia

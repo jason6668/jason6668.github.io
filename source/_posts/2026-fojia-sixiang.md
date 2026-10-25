@@ -1,7 +1,7 @@
 ---
 title: '"佛系"不是佛教：被误解最深的"外来户"，怎么成了中国人的精神止痛药'
 categories: 诸子百家
-tags: [佛家, 佛教, 禅宗, 诸子百家, 马老师]
+tags: [马老师杂谈, 佛家, 佛教, 禅宗, 诸子百家, 马老师]
 description: 四谛八正道说的是什么？禅宗为什么是中国化的佛教？"佛系"青年跟真佛教有半毛钱关系吗？这篇把话说透。
 cover: /images/fojia-sixiang.jpg
 abbrlink: zhuzi-fojia

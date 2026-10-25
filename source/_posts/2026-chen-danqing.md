@@ -1,7 +1,7 @@
 ---
 title: 陈丹青：这个"老愤青"的话，为什么总能让年轻人清醒？
 categories: 文化
-tags: [陈丹青, 文化批评, 教育, 艺术, 马老师]
+tags: [马老师杂谈, 陈丹青, 文化批评, 教育, 艺术, 马老师]
 description: 从《西藏组画》到《退步集》，从清华辞职到《局部》，陈丹青骂了二十年，骂的都是真话。这篇讲讲他到底在骂什么。
 cover: /images/chen-danqing.jpg
 abbrlink: chen-danqing

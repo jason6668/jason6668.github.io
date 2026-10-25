@@ -1,7 +1,7 @@
 ---
 title: 近现代：从民国到今天，一百年走了个来回
 categories: [历史]
-tags: [民国, 新中国, 改革开放, 近现代史]
+tags: [马老师杂谈, 民国, 新中国, 改革开放, 近现代史]
 description: 一百年，从帝制到共和再到今天。说白了，有些问题换了个马甲还在。
 cover: /images/jindai-xiandai.jpg
 abbrlink: jindai-xiandai

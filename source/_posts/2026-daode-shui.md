@@ -1,7 +1,7 @@
 ---
 title: 道德税：最狠的税，不用法律只用良心收割你
 categories: [时事锐评]
-tags: [道德绑架, 道德税, 社会]
+tags: [马老师杂谈, 道德绑架, 道德税, 社会]
 description: 捐款要攀比，让座被审判，扶人怕被讹。说白了，道德一旦变成税，好人就成了待宰的羔羊。
 cover: /images/daode-shui.jpg
 abbrlink: daode-shui

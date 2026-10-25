@@ -2,7 +2,7 @@
 title: 毕业即失业：千万大学生的青春，正在被谁收割
 date: 2019-10-11 21:15:00
 categories: [时事锐评]
-tags: [社会批判, 大学生就业, 失业]
+tags: [马老师杂谈, 社会批判, 大学生就业, 失业]
 description: 一年一千多万毕业生涌进就业市场，岗位却越来越少，考研考公卷上天，外卖和网约车装下无数本科生——毕业即失业这场游戏，到底谁在赢
 cover: /images/daxuesheng-shiye.jpg
 abbrlink: daxuesheng-shiye

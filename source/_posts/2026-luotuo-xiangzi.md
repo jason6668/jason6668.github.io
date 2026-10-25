@@ -2,7 +2,7 @@
 title: 三次买车三次失去：祥子不是懒，是这个世道不让他好好活
 date: 2019-06-26 08:00:00
 categories: 老舍
-tags: [老舍, 骆驼祥子, 打工人, 内卷]
+tags: [马老师杂谈, 老舍, 骆驼祥子, 打工人, 内卷]
 description: 一个老实人是怎么被逼成混混的？祥子的买车梦，和今天外卖骑手的买车梦，有什么区别？
 cover: /images/luotuo-xiangzi.jpg
 abbrlink: laoshe-xiangzi
