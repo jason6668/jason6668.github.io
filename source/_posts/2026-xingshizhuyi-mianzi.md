@@ -2,7 +2,7 @@
 title: 形式主义：面子工程的花样，劳民伤财的真相
 date: 2020-07-27 19:00:00
 categories: 时事锐评
-tags: [形式主义, 社会批判, 面子工程]
+tags: [马老师杂谈, 形式主义, 社会批判, 面子工程]
 description: 刷墙、摆拍、数字扶贫、烂尾广场——面子做足了，里子全没了，这笔账到底谁在买单？
 cover: /images/xingshi-cover.jpg
 abbrlink: xingshizhuyi-mianzi
