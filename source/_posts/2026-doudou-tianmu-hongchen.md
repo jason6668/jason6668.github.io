@@ -1,7 +1,7 @@
 ---
 title: 《天幕红尘》：看透了，就别再装睡了
 categories: 豆豆三部曲
-tags: [豆豆, 天幕红尘, 叶子农, 见路不走, 知识分子]
+tags: [马老师杂谈, 天幕红尘, 叶子农, 见路不走, 知识分子]
 description: 叶子农"见路不走"，在巴黎街头被人一刀捅死。豆豆下手最狠的一部，写给所有不愿装睡的人。
 cover: /images/doudou-tianmu-cover.jpg
 abbrlink: doudou-tianmu-hongchen

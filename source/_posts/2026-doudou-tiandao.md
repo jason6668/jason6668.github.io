@@ -1,7 +1,7 @@
 ---
 title: 《天道》：别怪命不好，你的文化属性里写着结局
 categories: 豆豆三部曲
-tags: [豆豆, 天道, 丁元英, 文化属性, 商战]
+tags: [马老师杂谈, 天道, 丁元英, 文化属性, 商战]
 description: 电视剧《天道》为什么封神？丁元英的"文化属性"到底在说什么？从王庙村扶贫到格律诗商战，马老师带你掰开揉碎讲透。
 cover: /images/doudou-tiandao-cover.jpg
 abbrlink: doudou-tiandao

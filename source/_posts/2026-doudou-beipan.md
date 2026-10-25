@@ -1,7 +1,7 @@
 ---
 title: 《背叛》：一个"骗子"教会我们的，比所有成功学都值钱
 categories: 豆豆三部曲
-tags: [豆豆, 背叛, 夏英杰, 和氏璧, 人性]
+tags: [马老师杂谈, 背叛, 夏英杰, 和氏璧, 人性]
 description: 一个老板自己举报自己偷税，心甘情愿蹲监狱。豆豆《背叛》讲的不是背叛，是比忠诚更难的东西。
 cover: /images/doudou-beipan-cover.jpg
 abbrlink: doudou-beipan
