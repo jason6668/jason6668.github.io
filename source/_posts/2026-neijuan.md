@@ -1,7 +1,7 @@
 ---
 title: 内卷：人人都在跑，可终点线一直在往后挪
 categories: [时事锐评]
-tags: [内卷, 打工人, 焦虑, 躺平]
+tags: [马老师杂谈, 内卷, 打工人, 焦虑, 躺平]
 description: 补课的卷、加班的卷、考公的卷，卷到最后谁赢了？说白了，卷赢的从来不是卷的人，是卖镰刀的人。
 cover: /images/neijuan.jpg
 abbrlink: neijuan

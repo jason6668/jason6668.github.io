@@ -1,7 +1,7 @@
 ---
 title: 夏商周：分封制注定崩溃，礼崩乐坏是必然
 categories: [历史]
-tags: [夏商周, 分封制, 礼乐, 春秋战国]
+tags: [马老师杂谈, 夏商周, 分封制, 礼乐, 春秋战国]
 description: 周天子分封天下，最后诸侯一个个反了。说白了，分出去的权力，泼出去的水。
 cover: /images/xia-shang-zhou.jpg
 abbrlink: xia-shang-zhou

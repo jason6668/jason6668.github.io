@@ -1,7 +1,7 @@
 ---
 title: 明清：皇权登峰造极，也是下坡的开始
 categories: [历史]
-tags: [明朝, 清朝, 皇权专制, 闭关锁国, 鸦片战争]
+tags: [马老师杂谈, 明朝, 清朝, 皇权专制, 闭关锁国, 鸦片战争]
 description: 皇权越来越大，国门越关越紧。说白了，自己把自己玩死的，古今第一。
 cover: /images/ming-qing.jpg
 abbrlink: ming-qing

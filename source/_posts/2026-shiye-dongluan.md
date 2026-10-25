@@ -1,7 +1,7 @@
 ---
 title: 失业潮之后：中国社会将出现什么现状？会不会乱，说透了
 categories: [时事锐评]
-tags: [失业, 社会, 预测]
+tags: [马老师杂谈, 失业, 社会, 预测]
 description: 几千万人没活干，社会会发生什么？说白了，不会一夜大乱，但会温水煮青蛙式地烂。这篇大胆预测，专叫装睡的人。
 cover: /images/shiye-dongluan.jpg
 abbrlink: shiye-dongluan

@@ -1,7 +1,7 @@
 ---
 title: 孝道绑架：爱一旦变成武器，亲情就变了味
 categories: [时事锐评]
-tags: [孝道, 亲情, 绑架, 家庭]
+tags: [马老师杂谈, 孝道, 亲情, 绑架, 家庭]
 description: 我养你这么大容易吗？这句话一出口，亲情就变成了债务。说白了，真孝顺是情分，被要挟的孝叫愚孝。
 cover: /images/xiaodao-bangjia.jpg
 abbrlink: xiaodao-bangjia

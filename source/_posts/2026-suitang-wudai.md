@@ -1,7 +1,7 @@
 ---
 title: 隋唐五代：盛世有多辉煌，崩塌就有多惨烈
 categories: [历史]
-tags: [隋朝, 唐朝, 五代十国, 盛世, 安史之乱]
+tags: [马老师杂谈, 隋朝, 唐朝, 五代十国, 盛世, 安史之乱]
 description: 开元盛世万国来朝，安史之乱一夜回到解放前。说白了，盛世是租来的，到期就得还。
 cover: /images/suitang-wudai.jpg
 abbrlink: suitang-wudai

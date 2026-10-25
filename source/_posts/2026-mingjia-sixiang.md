@@ -1,7 +1,7 @@
 ---
 title: 《白马非马》不是抬杠：被骂了两千年的名家，其实是中国逻辑学的祖师爷
 categories: 诸子百家
-tags: [诸子百家, 名家, 公孙龙, 惠施, 逻辑, 马老师]
+tags: [马老师杂谈, 诸子百家, 名家, 公孙龙, 惠施, 逻辑, 马老师]
 description: 公孙龙说《白马非马》，被笑话了两千年。可名家玩的真是诡辩吗？今天评论区里的杠精，和他们有什么区别？
 cover: /images/mingjia-sixiang.jpg
 abbrlink: zhuzi-mingjia

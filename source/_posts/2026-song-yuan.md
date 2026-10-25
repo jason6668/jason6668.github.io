@@ -1,7 +1,7 @@
 ---
 title: 宋元：最有钱的朝代，为什么最挨打
 categories: [历史]
-tags: [宋朝, 元朝, 重文轻武, 靖康之耻, 蒙古]
+tags: [马老师杂谈, 宋朝, 元朝, 重文轻武, 靖康之耻, 蒙古]
 description: 宋朝GDP世界第一，却被打得迁都又迁都。说白了，有钱没枪，钱就是别人的。
 cover: /images/song-yuan.jpg
 abbrlink: song-yuan

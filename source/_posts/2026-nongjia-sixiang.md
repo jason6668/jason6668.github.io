@@ -1,7 +1,7 @@
 ---
 title: 最接地气的学派，为什么最早被遗忘？
 categories: 诸子百家
-tags: [农家, 许行, 三农, 诸子百家, 马老师]
+tags: [马老师杂谈, 农家, 许行, 三农, 诸子百家, 马老师]
 description: 君民并耕、民以食为天，农家是最讲"人话"的学派。可为什么诸子百家中，它最早被遗忘？看看今天"谁来种地"的困境，答案扎心了。
 cover: /images/nongjia-sixiang.jpg
 abbrlink: zhuzi-nongjia

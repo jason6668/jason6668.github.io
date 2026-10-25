@@ -1,7 +1,7 @@
 ---
 title: 中国失业率预测：数字会好看，但你家的账本不会说谎
 categories: [时事锐评]
-tags: [失业, 就业, 经济]
+tags: [马老师杂谈, 失业, 就业, 经济]
 description: 毕业生一年比一年多，岗位一年比一年少。说白了，失业率预测不用看统计局，看你身边多少人不敢辞职就够了。
 cover: /images/shiyelv-yuce.jpg
 abbrlink: shiyelv-yuce

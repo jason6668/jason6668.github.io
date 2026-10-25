@@ -1,7 +1,7 @@
 ---
 title: 三国两晋南北朝：门阀的天下，寒门的血泪
 categories: [历史]
-tags: [三国, 两晋, 南北朝, 门阀, 五胡乱华]
+tags: [马老师杂谈, 三国, 两晋, 南北朝, 门阀, 五胡乱华]
 description: 上品无寒门，下品无士族。说白了，投胎是门技术活，古今都一样。
 cover: /images/sanguo-nanbeichao.jpg
 abbrlink: sanguo-nanbeichao

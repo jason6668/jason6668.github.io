@@ -1,7 +1,7 @@
 ---
 title: 秦汉：大一统的荣耀，与老百姓的代价
 categories: [历史]
-tags: [秦朝, 汉朝, 秦始皇, 郡县制, 大一统]
+tags: [马老师杂谈, 秦朝, 汉朝, 秦始皇, 郡县制, 大一统]
 description: 秦始皇统一天下，十五年就亡了。说白了，把老百姓当柴烧，火再旺也长久不了。
 cover: /images/qin-han.jpg
 abbrlink: qin-han

@@ -1,7 +1,7 @@
 ---
 title: 为啥中国人底层这么穷：不是你不努力，是这局游戏就这么设计的
 categories: [时事锐评]
-tags: [贫穷, 底层, 工资, 分配, 内卷]
+tags: [马老师杂谈, 贫穷, 底层, 工资, 分配, 内卷]
 description: 二三线3000，县城2500，一线6000都算高薪。说白了，穷不是因为你懒，是分蛋糕的人没打算分给你。
 cover: /images/weishenme-qiong.jpg
 abbrlink: weishenme-qiong
