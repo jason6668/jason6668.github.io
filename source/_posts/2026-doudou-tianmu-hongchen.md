@@ -1,10 +1,12 @@
 ---
-title: 《天幕红尘》：看透了，就别再装睡了
-categories: 豆豆三部曲
-tags: [马老师杂谈, 天幕红尘, 叶子农, 见路不走, 知识分子]
-description: 叶子农"见路不走"，在巴黎街头被人一刀捅死。豆豆下手最狠的一部，写给所有不愿装睡的人。
-cover: /images/doudou-tianmu-cover.jpg
-abbrlink: doudou-tianmu-hongchen
+title: 《天幕红尘》：看透了，就别再装睡了
+categories:
+  - 豆豆三部曲
+  - 马老师杂谈
+tags: [马老师杂谈, 天幕红尘, 叶子农, 见路不走, 知识分子]
+description: 叶子农"见路不走"，在巴黎街头被人一刀捅死。豆豆下手最狠的一部，写给所有不愿装睡的人。
+cover: /images/doudou-tianmu-cover.jpg
+abbrlink: doudou-tianmu-hongchen
 date: 2019-09-14 12:00:00
 ---
 很多人是看《天道》入的坑。丁元英一出场，弹古琴，喝大红袍，张口就是"文化属性"，逼格直接拉满。可你真把豆豆这三部曲读完，就会发现《天幕红尘》才是她下手最狠的一部——狠到什么份上？主角叶子农，一个把社会看得透透的人，结果在巴黎街头被人一刀捅死，连个像样的葬礼都没有。
