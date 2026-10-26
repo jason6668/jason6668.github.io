@@ -1,12 +1,10 @@
 ---
-title: 《遥远的救世主》：没有救世主，能渡你的只有你自己
-categories:
-  - 豆豆三部曲
-  - 马老师杂谈
-tags: [马老师杂谈, 遥远的救世主, 丁元英, 芮小丹, 文化属性, 人性]
-description: 电视剧《天道》的原著，豆豆《遥远的救世主》人物全分析：丁元英为什么不救人，芮小丹为什么敢死，刘冰为什么非死不可。马老师角度讲透文化属性。
-cover: /images/yaoyuan-cover.jpg
-abbrlink: yaoyuan-de-jiushizhu
+title: 《遥远的救世主》：没有救世主，能渡你的只有你自己
+categories: 马老师杂谈
+tags: [马老师杂谈, 遥远的救世主, 丁元英, 芮小丹, 文化属性, 人性]
+description: 电视剧《天道》的原著，豆豆《遥远的救世主》人物全分析：丁元英为什么不救人，芮小丹为什么敢死，刘冰为什么非死不可。马老师角度讲透文化属性。
+cover: /images/yaoyuan-cover.jpg
+abbrlink: yaoyuan-de-jiushizhu
 date: 2026-10-25 20:00:00
 ---
 
