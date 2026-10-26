@@ -1,7 +1,9 @@
 ---
 title: 雾起江城
 date: 2026-10-24 19:00:00
-categories: 杂谈
+categories:
+  - 杂谈
+  - 马老师杂谈
 tags: 马老师杂谈
 cover: /images/wuqi-jiangcheng/cover.jpg
 abbrlink: wu-qi-jiang-cheng
