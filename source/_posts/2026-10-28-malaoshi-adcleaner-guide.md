@@ -1,7 +1,7 @@
 ---
 title: 马老师专属去广告使用教程，插上数据线点几下关掉手机广告
 categories: [马老师杂谈]
-tags: [马老师杂谈]
+tags: [马老师杂谈, 马老师工具分享]
 description: 马老师专属去广告 Windows 客户端完整使用教程，从下载安装到连接手机、检测、选择、执行、还原，讲清楚
 cover: /images/malaoshi-adcleaner-guide.jpg
 abbrlink: malaoshi-adcleaner-guide
