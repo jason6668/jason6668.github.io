@@ -233,3 +233,16 @@
     overflow: hidden;
   }
 }
+/* 标签页文章标题完整显示：取消单行省略，信息区高度自适应 */
+#tag .article-sort-item-info {
+  height: auto;
+  max-height: none;
+}
+#tag .article-sort-item-info .article-sort-item-title {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+  height: auto;
+}
