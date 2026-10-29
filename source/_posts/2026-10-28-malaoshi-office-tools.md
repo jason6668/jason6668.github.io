@@ -2,7 +2,7 @@
 title: 马老师专属 Office 工具：一键下载、安装、激活 Office
 date: 2026-10-28 12:58:00
 categories: [马老师杂谈]
-tags: [马老师杂谈, 工具教程]
+tags: [马老师杂谈, 工具教程, 马老师工具分享]
 description: 马老师专属 Office 工具使用教程，一键下载安装激活 Office，附下载地址。
 cover: /images/malaoshi-office-tools.jpg
 abbrlink: malaoshi-office-tools
