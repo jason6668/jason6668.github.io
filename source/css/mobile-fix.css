@@ -250,15 +250,23 @@
 }
 /* 标签页 PC 端：保持 PC 布局（2026-10-30 修你截图里窄列右移的问题）
    居中宽列、左栏右主文；主题在 1200px 以下会改纵向，这里在 PC 宽度下强制横排，
-   宽列下标题最多两行，长标题基本一行能放下，不再像手机那样折三行。 */
+   宽列下标题最多两行，长标题基本一行能放下，不再像手机那样折三行。
+   2026-10-30 晚补强：上一版只写 max-width，实测仍缩回 787px 宽、左 844 右 289；
+   这次把宽写死、父容器写满、主列最小宽清零，杜绝 flex 收缩。 */
 @media screen and (min-width: 901px) {
+  #blog-container {
+    width: 100% !important;
+  }
   #content-inner.layout {
+    width: 1400px !important;
     max-width: 1400px !important;
+    min-width: 0 !important;
     margin-left: auto !important;
     margin-right: auto !important;
     flex-direction: row !important;
     -webkit-box-orient: horizontal !important;
     justify-content: center !important;
+    flex: none !important;
   }
   #content-inner.layout > #aside-content {
     -webkit-box-ordinal-group: 1 !important;
@@ -291,4 +299,42 @@
     white-space: normal;
     height: auto;
   }
+  #content-inner.layout > #tag {
+    min-width: 0 !important;
+  }
+}
+
+/* 标签栏（2026-10-30 用户令“你自己看着来”后定）：
+   主区文章下面的大标签云用 flex 顺序提到标题下面、文章上面，
+   但只占一行横向可滑的小药丸栏，不把文章推到下面；
+   侧边栏标签云原来标题是空的，给它补一个“标签”标题，免得看着像无名列表。 */
+#tag {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#tag .article-sort-title {
+  order: 1 !important;
+}
+#tag #tag-page-tags {
+  order: 2 !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-height: 56px !important;
+  padding-bottom: 4px !important;
+  scrollbar-width: thin !important;
+}
+#tag #tag-page-tags a {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+#tag .article-sort {
+  order: 3 !important;
+  width: 100% !important;
+}
+#aside-content .card-tags .item-headline::after {
+  content: "标签";
+  font-size: 1rem;
+  font-weight: bold;
 }
