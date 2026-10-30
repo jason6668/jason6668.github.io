@@ -338,3 +338,18 @@
   font-size: 1rem;
   font-weight: bold;
 }
+
+/* PC 窄列真因（2026-10-30 晚，页眉/页脚 256-1628、主区 842-1628 对照实锤）：
+   #content-inner 是横排 flex，里面除了侧边栏、主区，还有一个 nav#pagination，
+   主题给它 width:100%，order 默认 0，等于在左边占了一个 100% 宽的隐形格子，
+   把侧边栏和主区往右挤、主区被 flex 收缩压到 490，标题才截断。
+   修法：让主容器换行，分页栏 order 排到最后、独占一行，侧边栏和主区回第一行。 */
+#content-inner.layout {
+  flex-wrap: wrap !important;
+}
+#content-inner.layout > nav#pagination {
+  order: 3 !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
