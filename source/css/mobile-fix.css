@@ -233,16 +233,62 @@
     overflow: hidden;
   }
 }
-/* 标签页文章标题完整显示：取消单行省略，信息区高度自适应 */
-#tag .article-sort-item-info {
-  height: auto;
-  max-height: none;
+/* 标签页标题：手机端完整显示（2026-10-29 旧规则原样收进手机断点，不再影响 PC） */
+@media screen and (max-width: 900px) {
+  #tag .article-sort-item-info {
+    height: auto;
+    max-height: none;
+  }
+  #tag .article-sort-item-info .article-sort-item-title {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    height: auto;
+  }
 }
-#tag .article-sort-item-info .article-sort-item-title {
-  display: block;
-  -webkit-line-clamp: unset;
-  overflow: visible;
-  text-overflow: clip;
-  white-space: normal;
-  height: auto;
+/* 标签页 PC 端：保持 PC 布局（2026-10-30 修你截图里窄列右移的问题）
+   居中宽列、左栏右主文；主题在 1200px 以下会改纵向，这里在 PC 宽度下强制横排，
+   宽列下标题最多两行，长标题基本一行能放下，不再像手机那样折三行。 */
+@media screen and (min-width: 901px) {
+  #content-inner.layout {
+    max-width: 1400px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex-direction: row !important;
+    -webkit-box-orient: horizontal !important;
+    justify-content: center !important;
+  }
+  #content-inner.layout > #aside-content {
+    -webkit-box-ordinal-group: 1 !important;
+    -moz-box-ordinal-group: 1 !important;
+    -ms-flex-order: 1 !important;
+    -webkit-order: 1 !important;
+    order: 1 !important;
+    width: 300px !important;
+    flex: 0 0 300px !important;
+  }
+  #content-inner.layout > #tag {
+    -webkit-box-ordinal-group: 2 !important;
+    -moz-box-ordinal-group: 2 !important;
+    -ms-flex-order: 2 !important;
+    -webkit-order: 2 !important;
+    order: 2 !important;
+    width: calc(100% - 300px) !important;
+    flex: 1 1 auto !important;
+  }
+  #tag .article-sort-item-info {
+    height: auto;
+    max-height: none;
+  }
+  #tag .article-sort-item-info .article-sort-item-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    height: auto;
+  }
 }
