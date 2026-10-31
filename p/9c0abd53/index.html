@@ -1,0 +1,1020 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><title>全平台代理客户端与订阅转换工具使用教程 | 马老师BLOG</title><meta name="keywords" content="马老师工具分享,科学详解"><meta name="author" content="马老师"><meta name="copyright" content="马老师"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#f7f9fe"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="apple-mobile-web-app-title" content="全平台代理客户端与订阅转换工具使用教程"><meta name="application-name" content="全平台代理客户端与订阅转换工具使用教程"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="#f7f9fe"><meta property="og:type" content="article"><meta property="og:title" content="全平台代理客户端与订阅转换工具使用教程"><meta property="og:url" content="https://blog.8818618.xyz/p/9c0abd53/index.html"><meta property="og:site_name" content="马老师BLOG"><meta property="og:description" content="全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题上一篇文章整理了 Windows、macOS、Linux、Android、iOS 常见代理客户端和订阅转换工具。这一篇更偏向实操，重点讲每一个工具怎么用，包括下载安装、导入配置、开启代理、更新订阅和常见问题处理。 本文只介绍"><meta property="og:locale" content="zh-CN"><meta property="og:image" content="https://blog.8818618.xyz/images/cover-proxy-clients-20261004.jpg"><meta property="article:author" content="马老师"><meta property="article:tag" content="马老师,博客,心理咨询师,教程,分享,失业联盟,搭子"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://blog.8818618.xyz/images/cover-proxy-clients-20261004.jpg"><meta name="description" content="全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题上一篇文章整理了 Windows、macOS、Linux、Android、iOS 常见代理客户端和订阅转换工具。这一篇更偏向实操，重点讲每一个工具怎么用，包括下载安装、导入配置、开启代理、更新订阅和常见问题处理。 本文只介绍"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://blog.8818618.xyz/p/9c0abd53/"><link rel="preconnect" href="//cdn.cbd.int"/><meta name="google-site-verification" content="xxx"/><meta name="baidu-site-verification" content="code-xxx"/><meta name="msvalidate.01" content="xxx"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/swiper/swiper.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  linkPageTop: undefined,
+  peoplecanvas: undefined,
+  postHeadAiDescription: {"enable":true,"gptName":"AnZhiYu","mode":"tianli","switchBtn":false,"btnLink":"https://afdian.net/item/886a79d4db6711eda42a52540025c377","randomNum":3,"basicWordCount":1000,"key":"S-DUCSO4G2QZ1Z7SLR","Referer":"https://comema.ggff.net/"},
+  diytitle: {"enable":true,"leaveTitle":"w(ﾟДﾟ)w 不要走！再看看嘛！","backTitle":"♪(^∇^*)欢迎肥来！"},
+  LA51: undefined,
+  greetingBox: undefined,
+  twikooEnvId: 'https://comment.8818618.xyz',
+  commentBarrageConfig:undefined,
+  music_page_default: "nav_music",
+  root: '/',
+  preloader: {"source":3},
+  friends_vue_info: undefined,
+  navMusic: true,
+  mainTone: undefined,
+  authorStatus: {"skills":["🤖️ 心理咨询师","🔍 分享与热心帮助","🏠 正红旗少先队大队长","🔨 设计开发一条龙","🤝 专修交互与设计","🏃 脚踏实地行动派","🧱 团队小组发动机","💢 闲得蛋疼"]},
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: {"defaultEncoding":2,"translateDelay":0,"msgToTraditionalChinese":"繁","msgToSimplifiedChinese":"简","rightMenuMsgToTraditionalChinese":"转为繁体","rightMenuMsgToSimplifiedChinese":"转为简体"},
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":330},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    simplehomepage: true,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"copy":true,"copyrightEbable":true,"limitCount":50,"languages":{"author":"作者: 马老师","link":"链接: ","source":"来源: 马老师BLOG","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。","copySuccess":"复制成功，复制和转载请标注本文地址"}},
+  lightbox: 'fancybox',
+  Snackbar: {"chs_to_cht":"你已切换为繁体","cht_to_chs":"你已切换为简体","day_to_night":"你已切换为深色模式","night_to_day":"你已切换为浅色模式","bgLight":"#425AEF","bgDark":"#1f1f1f","position":"top-center"},
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.min.js',
+      css: 'https://cdn.cbd.int/flickr-justified-gallery@2.2.0/dist/fjGallery.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  shortcutKey: undefined,
+  autoDarkmode: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  configTitle: '马老师BLOG',
+  title: '全平台代理客户端与订阅转换工具使用教程',
+  postAI: '',
+  pageFillDescription: '全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题, 一、使用前准备, 二、订阅转换工具教程, 1.  使用教程, 适合谁用, 基础使用流程, 常见参数理解, 常见问题, 2.  使用教程, 适合谁用, 基础使用流程, 使用建议, 常见问题, 3.  使用教程, 适合谁用, Windows x2F macOS x2F Linux 安装, Android 安装, iOS 安装, 导入订阅, 使用建议, 常见问题, 4.  使用教程, 适合谁用, 基础使用流程, 使用建议, 常见问题, 5.  使用教程, 适合谁用, 基础使用流程, 使用建议, 三、跨平台客户端教程, 6.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 7.  使用教程, 安装方法, 导入订阅, 启动使用, 常见问题, 8.  使用教程, 安装方法, 导入订阅, 启动代理, 使用建议, 9.  使用教程, 安装方法, 导入订阅, 多设备同步建议, 常见问题, 四、Windows 客户端教程, 10.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 11.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 12.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 五、macOS 客户端教程, 13.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 14.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 15.  使用教程, 安装方法, 导入订阅, 启动代理, 使用建议, 常见问题, 16.  使用教程, 安装方法, 导入配置, 启动使用, 使用建议, 常见问题, 六、Android 客户端教程, 17.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 18.  使用教程, 安装方法, 导入订阅, 手动导入, 启动代理, 常见问题, 19.  使用教程, 安装方法, 导入订阅, 启动代理, 使用建议, 常见问题, 20.  使用教程, 安装方法, 配置方法, 启动方法, 常见问题, 七、iOS 客户端教程, 21.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 22.  使用教程, 安装方法, 导入订阅, 导入配置, 启动代理, 使用建议, 23.  使用教程, 安装方法, 导入订阅, 启动代理, 常见问题, 24.  使用教程, 安装方法, 导入配置, 启动代理, 常见问题, 25.  使用教程, 安装方法, 添加节点, 添加订阅, 常见问题, 26.  使用教程, 安装方法, 导入访问密钥, 启动连接, 常见问题, 八、通用排错方法, 1. 订阅导入失败, 2. 连接成功但网页打不开, 3. 手机后台自动断开, 4. 节点测速全部失败, 九、安全提醒, 十、总结全平台代理客户端与订阅转换工具使用教程每个工具怎么安装导入订阅和排查问题上一篇文章整理了常见代理客户端和订阅转换工具这一篇更偏向实操重点讲每一个工具怎么用包括下载安装导入配置开启代理更新订阅和常见问题处理本文只介绍工具使用方法不推荐任何服务商也不提供节点购买建议工具清单参考自项目该项目说明中提到工具覆盖并且下载链接主要指向官方或以降低下载到假冒安装包的风险一使用前准备在开始之前你需要准备三样东西一个对应系统的客户端一个可用的订阅链接配置文件或手动节点信息一个能正常访问下载页面的网络环境常见导入方式有三种订阅链接导入本地配置文件导入二维码或手动添加节点如果你手里的订阅格式和客户端不兼容就需要使用订阅转换工具原项目也把订阅转换工具单独列为一类用来解决等格式之间不兼容的问题二订阅转换工具教程使用教程是经典订阅转换工具适合把一种订阅格式转换成另一种客户端可识别的格式它的官方说明中写明支持等多种格式作为源或目标格式并提供了接口形式的转换方法适合谁用适合需要多格式转换多订阅合并自建转换服务的人不太适合完全不想接触参数的新手基础使用流程第一步打开项目页面第二步根据自己的系统下载中对应版本如果你只是普通用户更推荐使用已经部署好的前端或服务端如果你有服务器可以自行部署第三步准备你的原始订阅链接第四步选择目标格式例如客户端选择选择选择选择选择第五步生成转换后的订阅链接再复制到目标客户端中导入常见参数理解常见转换接口形式类似目标格式原订阅链接实际使用时原订阅链接通常需要进行否则可能因为链接里有特殊符号导致转换失败常见问题如果转换后无法导入优先检查三点第一原订阅链接是否有效第二目标格式是否选错第三订阅链接是否正确编码多个订阅合并时不建议一次性放太多来源先用一个订阅测试成功再逐步增加使用教程是高级订阅管理器适合等用户原项目介绍中也提到支持多订阅聚合规则处理格式转换和定时更新等功能适合谁用适合深度用户尤其是需要统一管理多个订阅多个客户端配置的人基础使用流程第一步打开项目页面第二步按项目说明部署或使用已有面板第三步进入管理界面第四步新建订阅把原始订阅链接粘贴进去第五步选择输出类型例如等第六步保存后复制生成的新订阅链接第七步把新订阅链接导入对应客户端使用建议不只是转换工具更适合长期管理订阅你可以用它做节点筛选重命名分组规则处理和定时更新新手第一次使用时建议只做一件事把一个原始订阅转换成一个目标客户端订阅等确认能用后再研究高级脚本和规则常见问题如果生成的链接导入失败先不要改复杂脚本先测试最基础的转换流程原订阅链接生成目标订阅客户端导入如果基础流程成功再逐步添加规则处理使用教程是跨平台客户端支持原项目介绍中提到它基于内核支持多平台多协议模式远程配置文件和内置测速等功能适合谁用适合新手多设备用户以及想要一个客户端解决大部分配置问题的人安装第一步打开第二步下载与你系统对应的安装包通常选择或通常选择可选择或其他对应格式第三步安装并打开软件第四步首次打开时按系统提示允许网络权限或权限安装第一步打开第二步下载第三步安装如果系统提示禁止安装未知来源应用需要在系统设置里允许当前浏览器或文件管理器安装应用第四步打开允许创建配置安装用户可以通过或项目提供的方式安装若地区无法搜索到需要检查地区导入订阅打开后一般可以通过以下方式导入粘贴订阅链接扫描二维码导入配置文件从剪贴板识别配置导入成功后先进行一次测速再选择延迟较低的节点连接使用建议新手建议先使用默认模式不要一开始就改高级路由等选项如果能正常使用再逐步调整规则和分流设置常见问题如果连接后没有效果检查是否允许权限是否开启系统代理或模式节点是否测速正常订阅是否已经过期是否被其他代理软件占用了端口使用教程是偏向配置转换的工具适合把其他格式转成可用配置适合谁用适合主要使用或其他前端的用户基础使用流程第一步打开项目页面第二步查看项目的使用方式第三步准备原始配置或订阅链接第四步按照工具要求输入源配置第五步生成配置第六步把生成的配置导入或支持的客户端使用建议如果你只是新手不建议直接手写复杂可以先用或这类图形客户端导入订阅等熟悉后再尝试单独转换配置常见问题配置对格式要求较严格如果导入失败常见原因是格式错误缺少必要字段协议字段不兼容或路由配置写错使用教程主要用于把或相关配置转换为配置适合谁用适合已经有配置但想迁移到的用户基础使用流程第一步打开项目页面第二步按照准备运行环境第三步输入原始订阅或配置第四步选择输出为配置第五步把输出配置保存为文件第六步在或支持的客户端中导入该配置使用建议更适合有一定动手能力的人如果只是日常使用优先考虑图形客户端如果你在做配置迁移批量转换或自定义配置会更合适三跨平台客户端教程使用教程是上常见的图形客户端原项目说明中提到它支持规则分流订阅管理和内核切换安装方法第一步打开第二步按系统下载下载或下载下载或第三步安装并打开软件第四步首次运行时按提示允许网络权限导入订阅打开软件后进入或配置页面点击添加配置粘贴订阅链接点击保存并更新选择刚刚导入的配置文件启动代理导入配置后打开系统代理开关选择模式作为日常使用模式在页面选择策略组和节点测试网页是否正常访问常见问题如果导入后没有节点可能是订阅格式不兼容可以先用转成格式如果系统代理开启后浏览器没效果检查浏览器是否安装了其他代理插件使用教程是简洁型客户端适合喜欢轻量操作的人安装方法打开下载对应系统安装包并安装用户选择或用户选择用户选择适合自己发行版的包导入订阅进入配置或订阅页面点击添加订阅粘贴订阅链接点击更新订阅确认节点列表已经出现启动使用开启系统代理选择规则模式进入节点页面选择可用节点进行延迟测试优先选择延迟稳定的节点常见问题如果订阅更新失败先检查链接是否完整再检查本地网络是否能访问订阅地址如果节点延迟全部超时可以换网络环境测试也可以检查防火墙是否拦截使用教程是风格的客户端原项目说明中提到它支持并且界面比较现代安装方法打开根据设备下载对应版本桌面端按普通软件安装下载后安装导入订阅进入配置页面点击添加配置或添加订阅粘贴订阅链接更新订阅切换到该配置启动代理开启代理服务选择规则模式进入代理组选择节点测试连接使用建议界面比较直观适合新手用户如果经常断开建议关闭系统对的电池优化使用教程是多平台代理客户端原项目中提到它支持并且支持前端和多平台配置同步安装方法桌面和用户可以打开下载用户可以通过安装导入订阅打开进入配置或订阅管理选择添加订阅粘贴订阅链接点击更新选择默认策略组多设备同步建议如果你在多台设备上使用可以先在一台设备上配置好订阅规则和策略再研究同步功能不要一开始就在多台设备同时修改配置容易混乱常见问题如果无法下载检查地区如果后台断开检查电池优化和常驻权限如果桌面端无法接管流量检查系统代理是否开启四客户端教程使用教程是上常见的系客户端适合使用等配置的用户原工具清单也把列为平台常见客户端安装方法打开下载压缩包或安装包解压后运行主程序如果提示缺少运行库按项目说明安装对应运行环境导入订阅打开找到订阅分组或订阅设置添加订阅地址点击更新订阅节点出现后选择一个节点启动代理右键系统托盘图标选择系统代理模式通常新手可以选择自动配置系统代理再选择一个可用节点作为活动服务器常见问题如果浏览器没有走代理检查系统代理是否已开启如果节点无法连接先更新订阅再换节点测试如果所有节点都不通检查本机防火墙或安全软件是否拦截使用教程是基于的跨平台代理客户端适合需要多协议和图形界面的用户安装方法打开下载对应系统版本解压或安装后运行用户注意不要把软件放在权限受限目录中导入订阅打开进入订阅或分组管理添加订阅链接更新订阅选择节点启动代理开启系统代理根据需要开启模式选择路由模式测试访问常见问题如果模式无法开启可能是权限不足可以尝试以管理员身份运行如果异常可以先关闭高级设置回到默认配置测试汉化版使用教程汉化版是旧版的汉化版本更适合需要兼容旧配置的用户安装方法打开汉化版下载安装包安装并运行导入订阅进入页面在输入框中粘贴订阅链接点击下载成功后选择该配置启动代理进入页面打开需要全局代理时选择日常使用建议选择常见问题如果配置下载失败检查订阅链接是否支持格式如果软件版本较旧建议优先考虑维护更活跃的或五客户端教程使用教程是上常见的客户端适合喜欢菜单栏操作的用户安装方法打开下载文件拖入应用程序文件夹首次打开时如果系统提示无法验证开发者可以在系统设置的安全性与隐私中允许打开导入订阅点击菜单栏图标找到配置或菜单选择从导入配置粘贴订阅链接下载并切换到该配置启动代理在菜单栏中打开选择模式进入菜单选择节点常见问题如果浏览器没有效果检查系统代理是否被其他软件覆盖如果菜单栏没有图标确认是否已经启动使用教程是平台的客户端适合使用系配置的用户原工具清单也把列为客户端安装方法打开下载文件拖入打开后允许网络权限导入订阅点击菜单栏图标进入服务器订阅设置添加订阅地址更新订阅选择一个节点启动代理开启系统代理选择或全局模式测试网页访问常见问题如果导入后节点为空检查订阅格式是否适合如果系统代理无效重启或检查网络代理设置使用教程是上的规则代理客户端也可在部分设备上使用页面介绍它适配规则并支持规则脚本重写等功能安装方法打开购买并安装打开后允许配置导入订阅进入首页点击配置文件或选择从下载配置粘贴兼容订阅链接保存并更新启动代理回到首页选择配置文件点击启动首次启动时允许添加配置使用建议适合使用规则的用户如果你的订阅不是格式可以先用或转换常见问题如果配置报错检查缩进和格式如果规则不生效确认当前模式是否为而不是或使用教程是专业级网络工具适合高级用户原工具清单也把列为平台的专业规则工具安装方法打开安装并打开按提示允许权限导入配置进入配置管理选择从安装配置或导入本地配置文件粘贴格式配置链接保存并应用配置启动使用选择当前配置打开开关检查策略组是否正常显示根据需要选择或使用建议功能很强但学习成本较高新手不要一开始就修改复杂脚本和重写规则先确认基础代理能正常工作再逐步学习模块和规则常见问题如果配置导入失败通常是配置格式不是格式如果解密相关功能异常检查证书是否正确安装和信任六客户端教程使用教程是上的客户端适合使用订阅的人安装方法打开下载安装并打开允许权限导入订阅进入点击新建配置选择导入粘贴订阅链接下载并启用配置启动代理回到首页点击启动进入代理页面选择节点选择模式常见问题如果无法安装检查手机架构和系统版本如果后台经常断开关闭电池优化并允许后台运行使用教程是上常见的客户端适合等配置安装方法打开下载安装后打开允许权限导入订阅点击右上角加号或菜单选择订阅设置添加订阅链接返回主界面点击更新订阅节点出现后选择一个节点手动导入如果你有二维码可以选择扫码导入如果你有节点链接可以复制到剪贴板再选择从剪贴板导入启动代理选择节点点击右下角启动按钮状态显示已连接后测试访问常见问题如果能连接但网页打不开检查路由设置和如果所有节点超时更新订阅或检查手机网络使用教程是上轻量的多协议客户端安装方法打开下载安装并打开允许配置权限导入订阅进入分组或配置管理添加订阅链接更新订阅选择节点启动代理点击启动按钮确认图标出现测试连接使用建议适合喜欢简洁界面的人新手可以先使用默认路由设置不要一开始就调整复杂常见问题如果无法启动检查是否已有其他应用正在运行如果节点导入失败检查订阅格式是否兼容使用教程是代理内核和客户端生态的重要工具适合有一定配置能力的用户原工具清单中也把列为平台客户端并提到其支持新协议安装方法打开根据系统下载对应版本用户下载桌面或服务器用户下载对应命令行版本配置方法通常使用配置文件你可以手动编写使用转换工具生成从兼容客户端导出使用等前端间接使用启动方法版打开后导入配置并启动命令行版本通常需要指定配置文件启动常见问题如果配置无法启动优先检查格式是否正确如果异常先使用最简单配置测试如果路由不生效检查规则顺序七客户端教程使用教程是上常见的代理客户端适合需要简单导入和快速使用的人原工具清单把它列为平台常见付费工具安装方法打开购买并安装打开后允许配置导入订阅打开点击右上角加号选择或订阅粘贴订阅链接保存后更新订阅启动代理回到首页选择节点打开顶部连接开关首次使用时允许添加配置常见问题如果订阅导入后为空检查订阅格式如果搜不到检查地区如果节点连接失败先换节点测试使用教程是上功能丰富的规则工具适合高级用户原工具清单中提到它支持脚本重写规则分流和任务自动化安装方法打开购买并安装打开后允许权限导入订阅进入设置页面找到节点资源或资源添加订阅链接保存并更新资源回到主界面选择节点导入配置如果你有完整配置文件可以通过配置文件或本地文件导入启动代理开启右上角开关选择策略模式查看日志确认连接是否正常使用建议功能较复杂新手先学会三件事添加节点订阅更新资源开启脚本重写定时任务等高级功能建议后面再学习使用教程是上的规则代理工具适合需要规则插件脚本功能的用户安装方法打开购买并安装首次启动时允许权限导入订阅进入配置或资源页面添加订阅链接选择节点类型或规则资源更新订阅返回首页选择策略启动代理开启开关选择规则模式测试连接常见问题如果规则不生效确认当前使用的是正确配置如果订阅导入失败使用转换成兼容格式后再导入使用教程是上的客户端适合配置用户安装方法打开安装并打开允许配置权限导入配置准备配置在应用中选择导入配置可以从文件导入也可以粘贴配置内容保存并启用配置启动代理选择配置点击启动检查图标是否出现常见问题如果配置启动失败重点检查格式如果你手上是订阅可以先用或转换后再导入使用教程是上的代理工具页面显示它支持等协议并支持二维码和手动输入等方式安装方法打开安装并打开允许权限添加节点点击添加代理选择手动输入二维码扫描或导入填写服务器端口加密方式密码等信息保存配置添加订阅如果使用订阅功能进入订阅或页面添加订阅链接更新订阅选择节点并启动常见问题如果连接失败检查协议类型和加密方式是否匹配如果订阅无法更新检查链接格式是否支持使用教程是偏简单化的代理客户端适合使用访问密钥的用户原工具清单也列出了的和下载入口安装方法用户打开用户打开安装后打开导入访问密钥复制访问密钥打开应用通常会自动识别剪贴板中的访问密钥点击添加服务器保存配置启动连接选择服务器点击连接首次使用时允许权限常见问题不适合导入这类复杂订阅它主要适合格式的访问密钥如果你手里是普通订阅链接需要换用等客户端八通用排错方法无论你使用哪个工具遇到问题时都可以按这个顺序排查原项目的快速开始指南也建议按选择客户端下载安装导入订阅配置客户端测试连接的流程操作并在连接异常时检查配置节点本地网络和防火墙等因素订阅导入失败先检查订阅链接是否复制完整链接是否过期客户端是否支持该格式是否需要先转换格式本地网络是否能访问订阅地址解决方式类客户端使用格式类客户端使用使用各自兼容格式格式不对时使用或转换连接成功但网页打不开先检查是否开启系统代理或是否选中了可用节点是否有其他代理软件冲突浏览器是否安装了独立代理插件是否异常当前模式是否选错建议先切换到测试如果能用不能用说明大概率是规则分流问题手机后台自动断开检查电池优化后台运行权限常驻权限系统管家限制检查是否手动关闭了是否切换网络导致断开是否需要重新授权配置节点测速全部失败常见原因订阅已经失效网络环境不稳定客户端内核异常防火墙拦截解析失败可以尝试更新订阅更换网络重启客户端换一个客户端测试查看日志定位错误九安全提醒下载客户端时尽量从官方官方网站或获取不要使用来源不明的安装包原项目免责声明也提醒相关工具仅供技术交流和学习使用使用时应遵守当地法律法规并注意免费节点和陌生配置可能带来的隐私风险建议做到不安装破解包不使用来历不明的二次打包版本不随意导入陌生人发来的配置文件不在不可信配置下登录重要账号定期更新客户端备份自己的配置遵守当地法律法规十总结如果你是新手优先从这类容易上手的客户端开始如果你需要订阅转换优先了解和如果你主要使用生态可以选择或实际使用中不需要每个工具都安装最合理的方式是每个平台保留一个主力客户端再准备一个订阅转换工具备用这样既方便管理也能减少系统代理冲突和配置混乱',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-07-12 08:03:52',
+  postMainColor: '',
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#18171d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#f7f9fe')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 6 || hour >= 18
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(e => {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/mobile-fix.css?v=2026103031"><link rel="stylesheet" href="/css/bg-eooce.css?v=20261009"><link rel="stylesheet" href="/css/aside-left.css?v=20261018b"><link rel="stylesheet" href="/css/ma-telegram-icon.css?v=20261017a"><meta name="generator" content="Hexo 8.1.2"><link rel="alternate" href="/atom.xml" title="马老师BLOG" type="application/atom+xml">
+</head><body data-type="anzhiyu"><div id="web_bg"></div><div id="an_music_bg"></div><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><img class="loading-img nolazyload" alt="加载头像" src="https://tc.8818618.xyz/file/1783850983366_image.png"/><div class="loading-image-dot"></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.getElementById('loading-box').classList.add("loaded");
+  },
+  initLoading: () => {
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+setTimeout(function(){preloader.endLoading();},10000)
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.10/progress_bar/progress_bar.css"/><script async="async" src="https://cdn.cbd.int/pace-js@1.2.4/pace.min.js" data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"></script><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><div id="nav-group"><span id="blog_name"><a id="site-name" href="/" accesskey="h"><div class="title">马老师BLOG</div><i class="anzhiyufont anzhiyu-icon-house-chimney"></i></a></span><div class="mask-name-container"><div id="name-container"><a id="page-name" href="javascript:anzhiyu.scrollToDest(0, 500)">PAGE_NAME</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 探索</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6%E9%9A%8F%E7%AC%94/"><i class="anzhiyufont anzhiyu-icon-heartbeat faa-tada" style="font-size: 0.9em;"></i><span> 心理学随笔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/blacklist/"><i class="anzhiyufont anzhiyu-icon-shield-halved faa-tada" style="font-size: 0.9em;"></i><span> 避雷专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mental-test/"><i class="anzhiyufont anzhiyu-icon-heart-pulse faa-tada" style="font-size: 0.9em;"></i><span> 心理自测</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mbti-test/"><i class="anzhiyufont anzhiyu-icon-brain faa-tada" style="font-size: 0.9em;"></i><span> MBTI测评</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/star-fortune/"><i class="anzhiyufont anzhiyu-icon-star faa-tada" style="font-size: 0.9em;"></i><span> 星座分析</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/liuyao/"><i class="anzhiyufont anzhiyu-icon-yin-yang faa-tada" style="font-size: 0.9em;"></i><span> 六爻占卜</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tutorial/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> 新手教程</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 点我试一试</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://nav.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-map-location-dot faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属导航</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://newsma.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-newspaper faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属新闻频道</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://cmgame.zone.id/"><i class="anzhiyufont anzhiyu-icon-gamepad faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼小游戏</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/moyu"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 专属服务</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属直播</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://tv.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-film faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属TV</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://bbs.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-comments faa-tada" style="font-size: 0.9em;"></i><span> 论坛社区</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vip.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-crown faa-tada" style="font-size: 0.9em;"></i><span> 会员服务</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://rewards.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 赞赏支持</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://ssh.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-terminal faa-tada" style="font-size: 0.9em;"></i><span> WebSSH</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vps.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-server faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属面板</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://sub.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-arrows-rotate faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属订阅转换</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://tunnel.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-road faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属隧道面板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li></ul></div></div></div><div id="nav-right"><div class="nav-button" id="randomPost_button"><a class="site-page" onclick="toRandomPost()" title="随机前往一个文章" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-dice"></i></a></div><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="搜索🔍" accesskey="s"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span> 搜索</span></a></div><input id="center-console" type="checkbox"/><label class="widget" for="center-console" title="中控台" onclick="anzhiyu.switchConsole();"><i class="left"></i><i class="widget center"></i><i class="widget right"></i></label><div id="console"><div class="console-card-group-reward"><ul class="reward-all console-card"><li class="reward-item"><a href="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg" target="_blank"><img class="post-qr-code-img" alt="赞赏" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg"/></a><div class="post-qr-code-desc">赞赏</div></li></ul></div><div class="console-card-group"><div class="console-card-group-left"></div><div class="console-card-group-right"><div class="console-card tags"><div class="card-content"><div class="author-content-item-tips">兴趣点</div><span class="author-content-item-title">寻找你感兴趣的领域</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%9C%A3%E7%BB%8F/" style="font-size: 1.05rem;">一个人的圣经<sup>1</sup></a><a href="/tags/%E4%BA%B2%E7%88%B1%E7%9A%84%E7%94%9F%E6%B4%BB/" style="font-size: 1.05rem;">亲爱的生活<sup>1</sup></a><a href="/tags/%E4%BC%8A%E5%A7%86%E9%9B%B7%C2%B7%E5%87%AF%E5%B0%94%E6%B3%B0%E6%96%AF/" style="font-size: 1.05rem;">伊姆雷·凯尔泰斯<sup>1</sup></a><a href="/tags/%E5%85%AC%E7%BE%8A%E7%9A%84%E8%8A%82%E6%97%A5/" style="font-size: 1.05rem;">公羊的节日<sup>1</sup></a><a href="/tags/%E5%8B%92%E5%85%8B%E8%8E%B1%E9%BD%90%E5%A5%A5/" style="font-size: 1.05rem;">勒克莱齐奥<sup>1</sup></a><a href="/tags/%E5%91%BC%E5%90%B8%E7%A7%8B%E5%8D%83/" style="font-size: 1.05rem;">呼吸秋千<sup>1</sup></a><a href="/tags/%E5%93%88%E7%BD%97%E5%BE%B7%C2%B7%E5%93%81%E7%89%B9/" style="font-size: 1.05rem;">哈罗德·品特<sup>1</sup></a><a href="/tags/%E5%9F%83%E5%B0%94%E5%BC%97%E9%87%8C%E5%BE%B7%C2%B7%E8%80%B6%E5%88%A9%E5%86%85%E5%85%8B/" style="font-size: 1.05rem;">埃尔弗里德·耶利内克<sup>1</sup></a><a href="/tags/%E5%A4%9A%E4%B8%BD%E4%B8%9D%C2%B7%E8%8E%B1%E8%BE%9B/" style="font-size: 1.05rem;">多丽丝·莱辛<sup>1</sup></a><a href="/tags/%E5%A5%88%E4%BF%9D%E5%B0%94/" style="font-size: 1.05rem;">奈保尔<sup>1</sup></a><a href="/tags/%E5%A5%B3%E6%83%85%E4%BA%BA%E4%BB%AC/" style="font-size: 1.05rem;">女情人们<sup>1</sup></a><a href="/tags/%E5%AF%BB%E9%87%91%E8%80%85/" style="font-size: 1.05rem;">寻金者<sup>1</sup></a><a href="/tags/%E5%BA%93%E5%88%87/" style="font-size: 1.05rem;">库切<sup>1</sup></a><a href="/tags/%E5%BF%83%E5%85%BD/" style="font-size: 1.05rem;">心兽<sup>1</sup></a><a href="/tags/%E6%83%A8%E8%B4%A5/" style="font-size: 1.05rem;">惨败<sup>1</sup></a><a href="/tags/%E6%89%98%E9%A9%AC%E6%96%AF%C2%B7%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86/" style="font-size: 1.05rem;">托马斯·特朗斯特罗姆<sup>1</sup></a><a href="/tags/%E6%97%A0%E5%91%BD%E8%BF%90%E7%9A%84%E4%BA%BA%E7%94%9F/" style="font-size: 1.05rem;">无命运的人生<sup>1</sup></a><a href="/tags/%E6%AF%95%E6%96%AF%E6%B2%83%E6%96%AF%E5%85%88%E7%94%9F%E7%9A%84%E6%88%BF%E5%AD%90/" style="font-size: 1.05rem;">毕斯沃斯先生的房子<sup>1</sup></a><a href="/tags/%E7%81%B5%E5%B1%B1/" style="font-size: 1.05rem;">灵山<sup>1</sup></a><a href="/tags/%E7%88%B1%E4%B8%BD%E4%B8%9D%C2%B7%E9%97%A8%E7%BD%97/" style="font-size: 1.05rem;">爱丽丝·门罗<sup>1</sup></a><a href="/tags/%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86%E8%AF%97%E6%AD%8C%E5%85%A8%E9%9B%86/" style="font-size: 1.05rem;">特朗斯特罗姆诗歌全集<sup>1</sup></a><a href="/tags/%E7%94%9F%E6%97%A5%E6%B4%BE%E5%AF%B9/" style="font-size: 1.05rem;">生日派对<sup>1</sup></a><a href="/tags/%E7%9C%8B%E9%97%A8%E4%BA%BA/" style="font-size: 1.05rem;">看门人<sup>1</sup></a><a href="/tags/%E7%B1%B3%E6%A0%BC%E5%B0%94%E8%A1%97/" style="font-size: 1.05rem;">米格尔街<sup>1</sup></a><a href="/tags/%E7%BA%A2%E9%AB%98%E7%B2%B1%E5%AE%B6%E6%97%8F/" style="font-size: 1.05rem;">红高粱家族<sup>1</sup></a><a href="/tags/%E7%BB%BF%E6%88%BF%E5%AD%90/" style="font-size: 1.05rem;">绿房子<sup>1</sup></a><a href="/tags/%E8%80%BB/" style="font-size: 1.05rem;">耻<sup>1</sup></a><a href="/tags/%E8%8E%AB%E8%A8%80/" style="font-size: 1.05rem;">莫言<sup>9</sup></a><a href="/tags/%E8%9B%99/" style="font-size: 1.05rem;">蛙<sup>2</sup></a><a href="/tags/%E8%AE%B0%E5%BF%86%E7%9C%8B%E8%A7%81%E6%88%91/" style="font-size: 1.05rem;">记忆看见我<sup>1</sup></a><a href="/tags/%E8%AF%89%E8%AE%BC%E7%AC%94%E5%BD%95/" style="font-size: 1.05rem;">诉讼笔录<sup>1</sup></a><a href="/tags/%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96/" style="font-size: 1.05rem;">诺贝尔文学奖<sup>35</sup></a><a href="/tags/%E8%B5%AB%E5%A1%94%C2%B7%E7%B1%B3%E5%8B%92/" style="font-size: 1.05rem;">赫塔·米勒<sup>1</sup></a><a href="/tags/%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7K%E7%9A%84%E7%94%9F%E6%B4%BB%E5%92%8C%E6%97%B6%E4%BB%A3/" style="font-size: 1.05rem;">迈克尔·K的生活和时代<sup>1</sup></a><a href="/tags/%E9%80%83%E7%A6%BB/" style="font-size: 1.05rem;">逃离<sup>1</sup></a><a href="/tags/%E9%87%8E%E8%8D%89%E5%9C%A8%E6%AD%8C%E5%94%B1/" style="font-size: 1.05rem;">野草在歌唱<sup>1</sup></a><a href="/tags/%E9%87%91%E8%89%B2%E7%AC%94%E8%AE%B0/" style="font-size: 1.05rem;">金色笔记<sup>1</sup></a><a href="/tags/%E9%92%A2%E7%90%B4%E6%95%99%E5%B8%88/" style="font-size: 1.05rem;">钢琴教师<sup>1</sup></a><a href="/tags/%E9%A9%AC%E9%87%8C%E5%A5%A5%C2%B7%E5%B7%B4%E5%B0%94%E5%8A%A0%E6%96%AF%C2%B7%E7%95%A5%E8%90%A8/" style="font-size: 1.05rem;">马里奥·巴尔加斯·略萨<sup>1</sup></a><a href="/tags/%E9%AB%98%E8%A1%8C%E5%81%A5/" style="font-size: 1.05rem;">高行健<sup>1</sup></a></div></div><hr/></div></div><div class="console-card history"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-box-archiv"></i><span>文章</span></div><div class="card-archives"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="anzhiyufont anzhiyu-icon-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/10/"><span class="card-archive-list-date">十月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">46</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/09/"><span class="card-archive-list-date">九月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/08/"><span class="card-archive-list-date">八月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/07/"><span class="card-archive-list-date">七月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/06/"><span class="card-archive-list-date">六月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/05/"><span class="card-archive-list-date">五月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/04/"><span class="card-archive-list-date">四月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">11</span><span>篇</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/03/"><span class="card-archive-list-date">三月 2026</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span>篇</span></div></a></li></ul></div><hr/></div></div></div><div class="button-group"><div class="console-btn-item"><a class="darkmode_switchbutton" title="显示模式切换" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-moon"></i></a></div><div class="console-btn-item" id="consoleHideAside" onclick="anzhiyu.hideAsideBtn()" title="边栏显示控制"><a class="asideSwitch"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></a></div><div class="console-btn-item" id="consoleMusic" onclick="anzhiyu.musicToggle()" title="音乐开关"><a class="music-switch"><i class="anzhiyufont anzhiyu-icon-music"></i></a></div></div><div class="console-mask" onclick="anzhiyu.hideConsole()" href="javascript:void(0);"></div></div><div class="nav-button" id="nav-totop"><a class="totopbtn" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i><span id="percent" onclick="anzhiyu.scrollToDest(0,500)">0</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);" title="切换"><i class="anzhiyufont anzhiyu-icon-bars"></i></a></div></div></div></nav><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original">原创</a><span class="post-meta-categories"><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-inbox post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" itemprop="url">科学上网</a></span><span class="article-meta tags"><a class="article-meta__tags" href="/tags/%E9%A9%AC%E8%80%81%E5%B8%88%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>马老师工具分享</span></a><a class="article-meta__tags" href="/tags/%E7%A7%91%E5%AD%A6%E8%AF%A6%E8%A7%A3/" tabindex="-1" itemprop="url"> <span> <i class="anzhiyufont anzhiyu-icon-hashtag"></i>科学详解</span></a></span></div></div><h1 class="post-title" itemprop="name headline">全平台代理客户端与订阅转换工具使用教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="anzhiyufont anzhiyu-icon-calendar-days post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" itemprop="dateCreated datePublished" datetime="2026-04-24T04:45:10.114Z" title="发表于 2026-04-24 12:45:10">2026-04-24</time><span class="post-meta-separator"></span><i class="anzhiyufont anzhiyu-icon-history post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" itemprop="dateCreated datePublished" datetime="2026-07-12T00:03:52.461Z" title="更新于 2026-07-12 08:03:52">2026-07-12</time></span></div><div class="meta-secondline"><span class="post-meta-separator">       </span><span class="post-meta-position" title="作者IP属地为澳大利亚"><i class="anzhiyufont anzhiyu-icon-location-dot"></i>澳大利亚</span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section><div id="post-top-cover"><img class="nolazyload" id="post-top-bg" src="/images/cover-proxy-clients-20261004.jpg"></div></header><main id="blog-container"><div class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container" itemscope itemtype="https://blog.8818618.xyz/p/9c0abd53/"><header><a class="post-meta-categories" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" itemprop="url">科学上网</a><a href="/tags/%E9%A9%AC%E8%80%81%E5%B8%88%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/" tabindex="-1" itemprop="url">马老师工具分享</a><a href="/tags/%E7%A7%91%E5%AD%A6%E8%AF%A6%E8%A7%A3/" tabindex="-1" itemprop="url">科学详解</a><h1 id="CrawlerTitle" itemprop="name headline">全平台代理客户端与订阅转换工具使用教程</h1><span itemprop="author" itemscope itemtype="http://schema.org/Person">马老师</span><time itemprop="dateCreated datePublished" datetime="2026-04-24T04:45:10.114Z" title="发表于 2026-04-24 12:45:10">2026-04-24</time><time itemprop="dateCreated datePublished" datetime="2026-07-12T00:03:52.461Z" title="更新于 2026-07-12 08:03:52">2026-07-12</time></header><h1 id="全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题"><a href="#全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题" class="headerlink" title="全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题"></a>全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题</h1><p>上一篇文章整理了 Windows、macOS、Linux、Android、iOS 常见代理客户端和订阅转换工具。这一篇更偏向实操，重点讲每一个工具怎么用，包括下载安装、导入配置、开启代理、更新订阅和常见问题处理。</p>
+<p>本文只介绍工具使用方法，不推荐任何服务商，也不提供节点购买建议。工具清单参考自 <code>dingyue-tools</code> 项目，该项目说明中提到，工具覆盖 Windows、macOS、Linux、Android、iOS，并且下载链接主要指向官方 GitHub Releases 或 App Store，以降低下载到假冒安装包的风险。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<hr>
+<h2 id="一、使用前准备"><a href="#一、使用前准备" class="headerlink" title="一、使用前准备"></a>一、使用前准备</h2><p>在开始之前，你需要准备三样东西：</p>
+<ol>
+<li>一个对应系统的客户端；</li>
+<li>一个可用的订阅链接、配置文件或手动节点信息；</li>
+<li>一个能正常访问下载页面的网络环境。</li>
+</ol>
+<p>常见导入方式有三种：</p>
+<ul>
+<li>订阅链接导入；</li>
+<li>本地配置文件导入；</li>
+<li>二维码或手动添加节点。</li>
+</ul>
+<p>如果你手里的订阅格式和客户端不兼容，就需要使用订阅转换工具。原项目也把订阅转换工具单独列为一类，用来解决 Clash、Mihomo、Sing-box、Surge、Quantumult X、Loon 等格式之间不兼容的问题。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<hr>
+<h1 id="二、订阅转换工具教程"><a href="#二、订阅转换工具教程" class="headerlink" title="二、订阅转换工具教程"></a>二、订阅转换工具教程</h1><h2 id="1-subconverter-使用教程"><a href="#1-subconverter-使用教程" class="headerlink" title="1. subconverter 使用教程"></a>1. <a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter">subconverter</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter">subconverter</a> 是经典订阅转换工具，适合把一种订阅格式转换成另一种客户端可识别的格式。它的官方说明中写明支持 Clash、Quantumult X、Loon、SS、SSR、Surge、V2Ray 等多种格式作为源或目标格式，并提供了接口形式的转换方法。(<a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter" title="GitHub - tindy2013&#x2F;subconverter: Utility to convert between various subscription format · GitHub">GitHub</a>)</p>
+<h3 id="适合谁用"><a href="#适合谁用" class="headerlink" title="适合谁用"></a>适合谁用</h3><p>适合需要多格式转换、多订阅合并、自建转换服务的人。不太适合完全不想接触参数的新手。</p>
+<h3 id="基础使用流程"><a href="#基础使用流程" class="headerlink" title="基础使用流程"></a>基础使用流程</h3><p>第一步，打开 <a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter">subconverter 项目页面</a>。</p>
+<p>第二步，根据自己的系统下载 Releases 中对应版本。如果你只是普通用户，更推荐使用已经部署好的前端或服务端；如果你有服务器，可以自行部署。</p>
+<p>第三步，准备你的原始订阅链接。</p>
+<p>第四步，选择目标格式。例如：</p>
+<ul>
+<li>Clash &#x2F; Mihomo 客户端：选择 <code>clash</code></li>
+<li>Quantumult X：选择 <code>quanx</code></li>
+<li>Loon：选择 <code>loon</code></li>
+<li>Surge：选择 <code>surge</code></li>
+<li>V2Ray：选择 <code>v2ray</code></li>
+</ul>
+<p>第五步，生成转换后的订阅链接，再复制到目标客户端中导入。</p>
+<h3 id="常见参数理解"><a href="#常见参数理解" class="headerlink" title="常见参数理解"></a>常见参数理解</h3><p>subconverter 常见转换接口形式类似：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/sub?target=目标格式&amp;url=原订阅链接</span><br></pre></td></tr></table></figure>
+
+<p>实际使用时，原订阅链接通常需要进行 URL Encode，否则可能因为链接里有特殊符号导致转换失败。</p>
+<h3 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果转换后无法导入，优先检查三点：</p>
+<p>第一，原订阅链接是否有效。</p>
+<p>第二，目标格式是否选错。</p>
+<p>第三，订阅链接是否正确编码。</p>
+<p>多个订阅合并时，不建议一次性放太多来源，先用一个订阅测试成功，再逐步增加。</p>
+<hr>
+<h2 id="2-Sub-Store-使用教程"><a href="#2-Sub-Store-使用教程" class="headerlink" title="2. Sub-Store 使用教程"></a>2. <a target="_blank" rel="noopener" href="https://github.com/sub-store-org/Sub-Store">Sub-Store</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/sub-store-org/Sub-Store">Sub-Store</a> 是高级订阅管理器，适合 Quantumult X、Loon、Surge、Stash、Shadowrocket 等用户。原项目介绍中也提到，Sub-Store 支持多订阅聚合、规则处理、格式转换和定时更新等功能。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="适合谁用-1"><a href="#适合谁用-1" class="headerlink" title="适合谁用"></a>适合谁用</h3><p>适合 iOS、macOS 深度用户，尤其是需要统一管理多个订阅、多个客户端配置的人。</p>
+<h3 id="基础使用流程-1"><a href="#基础使用流程-1" class="headerlink" title="基础使用流程"></a>基础使用流程</h3><p>第一步，打开 <a target="_blank" rel="noopener" href="https://github.com/sub-store-org/Sub-Store">Sub-Store 项目页面</a>。</p>
+<p>第二步，按项目说明部署或使用已有面板。</p>
+<p>第三步，进入 Sub-Store 管理界面。</p>
+<p>第四步，新建订阅，把原始订阅链接粘贴进去。</p>
+<p>第五步，选择输出类型，例如 Clash、Surge、Loon、Quantumult X、Stash 等。</p>
+<p>第六步，保存后复制生成的新订阅链接。</p>
+<p>第七步，把新订阅链接导入对应客户端。</p>
+<h3 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h3><p>Sub-Store 不只是转换工具，更适合长期管理订阅。你可以用它做节点筛选、重命名、分组、规则处理和定时更新。</p>
+<p>新手第一次使用时，建议只做一件事：把一个原始订阅转换成一个目标客户端订阅。等确认能用后，再研究高级脚本和规则。</p>
+<h3 id="常见问题-1"><a href="#常见问题-1" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果生成的链接导入失败，先不要改复杂脚本。先测试最基础的转换流程：</p>
+<p>原订阅链接 → Sub-Store → 生成目标订阅 → 客户端导入。</p>
+<p>如果基础流程成功，再逐步添加规则处理。</p>
+<hr>
+<h2 id="3-Hiddify-Next-使用教程"><a href="#3-Hiddify-Next-使用教程" class="headerlink" title="3. Hiddify Next 使用教程"></a>3. <a target="_blank" rel="noopener" href="https://github.com/hiddify/hiddify-app/releases">Hiddify Next</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/hiddify/hiddify-app/releases">Hiddify Next</a> 是跨平台客户端，支持 Windows、macOS、Linux、Android、iOS。原项目介绍中提到，它基于 Sing-box 内核，支持多平台、多协议、TUN 模式、远程配置文件和内置测速等功能。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="适合谁用-2"><a href="#适合谁用-2" class="headerlink" title="适合谁用"></a>适合谁用</h3><p>适合新手、多设备用户，以及想要一个客户端解决大部分配置问题的人。</p>
+<h3 id="Windows-macOS-Linux-安装"><a href="#Windows-macOS-Linux-安装" class="headerlink" title="Windows &#x2F; macOS &#x2F; Linux 安装"></a>Windows &#x2F; macOS &#x2F; Linux 安装</h3><p>第一步，打开 <a target="_blank" rel="noopener" href="https://github.com/hiddify/hiddify-app/releases">Hiddify Next Releases</a>。</p>
+<p>第二步，下载与你系统对应的安装包：</p>
+<ul>
+<li>Windows 通常选择 <code>.exe</code> 或 <code>.msi</code></li>
+<li>macOS 通常选择 <code>.dmg</code></li>
+<li>Linux 可选择 <code>.AppImage</code>、<code>.deb</code> 或其他对应格式</li>
+</ul>
+<p>第三步，安装并打开软件。</p>
+<p>第四步，首次打开时，按系统提示允许网络权限或 VPN 权限。</p>
+<h3 id="Android-安装"><a href="#Android-安装" class="headerlink" title="Android 安装"></a>Android 安装</h3><p>第一步，打开 <a target="_blank" rel="noopener" href="https://github.com/hiddify/hiddify-app/releases">Hiddify Next Releases</a>。</p>
+<p>第二步，下载 Android APK。</p>
+<p>第三步，安装 APK。如果系统提示“禁止安装未知来源应用”，需要在系统设置里允许当前浏览器或文件管理器安装应用。</p>
+<p>第四步，打开 Hiddify Next，允许创建 VPN 配置。</p>
+<h3 id="iOS-安装"><a href="#iOS-安装" class="headerlink" title="iOS 安装"></a>iOS 安装</h3><p>iOS 用户可以通过 App Store 或项目提供的方式安装。若 App Store 地区无法搜索到，需要检查 Apple ID 地区。</p>
+<h3 id="导入订阅"><a href="#导入订阅" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>打开 Hiddify Next 后，一般可以通过以下方式导入：</p>
+<ul>
+<li>粘贴订阅链接；</li>
+<li>扫描二维码；</li>
+<li>导入配置文件；</li>
+<li>从剪贴板识别配置。</li>
+</ul>
+<p>导入成功后，先进行一次测速，再选择延迟较低的节点连接。</p>
+<h3 id="使用建议-1"><a href="#使用建议-1" class="headerlink" title="使用建议"></a>使用建议</h3><p>新手建议先使用默认模式，不要一开始就改 DNS、TUN、高级路由等选项。如果能正常使用，再逐步调整规则和分流设置。</p>
+<h3 id="常见问题-2"><a href="#常见问题-2" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果连接后没有效果，检查：</p>
+<ul>
+<li>是否允许 VPN 权限；</li>
+<li>是否开启系统代理或 VPN 模式；</li>
+<li>节点是否测速正常；</li>
+<li>订阅是否已经过期；</li>
+<li>是否被其他代理软件占用了端口。</li>
+</ul>
+<hr>
+<h2 id="4-sing-box-converter-使用教程"><a href="#4-sing-box-converter-使用教程" class="headerlink" title="4. sing-box-converter 使用教程"></a>4. <a target="_blank" rel="noopener" href="https://github.com/dzhuang/sing-box-converter">sing-box-converter</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/dzhuang/sing-box-converter">sing-box-converter</a> 是偏向 Sing-box 配置转换的工具，适合把其他格式转成 Sing-box 可用配置。</p>
+<h3 id="适合谁用-3"><a href="#适合谁用-3" class="headerlink" title="适合谁用"></a>适合谁用</h3><p>适合主要使用 Sing-box、Hiddify Next、Karing 或其他 Sing-box 前端的用户。</p>
+<h3 id="基础使用流程-2"><a href="#基础使用流程-2" class="headerlink" title="基础使用流程"></a>基础使用流程</h3><p>第一步，打开 <a target="_blank" rel="noopener" href="https://github.com/dzhuang/sing-box-converter">sing-box-converter 项目页面</a>。</p>
+<p>第二步，查看项目 README 的使用方式。</p>
+<p>第三步，准备原始配置或订阅链接。</p>
+<p>第四步，按照工具要求输入源配置。</p>
+<p>第五步，生成 Sing-box JSON 配置。</p>
+<p>第六步，把生成的配置导入 Sing-box 或支持 Sing-box 的客户端。</p>
+<h3 id="使用建议-2"><a href="#使用建议-2" class="headerlink" title="使用建议"></a>使用建议</h3><p>如果你只是新手，不建议直接手写复杂 JSON。可以先用 Hiddify Next 或 Karing 这类图形客户端导入订阅，等熟悉后再尝试单独转换配置。</p>
+<h3 id="常见问题-3"><a href="#常见问题-3" class="headerlink" title="常见问题"></a>常见问题</h3><p>Sing-box 配置对 JSON 格式要求较严格。如果导入失败，常见原因是：</p>
+<ul>
+<li>JSON 格式错误；</li>
+<li>缺少必要字段；</li>
+<li>协议字段不兼容；</li>
+<li>DNS 或路由配置写错。</li>
+</ul>
+<hr>
+<h2 id="5-v2sing-使用教程"><a href="#5-v2sing-使用教程" class="headerlink" title="5. v2sing 使用教程"></a>5. <a target="_blank" rel="noopener" href="https://github.com/printfer/v2sing">v2sing</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/printfer/v2sing">v2sing</a> 主要用于把 V2Ray 或 Clash 相关配置转换为 Sing-box 配置。</p>
+<h3 id="适合谁用-4"><a href="#适合谁用-4" class="headerlink" title="适合谁用"></a>适合谁用</h3><p>适合已经有 V2Ray、Clash、Mihomo 配置，但想迁移到 Sing-box 的用户。</p>
+<h3 id="基础使用流程-3"><a href="#基础使用流程-3" class="headerlink" title="基础使用流程"></a>基础使用流程</h3><p>第一步，打开 <a target="_blank" rel="noopener" href="https://github.com/printfer/v2sing">v2sing 项目页面</a>。</p>
+<p>第二步，按照 README 准备运行环境。</p>
+<p>第三步，输入原始订阅或配置。</p>
+<p>第四步，选择输出为 Sing-box 配置。</p>
+<p>第五步，把输出配置保存为 JSON 文件。</p>
+<p>第六步，在 Sing-box 或支持 Sing-box 的客户端中导入该配置。</p>
+<h3 id="使用建议-3"><a href="#使用建议-3" class="headerlink" title="使用建议"></a>使用建议</h3><p>v2sing 更适合有一定动手能力的人。如果只是日常使用，优先考虑图形客户端；如果你在做配置迁移、批量转换或自定义配置，v2sing 会更合适。</p>
+<hr>
+<h1 id="三、跨平台客户端教程"><a href="#三、跨平台客户端教程" class="headerlink" title="三、跨平台客户端教程"></a>三、跨平台客户端教程</h1><h2 id="6-Clash-Verge-Rev-使用教程"><a href="#6-Clash-Verge-Rev-使用教程" class="headerlink" title="6. Clash Verge Rev 使用教程"></a>6. <a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases">Clash Verge Rev</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases">Clash Verge Rev</a> 是 Windows、macOS、Linux 上常见的 Mihomo 图形客户端。原项目说明中提到，它支持规则分流、订阅管理和内核切换。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h3><p>第一步，打开 <a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases">Clash Verge Rev Releases</a>。</p>
+<p>第二步，按系统下载：</p>
+<ul>
+<li>Windows：下载 <code>.exe</code> 或 <code>.msi</code></li>
+<li>macOS：下载 <code>.dmg</code></li>
+<li>Linux：下载 <code>.AppImage</code>、<code>.deb</code> 或 <code>.rpm</code></li>
+</ul>
+<p>第三步，安装并打开软件。</p>
+<p>第四步，首次运行时按提示允许网络权限。</p>
+<h3 id="导入订阅-1"><a href="#导入订阅-1" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>打开软件后，进入 Profiles 或配置页面。</p>
+<p>点击 New &#x2F; Import &#x2F; 添加配置。</p>
+<p>粘贴订阅链接。</p>
+<p>点击保存并更新。</p>
+<p>选择刚刚导入的配置文件。</p>
+<h3 id="启动代理"><a href="#启动代理" class="headerlink" title="启动代理"></a>启动代理</h3><p>导入配置后，打开系统代理开关。</p>
+<p>选择 Rule 模式作为日常使用模式。</p>
+<p>在 Proxies 页面选择策略组和节点。</p>
+<p>测试网页是否正常访问。</p>
+<h3 id="常见问题-4"><a href="#常见问题-4" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果导入后没有节点，可能是订阅格式不兼容，可以先用 subconverter 转成 Clash&#x2F;Mihomo 格式。</p>
+<p>如果系统代理开启后浏览器没效果，检查浏览器是否安装了其他代理插件。</p>
+<hr>
+<h2 id="7-Mihomo-Party-使用教程"><a href="#7-Mihomo-Party-使用教程" class="headerlink" title="7. Mihomo Party 使用教程"></a>7. <a target="_blank" rel="noopener" href="https://github.com/mihomo-party-org/clash-party/releases">Mihomo Party</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/mihomo-party-org/clash-party/releases">Mihomo Party</a> 是简洁型 Mihomo 客户端，适合喜欢轻量操作的人。</p>
+<h3 id="安装方法-1"><a href="#安装方法-1" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/mihomo-party-org/clash-party/releases">Mihomo Party Releases</a>，下载对应系统安装包并安装。</p>
+<p>Windows 用户选择 <code>.exe</code> 或 <code>.msi</code>。</p>
+<p>macOS 用户选择 <code>.dmg</code>。</p>
+<p>Linux 用户选择适合自己发行版的包。</p>
+<h3 id="导入订阅-2"><a href="#导入订阅-2" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入配置或订阅页面。</p>
+<p>点击添加订阅。</p>
+<p>粘贴订阅链接。</p>
+<p>点击更新订阅。</p>
+<p>确认节点列表已经出现。</p>
+<h3 id="启动使用"><a href="#启动使用" class="headerlink" title="启动使用"></a>启动使用</h3><p>开启系统代理。</p>
+<p>选择规则模式。</p>
+<p>进入节点页面选择可用节点。</p>
+<p>进行延迟测试，优先选择延迟稳定的节点。</p>
+<h3 id="常见问题-5"><a href="#常见问题-5" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果订阅更新失败，先检查链接是否完整，再检查本地网络是否能访问订阅地址。</p>
+<p>如果节点延迟全部超时，可以换网络环境测试，也可以检查防火墙是否拦截。</p>
+<hr>
+<h2 id="8-FlClash-使用教程"><a href="#8-FlClash-使用教程" class="headerlink" title="8. FlClash 使用教程"></a>8. <a target="_blank" rel="noopener" href="https://github.com/chen08209/FlClash/releases">FlClash</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/chen08209/FlClash/releases">FlClash</a> 是 Fluent UI 风格的 Clash&#x2F;Mihomo 客户端，原项目说明中提到它支持 Windows、macOS、Linux、Android，并且界面比较现代。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-2"><a href="#安装方法-2" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/chen08209/FlClash/releases">FlClash Releases</a>。</p>
+<p>根据设备下载对应版本。</p>
+<p>桌面端按普通软件安装。</p>
+<p>Android 下载 APK 后安装。</p>
+<h3 id="导入订阅-3"><a href="#导入订阅-3" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入配置页面。</p>
+<p>点击添加配置或添加订阅。</p>
+<p>粘贴订阅链接。</p>
+<p>更新订阅。</p>
+<p>切换到该配置。</p>
+<h3 id="启动代理-1"><a href="#启动代理-1" class="headerlink" title="启动代理"></a>启动代理</h3><p>开启代理服务。</p>
+<p>选择规则模式。</p>
+<p>进入代理组选择节点。</p>
+<p>测试连接。</p>
+<h3 id="使用建议-4"><a href="#使用建议-4" class="headerlink" title="使用建议"></a>使用建议</h3><p>FlClash 界面比较直观，适合新手。Android 用户如果经常断开，建议关闭系统对 FlClash 的电池优化。</p>
+<hr>
+<h2 id="9-Karing-使用教程"><a href="#9-Karing-使用教程" class="headerlink" title="9. Karing 使用教程"></a>9. <a target="_blank" rel="noopener" href="https://github.com/KaringX/karing/releases">Karing</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/KaringX/karing/releases">Karing</a> 是多平台代理客户端，原项目中提到它支持 Windows、macOS、Linux、Android、iOS，并且支持 Clash &#x2F; Sing-box 前端和多平台配置同步。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-3"><a href="#安装方法-3" class="headerlink" title="安装方法"></a>安装方法</h3><p>桌面和 Android 用户可以打开 <a target="_blank" rel="noopener" href="https://github.com/KaringX/karing/releases">Karing Releases</a> 下载。</p>
+<p>iOS 用户可以通过 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/karing/id6472431552">Karing App Store</a> 安装。</p>
+<h3 id="导入订阅-4"><a href="#导入订阅-4" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>打开 Karing。</p>
+<p>进入配置或订阅管理。</p>
+<p>选择添加订阅。</p>
+<p>粘贴订阅链接。</p>
+<p>点击更新。</p>
+<p>选择默认策略组。</p>
+<h3 id="多设备同步建议"><a href="#多设备同步建议" class="headerlink" title="多设备同步建议"></a>多设备同步建议</h3><p>如果你在多台设备上使用 Karing，可以先在一台设备上配置好订阅、规则和策略，再研究同步功能。不要一开始就在多台设备同时修改配置，容易混乱。</p>
+<h3 id="常见问题-6"><a href="#常见问题-6" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果 iOS 无法下载，检查 App Store 地区。</p>
+<p>如果 Android 后台断开，检查电池优化和 VPN 常驻权限。</p>
+<p>如果桌面端无法接管流量，检查系统代理是否开启。</p>
+<hr>
+<h1 id="四、Windows-客户端教程"><a href="#四、Windows-客户端教程" class="headerlink" title="四、Windows 客户端教程"></a>四、Windows 客户端教程</h1><h2 id="10-V2RayN-使用教程"><a href="#10-V2RayN-使用教程" class="headerlink" title="10. V2RayN 使用教程"></a>10. <a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases">V2RayN</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases">V2RayN</a> 是 Windows 上常见的 V2Ray 系客户端，适合使用 VMess、VLESS、Trojan 等配置的用户。原工具清单也把 V2RayN 列为 Windows 平台常见客户端。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-4"><a href="#安装方法-4" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayN/releases">V2RayN Releases</a>。</p>
+<p>下载压缩包或安装包。</p>
+<p>解压后运行主程序。</p>
+<p>如果提示缺少运行库，按项目说明安装对应运行环境。</p>
+<h3 id="导入订阅-5"><a href="#导入订阅-5" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>打开 V2RayN。</p>
+<p>找到订阅分组或订阅设置。</p>
+<p>添加订阅地址。</p>
+<p>点击更新订阅。</p>
+<p>节点出现后，选择一个节点。</p>
+<h3 id="启动代理-2"><a href="#启动代理-2" class="headerlink" title="启动代理"></a>启动代理</h3><p>右键系统托盘图标。</p>
+<p>选择系统代理模式。</p>
+<p>通常新手可以选择“自动配置系统代理”。</p>
+<p>再选择一个可用节点作为活动服务器。</p>
+<h3 id="常见问题-7"><a href="#常见问题-7" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果浏览器没有走代理，检查系统代理是否已开启。</p>
+<p>如果节点无法连接，先更新订阅，再换节点测试。</p>
+<p>如果所有节点都不通，检查本机防火墙或安全软件是否拦截 V2RayN。</p>
+<hr>
+<h2 id="11-NekoRay-使用教程"><a href="#11-NekoRay-使用教程" class="headerlink" title="11. NekoRay 使用教程"></a>11. <a target="_blank" rel="noopener" href="https://github.com/MatsuriDayo/nekoray/releases">NekoRay</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/MatsuriDayo/nekoray/releases">NekoRay</a> 是基于 Qt 的跨平台代理客户端，适合需要多协议和图形界面的用户。</p>
+<h3 id="安装方法-5"><a href="#安装方法-5" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/MatsuriDayo/nekoray/releases">NekoRay Releases</a>。</p>
+<p>下载对应系统版本。</p>
+<p>解压或安装后运行。</p>
+<p>Windows 用户注意不要把软件放在权限受限目录中。</p>
+<h3 id="导入订阅-6"><a href="#导入订阅-6" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>打开 NekoRay。</p>
+<p>进入订阅或分组管理。</p>
+<p>添加订阅链接。</p>
+<p>更新订阅。</p>
+<p>选择节点。</p>
+<h3 id="启动代理-3"><a href="#启动代理-3" class="headerlink" title="启动代理"></a>启动代理</h3><p>开启系统代理。</p>
+<p>根据需要开启 TUN 模式。</p>
+<p>选择路由模式。</p>
+<p>测试访问。</p>
+<h3 id="常见问题-8"><a href="#常见问题-8" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果 TUN 模式无法开启，可能是权限不足。Windows 可以尝试以管理员身份运行。</p>
+<p>如果 DNS 异常，可以先关闭高级 DNS 设置，回到默认配置测试。</p>
+<hr>
+<h2 id="12-Clash-for-Windows-汉化版-使用教程"><a href="#12-Clash-for-Windows-汉化版-使用教程" class="headerlink" title="12. Clash for Windows 汉化版 使用教程"></a>12. <a target="_blank" rel="noopener" href="https://github.com/Z-Siqi/Clash-for-Windows_Chinese/releases">Clash for Windows 汉化版</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/Z-Siqi/Clash-for-Windows_Chinese/releases">Clash for Windows 汉化版</a> 是旧版 Clash for Windows 的汉化版本，更适合需要兼容旧配置的用户。</p>
+<h3 id="安装方法-6"><a href="#安装方法-6" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/Z-Siqi/Clash-for-Windows_Chinese/releases">Clash for Windows 汉化版 Releases</a>。</p>
+<p>下载 Windows 安装包。</p>
+<p>安装并运行。</p>
+<h3 id="导入订阅-7"><a href="#导入订阅-7" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入 Profiles 页面。</p>
+<p>在输入框中粘贴订阅链接。</p>
+<p>点击 Download。</p>
+<p>下载成功后，选择该配置。</p>
+<h3 id="启动代理-4"><a href="#启动代理-4" class="headerlink" title="启动代理"></a>启动代理</h3><p>进入 General 页面。</p>
+<p>打开 System Proxy。</p>
+<p>需要全局代理时选择 Global。</p>
+<p>日常使用建议选择 Rule。</p>
+<h3 id="常见问题-9"><a href="#常见问题-9" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果配置下载失败，检查订阅链接是否支持 Clash 格式。</p>
+<p>如果软件版本较旧，建议优先考虑维护更活跃的 Clash Verge Rev 或 Mihomo Party。</p>
+<hr>
+<h1 id="五、macOS-客户端教程"><a href="#五、macOS-客户端教程" class="headerlink" title="五、macOS 客户端教程"></a>五、macOS 客户端教程</h1><h2 id="13-ClashX-使用教程"><a href="#13-ClashX-使用教程" class="headerlink" title="13. ClashX 使用教程"></a>13. <a target="_blank" rel="noopener" href="https://github.com/githubvpn007/ClashX/releases">ClashX</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/githubvpn007/ClashX/releases">ClashX</a> 是 macOS 上常见的 Clash 客户端，适合喜欢菜单栏操作的用户。</p>
+<h3 id="安装方法-7"><a href="#安装方法-7" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/githubvpn007/ClashX/releases">ClashX Releases</a>。</p>
+<p>下载 <code>.dmg</code> 文件。</p>
+<p>拖入 Applications 应用程序文件夹。</p>
+<p>首次打开时，如果系统提示无法验证开发者，可以在系统设置的安全性与隐私中允许打开。</p>
+<h3 id="导入订阅-8"><a href="#导入订阅-8" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>点击菜单栏 ClashX 图标。</p>
+<p>找到配置或 Config 菜单。</p>
+<p>选择从 URL 导入配置。</p>
+<p>粘贴订阅链接。</p>
+<p>下载并切换到该配置。</p>
+<h3 id="启动代理-5"><a href="#启动代理-5" class="headerlink" title="启动代理"></a>启动代理</h3><p>在菜单栏中打开 Set as System Proxy。</p>
+<p>选择 Rule 模式。</p>
+<p>进入 Proxy 菜单选择节点。</p>
+<h3 id="常见问题-10"><a href="#常见问题-10" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果浏览器没有效果，检查 macOS 系统代理是否被其他软件覆盖。</p>
+<p>如果菜单栏没有图标，确认 ClashX 是否已经启动。</p>
+<hr>
+<h2 id="14-V2RayU-使用教程"><a href="#14-V2RayU-使用教程" class="headerlink" title="14. V2RayU 使用教程"></a>14. <a target="_blank" rel="noopener" href="https://github.com/yanue/V2RayU/releases">V2RayU</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/yanue/V2RayU/releases">V2RayU</a> 是 macOS 平台的 V2Ray 客户端，适合使用 V2Ray 系配置的用户。原工具清单也把 V2RayU 列为 macOS 客户端。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-8"><a href="#安装方法-8" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/yanue/V2RayU/releases">V2RayU Releases</a>。</p>
+<p>下载 <code>.dmg</code> 文件。</p>
+<p>拖入 Applications。</p>
+<p>打开后允许网络权限。</p>
+<h3 id="导入订阅-9"><a href="#导入订阅-9" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>点击菜单栏 V2RayU 图标。</p>
+<p>进入服务器订阅设置。</p>
+<p>添加订阅地址。</p>
+<p>更新订阅。</p>
+<p>选择一个节点。</p>
+<h3 id="启动代理-6"><a href="#启动代理-6" class="headerlink" title="启动代理"></a>启动代理</h3><p>开启系统代理。</p>
+<p>选择 PAC 或全局模式。</p>
+<p>测试网页访问。</p>
+<h3 id="常见问题-11"><a href="#常见问题-11" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果导入后节点为空，检查订阅格式是否适合 V2RayU。</p>
+<p>如果系统代理无效，重启 V2RayU 或检查 macOS 网络代理设置。</p>
+<hr>
+<h2 id="15-Stash-使用教程"><a href="#15-Stash-使用教程" class="headerlink" title="15. Stash 使用教程"></a>15. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/stash-rule-based-proxy/id1596063349">Stash</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/stash-rule-based-proxy/id1596063349">Stash</a> 是 iOS &#x2F; iPadOS 上的规则代理客户端，也可在部分 Apple 设备上使用。App Store 页面介绍它适配 Clash 规则，并支持规则、脚本、HTTP 重写、MitM、DNS 等功能。(<a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/stash-rule-based-proxy/id1596063349" title="‎Stash - Rule Based Proxy App - App Store">App Store</a>)</p>
+<h3 id="安装方法-9"><a href="#安装方法-9" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/stash-rule-based-proxy/id1596063349">Stash App Store</a>。</p>
+<p>购买并安装。</p>
+<p>打开后允许 VPN 配置。</p>
+<h3 id="导入订阅-10"><a href="#导入订阅-10" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入 Stash 首页。</p>
+<p>点击配置文件或 Profiles。</p>
+<p>选择从 URL 下载配置。</p>
+<p>粘贴 Clash &#x2F; Stash 兼容订阅链接。</p>
+<p>保存并更新。</p>
+<h3 id="启动代理-7"><a href="#启动代理-7" class="headerlink" title="启动代理"></a>启动代理</h3><p>回到首页。</p>
+<p>选择配置文件。</p>
+<p>点击启动。</p>
+<p>首次启动时允许添加 VPN 配置。</p>
+<h3 id="使用建议-5"><a href="#使用建议-5" class="headerlink" title="使用建议"></a>使用建议</h3><p>Stash 适合使用 Clash 规则的用户。如果你的订阅不是 Clash 格式，可以先用 subconverter 或 Sub-Store 转换。</p>
+<h3 id="常见问题-12"><a href="#常见问题-12" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果配置报错，检查 YAML 缩进和格式。</p>
+<p>如果规则不生效，确认当前模式是否为 Rule，而不是 Global 或 Direct。</p>
+<hr>
+<h2 id="16-Surge-5-使用教程"><a href="#16-Surge-5-使用教程" class="headerlink" title="16. Surge 5 使用教程"></a>16. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/surge-5/id1442620678">Surge 5</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/surge-5/id1442620678">Surge 5</a> 是专业级网络工具，适合高级用户。原工具清单也把 Surge 列为 macOS &#x2F; iOS 平台的专业规则工具。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-10"><a href="#安装方法-10" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/surge-5/id1442620678">Surge 5 App Store</a>。</p>
+<p>安装并打开。</p>
+<p>按提示允许 VPN 权限。</p>
+<h3 id="导入配置"><a href="#导入配置" class="headerlink" title="导入配置"></a>导入配置</h3><p>进入配置管理。</p>
+<p>选择从 URL 安装配置，或导入本地配置文件。</p>
+<p>粘贴 Surge 格式配置链接。</p>
+<p>保存并应用配置。</p>
+<h3 id="启动使用-1"><a href="#启动使用-1" class="headerlink" title="启动使用"></a>启动使用</h3><p>选择当前配置。</p>
+<p>打开 Surge 开关。</p>
+<p>检查策略组是否正常显示。</p>
+<p>根据需要选择 Rule、Global 或 Direct。</p>
+<h3 id="使用建议-6"><a href="#使用建议-6" class="headerlink" title="使用建议"></a>使用建议</h3><p>Surge 功能很强，但学习成本较高。新手不要一开始就修改复杂脚本、MITM、DNS 和重写规则。先确认基础代理能正常工作，再逐步学习模块和规则。</p>
+<h3 id="常见问题-13"><a href="#常见问题-13" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果配置导入失败，通常是配置格式不是 Surge 格式。</p>
+<p>如果 HTTPS 解密相关功能异常，检查证书是否正确安装和信任。</p>
+<hr>
+<h1 id="六、Android-客户端教程"><a href="#六、Android-客户端教程" class="headerlink" title="六、Android 客户端教程"></a>六、Android 客户端教程</h1><h2 id="17-ClashMeta-for-Android-使用教程"><a href="#17-ClashMeta-for-Android-使用教程" class="headerlink" title="17. ClashMeta for Android 使用教程"></a>17. <a target="_blank" rel="noopener" href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases">ClashMeta for Android</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases">ClashMeta for Android</a> 是 Android 上的 Clash&#x2F;Mihomo 客户端，适合使用 Clash 订阅的人。</p>
+<h3 id="安装方法-11"><a href="#安装方法-11" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/MetaCubeX/ClashMetaForAndroid/releases">ClashMeta for Android Releases</a>。</p>
+<p>下载 APK。</p>
+<p>安装并打开。</p>
+<p>允许 VPN 权限。</p>
+<h3 id="导入订阅-11"><a href="#导入订阅-11" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入 Profiles。</p>
+<p>点击新建配置。</p>
+<p>选择 URL 导入。</p>
+<p>粘贴 Clash&#x2F;Mihomo 订阅链接。</p>
+<p>下载并启用配置。</p>
+<h3 id="启动代理-8"><a href="#启动代理-8" class="headerlink" title="启动代理"></a>启动代理</h3><p>回到首页。</p>
+<p>点击启动。</p>
+<p>进入代理页面选择节点。</p>
+<p>选择 Rule 模式。</p>
+<h3 id="常见问题-14"><a href="#常见问题-14" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果 APK 无法安装，检查手机架构和系统版本。</p>
+<p>如果后台经常断开，关闭电池优化，并允许后台运行。</p>
+<hr>
+<h2 id="18-V2RayNG-使用教程"><a href="#18-V2RayNG-使用教程" class="headerlink" title="18. V2RayNG 使用教程"></a>18. <a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayNG/releases">V2RayNG</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayNG/releases">V2RayNG</a> 是 Android 上常见的 V2Ray 客户端，适合 VMess、VLESS、Trojan 等配置。</p>
+<h3 id="安装方法-12"><a href="#安装方法-12" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayNG/releases">V2RayNG Releases</a>。</p>
+<p>下载 APK。</p>
+<p>安装后打开。</p>
+<p>允许 VPN 权限。</p>
+<h3 id="导入订阅-12"><a href="#导入订阅-12" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>点击右上角加号或菜单。</p>
+<p>选择订阅设置。</p>
+<p>添加订阅链接。</p>
+<p>返回主界面，点击更新订阅。</p>
+<p>节点出现后选择一个节点。</p>
+<h3 id="手动导入"><a href="#手动导入" class="headerlink" title="手动导入"></a>手动导入</h3><p>如果你有二维码，可以选择扫码导入。</p>
+<p>如果你有节点链接，可以复制到剪贴板，再选择从剪贴板导入。</p>
+<h3 id="启动代理-9"><a href="#启动代理-9" class="headerlink" title="启动代理"></a>启动代理</h3><p>选择节点。</p>
+<p>点击右下角启动按钮。</p>
+<p>状态显示已连接后测试访问。</p>
+<h3 id="常见问题-15"><a href="#常见问题-15" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果能连接但网页打不开，检查路由设置和 DNS。</p>
+<p>如果所有节点超时，更新订阅或检查手机网络。</p>
+<hr>
+<h2 id="19-NekoBox-for-Android-使用教程"><a href="#19-NekoBox-for-Android-使用教程" class="headerlink" title="19. NekoBox for Android 使用教程"></a>19. <a target="_blank" rel="noopener" href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases">NekoBox for Android</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases">NekoBox for Android</a> 是 Android 上轻量的多协议客户端。</p>
+<h3 id="安装方法-13"><a href="#安装方法-13" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/MatsuriDayo/NekoBoxForAndroid/releases">NekoBox for Android Releases</a>。</p>
+<p>下载 APK。</p>
+<p>安装并打开。</p>
+<p>允许 VPN 配置权限。</p>
+<h3 id="导入订阅-13"><a href="#导入订阅-13" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入分组或配置管理。</p>
+<p>添加订阅链接。</p>
+<p>更新订阅。</p>
+<p>选择节点。</p>
+<h3 id="启动代理-10"><a href="#启动代理-10" class="headerlink" title="启动代理"></a>启动代理</h3><p>点击启动按钮。</p>
+<p>确认 VPN 图标出现。</p>
+<p>测试连接。</p>
+<h3 id="使用建议-7"><a href="#使用建议-7" class="headerlink" title="使用建议"></a>使用建议</h3><p>NekoBox 适合喜欢简洁界面的人。新手可以先使用默认路由设置，不要一开始就调整复杂 DNS。</p>
+<h3 id="常见问题-16"><a href="#常见问题-16" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果无法启动 VPN，检查是否已有其他 VPN 应用正在运行。</p>
+<p>如果节点导入失败，检查订阅格式是否兼容。</p>
+<hr>
+<h2 id="20-Sing-box-使用教程"><a href="#20-Sing-box-使用教程" class="headerlink" title="20. Sing-box 使用教程"></a>20. <a target="_blank" rel="noopener" href="https://github.com/SagerNet/sing-box/releases">Sing-box</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://github.com/SagerNet/sing-box/releases">Sing-box</a> 是代理内核和客户端生态的重要工具，适合有一定配置能力的用户。原工具清单中也把 Sing-box 列为 Android 平台客户端，并提到其支持新协议。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-14"><a href="#安装方法-14" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://github.com/SagerNet/sing-box/releases">Sing-box Releases</a>。</p>
+<p>根据系统下载对应版本。</p>
+<p>Android 用户下载 APK。</p>
+<p>桌面或服务器用户下载对应命令行版本。</p>
+<h3 id="配置方法"><a href="#配置方法" class="headerlink" title="配置方法"></a>配置方法</h3><p>Sing-box 通常使用 JSON 配置文件。</p>
+<p>你可以：</p>
+<ul>
+<li>手动编写 JSON；</li>
+<li>使用转换工具生成；</li>
+<li>从兼容客户端导出；</li>
+<li>使用 Hiddify Next、Karing 等前端间接使用 Sing-box。</li>
+</ul>
+<h3 id="启动方法"><a href="#启动方法" class="headerlink" title="启动方法"></a>启动方法</h3><p>Android 版打开后导入配置并启动。</p>
+<p>命令行版本通常需要指定配置文件启动。</p>
+<h3 id="常见问题-17"><a href="#常见问题-17" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果配置无法启动，优先检查 JSON 格式是否正确。</p>
+<p>如果 DNS 异常，先使用最简单 DNS 配置测试。</p>
+<p>如果路由不生效，检查 route 规则顺序。</p>
+<hr>
+<h1 id="七、iOS-客户端教程"><a href="#七、iOS-客户端教程" class="headerlink" title="七、iOS 客户端教程"></a>七、iOS 客户端教程</h1><h2 id="21-Shadowrocket-使用教程"><a href="#21-Shadowrocket-使用教程" class="headerlink" title="21. Shadowrocket 使用教程"></a>21. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a> 是 iOS 上常见的代理客户端，适合需要简单导入和快速使用的人。原工具清单把它列为 iOS 平台常见付费工具。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-15"><a href="#安装方法-15" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket App Store</a>。</p>
+<p>购买并安装。</p>
+<p>打开后允许 VPN 配置。</p>
+<h3 id="导入订阅-14"><a href="#导入订阅-14" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>打开 Shadowrocket。</p>
+<p>点击右上角加号。</p>
+<p>选择 Subscribe 或订阅。</p>
+<p>粘贴订阅链接。</p>
+<p>保存后更新订阅。</p>
+<h3 id="启动代理-11"><a href="#启动代理-11" class="headerlink" title="启动代理"></a>启动代理</h3><p>回到首页。</p>
+<p>选择节点。</p>
+<p>打开顶部连接开关。</p>
+<p>首次使用时允许添加 VPN 配置。</p>
+<h3 id="常见问题-18"><a href="#常见问题-18" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果订阅导入后为空，检查订阅格式。</p>
+<p>如果 App Store 搜不到，检查 Apple ID 地区。</p>
+<p>如果节点连接失败，先换节点测试。</p>
+<hr>
+<h2 id="22-Quantumult-X-使用教程"><a href="#22-Quantumult-X-使用教程" class="headerlink" title="22. Quantumult X 使用教程"></a>22. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/quantumult-x/id1443988620">Quantumult X</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/quantumult-x/id1443988620">Quantumult X</a> 是 iOS 上功能丰富的规则工具，适合高级用户。原工具清单中提到它支持脚本、HTTP 重写、规则分流和任务自动化。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-16"><a href="#安装方法-16" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/quantumult-x/id1443988620">Quantumult X App Store</a>。</p>
+<p>购买并安装。</p>
+<p>打开后允许 VPN 权限。</p>
+<h3 id="导入订阅-15"><a href="#导入订阅-15" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入设置页面。</p>
+<p>找到节点资源或 Server 资源。</p>
+<p>添加订阅链接。</p>
+<p>保存并更新资源。</p>
+<p>回到主界面选择节点。</p>
+<h3 id="导入配置-1"><a href="#导入配置-1" class="headerlink" title="导入配置"></a>导入配置</h3><p>如果你有完整配置文件，可以通过配置文件 URL 或本地文件导入。</p>
+<h3 id="启动代理-12"><a href="#启动代理-12" class="headerlink" title="启动代理"></a>启动代理</h3><p>开启右上角开关。</p>
+<p>选择策略模式。</p>
+<p>查看日志确认连接是否正常。</p>
+<h3 id="使用建议-8"><a href="#使用建议-8" class="headerlink" title="使用建议"></a>使用建议</h3><p>Quantumult X 功能较复杂。新手先学会三件事：</p>
+<ul>
+<li>添加节点订阅；</li>
+<li>更新资源；</li>
+<li>开启 VPN。</li>
+</ul>
+<p>脚本、重写、MitM、定时任务等高级功能，建议后面再学习。</p>
+<hr>
+<h2 id="23-Loon-使用教程"><a href="#23-Loon-使用教程" class="headerlink" title="23. Loon 使用教程"></a>23. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/loon/id1373567447">Loon</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/loon/id1373567447">Loon</a> 是 iOS 上的规则代理工具，适合需要规则、插件、脚本功能的用户。</p>
+<h3 id="安装方法-17"><a href="#安装方法-17" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/loon/id1373567447">Loon App Store</a>。</p>
+<p>购买并安装。</p>
+<p>首次启动时允许 VPN 权限。</p>
+<h3 id="导入订阅-16"><a href="#导入订阅-16" class="headerlink" title="导入订阅"></a>导入订阅</h3><p>进入配置或资源页面。</p>
+<p>添加订阅链接。</p>
+<p>选择节点类型或规则资源。</p>
+<p>更新订阅。</p>
+<p>返回首页选择策略。</p>
+<h3 id="启动代理-13"><a href="#启动代理-13" class="headerlink" title="启动代理"></a>启动代理</h3><p>开启 Loon 开关。</p>
+<p>选择规则模式。</p>
+<p>测试连接。</p>
+<h3 id="常见问题-19"><a href="#常见问题-19" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果规则不生效，确认当前使用的是正确配置。</p>
+<p>如果订阅导入失败，使用 Sub-Store 转换成 Loon 兼容格式后再导入。</p>
+<hr>
+<h2 id="24-sing-box-VT-使用教程"><a href="#24-sing-box-VT-使用教程" class="headerlink" title="24. sing-box VT 使用教程"></a>24. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/sing-box-vt/id6673731168">sing-box VT</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/sing-box-vt/id6673731168">sing-box VT</a> 是 iOS 上的 Sing-box 客户端，适合 Sing-box 配置用户。</p>
+<h3 id="安装方法-18"><a href="#安装方法-18" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/sing-box-vt/id6673731168">sing-box VT App Store</a>。</p>
+<p>安装并打开。</p>
+<p>允许 VPN 配置权限。</p>
+<h3 id="导入配置-2"><a href="#导入配置-2" class="headerlink" title="导入配置"></a>导入配置</h3><p>准备 Sing-box JSON 配置。</p>
+<p>在应用中选择导入配置。</p>
+<p>可以从文件导入，也可以粘贴配置内容。</p>
+<p>保存并启用配置。</p>
+<h3 id="启动代理-14"><a href="#启动代理-14" class="headerlink" title="启动代理"></a>启动代理</h3><p>选择配置。</p>
+<p>点击启动。</p>
+<p>检查 VPN 图标是否出现。</p>
+<h3 id="常见问题-20"><a href="#常见问题-20" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果配置启动失败，重点检查 JSON 格式。</p>
+<p>如果你手上是 Clash 订阅，可以先用 Hiddify Next、sing-box-converter 或 v2sing 转换后再导入。</p>
+<hr>
+<h2 id="25-Potatso-使用教程"><a href="#25-Potatso-使用教程" class="headerlink" title="25. Potatso 使用教程"></a>25. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/potatso/id1239860606">Potatso</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/potatso/id1239860606">Potatso</a> 是 iOS 上的代理工具。App Store 页面显示它支持 Shadowsocks、ShadowsocksR、Socks、HTTP(S) 等协议，并支持二维码、URI 和手动输入等方式。(<a target="_blank" rel="noopener" href="https://apps.apple.com/app/potatso/id1239860606" title="‎Potatso App - App Store">App Store</a>)</p>
+<h3 id="安装方法-19"><a href="#安装方法-19" class="headerlink" title="安装方法"></a>安装方法</h3><p>打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/potatso/id1239860606">Potatso App Store</a>。</p>
+<p>安装并打开。</p>
+<p>允许 VPN 权限。</p>
+<h3 id="添加节点"><a href="#添加节点" class="headerlink" title="添加节点"></a>添加节点</h3><p>点击添加代理。</p>
+<p>选择手动输入、二维码扫描或 URI 导入。</p>
+<p>填写服务器、端口、加密方式、密码等信息。</p>
+<p>保存配置。</p>
+<h3 id="添加订阅"><a href="#添加订阅" class="headerlink" title="添加订阅"></a>添加订阅</h3><p>如果使用订阅功能，进入订阅或 Profile 页面。</p>
+<p>添加订阅链接。</p>
+<p>更新订阅。</p>
+<p>选择节点并启动。</p>
+<h3 id="常见问题-21"><a href="#常见问题-21" class="headerlink" title="常见问题"></a>常见问题</h3><p>如果连接失败，检查协议类型和加密方式是否匹配。</p>
+<p>如果订阅无法更新，检查链接格式是否支持 Potatso。</p>
+<hr>
+<h2 id="26-Outline-使用教程"><a href="#26-Outline-使用教程" class="headerlink" title="26. Outline 使用教程"></a>26. <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/outline-app/id1356177741">Outline</a> 使用教程</h2><p><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/outline-app/id1356177741">Outline</a> 是偏简单化的代理客户端，适合使用 Outline 访问密钥的用户。原工具清单也列出了 Outline 的 iOS 和 macOS 下载入口。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h3 id="安装方法-20"><a href="#安装方法-20" class="headerlink" title="安装方法"></a>安装方法</h3><p>iOS 用户打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/outline-app/id1356177741">Outline iOS</a>。</p>
+<p>macOS 用户打开 <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/outline-secure-internet-access/id1356178125?mt=12">Outline macOS</a>。</p>
+<p>安装后打开。</p>
+<h3 id="导入访问密钥"><a href="#导入访问密钥" class="headerlink" title="导入访问密钥"></a>导入访问密钥</h3><p>复制 Outline 访问密钥。</p>
+<p>打开 Outline。</p>
+<p>应用通常会自动识别剪贴板中的访问密钥。</p>
+<p>点击添加服务器。</p>
+<p>保存配置。</p>
+<h3 id="启动连接"><a href="#启动连接" class="headerlink" title="启动连接"></a>启动连接</h3><p>选择服务器。</p>
+<p>点击连接。</p>
+<p>首次使用时允许 VPN 权限。</p>
+<h3 id="常见问题-22"><a href="#常见问题-22" class="headerlink" title="常见问题"></a>常见问题</h3><p>Outline 不适合导入 Clash、Surge、Quantumult X 这类复杂订阅。它主要适合 Outline 格式的访问密钥。</p>
+<p>如果你手里是普通订阅链接，需要换用 Clash Verge Rev、Hiddify Next、Shadowrocket、Stash 等客户端。</p>
+<hr>
+<h1 id="八、通用排错方法"><a href="#八、通用排错方法" class="headerlink" title="八、通用排错方法"></a>八、通用排错方法</h1><p>无论你使用哪个工具，遇到问题时都可以按这个顺序排查。原项目的快速开始指南也建议按“选择客户端、下载安装、导入订阅、配置客户端、测试连接”的流程操作，并在连接异常时检查配置、节点、本地网络和防火墙等因素。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<h2 id="1-订阅导入失败"><a href="#1-订阅导入失败" class="headerlink" title="1. 订阅导入失败"></a>1. 订阅导入失败</h2><p>先检查：</p>
+<ul>
+<li>订阅链接是否复制完整；</li>
+<li>链接是否过期；</li>
+<li>客户端是否支持该格式；</li>
+<li>是否需要先转换格式；</li>
+<li>本地网络是否能访问订阅地址。</li>
+</ul>
+<p>解决方式：</p>
+<ul>
+<li>Clash 类客户端使用 Clash&#x2F;Mihomo 格式；</li>
+<li>Sing-box 类客户端使用 Sing-box JSON；</li>
+<li>Surge、Loon、Quantumult X 使用各自兼容格式；</li>
+<li>格式不对时使用 subconverter 或 Sub-Store 转换。</li>
+</ul>
+<h2 id="2-连接成功但网页打不开"><a href="#2-连接成功但网页打不开" class="headerlink" title="2. 连接成功但网页打不开"></a>2. 连接成功但网页打不开</h2><p>先检查：</p>
+<ul>
+<li>是否开启系统代理或 VPN；</li>
+<li>是否选中了可用节点；</li>
+<li>是否有其他代理软件冲突；</li>
+<li>浏览器是否安装了独立代理插件；</li>
+<li>DNS 是否异常；</li>
+<li>当前模式是否选错。</li>
+</ul>
+<p>建议先切换到 Global 测试。如果 Global 能用、Rule 不能用，说明大概率是规则分流问题。</p>
+<h2 id="3-手机后台自动断开"><a href="#3-手机后台自动断开" class="headerlink" title="3. 手机后台自动断开"></a>3. 手机后台自动断开</h2><p>Android 检查：</p>
+<ul>
+<li>电池优化；</li>
+<li>后台运行权限；</li>
+<li>VPN 常驻权限；</li>
+<li>系统管家限制。</li>
+</ul>
+<p>iOS 检查：</p>
+<ul>
+<li>是否手动关闭了 VPN；</li>
+<li>是否切换网络导致断开；</li>
+<li>App 是否需要重新授权 VPN 配置。</li>
+</ul>
+<h2 id="4-节点测速全部失败"><a href="#4-节点测速全部失败" class="headerlink" title="4. 节点测速全部失败"></a>4. 节点测速全部失败</h2><p>常见原因：</p>
+<ul>
+<li>订阅已经失效；</li>
+<li>网络环境不稳定；</li>
+<li>客户端内核异常；</li>
+<li>防火墙拦截；</li>
+<li>DNS 解析失败。</li>
+</ul>
+<p>可以尝试：</p>
+<ul>
+<li>更新订阅；</li>
+<li>更换网络；</li>
+<li>重启客户端；</li>
+<li>换一个客户端测试；</li>
+<li>查看日志定位错误。</li>
+</ul>
+<hr>
+<h1 id="九、安全提醒"><a href="#九、安全提醒" class="headerlink" title="九、安全提醒"></a>九、安全提醒</h1><p>下载客户端时，尽量从官方 GitHub Releases、官方网站或 App Store 获取，不要使用来源不明的安装包。原项目免责声明也提醒，相关工具仅供技术交流和学习使用，使用时应遵守当地法律法规，并注意免费节点和陌生配置可能带来的隐私风险。(<a target="_blank" rel="noopener" href="https://github.com/maomao533/dingyue-tools/tree/main" title="GitHub - maomao533&#x2F;dingyue-tools: 精心整理的科学上网客户端工具合集，涵盖Windows、macOS、Linux、Android、iOS等全平台。所有工具均指向官方GitHub仓库的Releases页面，确保下载最新稳定版。 · GitHub">GitHub</a>)</p>
+<p>建议做到：</p>
+<ul>
+<li>不安装破解包；</li>
+<li>不使用来历不明的二次打包版本；</li>
+<li>不随意导入陌生人发来的配置文件；</li>
+<li>不在不可信配置下登录重要账号；</li>
+<li>定期更新客户端；</li>
+<li>备份自己的配置；</li>
+<li>遵守当地法律法规。</li>
+</ul>
+<hr>
+<h1 id="十、总结"><a href="#十、总结" class="headerlink" title="十、总结"></a>十、总结</h1><p>如果你是新手，优先从 <a target="_blank" rel="noopener" href="https://github.com/hiddify/hiddify-app/releases">Hiddify Next</a>、<a target="_blank" rel="noopener" href="https://github.com/clash-verge-rev/clash-verge-rev/releases">Clash Verge Rev</a>、<a target="_blank" rel="noopener" href="https://github.com/2dust/v2rayNG/releases">V2RayNG</a>、<a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/shadowrocket/id932747118">Shadowrocket</a> 这类容易上手的客户端开始。</p>
+<p>如果你需要订阅转换，优先了解 <a target="_blank" rel="noopener" href="https://github.com/tindy2013/subconverter">subconverter</a> 和 <a target="_blank" rel="noopener" href="https://github.com/sub-store-org/Sub-Store">Sub-Store</a>。</p>
+<p>如果你主要使用 Sing-box 生态，可以选择 <a target="_blank" rel="noopener" href="https://github.com/hiddify/hiddify-app/releases">Hiddify Next</a>、<a target="_blank" rel="noopener" href="https://github.com/KaringX/karing/releases">Karing</a>、<a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/sing-box-vt/id6673731168">sing-box VT</a>、<a target="_blank" rel="noopener" href="https://github.com/dzhuang/sing-box-converter">sing-box-converter</a> 或 <a target="_blank" rel="noopener" href="https://github.com/printfer/v2sing">v2sing</a>。</p>
+<p>实际使用中，不需要每个工具都安装。最合理的方式是：每个平台保留一个主力客户端，再准备一个订阅转换工具备用。这样既方便管理，也能减少系统代理冲突和配置混乱。</p>
+</article><div class="post-copyright"><div class="copyright-cc-box"><i class="anzhiyufont anzhiyu-icon-copyright"></i></div><div class="post-copyright__author_box"><a class="post-copyright__author_img" href="/" title="头像"><img class="post-copyright__author_img_back" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783850983366_image.png" title="头像" alt="头像"><img class="post-copyright__author_img_front" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783850983366_image.png" title="头像" alt="头像"></a><div class="post-copyright__author_name">马老师</div><div class="post-copyright__author_desc">不务正业的理性浪漫</div></div><div class="post-copyright__post__info"><a class="post-copyright__original" title="该文章为原创文章，注意版权协议" href="https://blog.8818618.xyz/p/9c0abd53/">原创</a><a class="post-copyright-title"><span onclick="rm.copyPageUrl('https://blog.8818618.xyz/p/9c0abd53/')">全平台代理客户端与订阅转换工具使用教程</span></a></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div class="rewardLeftButton"><div class="post-reward" onclick="anzhiyu.addRewardMask()"><div class="reward-button button--animated" title="赞赏作者"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill"></i>打赏作者</div><div class="reward-main"><div class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span><ul class="reward-group"><li class="reward-item"><a href="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg" target="_blank"><img class="post-qr-code-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1784010628274_cbf5a9ac85f4b82dbe34e1a400c4eed3.jpg" alt="赞赏"/></a><div class="post-qr-code-desc">赞赏</div></li></ul><a class="reward-main-btn" href="https://rewards.8818618.xyz/" target="_blank"><div class="reward-text">赞赏者名单</div><div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div></a></div></div></div><div id="quit-box" onclick="anzhiyu.removeRewardMask()" style="display: none"></div></div><div class="shareRight"><div class="share-link mobile"><div class="share-qrcode"><div class="share-button" title="使用手机访问这篇文章"><i class="anzhiyufont anzhiyu-icon-qrcode"></i></div><div class="share-main"><div class="share-main-all"><div id="qrcode" title="https://blog.8818618.xyz/p/9c0abd53/"></div><div class="reward-dec">使用手机访问这篇文章</div></div></div></div></div><div class="share-link weibo"><a class="share-button" target="_blank" href="https://service.weibo.com/share/share.php?title=全平台代理客户端与订阅转换工具使用教程&amp;url=https://blog.8818618.xyz/p/9c0abd53/&amp;pic=/images/cover-proxy-clients-20261004.jpg" rel="external nofollow noreferrer noopener"><i class="anzhiyufont anzhiyu-icon-weibo"></i></a></div><script>function copyCurrentPageUrl() {
+  var currentPageUrl = window.location.href;
+  var input = document.createElement("input");
+  input.setAttribute("value", currentPageUrl);
+  document.body.appendChild(input);
+  input.select();
+  input.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.body.removeChild(input);
+}</script><div class="share-link copyurl"><div class="share-button" id="post-share-url" title="复制链接" onclick="copyCurrentPageUrl()"><i class="anzhiyufont anzhiyu-icon-link"></i></div></div></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.8818618.xyz" target="_blank">马老师BLOG</a>！</span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__box"><div class="post-meta__box__tag-list"><a class="post-meta__box__tags" href="/tags/%E9%A9%AC%E8%80%81%E5%B8%88%E5%B7%A5%E5%85%B7%E5%88%86%E4%BA%AB/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>马老师工具分享<span class="tagsPageCount">7</span></a><a class="post-meta__box__tags" href="/tags/%E7%A7%91%E5%AD%A6%E8%AF%A6%E8%A7%A3/"><span class="tags-punctuation"> <i class="anzhiyufont anzhiyu-icon-tag"></i></span>科学详解<span class="tagsPageCount">1</span></a></div></div></div><div class="post_share"><div class="social-share" data-image="https://tc.8818618.xyz/file/1786351325369_image.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"/><script src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer="defer"></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/p/730aaade/"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/cover-proxy-summary-20261004.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">科学上网汇总讲解</div></div></a></div><div class="next-post pull-right"><a href="/p/5a82730e/"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783841546057_image.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">VMRack VPS 体验分享</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="anzhiyufont anzhiyu-icon-thumbs-up fa-fw" style="font-size: 1.5rem; margin-right: 4px"></i><span>喜欢这篇文章的人也看了</span></div><div class="relatedPosts-list"><div><a href="/p/malaoshi-shadowstore/" title="马老师专属ShadowStore使用教程，一个站搜遍全网代理模块"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/shadowstore-guide-cover.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-10-29</div><div class="title">马老师专属ShadowStore使用教程，一个站搜遍全网代理模块</div></div></a></div><div><a href="/p/malaoshi-adcleaner-guide/" title="马老师专属去广告使用教程，插上数据线点几下关掉手机广告"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/malaoshi-adcleaner-guide.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-10-28</div><div class="title">马老师专属去广告使用教程，插上数据线点几下关掉手机广告</div></div></a></div><div><a href="/p/malaoshi-office-tools/" title="马老师专属 Office 工具：一键下载、安装、激活 Office"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/malaoshi-office-tools.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-10-28</div><div class="title">马老师专属 Office 工具：一键下载、安装、激活 Office</div></div></a></div><div><a href="/p/2b11aba6/" title="马老师专属平台全站教程：一个账号玩转直播、TV、音乐、论坛、博客"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1790605986777_image.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-10-02</div><div class="title">马老师专属平台全站教程：一个账号玩转直播、TV、音乐、论坛、博客</div></div></a></div><div><a href="/p/cbfc1e6a/" title="Edgetunnel 部署与 VLESS 订阅转换指南"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1784009889465_image.png" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-07-14</div><div class="title">Edgetunnel 部署与 VLESS 订阅转换指南</div></div></a></div><div><a href="/p/f8759eb6/" title="部署订阅转换：WEB前端 - 多种主流方案详解"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/cover-subconvert-20261004.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="anzhiyufont anzhiyu-icon-calendar-days fa-fw"></i> 2026-04-12</div><div class="title">部署订阅转换：WEB前端 - 多种主流方案详解</div></div></a></div></div></div><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="anzhiyufont anzhiyu-icon-comments"></i><span> 评论</span></div><div class="comment-randomInfo"><a onclick="anzhiyu.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a><a href="/privacy" style="margin-left: 4px">隐私政策</a></div><div class="comment-tips" id="comment-tips"><span>✅ 你无需删除空行，直接评论以获取最佳展示效果</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div><div class="comment-barrage"></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="author-info__sayhi" id="author-info__sayhi" onclick="anzhiyu.changeSayHelloText()"></div><div class="author-info-avatar"><img class="avatar-img" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1783850983366_image.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-status"><img class="g-status" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/ma-status-badge.jpg" alt="status"/></div></div><div class="author-info__description">马老师，专说大实话…不务正业的理性浪漫，欢迎常来坐坐。</div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/"><h1 class="author-info__name">马老师</h1><div class="author-info__desc">不务正业的理性浪漫</div></a><div class="card-info-social-icons is-center"><a class="social-icon faa-parent animated-hover" href="https://github.com/jason6668" target="_blank" title="Github"><i class="anzhiyufont anzhiyu-icon-github"></i></a><a class="social-icon faa-parent animated-hover" href="mailto:ma@8818618.xyz" target="_blank" title="Email"><i class="anzhiyufont anzhiyu-icon-envelope"></i></a><a class="social-icon faa-parent animated-hover" href="https://t.me/sisumasanBot" target="_blank" title="Telegram"><i class="anzhiyufont anzhiyu-icon-telegram"></i></a></div></div></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bullhorn anzhiyu-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到马老师的“无用之地”。这里记录着心理学的洞察、自动化的实践以及那些被按下的暂停键。</div></div><div class="card-widget anzhiyu-right-widget" id="card-wechat" onclick="window.open(&quot;https://vip.8818618.xyz/&quot;)"><div id="flip-wrapper"><div id="flip-content"><div class="face" style="background: url(/images/vip-join-face.png?v=20260930) center center / 100% no-repeat"></div><div class="back face" style="background: url(/images/vip-join-back.png?v=20260930) center center / 100% no-repeat"></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-bars"></i><span>文章目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E5%B9%B3%E5%8F%B0%E4%BB%A3%E7%90%86%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8E%E8%AE%A2%E9%98%85%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B%EF%BC%9A%E6%AF%8F%E4%B8%AA%E5%B7%A5%E5%85%B7%E6%80%8E%E4%B9%88%E5%AE%89%E8%A3%85%E3%80%81%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85%E5%92%8C%E6%8E%92%E6%9F%A5%E9%97%AE%E9%A2%98"><span class="toc-number">1.</span> <span class="toc-text">全平台代理客户端与订阅转换工具使用教程：每个工具怎么安装、导入订阅和排查问题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%BD%BF%E7%94%A8%E5%89%8D%E5%87%86%E5%A4%87"><span class="toc-number">1.1.</span> <span class="toc-text">一、使用前准备</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%AE%A2%E9%98%85%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7%E6%95%99%E7%A8%8B"><span class="toc-number">2.</span> <span class="toc-text">二、订阅转换工具教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-subconverter-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">2.1.</span> <span class="toc-text">1. subconverter 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E8%B0%81%E7%94%A8"><span class="toc-number">2.1.1.</span> <span class="toc-text">适合谁用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B"><span class="toc-number">2.1.2.</span> <span class="toc-text">基础使用流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E5%8F%82%E6%95%B0%E7%90%86%E8%A7%A3"><span class="toc-number">2.1.3.</span> <span class="toc-text">常见参数理解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-number">2.1.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Sub-Store-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">2.2.</span> <span class="toc-text">2. Sub-Store 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E8%B0%81%E7%94%A8-1"><span class="toc-number">2.2.1.</span> <span class="toc-text">适合谁用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B-1"><span class="toc-number">2.2.2.</span> <span class="toc-text">基础使用流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE"><span class="toc-number">2.2.3.</span> <span class="toc-text">使用建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-1"><span class="toc-number">2.2.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Hiddify-Next-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">3. Hiddify Next 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E8%B0%81%E7%94%A8-2"><span class="toc-number">2.3.1.</span> <span class="toc-text">适合谁用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Windows-macOS-Linux-%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.2.</span> <span class="toc-text">Windows &#x2F; macOS &#x2F; Linux 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Android-%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.3.</span> <span class="toc-text">Android 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iOS-%E5%AE%89%E8%A3%85"><span class="toc-number">2.3.4.</span> <span class="toc-text">iOS 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85"><span class="toc-number">2.3.5.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-1"><span class="toc-number">2.3.6.</span> <span class="toc-text">使用建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-2"><span class="toc-number">2.3.7.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-sing-box-converter-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">2.4.</span> <span class="toc-text">4. sing-box-converter 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E8%B0%81%E7%94%A8-3"><span class="toc-number">2.4.1.</span> <span class="toc-text">适合谁用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B-2"><span class="toc-number">2.4.2.</span> <span class="toc-text">基础使用流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-2"><span class="toc-number">2.4.3.</span> <span class="toc-text">使用建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-3"><span class="toc-number">2.4.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-v2sing-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">2.5.</span> <span class="toc-text">5. v2sing 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%82%E5%90%88%E8%B0%81%E7%94%A8-4"><span class="toc-number">2.5.1.</span> <span class="toc-text">适合谁用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B-3"><span class="toc-number">2.5.2.</span> <span class="toc-text">基础使用流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-3"><span class="toc-number">2.5.3.</span> <span class="toc-text">使用建议</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%95%99%E7%A8%8B"><span class="toc-number">3.</span> <span class="toc-text">三、跨平台客户端教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Clash-Verge-Rev-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">3.1.</span> <span class="toc-text">6. Clash Verge Rev 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-number">3.1.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-1"><span class="toc-number">3.1.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86"><span class="toc-number">3.1.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-4"><span class="toc-number">3.1.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Mihomo-Party-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">3.2.</span> <span class="toc-text">7. Mihomo Party 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-1"><span class="toc-number">3.2.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-2"><span class="toc-number">3.2.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BD%BF%E7%94%A8"><span class="toc-number">3.2.3.</span> <span class="toc-text">启动使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-5"><span class="toc-number">3.2.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-FlClash-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">3.3.</span> <span class="toc-text">8. FlClash 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-2"><span class="toc-number">3.3.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-3"><span class="toc-number">3.3.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-1"><span class="toc-number">3.3.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-4"><span class="toc-number">3.3.4.</span> <span class="toc-text">使用建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Karing-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">3.4.</span> <span class="toc-text">9. Karing 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-3"><span class="toc-number">3.4.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-4"><span class="toc-number">3.4.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E8%AE%BE%E5%A4%87%E5%90%8C%E6%AD%A5%E5%BB%BA%E8%AE%AE"><span class="toc-number">3.4.3.</span> <span class="toc-text">多设备同步建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-6"><span class="toc-number">3.4.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81Windows-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%95%99%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">四、Windows 客户端教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-V2RayN-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">4.1.</span> <span class="toc-text">10. V2RayN 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-4"><span class="toc-number">4.1.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-5"><span class="toc-number">4.1.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-2"><span class="toc-number">4.1.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-7"><span class="toc-number">4.1.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-NekoRay-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">4.2.</span> <span class="toc-text">11. NekoRay 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-5"><span class="toc-number">4.2.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-6"><span class="toc-number">4.2.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-3"><span class="toc-number">4.2.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-8"><span class="toc-number">4.2.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Clash-for-Windows-%E6%B1%89%E5%8C%96%E7%89%88-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">4.3.</span> <span class="toc-text">12. Clash for Windows 汉化版 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-6"><span class="toc-number">4.3.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-7"><span class="toc-number">4.3.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-4"><span class="toc-number">4.3.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-9"><span class="toc-number">4.3.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81macOS-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%95%99%E7%A8%8B"><span class="toc-number">5.</span> <span class="toc-text">五、macOS 客户端教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#13-ClashX-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">5.1.</span> <span class="toc-text">13. ClashX 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-7"><span class="toc-number">5.1.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-8"><span class="toc-number">5.1.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-5"><span class="toc-number">5.1.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-10"><span class="toc-number">5.1.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-V2RayU-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">5.2.</span> <span class="toc-text">14. V2RayU 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-8"><span class="toc-number">5.2.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-9"><span class="toc-number">5.2.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-6"><span class="toc-number">5.2.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-11"><span class="toc-number">5.2.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-Stash-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">5.3.</span> <span class="toc-text">15. Stash 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-9"><span class="toc-number">5.3.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-10"><span class="toc-number">5.3.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-7"><span class="toc-number">5.3.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-5"><span class="toc-number">5.3.4.</span> <span class="toc-text">使用建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-12"><span class="toc-number">5.3.5.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Surge-5-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">5.4.</span> <span class="toc-text">16. Surge 5 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-10"><span class="toc-number">5.4.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE"><span class="toc-number">5.4.2.</span> <span class="toc-text">导入配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BD%BF%E7%94%A8-1"><span class="toc-number">5.4.3.</span> <span class="toc-text">启动使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-6"><span class="toc-number">5.4.4.</span> <span class="toc-text">使用建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-13"><span class="toc-number">5.4.5.</span> <span class="toc-text">常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81Android-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%95%99%E7%A8%8B"><span class="toc-number">6.</span> <span class="toc-text">六、Android 客户端教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#17-ClashMeta-for-Android-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">6.1.</span> <span class="toc-text">17. ClashMeta for Android 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-11"><span class="toc-number">6.1.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-11"><span class="toc-number">6.1.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-8"><span class="toc-number">6.1.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-14"><span class="toc-number">6.1.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-V2RayNG-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">6.2.</span> <span class="toc-text">18. V2RayNG 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-12"><span class="toc-number">6.2.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-12"><span class="toc-number">6.2.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%A8%E5%AF%BC%E5%85%A5"><span class="toc-number">6.2.3.</span> <span class="toc-text">手动导入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-9"><span class="toc-number">6.2.4.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-15"><span class="toc-number">6.2.5.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-NekoBox-for-Android-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">6.3.</span> <span class="toc-text">19. NekoBox for Android 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-13"><span class="toc-number">6.3.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-13"><span class="toc-number">6.3.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-10"><span class="toc-number">6.3.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-7"><span class="toc-number">6.3.4.</span> <span class="toc-text">使用建议</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-16"><span class="toc-number">6.3.5.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-Sing-box-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">6.4.</span> <span class="toc-text">20. Sing-box 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-14"><span class="toc-number">6.4.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-number">6.4.2.</span> <span class="toc-text">配置方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E6%96%B9%E6%B3%95"><span class="toc-number">6.4.3.</span> <span class="toc-text">启动方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-17"><span class="toc-number">6.4.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81iOS-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%95%99%E7%A8%8B"><span class="toc-number">7.</span> <span class="toc-text">七、iOS 客户端教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#21-Shadowrocket-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">7.1.</span> <span class="toc-text">21. Shadowrocket 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-15"><span class="toc-number">7.1.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-14"><span class="toc-number">7.1.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-11"><span class="toc-number">7.1.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-18"><span class="toc-number">7.1.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-Quantumult-X-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">7.2.</span> <span class="toc-text">22. Quantumult X 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-16"><span class="toc-number">7.2.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-15"><span class="toc-number">7.2.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE-1"><span class="toc-number">7.2.3.</span> <span class="toc-text">导入配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-12"><span class="toc-number">7.2.4.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE-8"><span class="toc-number">7.2.5.</span> <span class="toc-text">使用建议</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-Loon-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">7.3.</span> <span class="toc-text">23. Loon 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-17"><span class="toc-number">7.3.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%A2%E9%98%85-16"><span class="toc-number">7.3.2.</span> <span class="toc-text">导入订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-13"><span class="toc-number">7.3.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-19"><span class="toc-number">7.3.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-sing-box-VT-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">7.4.</span> <span class="toc-text">24. sing-box VT 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-18"><span class="toc-number">7.4.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E9%85%8D%E7%BD%AE-2"><span class="toc-number">7.4.2.</span> <span class="toc-text">导入配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E4%BB%A3%E7%90%86-14"><span class="toc-number">7.4.3.</span> <span class="toc-text">启动代理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-20"><span class="toc-number">7.4.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-Potatso-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">7.5.</span> <span class="toc-text">25. Potatso 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-19"><span class="toc-number">7.5.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%8A%82%E7%82%B9"><span class="toc-number">7.5.2.</span> <span class="toc-text">添加节点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E8%AE%A2%E9%98%85"><span class="toc-number">7.5.3.</span> <span class="toc-text">添加订阅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-21"><span class="toc-number">7.5.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-Outline-%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-number">7.6.</span> <span class="toc-text">26. Outline 使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95-20"><span class="toc-number">7.6.1.</span> <span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%BC%E5%85%A5%E8%AE%BF%E9%97%AE%E5%AF%86%E9%92%A5"><span class="toc-number">7.6.2.</span> <span class="toc-text">导入访问密钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%90%AF%E5%8A%A8%E8%BF%9E%E6%8E%A5"><span class="toc-number">7.6.3.</span> <span class="toc-text">启动连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98-22"><span class="toc-number">7.6.4.</span> <span class="toc-text">常见问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E9%80%9A%E7%94%A8%E6%8E%92%E9%94%99%E6%96%B9%E6%B3%95"><span class="toc-number">8.</span> <span class="toc-text">八、通用排错方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%AE%A2%E9%98%85%E5%AF%BC%E5%85%A5%E5%A4%B1%E8%B4%A5"><span class="toc-number">8.1.</span> <span class="toc-text">1. 订阅导入失败</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%BF%9E%E6%8E%A5%E6%88%90%E5%8A%9F%E4%BD%86%E7%BD%91%E9%A1%B5%E6%89%93%E4%B8%8D%E5%BC%80"><span class="toc-number">8.2.</span> <span class="toc-text">2. 连接成功但网页打不开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%89%8B%E6%9C%BA%E5%90%8E%E5%8F%B0%E8%87%AA%E5%8A%A8%E6%96%AD%E5%BC%80"><span class="toc-number">8.3.</span> <span class="toc-text">3. 手机后台自动断开</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%8A%82%E7%82%B9%E6%B5%8B%E9%80%9F%E5%85%A8%E9%83%A8%E5%A4%B1%E8%B4%A5"><span class="toc-number">8.4.</span> <span class="toc-text">4. 节点测速全部失败</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%AE%89%E5%85%A8%E6%8F%90%E9%86%92"><span class="toc-number">9.</span> <span class="toc-text">九、安全提醒</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-number">10.</span> <span class="toc-text">十、总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="anzhiyufont anzhiyu-icon-history"></i><span>最近发布</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/p/abce2187/" title="2026最新全协议免费节点"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://tc.8818618.xyz/file/1786351325369_image.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026最新全协议免费节点"/></a><div class="content"><a class="title" href="/p/abce2187/" title="2026最新全协议免费节点">2026最新全协议免费节点</a><time datetime="2026-10-31T12:30:23.856Z" title="发表于 2026-10-31 20:30:23">2026-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/shengming-buxi/" title="生命不息：死过一次又一次的人，到底有没有活明白"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/shengming-buxi.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="生命不息：死过一次又一次的人，到底有没有活明白"/></a><div class="content"><a class="title" href="/p/shengming-buxi/" title="生命不息：死过一次又一次的人，到底有没有活明白">生命不息：死过一次又一次的人，到底有没有活明白</a><time datetime="2026-10-31T08:00:00.000Z" title="发表于 2026-10-31 16:00:00">2026-10-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/malaoshi-shadowstore/" title="马老师专属ShadowStore使用教程，一个站搜遍全网代理模块"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/shadowstore-guide-cover.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="马老师专属ShadowStore使用教程，一个站搜遍全网代理模块"/></a><div class="content"><a class="title" href="/p/malaoshi-shadowstore/" title="马老师专属ShadowStore使用教程，一个站搜遍全网代理模块">马老师专属ShadowStore使用教程，一个站搜遍全网代理模块</a><time datetime="2026-10-29T03:07:00.000Z" title="发表于 2026-10-29 11:07:00">2026-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/jidushan-bojue/" title="《基督山伯爵》报仇报到底，人到底是解脱还是又进监狱"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/jidushan-bojue.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《基督山伯爵》报仇报到底，人到底是解脱还是又进监狱"/></a><div class="content"><a class="title" href="/p/jidushan-bojue/" title="《基督山伯爵》报仇报到底，人到底是解脱还是又进监狱">《基督山伯爵》报仇报到底，人到底是解脱还是又进监狱</a><time datetime="2026-10-28T14:50:00.000Z" title="发表于 2026-10-28 22:50:00">2026-10-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/p/bali-shengmuyuan/" title="《巴黎圣母院》敲钟人爱上吉卜赛姑娘，美丑到底算什么"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/images/bali-shengmuyuan.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="《巴黎圣母院》敲钟人爱上吉卜赛姑娘，美丑到底算什么"/></a><div class="content"><a class="title" href="/p/bali-shengmuyuan/" title="《巴黎圣母院》敲钟人爱上吉卜赛姑娘，美丑到底算什么">《巴黎圣母院》敲钟人爱上吉卜赛姑娘，美丑到底算什么</a><time datetime="2026-10-28T14:35:00.000Z" title="发表于 2026-10-28 22:35:00">2026-10-28</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div id="workboard"><img class="workSituationImg boardsign" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://img.shields.io/badge/马老师-上班摸鱼中-orange?style=flat&amp;logo=coffeescript" alt="偶尔修 Bug，经常修心。这里是马老师的无用之地。" title="偶尔修 Bug，经常修心。这里是马老师的无用之地。"/><div id="runtimeTextTip"></div></div><div id="anzhiyu-footer"><div class="footer-group"><div class="footer-title">文章</div><div class="footer-links"><a class="footer-item" title="隧道" href="/archives/">隧道</a><a class="footer-item" title="分类" href="/categories/">分类</a><a class="footer-item" title="标签" href="/tags/">标签</a></div></div><div class="footer-group"><div class="footer-title">探索</div><div class="footer-links"><a class="footer-item" title="心理学随笔" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6%E9%9A%8F%E7%AC%94/">心理学随笔</a><a class="footer-item" title="避雷专区" href="/blacklist/">避雷专区</a><a class="footer-item" title="心理自测" href="/mental-test/">心理自测</a><a class="footer-item" title="MBTI测评" href="/mbti-test/">MBTI测评</a><a class="footer-item" title="星座分析" href="/star-fortune/">星座分析</a><a class="footer-item" title="六爻占卜" href="/liuyao/">六爻占卜</a><a class="footer-item" title="新手教程" href="/tutorial/">新手教程</a></div></div><div class="footer-group"><div class="footer-title">点我试一试</div><div class="footer-links"><a class="footer-item" title="马老师专属导航" target="_blank" rel="noopener" href="https://nav.8818618.xyz/">马老师专属导航</a><a class="footer-item" title="马老师专属新闻频道" target="_blank" rel="noopener" href="https://newsma.8818618.xyz/">马老师专属新闻频道</a><a class="footer-item" title="摸鱼小游戏" target="_blank" rel="noopener" href="https://cmgame.zone.id/">摸鱼小游戏</a><a class="footer-item" title="摸鱼专区" target="_blank" rel="noopener" href="https://zb.8818618.xyz/moyu">摸鱼专区</a><a class="footer-item" title="留言板" href="/comments/">留言板</a></div></div><div class="footer-group"><div class="footer-title">专属服务</div><div class="footer-links"><a class="footer-item" title="马老师专属直播" target="_blank" rel="noopener" href="https://zb.8818618.xyz/">马老师专属直播</a><a class="footer-item" title="马老师专属TV" target="_blank" rel="noopener" href="https://tv.8818618.xyz/">马老师专属TV</a><a class="footer-item" title="马老师专属音乐" target="_blank" rel="noopener" href="https://music.8818618.xyz/">马老师专属音乐</a><a class="footer-item" title="论坛社区" target="_blank" rel="noopener" href="https://bbs.8818618.xyz/">论坛社区</a><a class="footer-item" title="会员服务" target="_blank" rel="noopener" href="https://vip.8818618.xyz/">会员服务</a><a class="footer-item" title="赞赏支持" target="_blank" rel="noopener" href="https://rewards.8818618.xyz/">赞赏支持</a><a class="footer-item" title="WebSSH" target="_blank" rel="noopener" href="https://ssh.8818618.xyz/">WebSSH</a><a class="footer-item" title="马老师专属面板" target="_blank" rel="noopener" href="https://vps.8818618.xyz/">马老师专属面板</a><a class="footer-item" title="马老师专属订阅转换" target="_blank" rel="noopener" href="https://sub.8818618.xyz/">马老师专属订阅转换</a><a class="footer-item" title="马老师专属隧道面板" target="_blank" rel="noopener" href="https://tunnel.8818618.xyz/">马老师专属隧道面板</a></div></div><div class="footer-group"><div class="footer-title">我的</div><div class="footer-links"><a class="footer-item" title="音乐馆" href="/music/">音乐馆</a><a class="footer-item" title="追番页" href="/bangumis/">追番页</a><a class="footer-item" title="相册集" href="/album/">相册集</a><a class="footer-item" title="小空调" href="/air-conditioner/">小空调</a></div></div><div class="footer-group"><div class="footer-title">关于</div><div class="footer-links"><a class="footer-item" title="关于本人" href="/about/">关于本人</a><a class="footer-item" title="闲言碎语" href="/essay/">闲言碎语</a></div></div></div></div><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div id="footer-bar-tips"><div class="copyright">&copy;2020 - 2026 By <a class="footer-bar-link" href="/" title="马老师" target="_blank">马老师</a></div></div><div id="footer-type-tips"></div><div class="js-pjax"><script>function subtitleType () {
+  if () { 
+    window.typed = new Typed("#footer-type-tips", {
+      strings: ["不务正业的理性浪漫"],
+      startDelay: ,
+      typeSpeed: ,
+      loop: ,
+      backSpeed: 
+    })
+  } else {
+    document.getElementById("footer-type-tips").innerHTML = '不务正业的理性浪漫'
+  }
+}
+
+if () {
+  if (typeof Typed === 'function') {
+    subtitleType()
+  } else {
+    getScript('https://cdn.cbd.int/typed.js@2.1.0/dist/typed.umd.js').then(subtitleType)
+  }
+} else {
+  subtitleType()
+}</script></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://tc.8818618.xyz" title="图床">图床</a><a class="footer-bar-link cc" href="/copyright" title="CC协议"><i class="anzhiyufont anzhiyu-icon-copyright-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-by-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nc-line"></i><i class="anzhiyufont anzhiyu-icon-creative-commons-nd-line"></i></a></div></div></div></footer></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="sidebar-site-data site-data is-center"><a href="/archives/" title="archive"><div class="headline">文章</div><div class="length-num">414</div></a><a href="/tags/" title="tag"><div class="headline">标签</div><div class="length-num">697</div></a><a href="/categories/" title="category"><div class="headline">分类</div><div class="length-num">42</div></a></div><span class="sidebar-menu-item-title">功能</span><div class="sidebar-menu-item"><a class="darkmode_switchbutton menu-child" href="javascript:void(0);" title="显示模式"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span>显示模式</span></a></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">网页</div><div class="back-menu-list"><a class="back-menu-item" href="/lbj.8818618.xyz" title="看剧"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="/img/favicon.ico" alt="看剧"/><span class="back-menu-item-text">看剧</span></a></div></div><div class="back-menu-list-group"><div class="back-menu-list-title">项目</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://tc.8818618.xyz/" title="马老师图床"><img class="back-menu-item-icon" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="this.onerror=null,this.src=&quot;/img/404.jpg&quot;" data-lazy-src="https://image.anheyu.com/favicon.ico" alt="马老师图床"/><span class="back-menu-item-text">马老师图床</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 文章</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives/"><i class="anzhiyufont anzhiyu-icon-box-archive faa-tada" style="font-size: 0.9em;"></i><span> 隧道</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories/"><i class="anzhiyufont anzhiyu-icon-shapes faa-tada" style="font-size: 0.9em;"></i><span> 分类</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags faa-tada" style="font-size: 0.9em;"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 探索</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/categories/%E5%BF%83%E7%90%86%E5%AD%A6%E9%9A%8F%E7%AC%94/"><i class="anzhiyufont anzhiyu-icon-heartbeat faa-tada" style="font-size: 0.9em;"></i><span> 心理学随笔</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/blacklist/"><i class="anzhiyufont anzhiyu-icon-shield-halved faa-tada" style="font-size: 0.9em;"></i><span> 避雷专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mental-test/"><i class="anzhiyufont anzhiyu-icon-heart-pulse faa-tada" style="font-size: 0.9em;"></i><span> 心理自测</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/mbti-test/"><i class="anzhiyufont anzhiyu-icon-brain faa-tada" style="font-size: 0.9em;"></i><span> MBTI测评</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/star-fortune/"><i class="anzhiyufont anzhiyu-icon-star faa-tada" style="font-size: 0.9em;"></i><span> 星座分析</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/liuyao/"><i class="anzhiyufont anzhiyu-icon-yin-yang faa-tada" style="font-size: 0.9em;"></i><span> 六爻占卜</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tutorial/"><i class="anzhiyufont anzhiyu-icon-book-open faa-tada" style="font-size: 0.9em;"></i><span> 新手教程</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 点我试一试</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://nav.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-map-location-dot faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属导航</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://newsma.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-newspaper faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属新闻频道</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://cmgame.zone.id/"><i class="anzhiyufont anzhiyu-icon-gamepad faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼小游戏</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/moyu"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 摸鱼专区</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/comments/"><i class="anzhiyufont anzhiyu-icon-envelope faa-tada" style="font-size: 0.9em;"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 专属服务</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://zb.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-tv faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属直播</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://tv.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-film faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属TV</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://music.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属音乐</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://bbs.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-comments faa-tada" style="font-size: 0.9em;"></i><span> 论坛社区</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vip.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-crown faa-tada" style="font-size: 0.9em;"></i><span> 会员服务</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://rewards.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-hand-heart-fill faa-tada" style="font-size: 0.9em;"></i><span> 赞赏支持</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://ssh.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-terminal faa-tada" style="font-size: 0.9em;"></i><span> WebSSH</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://vps.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-server faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属面板</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://sub.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-arrows-rotate faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属订阅转换</span></a></li><li><a class="site-page child faa-parent animated-hover" target="_blank" rel="noopener" href="https://tunnel.8818618.xyz/"><i class="anzhiyufont anzhiyu-icon-road faa-tada" style="font-size: 0.9em;"></i><span> 马老师专属隧道面板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 我的</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/music/"><i class="anzhiyufont anzhiyu-icon-music faa-tada" style="font-size: 0.9em;"></i><span> 音乐馆</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/bangumis/"><i class="anzhiyufont anzhiyu-icon-bilibili faa-tada" style="font-size: 0.9em;"></i><span> 追番页</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/album/"><i class="anzhiyufont anzhiyu-icon-images faa-tada" style="font-size: 0.9em;"></i><span> 相册集</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/air-conditioner/"><i class="anzhiyufont anzhiyu-icon-fan faa-tada" style="font-size: 0.9em;"></i><span> 小空调</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span> 关于</span></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/about/"><i class="anzhiyufont anzhiyu-icon-paper-plane faa-tada" style="font-size: 0.9em;"></i><span> 关于本人</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/essay/"><i class="anzhiyufont anzhiyu-icon-lightbulb faa-tada" style="font-size: 0.9em;"></i><span> 闲言碎语</span></a></li></ul></div></div><span class="sidebar-menu-item-title">标签</span><div class="card-tags"><div class="item-headline"></div><div class="card-tag-cloud"><a href="/tags/%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E5%9C%A3%E7%BB%8F/" style="font-size: 0.88rem; color: rgb(48, 146, 97);">一个人的圣经<sup>1</sup></a><a href="/tags/%E4%BA%B2%E7%88%B1%E7%9A%84%E7%94%9F%E6%B4%BB/" style="font-size: 0.88rem; color: rgb(149, 108, 82);">亲爱的生活<sup>1</sup></a><a href="/tags/%E4%BC%8A%E5%A7%86%E9%9B%B7%C2%B7%E5%87%AF%E5%B0%94%E6%B3%B0%E6%96%AF/" style="font-size: 0.88rem; color: rgb(128, 186, 133);">伊姆雷·凯尔泰斯<sup>1</sup></a><a href="/tags/%E5%85%AC%E7%BE%8A%E7%9A%84%E8%8A%82%E6%97%A5/" style="font-size: 0.88rem; color: rgb(114, 200, 19);">公羊的节日<sup>1</sup></a><a href="/tags/%E5%8B%92%E5%85%8B%E8%8E%B1%E9%BD%90%E5%A5%A5/" style="font-size: 0.88rem; color: rgb(9, 40, 74);">勒克莱齐奥<sup>1</sup></a><a href="/tags/%E5%91%BC%E5%90%B8%E7%A7%8B%E5%8D%83/" style="font-size: 0.88rem; color: rgb(82, 88, 141);">呼吸秋千<sup>1</sup></a><a href="/tags/%E5%93%88%E7%BD%97%E5%BE%B7%C2%B7%E5%93%81%E7%89%B9/" style="font-size: 0.88rem; color: rgb(162, 70, 155);">哈罗德·品特<sup>1</sup></a><a href="/tags/%E5%9F%83%E5%B0%94%E5%BC%97%E9%87%8C%E5%BE%B7%C2%B7%E8%80%B6%E5%88%A9%E5%86%85%E5%85%8B/" style="font-size: 0.88rem; color: rgb(182, 188, 77);">埃尔弗里德·耶利内克<sup>1</sup></a><a href="/tags/%E5%A4%9A%E4%B8%BD%E4%B8%9D%C2%B7%E8%8E%B1%E8%BE%9B/" style="font-size: 0.88rem; color: rgb(127, 186, 52);">多丽丝·莱辛<sup>1</sup></a><a href="/tags/%E5%A5%88%E4%BF%9D%E5%B0%94/" style="font-size: 0.88rem; color: rgb(147, 18, 69);">奈保尔<sup>1</sup></a><a href="/tags/%E5%A5%B3%E6%83%85%E4%BA%BA%E4%BB%AC/" style="font-size: 0.88rem; color: rgb(14, 2, 141);">女情人们<sup>1</sup></a><a href="/tags/%E5%AF%BB%E9%87%91%E8%80%85/" style="font-size: 0.88rem; color: rgb(139, 163, 79);">寻金者<sup>1</sup></a><a href="/tags/%E5%BA%93%E5%88%87/" style="font-size: 0.88rem; color: rgb(114, 93, 142);">库切<sup>1</sup></a><a href="/tags/%E5%BF%83%E5%85%BD/" style="font-size: 0.88rem; color: rgb(12, 123, 100);">心兽<sup>1</sup></a><a href="/tags/%E6%83%A8%E8%B4%A5/" style="font-size: 0.88rem; color: rgb(113, 5, 169);">惨败<sup>1</sup></a><a href="/tags/%E6%89%98%E9%A9%AC%E6%96%AF%C2%B7%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86/" style="font-size: 0.88rem; color: rgb(84, 131, 14);">托马斯·特朗斯特罗姆<sup>1</sup></a><a href="/tags/%E6%97%A0%E5%91%BD%E8%BF%90%E7%9A%84%E4%BA%BA%E7%94%9F/" style="font-size: 0.88rem; color: rgb(179, 12, 32);">无命运的人生<sup>1</sup></a><a href="/tags/%E6%AF%95%E6%96%AF%E6%B2%83%E6%96%AF%E5%85%88%E7%94%9F%E7%9A%84%E6%88%BF%E5%AD%90/" style="font-size: 0.88rem; color: rgb(139, 73, 186);">毕斯沃斯先生的房子<sup>1</sup></a><a href="/tags/%E7%81%B5%E5%B1%B1/" style="font-size: 0.88rem; color: rgb(97, 13, 140);">灵山<sup>1</sup></a><a href="/tags/%E7%88%B1%E4%B8%BD%E4%B8%9D%C2%B7%E9%97%A8%E7%BD%97/" style="font-size: 0.88rem; color: rgb(82, 10, 161);">爱丽丝·门罗<sup>1</sup></a><a href="/tags/%E7%89%B9%E6%9C%97%E6%96%AF%E7%89%B9%E7%BD%97%E5%A7%86%E8%AF%97%E6%AD%8C%E5%85%A8%E9%9B%86/" style="font-size: 0.88rem; color: rgb(31, 190, 12);">特朗斯特罗姆诗歌全集<sup>1</sup></a><a href="/tags/%E7%94%9F%E6%97%A5%E6%B4%BE%E5%AF%B9/" style="font-size: 0.88rem; color: rgb(106, 32, 199);">生日派对<sup>1</sup></a><a href="/tags/%E7%9C%8B%E9%97%A8%E4%BA%BA/" style="font-size: 0.88rem; color: rgb(170, 144, 128);">看门人<sup>1</sup></a><a href="/tags/%E7%B1%B3%E6%A0%BC%E5%B0%94%E8%A1%97/" style="font-size: 0.88rem; color: rgb(198, 75, 121);">米格尔街<sup>1</sup></a><a href="/tags/%E7%BA%A2%E9%AB%98%E7%B2%B1%E5%AE%B6%E6%97%8F/" style="font-size: 0.88rem; color: rgb(91, 42, 145);">红高粱家族<sup>1</sup></a><a href="/tags/%E7%BB%BF%E6%88%BF%E5%AD%90/" style="font-size: 0.88rem; color: rgb(179, 49, 51);">绿房子<sup>1</sup></a><a href="/tags/%E8%80%BB/" style="font-size: 0.88rem; color: rgb(165, 23, 162);">耻<sup>1</sup></a><a href="/tags/%E8%8E%AB%E8%A8%80/" style="font-size: 0.88rem; color: rgb(29, 161, 74);">莫言<sup>9</sup></a><a href="/tags/%E8%9B%99/" style="font-size: 0.88rem; color: rgb(90, 180, 58);">蛙<sup>2</sup></a><a href="/tags/%E8%AE%B0%E5%BF%86%E7%9C%8B%E8%A7%81%E6%88%91/" style="font-size: 0.88rem; color: rgb(148, 180, 88);">记忆看见我<sup>1</sup></a><a href="/tags/%E8%AF%89%E8%AE%BC%E7%AC%94%E5%BD%95/" style="font-size: 0.88rem; color: rgb(36, 139, 43);">诉讼笔录<sup>1</sup></a><a href="/tags/%E8%AF%BA%E8%B4%9D%E5%B0%94%E6%96%87%E5%AD%A6%E5%A5%96/" style="font-size: 0.88rem; color: rgb(34, 34, 49);">诺贝尔文学奖<sup>35</sup></a><a href="/tags/%E8%B5%AB%E5%A1%94%C2%B7%E7%B1%B3%E5%8B%92/" style="font-size: 0.88rem; color: rgb(109, 120, 189);">赫塔·米勒<sup>1</sup></a><a href="/tags/%E8%BF%88%E5%85%8B%E5%B0%94%C2%B7K%E7%9A%84%E7%94%9F%E6%B4%BB%E5%92%8C%E6%97%B6%E4%BB%A3/" style="font-size: 0.88rem; color: rgb(108, 26, 192);">迈克尔·K的生活和时代<sup>1</sup></a><a href="/tags/%E9%80%83%E7%A6%BB/" style="font-size: 0.88rem; color: rgb(176, 31, 141);">逃离<sup>1</sup></a><a href="/tags/%E9%87%8E%E8%8D%89%E5%9C%A8%E6%AD%8C%E5%94%B1/" style="font-size: 0.88rem; color: rgb(112, 55, 126);">野草在歌唱<sup>1</sup></a><a href="/tags/%E9%87%91%E8%89%B2%E7%AC%94%E8%AE%B0/" style="font-size: 0.88rem; color: rgb(82, 181, 106);">金色笔记<sup>1</sup></a><a href="/tags/%E9%92%A2%E7%90%B4%E6%95%99%E5%B8%88/" style="font-size: 0.88rem; color: rgb(108, 70, 164);">钢琴教师<sup>1</sup></a><a href="/tags/%E9%A9%AC%E9%87%8C%E5%A5%A5%C2%B7%E5%B7%B4%E5%B0%94%E5%8A%A0%E6%96%AF%C2%B7%E7%95%A5%E8%90%A8/" style="font-size: 0.88rem; color: rgb(70, 100, 46);">马里奥·巴尔加斯·略萨<sup>1</sup></a><a href="/tags/%E9%AB%98%E8%A1%8C%E5%81%A5/" style="font-size: 0.88rem; color: rgb(59, 185, 32);">高行健<sup>1</sup></a></div></div><hr/></div></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="anzhiyufont anzhiyu-icon-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="anzhiyufont anzhiyu-icon-arrows-left-right"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="anzhiyufont anzhiyu-icon-gear"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="anzhiyufont anzhiyu-icon-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="anzhiyufont anzhiyu-icon-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></button></div></div><div id="nav-music"><a id="nav-music-hoverTips" onclick="anzhiyu.musicToggle()" accesskey="m">播放音乐</a><div id="console-music-bg"></div><meting-js id="8152976493" server="netease" type="playlist" mutex="true" preload="none" theme="var(--anzhiyu-main)" data-lrctype="0" order="random" volume="0.7"></meting-js></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="anzhiyufont anzhiyu-icon-xmark"></i></button></nav><div class="is-center" id="loading-database"><i class="anzhiyufont anzhiyu-icon-spinner anzhiyu-pulse-icon"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div id="rightMenu"><div class="rightMenu-group rightMenu-small"><div class="rightMenu-item" id="menu-backward"><i class="anzhiyufont anzhiyu-icon-arrow-left"></i></div><div class="rightMenu-item" id="menu-forward"><i class="anzhiyufont anzhiyu-icon-arrow-right"></i></div><div class="rightMenu-item" id="menu-refresh"><i class="anzhiyufont anzhiyu-icon-arrow-rotate-right" style="font-size: 1rem;"></i></div><div class="rightMenu-item" id="menu-top"><i class="anzhiyufont anzhiyu-icon-arrow-up"></i></div></div><div class="rightMenu-group rightMenu-line rightMenuPlugin"><div class="rightMenu-item" id="menu-copytext"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制选中文本</span></div><div class="rightMenu-item" id="menu-pastetext"><i class="anzhiyufont anzhiyu-icon-paste"></i><span>粘贴文本</span></div><a class="rightMenu-item" id="menu-commenttext"><i class="anzhiyufont anzhiyu-icon-comment-medical"></i><span>引用到评论</span></a><div class="rightMenu-item" id="menu-newwindow"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开</span></div><div class="rightMenu-item" id="menu-copylink"><i class="anzhiyufont anzhiyu-icon-link"></i><span>复制链接地址</span></div><div class="rightMenu-item" id="menu-copyimg"><i class="anzhiyufont anzhiyu-icon-images"></i><span>复制此图片</span></div><div class="rightMenu-item" id="menu-downloadimg"><i class="anzhiyufont anzhiyu-icon-download"></i><span>下载此图片</span></div><div class="rightMenu-item" id="menu-newwindowimg"><i class="anzhiyufont anzhiyu-icon-window-restore"></i><span>新窗口打开图片</span></div><div class="rightMenu-item" id="menu-search"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>站内搜索</span></div><div class="rightMenu-item" id="menu-searchBaidu"><i class="anzhiyufont anzhiyu-icon-magnifying-glass"></i><span>百度搜索</span></div><div class="rightMenu-item" id="menu-music-toggle"><i class="anzhiyufont anzhiyu-icon-play"></i><span>播放音乐</span></div><div class="rightMenu-item" id="menu-music-back"><i class="anzhiyufont anzhiyu-icon-backward"></i><span>切换到上一首</span></div><div class="rightMenu-item" id="menu-music-forward"><i class="anzhiyufont anzhiyu-icon-forward"></i><span>切换到下一首</span></div><div class="rightMenu-item" id="menu-music-playlist" onclick="window.open(&quot;https://y.qq.com/n/ryqq/playlist/8802438608&quot;, &quot;_blank&quot;);" style="display: none;"><i class="anzhiyufont anzhiyu-icon-radio"></i><span>查看所有歌曲</span></div><div class="rightMenu-item" id="menu-music-copyMusicName"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制歌名</span></div></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item menu-link" id="menu-randomPost"><i class="anzhiyufont anzhiyu-icon-shuffle"></i><span>随便逛逛</span></a><a class="rightMenu-item menu-link" href="/categories/"><i class="anzhiyufont anzhiyu-icon-cube"></i><span>博客分类</span></a><a class="rightMenu-item menu-link" href="/tags/"><i class="anzhiyufont anzhiyu-icon-tags"></i><span>文章标签</span></a></div><div class="rightMenu-group rightMenu-line rightMenuOther"><a class="rightMenu-item" id="menu-copy" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-copy"></i><span>复制地址</span></a><a class="rightMenu-item" id="menu-commentBarrage" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-message"></i><span class="menu-commentBarrage-text">关闭热评</span></a><a class="rightMenu-item" id="menu-darkmode" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-circle-half-stroke"></i><span class="menu-darkmode-text">深色模式</span></a><a class="rightMenu-item" id="menu-translate" href="javascript:void(0);"><i class="anzhiyufont anzhiyu-icon-language"></i><span>轉為繁體</span></a></div></div><div id="rightmenu-mask"></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/tw_cn.js"></script><script src="https://cdn.cbd.int/@fancyapps/ui@6.1.6/dist/fancybox/fancybox.umd.js"></script><script src="https://cdn.cbd.int/instant.page@5.2.0/instantpage.js" type="module"></script><script src="https://cdn.cbd.int/vanilla-lazyload@19.1.3/dist/lazyload.iife.min.js"></script><script src="https://cdn.cbd.int/node-snackbar@0.1.16/dist/snackbar.min.js"></script><canvas id="universe"></canvas><script async src="https://npm.elemecdn.com/anzhiyu-theme-static@1.0.0/dark/dark.js"></script><script>// 消除控制台打印
+var HoldLog = console.log;
+console.log = function () {};
+let now1 = new Date();
+queueMicrotask(() => {
+  const Log = function () {
+    HoldLog.apply(console, arguments);
+  }; //在恢复前输出日志
+  const grt = new Date("04/01/2021 00:00:00"); //此处修改你的建站时间或者网站上线时间
+  now1.setTime(now1.getTime() + 250);
+  const days = (now1 - grt) / 1000 / 60 / 60 / 24;
+  const dnum = Math.floor(days);
+  const ascll = [
+    `欢迎使用安知鱼!`,
+    `生活明朗, 万物可爱`,
+    `
+        
+       █████╗ ███╗   ██╗███████╗██╗  ██╗██╗██╗   ██╗██╗   ██╗
+      ██╔══██╗████╗  ██║╚══███╔╝██║  ██║██║╚██╗ ██╔╝██║   ██║
+      ███████║██╔██╗ ██║  ███╔╝ ███████║██║ ╚████╔╝ ██║   ██║
+      ██╔══██║██║╚██╗██║ ███╔╝  ██╔══██║██║  ╚██╔╝  ██║   ██║
+      ██║  ██║██║ ╚████║███████╗██║  ██║██║   ██║   ╚██████╔╝
+      ╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝    ╚═════╝
+        
+        `,
+    "已上线",
+    dnum,
+    "天",
+    "©2020 By 安知鱼 V1.7.1",
+  ];
+  const ascll2 = [`NCC2-036`, `调用前置摄像头拍照成功，识别为【小笨蛋】.`, `Photo captured: `, `🤪`];
+
+  setTimeout(
+    Log.bind(
+      console,
+      `\n%c${ascll[0]} %c ${ascll[1]} %c ${ascll[2]} %c${ascll[3]}%c ${ascll[4]}%c ${ascll[5]}\n\n%c ${ascll[6]}\n`,
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      "color:#425AEF",
+      "",
+      "color:#425AEF",
+      ""
+    )
+  );
+  setTimeout(
+    Log.bind(
+      console,
+      `%c ${ascll2[0]} %c ${ascll2[1]} %c \n${ascll2[2]} %c\n${ascll2[3]}\n`,
+      "color:white; background-color:#4fd953",
+      "",
+      "",
+      'background:url("https://npm.elemecdn.com/anzhiyu-blog@1.1.6/img/post/common/tinggge.gif") no-repeat;font-size:450%'
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c WELCOME %c 你好，小笨蛋.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(
+      console,
+      "%c ⚡ Powered by 安知鱼 %c 你正在访问 马老师 的博客.",
+      "color:white; background-color:#f0ad4e",
+      ""
+    )
+  );
+
+  setTimeout(Log.bind(console, "%c W23-12 %c 你已打开控制台.", "color:white; background-color:#4f90d9", ""));
+
+  setTimeout(
+    console.warn.bind(console, "%c S013-782 %c 你现在正处于监控中.", "color:white; background-color:#d9534f", "")
+  );
+});</script><script async src="/anzhiyu/random.js"></script><script async="async">(function () {
+  var grt = new Date("04/01/2021 00:00:00"); //设置网站上线时间
+  var now = new Date();
+  var dnum;
+  var hnum;
+  var mnum;
+  var snum;
+  var nowHour;
+
+  // 计算并更新天数、小时数、分钟数和秒数
+  function updateTime() {
+    now = new Date(); // 更新 now 的值
+    nowHour = now.getHours(); // 更新 nowHour 的值
+    var days = (now - grt) / 1000 / 60 / 60 / 24;
+    dnum = Math.floor(days);
+    var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+    hnum = Math.floor(hours);
+    if (String(hnum).length == 1) {
+      hnum = "0" + hnum;
+    }
+    var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+    mnum = Math.floor(minutes);
+    if (String(mnum).length == 1) {
+      mnum = "0" + mnum;
+    }
+    var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+    snum = Math.round(seconds);
+    if (String(snum).length == 1) {
+      snum = "0" + snum;
+    }
+  }
+
+  // 更新网页中显示的网站运行时间
+  function updateHtml() {
+    const footer = document.getElementById("footer");
+    if (!footer) return
+    let currentTimeHtml = "";
+    if (nowHour < 18 && nowHour >= 9) {
+      // 如果是上班时间，默认就是"安知鱼-上班摸鱼中.svg"图片，不需要更改
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    } else {
+      // 如果是下班时间，插入"安知鱼-下班啦.svg"图片
+      let img = document.querySelector("#workboard .workSituationImg");
+      if (img != null) {
+        img.src = "https://img.shields.io/badge/马老师-下班啦-blue?style=flat&amp;logo=coffeescript";
+        img.title = "职业可以中断，但生活不必关机。";
+        img.alt = "职业可以中断，但生活不必关机。";
+      }
+
+      currentTimeHtml = `本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='anzhiyufont anzhiyu-icon-heartbeat' style='color:red'></i>`;
+    }
+
+    if (document.getElementById("runtimeTextTip")) {
+      document.getElementById("runtimeTextTip").innerHTML = currentTimeHtml;
+    }
+  }
+
+  setInterval(() => {
+    updateTime();
+    updateHtml();
+  }, 1000);
+})();</script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://comment.8818618.xyz',
+      region: '',
+      onCommentLoaded: () => {
+        anzhiyu.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(runFn,0)
+    else getScript('https://cdn.cbd.int/twikoo@1.6.44/dist/twikoo.all.min.js').then(runFn)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://comment.8818618.xyz',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const runFn = () => {
+    init();
+    
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) anzhiyu.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script><input type="hidden" name="page-type" id="page-type" value="post"></div><script>var visitorMail = "";
+</script><script async data-pjax src="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/waterfall/waterfall.js"></script><script src="https://cdn.cbd.int/qrcodejs@1.0.0/qrcode.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.1.9/icon/ali_iconfont_css.css"><script src="/js/ma-newest-comments.js?v=20261017h"></script><script src="/js/ma-anti-copy.js?v=20261023a"></script><script id="canvas_nest" defer="defer" color="0,0,255" opacity="0.7" zIndex="-1" count="99" mobile="false" src="https://cdn.cbd.int/butterfly-extsrc@1.1.3/dist/canvas-nest.min.js"></script><link rel="stylesheet" href="https://cdn.cbd.int/anzhiyu-theme-static@1.0.0/aplayer/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.cbd.int/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.cbd.int/hexo-anzhiyu-music@1.0.1/assets/js/Meting2.min.js"></script><script src="https://cdn.cbd.int/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","meta[property=\"og:type\"]","meta[property=\"og:site_name\"]","meta[property=\"og:description\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+  // removeEventListener scroll 
+  anzhiyu.removeGlobalFnEvent('pjax')
+  anzhiyu.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script charset="UTF-8" src="https://cdn.cbd.int/anzhiyu-theme-static@1.1.5/accesskey/accesskey.js"></script></div><div id="popup-window"><div class="popup-window-title">通知</div><div class="popup-window-divider"></div><div class="popup-window-content"><div class="popup-tip">你好呀</div><div class="popup-link"><i class="anzhiyufont anzhiyu-icon-arrow-circle-right"></i></div></div></div></body></html>
