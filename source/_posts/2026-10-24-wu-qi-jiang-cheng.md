@@ -1,11 +1,14 @@
 ---
 title: 雾起江城
 date: 2020-01-23 19:00:00
-categories: 马老师杂谈
-tags: 马老师杂谈
+categories:
+- 马老师杂谈
+tags:
+- 马老师杂谈
 cover: /images/wuqi-jiangcheng/cover.jpg
 abbrlink: wu-qi-jiang-cheng
 description: 一部写给江城的小说，从市场清晨的雾写到解封那夜的灯，再写到雾散之后的日子，写普通人在一场大疫里怎么活过来。
+sticky: 999
 ---
 
 ## 楔子 雾
