@@ -370,6 +370,8 @@ footer:
         link: https://sub.8818618.xyz/
       - title: 马老师专属隧道面板
         link: https://tunnel.8818618.xyz/
+      - title: 马老师专属PDF
+        link: https://pdf.8818618.xyz/
     - title: 我的
       links:
       - title: 音乐馆
@@ -395,6 +397,8 @@ footer:
     linkList:
     - link: https://tc.8818618.xyz
       text: 图床
+    - link: https://pdf.8818618.xyz
+      text: 马老师专属PDF
     subTitle:
       enable: true
   auto_ads: true
