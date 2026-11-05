@@ -1,0 +1,301 @@
+---
+layout: false
+title: 躺平系统
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>躺平系统</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f7f9fe; color: #333; font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  .wrap { max-width: 640px; margin: 0 auto; padding: 20px 16px 40px; }
+  h1 { font-size: 26px; text-align: center; margin: 8px 0 4px; }
+  .sub { text-align: center; color: #888; font-size: 14px; margin-bottom: 20px; }
+  .card { background: #fff; border: 1px solid #e3e8f7; border-radius: 16px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 10px rgba(66,90,239,0.06); }
+  .card h2 { font-size: 18px; margin: 0 0 12px; }
+  .bigbtn { display: block; width: 100%; min-height: 56px; font-size: 19px; font-weight: bold; color: #fff; background: #425aef; border: none; border-radius: 14px; cursor: pointer; }
+  .bigbtn:disabled { background: #b8c2f0; cursor: default; }
+  .bigbtn.secondary { background: #fff; color: #425aef; border: 2px solid #425aef; }
+  .coin { font-size: 40px; font-weight: bold; text-align: center; color: #f0a020; margin: 6px 0 2px; }
+  .coin-label { text-align: center; color: #888; font-size: 14px; }
+  .level { text-align: center; font-size: 17px; margin: 12px 0 6px; }
+  .bar { height: 12px; background: #eef1fd; border-radius: 6px; overflow: hidden; }
+  .bar i { display: block; height: 100%; background: #425aef; border-radius: 6px; }
+  .next { text-align: center; color: #888; font-size: 13px; margin-top: 6px; }
+  .task { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-top: 1px solid #eef1fd; }
+  .task:first-of-type { border-top: none; }
+  .task span { font-size: 16px; }
+  .task button { min-width: 92px; min-height: 44px; font-size: 15px; font-weight: bold; color: #fff; background: #425aef; border: none; border-radius: 10px; cursor: pointer; }
+  .task button:disabled { background: #c8cfe8; }
+  .task .reward { color: #f0a020; font-size: 13px; }
+  .story { margin-bottom: 18px; }
+  .story:last-child { margin-bottom: 0; }
+  .story h3 { font-size: 17px; margin: 0 0 8px; }
+  .story p { font-size: 15px; line-height: 1.9; margin: 0 0 8px; text-indent: 2em; }
+  .story p.no-indent { text-indent: 0; }
+  .note { color: #888; font-size: 13px; line-height: 1.8; text-align: center; }
+  .status { text-align: center; font-size: 14px; color: #888; margin-top: 8px; }
+  .talent { text-align: center; font-size: 15px; color: #555; margin: 8px 0; }
+  .sysname { text-align: center; font-size: 22px; font-weight: bold; color: #425aef; }
+  .back { display: block; text-align: center; margin-top: 20px; font-size: 15px; color: #425aef; text-decoration: none; }
+  @media (prefers-color-scheme: dark) {
+    body { background: #18171d; color: #ddd; }
+    .card { background: #232028; border-color: #333; }
+    .task { border-top-color: #333; }
+    .bar { background: #333; }
+    .sub, .coin-label, .next, .note, .status { color: #999; }
+    .talent { color: #bbb; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>🛋️ 躺平系统</h1>
+  <p class="sub">躺着也有反馈，慢慢来也算数</p>
+
+  <div class="card" id="awakenCard">
+    <h2>✨ 觉醒你的系统</h2>
+    <p style="font-size:15px;line-height:1.8;">每个人的躺平方式都不一样。点一下，看看今天会觉醒出什么系统。</p>
+    <button class="bigbtn" id="awakenBtn">觉醒我的躺平系统</button>
+  </div>
+
+  <div class="card" id="sysCard" style="display:none;">
+    <h2>✅ 已觉醒</h2>
+    <div class="sysname" id="sysName"></div>
+    <div class="talent" id="sysTalent"></div>
+    <div class="level" id="levelLine"></div>
+    <div class="bar"><i id="levelBar" style="width:0%"></i></div>
+    <div class="next" id="levelNext"></div>
+  </div>
+
+  <div class="card">
+    <h2>💰 躺平币</h2>
+    <div class="coin" id="coinNum">0</div>
+    <div class="coin-label">本页开着每 10 秒 +1 币</div>
+    <div class="status" id="idleStatus">挂机进行中……</div>
+    <div style="height:14px;"></div>
+    <button class="bigbtn" id="checkinBtn">每日签到 +50 币</button>
+  </div>
+
+  <div class="card">
+    <h2>📋 今日躺平任务</h2>
+    <div id="taskList"></div>
+    <p class="note" style="margin-top:10px;">任务每天轮换，做完就领币，不做也不扣币。</p>
+  </div>
+
+  <div class="card">
+    <h2>📖 躺平故事</h2>
+    <p class="note" style="text-align:left;margin-bottom:14px;">小故事纯属虚构，讲的是又躺平又赚钱的人，不是什么致富承诺。</p>
+    <div class="story">
+      <h3>一、只开下午的摊子</h3>
+      <p>阿南以前在早市卖早点，每天凌晨四点起床，摸黑出摊，忙到中午才收。寒冬腊月里手冻得通红，夏天又是一身汗。起得比谁都早，摊位费、原料钱一刨，一个月剩不下几个钱，腰也落下了毛病，疼起来连弯腰都费劲。</p>
+      <p>去年冬天他病了一场，在家躺了半个月，反而想明白了：早点这行拼的就是谁起得早，可他这把年纪，实在拼不动了。出院那天，邻居随口说了句，你那萝卜丝饼和红薯丸子，下午出摊一样有人买。阿南一琢磨，干脆把摊子改成了下午档。</p>
+      <p>三点出摊，七点收摊，只卖两样拿手小吃。下午路过的人不赶时间，愿意停下来慢慢吃，吃得满意还会带朋友来。阿南每天睡到自然醒，午饭吃得踏实，出摊前还能在阳台上晒会儿太阳。摊子开得少了，味道反而更稳了。</p>
+      <p>月底一算，赚的不比以前少，日子却轻快多了。以前是睁眼就想着出摊，现在是出摊前先过好自己的半天。阿南说，少开几个小时，天也没塌下来，人倒是先活过来了。</p>
+      <p>现在阿南的摊子边上总坐着几个熟客，有下班路过的年轻人，有带孩子出来玩的老人。大家吃着饼聊着天，摊子倒像个小小的街边客厅。阿南也不催人，卖完就收，从不为了多卖一小时熬到天黑。</p>
+      <p>有人问他，不趁着生意好多开一会儿吗。阿南笑着摇头，说钱是赚不完的，身体和日子才是自己的。下午这四个小时，够养活自己，够睡个好觉，这就够了。</p>
+    </div>
+    <div class="story">
+      <h3>二、老周接起了零活</h3>
+      <p>老周在一家公司熬了十几年，天天加班到深夜，回家倒头就睡，第二天接着熬。体检单上的箭头一年比一年多，医生只说了一句，再这样下去，身体要先提意见了。那天晚上他坐在楼下想了很久，第二天就递了辞职信。</p>
+      <p>辞职之后他没急着找下家，只想先歇一阵。歇着歇着，邻居找上门：家里的旧收音机坏了，能不能帮忙看看。老周年轻时就是修电器的好手，拆开、换件、焊牢，收音机又响起来了。邻居一高兴，给他介绍了好几个街坊。</p>
+      <p>口碑就这样在小区里传开了。电饭煲不加热、电风扇不转、旧台灯接触不良，老周都修得妥帖，收费也实在，从不乱要价。他每天接两三单，上午干活，下午就去公园遛弯，晚上陪老伴看电视。</p>
+      <p>收入够生活，还能存下一点，赶上孙子放假，还能带孩子去郊外住两天。老周说，以前是时间追着人跑，现在是人挑着时间走，活还是那些活，心态换了，日子就换了。</p>
+      <p>小区里的人都知道，老周修东西有个规矩：能修的修，不能修的直说，绝不让人花冤枉钱。有回一台老电视实在没件可换，他直接劝人家别修了，买台新的更划算。那家人后来反而成了他的常客。</p>
+      <p>老周的工具箱如今擦得锃亮，里面每样工具都有自己的位置。他说年轻时修电器是为了养家，现在修电器是为了过日子，同样是手艺，心境不同，活儿的味道也不同了。</p>
+    </div>
+    <div class="story">
+      <h3>三、不加班之后，小林的副业活了</h3>
+      <p>小林以前一下班就被拉进各种临时会议，回到家只剩刷手机的力气，连喜欢的手工都碰不着。有一年她实在受够了，下了个决心：到点就走，天塌下来明天再说。头一个月心里还发虚，怕被说不上进，后来发现，按时完成分内事的人，没人真拿她怎么样。</p>
+      <p>空出来的晚上，她开始做自己喜欢的手工皂。起初只是送朋友当生日礼物，朋友用着好，拍照发了朋友圈，朋友的朋友也来问能不能买一块。她不急着扩大，就在下班时间接单，一周做几批，模具、精油、包装都慢慢添置。</p>
+      <p>客人越来越多，她定了个规矩：每天只接固定的单，做完就收工，绝不熬夜赶工。有客人催，她就老实说要等下一批，愿意等的自然会等。慢是慢了点，可退货和差评几乎没有，回头客倒是一个接一个。</p>
+      <p>主业的工资照拿，副业的收入够付房租水电，还有余钱买书买花。小林说，拒绝加班不是放弃上进，是把力气留给真正属于自己的那部分生活，日子是自己的，节奏也该是自己的。</p>
+      <p>小林还给自己立了条规矩：副业再忙，也不能侵占睡觉和周末。周六她雷打不动去爬山、逛菜市场，周日睡到自然醒。她说副业是生活的添头，要是添头反过来压垮了生活，那就本末倒置了。</p>
+      <p>如今她的小店每月都有稳定的订单，朋友圈里全是回头客的晒单。有人羡慕她运气好，她却说运气都是从到点下班那天开始攒的，先把时间还给自己，生活才有空还你点什么。</p>
+    </div>
+  </div>
+
+  <p class="note">站内躺平币为虚拟奖励，不能提现，与真实收入无关。</p>
+  <p class="note">存档保存在本浏览器 localStorage，换浏览器或清除浏览器数据会丢档。</p>
+  <a class="back" href="/">← 回博客首页</a>
+</div>
+
+<script>
+(function () {
+  var KEY = "tangping-v1";
+  var SYSTEMS = [
+    { name: "咸鱼翻身系统", talent: "天赋：躺着也能翻身，翻身必有好事。" },
+    { name: "午睡致富系统", talent: "天赋：每一次午睡，都在悄悄积累好运。" },
+    { name: "晒太阳系统", talent: "天赋：晒够太阳，心情和运气一起回暖。" },
+    { name: "发呆暴富系统", talent: "天赋：发呆的时候，灵感正在排队进场。" },
+    { name: "慢活系统", talent: "天赋：慢下来之后，好事反而追得上你。" },
+    { name: "云卷云舒系统", talent: "天赋：不争不抢，自有安排。" }
+  ];
+  var LEVELS = [
+    { coins: 0, name: "咸鱼" },
+    { coins: 200, name: "咸鱼翻身" },
+    { coins: 500, name: "躺平学徒" },
+    { coins: 1200, name: "躺平大师" },
+    { coins: 3000, name: "躺赢" }
+  ];
+  var TASKS = [
+    { text: "拒绝一次无效加班", reward: 20 },
+    { text: "今天不焦虑", reward: 20 },
+    { text: "按时吃午饭", reward: 20 },
+    { text: "午睡 20 分钟", reward: 20 },
+    { text: "晒太阳 10 分钟", reward: 20 },
+    { text: "睡前不刷工作群", reward: 20 }
+  ];
+
+  function todayStr() {
+    var d = new Date();
+    var m = d.getMonth() + 1;
+    var day = d.getDate();
+    return d.getFullYear() + "-" + (m < 10 ? "0" + m : m) + "-" + (day < 10 ? "0" + day : day);
+  }
+  function dayOfYear() {
+    var now = new Date();
+    var start = new Date(now.getFullYear(), 0, 0);
+    return Math.floor((now - start) / 86400000);
+  }
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      if (raw) { return JSON.parse(raw); }
+    } catch (e) {}
+    return { awakened: false, sys: 0, coins: 0, checkin: "", tasks: {} };
+  }
+  function save() {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+  var state = load();
+
+  function levelInfo() {
+    var cur = LEVELS[0];
+    var next = null;
+    for (var i = 0; i < LEVELS.length; i++) {
+      if (state.coins >= LEVELS[i].coins) { cur = LEVELS[i]; }
+      else { next = LEVELS[i]; break; }
+    }
+    return { cur: cur, next: next };
+  }
+
+  function render() {
+    var awakenCard = document.getElementById("awakenCard");
+    var sysCard = document.getElementById("sysCard");
+    if (state.awakened) {
+      awakenCard.style.display = "none";
+      sysCard.style.display = "block";
+      var sys = SYSTEMS[state.sys] || SYSTEMS[0];
+      document.getElementById("sysName").textContent = sys.name;
+      document.getElementById("sysTalent").textContent = sys.talent;
+    } else {
+      awakenCard.style.display = "block";
+      sysCard.style.display = "none";
+    }
+    document.getElementById("coinNum").textContent = state.coins;
+    var lv = levelInfo();
+    document.getElementById("levelLine").textContent = "当前称号：" + lv.cur.name;
+    var bar = document.getElementById("levelBar");
+    var nextLine = document.getElementById("levelNext");
+    if (lv.next) {
+      var pct = Math.floor((state.coins - lv.cur.coins) * 100 / (lv.next.coins - lv.cur.coins));
+      bar.style.width = pct + "%";
+      nextLine.textContent = "下一级：" + lv.next.name + "，还差 " + (lv.next.coins - state.coins) + " 币";
+    } else {
+      bar.style.width = "100%";
+      nextLine.textContent = "已满级，躺赢！";
+    }
+    var checkinBtn = document.getElementById("checkinBtn");
+    if (state.checkin === todayStr()) {
+      checkinBtn.disabled = true;
+      checkinBtn.textContent = "今日已签到";
+    } else {
+      checkinBtn.disabled = false;
+      checkinBtn.textContent = "每日签到 +50 币";
+    }
+    renderTasks();
+  }
+
+  function renderTasks() {
+    var list = document.getElementById("taskList");
+    var base = dayOfYear() % TASKS.length;
+    var done = state.tasks[todayStr()] || [];
+    var html = "";
+    for (var k = 0; k < 3; k++) {
+      var idx = (base + k) % TASKS.length;
+      var t = TASKS[idx];
+      var isDone = done.indexOf(idx) >= 0;
+      html += '<div class="task"><span>' + t.text + ' <span class="reward">+' + t.reward + ' 币</span></span>';
+      if (isDone) {
+        html += '<button disabled>已完成</button>';
+      } else {
+        html += '<button data-task="' + idx + '">完成</button>';
+      }
+      html += '</div>';
+    }
+    list.innerHTML = html;
+    var btns = list.querySelectorAll("button[data-task]");
+    for (var j = 0; j < btns.length; j++) {
+      btns[j].addEventListener("click", function () {
+        var idx = parseInt(this.getAttribute("data-task"), 10);
+        var day = todayStr();
+        var arr = state.tasks[day] || [];
+        if (arr.indexOf(idx) >= 0) { return; }
+        arr.push(idx);
+        state.tasks[day] = arr;
+        state.coins += TASKS[idx].reward;
+        save();
+        render();
+      });
+    }
+  }
+
+  document.getElementById("awakenBtn").addEventListener("click", function () {
+    state.sys = Math.floor(Math.random() * SYSTEMS.length);
+    state.awakened = true;
+    save();
+    render();
+  });
+  document.getElementById("checkinBtn").addEventListener("click", function () {
+    if (state.checkin === todayStr()) { return; }
+    state.checkin = todayStr();
+    state.coins += 50;
+    save();
+    render();
+  });
+
+  var idleRunning = !document.hidden;
+  function updateIdleStatus() {
+    document.getElementById("idleStatus").textContent = idleRunning ? "挂机进行中……" : "页面在后台，挂机已暂停";
+  }
+  document.addEventListener("visibilitychange", function () {
+    idleRunning = !document.hidden;
+    updateIdleStatus();
+  });
+  setInterval(function () {
+    if (!idleRunning) { return; }
+    state.coins += 1;
+    save();
+    document.getElementById("coinNum").textContent = state.coins;
+    var lv = levelInfo();
+    document.getElementById("levelLine").textContent = "当前称号：" + lv.cur.name;
+    if (lv.next) {
+      var pct = Math.floor((state.coins - lv.cur.coins) * 100 / (lv.next.coins - lv.cur.coins));
+      document.getElementById("levelBar").style.width = pct + "%";
+      document.getElementById("levelNext").textContent = "下一级：" + lv.next.name + "，还差 " + (lv.next.coins - state.coins) + " 币";
+    } else {
+      document.getElementById("levelBar").style.width = "100%";
+      document.getElementById("levelNext").textContent = "已满级，躺赢！";
+    }
+  }, 10000);
+
+  render();
+  updateIdleStatus();
+})();
+</script>
+</body>
+</html>
