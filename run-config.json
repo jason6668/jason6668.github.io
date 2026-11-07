@@ -1,1 +1,154 @@
-{"announcement":"欢迎来到马老师的“无用之地”。这里记录着心理学的洞察、自动化的实践以及那些被按下的暂停键。","brand":"马老师专属RUN","footer":{"enable":true,"groups":[{"links":[{"name":"首页","url":"index.html"},{"name":"欧洲 36 国","url":"europe/index.html"},{"name":"主要地区","url":"global/index.html"},{"name":"路线指南","url":"routes/index.html"},{"name":"签证速查","url":"visa/index.html"},{"name":"世界地图","url":"world/index.html"}],"title":"站内导航"},{"links":[{"name":"我该走哪条路","url":"routes/index.html"},{"name":"文件准备","url":"practical/index.html"},{"name":"资源导航","url":"resources/index.html"}],"title":"路线指南"},{"links":[{"name":"马老师专属TV","url":"https://tv.8818618.xyz/"},{"name":"马老师专属音乐","url":"https://music.8818618.xyz/"},{"name":"论坛社区","url":"https://bbs.8818618.xyz/"},{"name":"会员服务","url":"https://vip.8818618.xyz/"},{"name":"赞赏支持","url":"https://rewards.8818618.xyz/"},{"name":"马老师专属PDF","url":"https://pdf.8818618.xyz/"},{"name":"马老师专属导航","url":"https://nav.8818618.xyz/"},{"name":"马老师专属新闻","url":"https://newsma.8818618.xyz/"}],"title":"专属服务"},{"links":[{"name":"博客","url":"https://blog.8818618.xyz/"},{"name":"留言板","url":"https://blog.8818618.xyz/comments/"},{"name":"关于本人","url":"https://blog.8818618.xyz/about/"}],"title":"关于"}]},"hero":{"line1":"世界很大","line2":"我想去看看"},"nav":[{"name":"首页","url":"index.html"},{"name":"欧洲 36 国","url":"europe/index.html"},{"name":"主要地区","url":"global/index.html"},{"name":"路线指南","url":"routes/index.html"},{"name":"实用指南","url":"practical/index.html"},{"name":"签证速查","url":"visa/index.html"},{"name":"世界地图","url":"world/index.html"},{"external":true,"name":"博客","url":"https://blog.8818618.xyz/"}],"site":{"description":"世界很大，我想去看看。","subtitle":"马老师专属海外移居手册","title":"马老师专属RUN","url":"https://run.8818618.xyz"}}
+{
+  "announcement": "欢迎来到马老师的“无用之地”。这里记录着心理学的洞察、自动化的实践以及那些被按下的暂停键。。",
+  "brand": "马老师专属RUN",
+  "footer": {
+    "enable": true,
+    "groups": [
+      {
+        "links": [
+          {
+            "name": "首页",
+            "url": "index.html"
+          },
+          {
+            "name": "欧洲 36 国",
+            "url": "europe/index.html"
+          },
+          {
+            "name": "主要地区",
+            "url": "global/index.html"
+          },
+          {
+            "name": "路线指南",
+            "url": "routes/index.html"
+          },
+          {
+            "name": "签证速查",
+            "url": "visa/index.html"
+          },
+          {
+            "name": "世界地图",
+            "url": "world/index.html"
+          }
+        ],
+        "title": "站内导航"
+      },
+      {
+        "links": [
+          {
+            "name": "我该走哪条路",
+            "url": "routes/index.html"
+          },
+          {
+            "name": "文件准备",
+            "url": "practical/index.html"
+          },
+          {
+            "name": "资源导航",
+            "url": "resources/index.html"
+          }
+        ],
+        "title": "路线指南"
+      },
+      {
+        "links": [
+          {
+            "name": "马老师专属TV",
+            "url": "https://tv.8818618.xyz/"
+          },
+          {
+            "name": "马老师专属音乐",
+            "url": "https://music.8818618.xyz/"
+          },
+          {
+            "name": "论坛社区",
+            "url": "https://bbs.8818618.xyz/"
+          },
+          {
+            "name": "会员服务",
+            "url": "https://vip.8818618.xyz/"
+          },
+          {
+            "name": "赞赏支持",
+            "url": "https://rewards.8818618.xyz/"
+          },
+          {
+            "name": "马老师专属PDF",
+            "url": "https://pdf.8818618.xyz/"
+          },
+          {
+            "name": "马老师专属导航",
+            "url": "https://nav.8818618.xyz/"
+          },
+          {
+            "name": "马老师专属新闻",
+            "url": "https://newsma.8818618.xyz/"
+          }
+        ],
+        "title": "专属服务"
+      },
+      {
+        "links": [
+          {
+            "name": "博客",
+            "url": "https://blog.8818618.xyz/"
+          },
+          {
+            "name": "留言板",
+            "url": "https://blog.8818618.xyz/comments/"
+          },
+          {
+            "name": "关于本人",
+            "url": "https://blog.8818618.xyz/about/"
+          }
+        ],
+        "title": "关于"
+      }
+    ]
+  },
+  "hero": {
+    "line1": "世界很大",
+    "line2": "我想去看看"
+  },
+  "nav": [
+    {
+      "name": "首页",
+      "url": "index.html"
+    },
+    {
+      "name": "欧洲 36 国",
+      "url": "europe/index.html"
+    },
+    {
+      "name": "主要地区",
+      "url": "global/index.html"
+    },
+    {
+      "name": "路线指南",
+      "url": "routes/index.html"
+    },
+    {
+      "name": "实用指南",
+      "url": "practical/index.html"
+    },
+    {
+      "name": "签证速查",
+      "url": "visa/index.html"
+    },
+    {
+      "name": "世界地图",
+      "url": "world/index.html"
+    },
+    {
+      "external": true,
+      "name": "博客",
+      "url": "https://blog.8818618.xyz/"
+    }
+  ],
+  "site": {
+    "description": "世界很大，我想去看看。",
+    "subtitle": "马老师专属海外移居手册",
+    "title": "马老师专属RUN",
+    "url": "https://run.8818618.xyz"
+  }
+}
