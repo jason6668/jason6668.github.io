@@ -1,0 +1,355 @@
+/* 马老师博客 · 移动端排版（2026-10-04 v3，按 PC 端顶部结构还原）
+   PC 顶部：左=大标题卡（生活明朗/万物可爱+技能图标）+ 4 张分类卡横排，右=「失业联盟」今日大卡。
+   主题在 ≤1200px 把大标题卡和今日大卡都藏了，这里在 ≤900px 按原顺序整幅摆出来。PC 不受影响。 */
+
+@media screen and (max-width: 900px) {
+  /* 防任何元素把页面撑出横向滚动 */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* 横幅区：纵向排列，不再横向卷轴 */
+  #home_top .swiper_container_card {
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+    overflow-x: visible;
+    height: auto !important;
+    width: 100%;
+  }
+
+  div#bannerGroup {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ① 大标题卡（PC 左上同款，整幅显示） */
+  #random-banner {
+    display: flex !important;
+    height: auto;
+    min-height: 0;
+    padding: 16px 18px 12px;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+
+  .banners-title {
+    position: static !important;
+    z-index: 3;
+  }
+
+  .banners-title-big {
+    font-size: 30px !important;
+    line-height: 1.25;
+  }
+
+  /* 技能图标缩成一条小瓷砖装饰带（PC 是 120px 大砖，手机上等比缩小） */
+  #skills-tags-group-all {
+    transform: none !important;
+    flex: none;
+    position: relative;
+    z-index: 1;
+    height: 50px !important;
+    min-height: 0 !important;
+    overflow: hidden;
+    margin-top: 10px;
+    transform: none;
+  }
+
+  #skills-tags-group-all .tags-group-wrapper {
+    margin-top: 0 !important;
+  }
+
+  #skills-tags-group-all .tags-group-icon-pair {
+    margin-left: 0.55rem;
+  }
+
+  #skills-tags-group-all .tags-group-icon {
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 13px;
+    font-size: 22px;
+  }
+
+  #skills-tags-group-all .tags-group-icon img {
+    width: 24px !important;
+  }
+
+  #skills-tags-group-all .tags-group-icon-pair .tags-group-icon:nth-child(even) {
+    margin-top: 0.35rem;
+    transform: translate(-20px);
+  }
+
+  /* 随便逛逛蓝条：钉在标题卡里常驻（对应 PC 悬停态） */
+  #random-banner #random-hover {
+    position: relative !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: 46px !important;
+    top: auto !important;
+    left: auto !important;
+    margin-top: 10px;
+    padding-left: 1rem !important;
+    border-radius: 10px;
+    flex-direction: row !important;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 20px !important;
+  }
+
+  #random-banner #random-hover .bannerText {
+    font-size: 20px !important;
+  }
+
+  #random-banner #random-hover i {
+    font-size: 24px !important;
+    margin-left: 8px;
+  }
+
+  /* ② 分类卡：和 PC 一样 4 张横排一行 */
+  .categoryGroup {
+    display: flex !important;
+    flex-direction: row;
+    gap: 8px;
+    height: auto;
+    min-width: 0;
+    margin-top: 0;
+  }
+
+  .categoryGroup .categoryItem,
+  .categoryGroup .categoryItem:nth-child(3) {
+    display: block !important;
+    flex: 1 1 0;
+    width: auto;
+    height: 58px;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .categoryGroup a.categoryButton {
+    display: flex;
+    align-items: center;
+    height: 58px;
+    line-height: 1.15;
+    font-size: 13px;
+  }
+
+  .categoryGroup .categoryButtonText {
+    padding-left: 10px;
+    white-space: nowrap;
+  }
+
+  .categoryGroup a.categoryButton i,
+  .categoryGroup a.categoryButton svg {
+    font-size: 1.6rem;
+    width: 34px;
+    top: 50%;
+    transform: translateY(-50%) rotate(15deg);
+  }
+
+  a.categoryButton:after {
+    display: none;
+  }
+
+  /* ③ 今日大卡（PC 右侧「失业联盟」深色大卡，整幅显示在分类卡下方） */
+  .topGroup {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-top: 8px;
+  }
+
+  .topGroup .todayCard {
+    display: flex !important;
+    position: relative;
+    width: 100%;
+    height: 210px;
+    margin: 0;
+    top: auto;
+    left: auto;
+  }
+
+  .topGroup .todayCard .todayCard-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .topGroup .todayCard .todayCard-info {
+    bottom: 1.4rem;
+    left: 1.1rem;
+    max-width: 64%;
+  }
+
+  .topGroup .banner-button {
+    width: 108px;
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .topGroup .todayCard .todayCard-info .todayCard-title {
+    font-size: 19px;
+    line-height: 1.35;
+  }
+
+  .topGroup .banner-button-group {
+    right: 1.2rem;
+    bottom: 1.2rem;
+  }
+
+  /* PC 上今日大卡盖住的小卡不单独出（内容在下面文章列表里都有） */
+  .topGroup .recent-post-item {
+    display: none !important;
+  }
+
+  /* 分类标签行：横向滑动，不再换行挤压 */
+  #categoryBar .category-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #categoryBar .category-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  #categoryBar #catalog-list {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+  }
+
+  #categoryBar .catalog-list-item {
+    flex: 0 0 auto;
+  }
+
+  .category-bar-next {
+    display: none !important;
+  }
+
+  /* 文章列表卡片封面在手机上别太高 */
+  #recent-posts .recent-post-item .post_cover {
+    max-height: 200px;
+    overflow: hidden;
+  }
+}
+/* 标签页标题：手机端完整显示（2026-10-29 旧规则原样收进手机断点，不再影响 PC） */
+@media screen and (max-width: 900px) {
+  #tag .article-sort-item-info {
+    height: auto;
+    max-height: none;
+  }
+  #tag .article-sort-item-info .article-sort-item-title {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+    text-overflow: clip;
+    white-space: normal;
+    height: auto;
+  }
+}
+/* 标签页 PC 端：保持 PC 布局（2026-10-30 修你截图里窄列右移的问题）
+   居中宽列、左栏右主文；主题在 1200px 以下会改纵向，这里在 PC 宽度下强制横排，
+   宽列下标题最多两行，长标题基本一行能放下，不再像手机那样折三行。
+   2026-10-30 晚补强：上一版只写 max-width，实测仍缩回 787px 宽、左 844 右 289；
+   这次把宽写死、父容器写满、主列最小宽清零，杜绝 flex 收缩。 */
+@media screen and (min-width: 901px) {
+  #blog-container {
+    width: 100% !important;
+  }
+  #content-inner.layout {
+    width: 1400px !important;
+    max-width: 1400px !important;
+    min-width: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    flex-direction: row !important;
+    -webkit-box-orient: horizontal !important;
+    justify-content: center !important;
+    flex: none !important;
+  }
+  #content-inner.layout > #aside-content {
+    -webkit-box-ordinal-group: 1 !important;
+    -moz-box-ordinal-group: 1 !important;
+    -ms-flex-order: 1 !important;
+    -webkit-order: 1 !important;
+    order: 1 !important;
+    width: 300px !important;
+    flex: 0 0 300px !important;
+  }
+  #content-inner.layout > #tag {
+    -webkit-box-ordinal-group: 2 !important;
+    -moz-box-ordinal-group: 2 !important;
+    -ms-flex-order: 2 !important;
+    -webkit-order: 2 !important;
+    order: 2 !important;
+    width: calc(100% - 300px) !important;
+    flex: 1 1 auto !important;
+  }
+  #tag .article-sort-item-info {
+    height: auto;
+    max-height: none;
+  }
+  #tag .article-sort-item-info .article-sort-item-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    height: auto;
+  }
+  #content-inner.layout > #tag {
+    min-width: 0 !important;
+  }
+}
+
+/* 标签栏（2026-10-30 用户令“你自己看着来”后定）：
+   主区文章下面的大标签云用 flex 顺序提到标题下面、文章上面，
+   但只占一行横向可滑的小药丸栏，不把文章推到下面；
+   侧边栏标签云原来标题是空的，给它补一个“标签”标题，免得看着像无名列表。 */
+#tag {
+  display: flex !important;
+  flex-direction: column !important;
+}
+#tag .article-sort-title {
+  order: 1 !important;
+}
+#tag #tag-page-tags {
+  order: 2 !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  max-height: 56px !important;
+  padding-bottom: 4px !important;
+  scrollbar-width: thin !important;
+}
+#tag #tag-page-tags a {
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+}
+#tag .article-sort {
+  order: 3 !important;
+  width: 100% !important;
+}
+#aside-content .card-tags .item-headline::after {
+  content: "标签";
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* PC 窄列真因（2026-10-30 晚，页眉/页脚 256-1628、主区 842-1628 对照实锤）：
+   #content-inner 是横排 flex，里面除了侧边栏、主区，还有一个 nav#pagination，
+   主题给它 width:100%，order 默认 0，等于在左边占了一个 100% 宽的隐形格子，
+   把侧边栏和主区往右挤、主区被 flex 收缩压到 490，标题才截断。
+   修法：让主容器换行，分页栏 order 排到最后、独占一行，侧边栏和主区回第一行。 */
+#content-inner.layout {
+  flex-wrap: wrap !important;
+}
+#content-inner.layout > nav#pagination {
+  order: 3 !important;
+  flex: 0 0 100% !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
