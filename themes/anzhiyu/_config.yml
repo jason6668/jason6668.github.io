@@ -794,7 +794,7 @@ inject:
   bottom:
   - <script src="/js/ma-newest-comments.js?v=20261017h"></script>
   - <script src="/js/ma-anti-copy.js?v=20261023a"></script>
-  - <script src="/js/ma-todaycard-video.js?v=20261117b"></script>
+  - <script src="/js/ma-todaycard-video.js?v=20261117c"></script>
   CDN:
   internal_provider: local
   third_party_provider: cbd
