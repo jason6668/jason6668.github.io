@@ -11,7 +11,7 @@
 (function () {
   'use strict';
 
-  var VIDEO_SRC = '/images/shiye-banner.mp4?v=20261117b';
+  var VIDEO_SRC = '/images/shiye-banner.mp4?v=20261117c';
   var POSTER = '/images/shiye-banner-new.jpg?v=20261012';
 
   var style = document.createElement('style');
