@@ -41,7 +41,7 @@
     video.setAttribute('muted', '');
     video.setAttribute('loop', '');
     video.setAttribute('playsinline', '');
-    video.setAttribute('preload', 'metadata');
+    video.setAttribute('preload', 'auto');
     video.setAttribute('poster', POSTER);
     video.setAttribute('aria-hidden', 'true');
     video.muted = true;
@@ -105,6 +105,12 @@
 
     var p = video.play();
     if (p && p.catch) p.catch(function () { /* 自动播放被拦就留首帧海报 */ });
+    // 数据就绪后再补一次播放（慢网下首 call 可能发生在可播之前）
+    video.addEventListener('canplay', function () {
+      if (!restored && video.paused && toggle.textContent !== '\u25B6') {
+        video.play().catch(function () {});
+      }
+    });
   }
 
   init();
