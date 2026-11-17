@@ -11,8 +11,9 @@
 (function () {
   'use strict';
 
-  var VIDEO_SRC = '/images/shiye-banner.mp4?v=20261117c';
+  var VIDEO_SRC = '/images/shiye-banner.mp4?v=20261117d';
   var POSTER = '/images/shiye-banner-new.jpg?v=20261012';
+  var RETRY_MS = 2500;
 
   var style = document.createElement('style');
   style.textContent = [
@@ -33,7 +34,8 @@
     if (card.querySelector('video.todayCard-cover')) return;
     var img = card.querySelector('img.todayCard-cover');
     if (!img) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    /* 注：不拦 prefers-reduced-motion。站长本人点名要这个动效，
+     * 卡片右上角有手动暂停按钮，真不想看可以点停。 */
 
     var video = document.createElement('video');
     video.className = 'todayCard-cover';
@@ -51,6 +53,7 @@
     video.appendChild(src);
 
     var restored = false;
+    var retried = false;
     function restore() {
       if (restored) return;
       restored = true;
@@ -58,8 +61,23 @@
       if (toggle.parentNode) toggle.parentNode.removeChild(toggle);
       img.style.display = '';
     }
-    video.addEventListener('error', restore, true);
-    src.addEventListener('error', restore);
+    /* 移动弱网下视频可能一次加载失败：先重试一次再回退静态图 */
+    function onLoadError() {
+      if (restored) return;
+      if (!retried) {
+        retried = true;
+        setTimeout(function () {
+          if (restored) return;
+          video.load();
+          var p = video.play();
+          if (p && p.catch) p.catch(function () {});
+        }, RETRY_MS);
+      } else {
+        restore();
+      }
+    }
+    video.addEventListener('error', onLoadError, true);
+    src.addEventListener('error', onLoadError);
 
     var toggle = document.createElement('button');
     toggle.type = 'button';
