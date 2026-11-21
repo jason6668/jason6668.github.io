@@ -29,6 +29,10 @@
           {
             "name": "世界地图",
             "url": "world/index.html"
+          },
+          {
+            "name": "拿钱留学",
+            "url": "study/index.html"
           }
         ],
         "title": "站内导航"
@@ -142,6 +146,10 @@
     {
       "name": "世界地图",
       "url": "world/index.html"
+    },
+    {
+      "name": "拿钱留学",
+      "url": "study/index.html"
     },
     {
       "external": true,
