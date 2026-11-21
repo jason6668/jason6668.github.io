@@ -76,7 +76,7 @@
     &:hover
       img.post_bg
         filter: brightness(0.82) !important;
-        transform: scale(1.03) !important
+        animation-play-state: paused;
         transition: 0.3s ease-in-out;
 
     &.ads-wrap
@@ -98,6 +98,8 @@
         width 100%
         transition: all 0.6s ease 0s;
         object-fit: cover;
+        animation: coverKenBurns 16s ease-in-out infinite alternate;
+        will-change: transform;
 
       &.right
         order: 1
@@ -294,6 +296,8 @@ if hexo-config('article_double_row') == true
           img.post_bg
             width: 100%
             height: 100%
+            animation: coverKenBurns 16s ease-in-out infinite alternate;
+            will-change: transform;
 
         -webkit-flex-direction: column
         -ms-flex-direction: column
