@@ -455,3 +455,14 @@ blockquote
   & + #content-inner
     +maxWidth768()
       padding:1.875rem 0rem 0
+
+// 封面动效：缓慢缩放平移（Ken Burns），文章页顶图与列表封面共用
+@keyframes coverKenBurns
+  0%
+    transform: scale(1) translate(0, 0)
+  100%
+    transform: scale(1.12) translate(-1.5%, -1.5%)
+
+@media (prefers-reduced-motion: reduce)
+  #post-top-bg, .post_cover img.post_bg
+    animation: none !important
