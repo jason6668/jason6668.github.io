@@ -1,0 +1,63 @@
+/* live-better 满屏 + 移动端适配补丁 (2026-10-17) */
+
+/* ===== 桌面端满屏：解除所有宽度限制 ===== */
+main {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+body > div,
+div.container, div.wrap, div.layout, div.app, div#app,
+div.main-container, div.content-wrap {
+  max-width: 100% !important;
+}
+
+/* ===== 移动端适配 (<=768px) ===== */
+@media (max-width: 768px) {
+  /* 整体改为单列：目录在上，内容在下 */
+  body > div,
+  div.container, div.wrap, div.layout, div.app, div#app {
+    display: block !important;
+    flex-direction: column !important;
+    padding: 0 8px !important;
+  }
+  /* 顶部工具栏：按钮换行 */
+  header, div.header, div.toolbar {
+    flex-wrap: wrap !important;
+    padding: 8px !important;
+  }
+  header h1, div.header h1 {
+    font-size: 16px !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+  }
+  /* 目录栏：横向滚动条形式，不占纵向空间 */
+  nav, aside,
+  div.sidebar, div.toc, div.catalog,
+  div[class*="sidebar"], div[class*="toc"], div[class*="catalog"] {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 160px !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    position: static !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(0,0,0,.08) !important;
+    margin-bottom: 8px !important;
+    padding: 8px !important;
+    font-size: 13px !important;
+  }
+  /* 正文区全宽 */
+  main {
+    padding: 8px !important;
+    font-size: 15px !important;
+  }
+  main article, main section {
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  /* 搜索框全宽 */
+  input[type="search"], input[type="text"] {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
